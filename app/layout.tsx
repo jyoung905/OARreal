@@ -1,9 +1,17 @@
 import '@/styles/globals.css';
-import { Inter } from 'next/font/google';
+import { Inter, Manrope } from 'next/font/google';
 import type { ReactNode } from 'react';
 import { site } from '@/lib/site';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-body'
+});
+
+const manrope = Manrope({
+  subsets: ['latin'],
+  variable: '--font-display'
+});
 
 export const metadata = {
   metadataBase: new URL(site.url),
@@ -45,7 +53,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en-CA">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.variable} ${manrope.variable}`}>{children}</body>
     </html>
   );
 }
