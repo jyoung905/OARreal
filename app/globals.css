@@ -501,6 +501,86 @@ li,
   border: 1px solid rgba(23, 57, 95, 0.08);
 }
 
+.intake-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
+  gap: 1.2rem;
+  align-items: start;
+}
+
+.intake-sidecard,
+.intake-form-shell {
+  border-radius: 24px;
+  border: 1px solid rgba(214, 222, 232, 0.9);
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 50px rgba(15, 32, 54, 0.08);
+}
+
+.intake-sidecard {
+  position: sticky;
+  top: 6rem;
+  display: grid;
+  gap: 1rem;
+  padding: 1.3rem;
+}
+
+.intake-form-shell {
+  padding: 1.15rem;
+}
+
+.intake-step-list {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.intake-step-pill {
+  display: grid;
+  gap: 0.18rem;
+  padding: 0.9rem 1rem;
+  border-radius: 18px;
+  border: 1px solid rgba(214, 222, 232, 0.95);
+  background: rgba(244, 247, 251, 0.76);
+}
+
+.intake-step-pill span {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+.intake-step-pill strong {
+  font-size: 0.96rem;
+  letter-spacing: -0.02em;
+}
+
+.intake-step-pill.is-active {
+  background: linear-gradient(180deg, rgba(23, 57, 95, 0.08), rgba(35, 94, 102, 0.07));
+  border-color: rgba(23, 57, 95, 0.16);
+}
+
+.intake-step-pill.is-complete {
+  background: rgba(12, 122, 67, 0.08);
+  border-color: rgba(12, 122, 67, 0.14);
+}
+
+.progress-wrap-card,
+.step-heading-card {
+  padding: 1rem 1.05rem;
+  border-radius: 20px;
+  border: 1px solid rgba(214, 222, 232, 0.9);
+  background: rgba(247, 250, 253, 0.84);
+}
+
+.progress-wrap-card {
+  margin-bottom: 1rem;
+}
+
+.step-heading-card {
+  margin-bottom: 1.15rem;
+}
+
 .progress-wrap {
   margin-bottom: 1.25rem;
 }
@@ -1155,14 +1235,15 @@ body.dashboard-body,
   .check-grid,
   .intake-reassurance-grid,
   .matter-grid,
-  .process-grid {
+  .process-grid,
+  .intake-layout {
     grid-template-columns: 1fr;
   }
 
   .wide-card { grid-column: auto; }
   .desktop-only { display: none; }
   .lead-list { max-height: none; }
-  .sticky-workflow { position: static; }
+  .sticky-workflow, .intake-sidecard { position: static; }
 
   .setup-command-card,
   .subsection-head,

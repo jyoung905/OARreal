@@ -1,19 +1,27 @@
-import { FAQ } from '@/components/FAQ';
-import { Footer } from '@/components/Footer';
-import { Hero } from '@/components/Hero';
+import { FaqSection } from '@/components/FaqSection';
+import { FitSection } from '@/components/FitSection';
+import { ProcessSection } from '@/components/ProcessSection';
 import { QualificationForm } from '@/components/QualificationForm';
-import { TrustBadges } from '@/components/TrustBadges';
+import { SiteFooter } from '@/components/SiteFooter';
+import { SiteHeader } from '@/components/SiteHeader';
+import { TrustBar } from '@/components/TrustBar';
+import { ValueSection } from '@/components/ValueSection';
+import { HeroSection } from '@/components/HeroSection';
 
 export default function HomePage() {
   return (
     <>
-      <Hero />
+      <SiteHeader />
       <main>
-        <TrustBadges />
+        <HeroSection />
+        <TrustBar />
+        <ProcessSection />
+        <FitSection />
+        <ValueSection />
         <QualificationForm />
-        <FAQ />
+        <FaqSection />
       </main>
-      <Footer />
+      <SiteFooter />
     </>
   );
 }

@@ -8,10 +8,6 @@ export function SiteFooter() {
         <div>
           <Logo showTagline={false} className="footer-logo" />
           <p>Ontario Accident Review is not a law firm. No legal advice. No legal representation.</p>
-          <p className="disclaimer">
-            Follow-up, if any, comes from a representative of Ontario Accident Review after an
-            initial review.
-          </p>
         </div>
         <div>
           <p className="footer-heading">Pages</p>

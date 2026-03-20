@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { site } from '@/lib/site';
 
@@ -6,7 +5,7 @@ export function Logo({ showTagline = true, href = '/', className = '' }) {
   const content = (
     <>
       <span className="brand-mark" aria-hidden="true">
-        <Image src="/logo-placeholder.svg" alt="" width={34} height={34} />
+        OAR
       </span>
       <span>
         <span className="brand-name">{site.name}</span>
