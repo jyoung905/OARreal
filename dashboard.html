@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lead Inbox · Ontario Accident Review</title>
+  <meta name="description" content="Private lead inbox for Ontario Accident Review." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <div>
+        <div class="brand">Ontario Accident Review</div>
+        <div class="brand-sub">Private intake review dashboard</div>
+      </div>
+      <div class="nav-actions desktop-only">
+        <a class="text-link" href="/">Public site</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-section dashboard-page">
+    <div class="container dashboard-shell premium-shell">
+      <section class="dashboard-banner premium-banner cardish">
+        <div class="dashboard-banner-top">
+          <div>
+            <p class="eyebrow">Lead inbox</p>
+            <h1>Review requests before follow-up</h1>
+            <p>This internal view is for screening submissions, setting follow-up, and preparing cleaner handoff summaries when a request looks worth pursuing.</p>
+          </div>
+          <div class="dashboard-banner-actions">
+            <div class="operator-badge">Internal use</div>
+            <button class="button button-secondary hidden" id="logoutBtn" type="button">Log out</button>
+          </div>
+        </div>
+        <div class="dashboard-warning" id="dashboardWarning"></div>
+      </section>
+
+      <section id="loginPanel" class="auth-panel cardish hidden premium-login">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Protected access</p>
+            <h2>Unlock the dashboard</h2>
+          </div>
+          <div class="login-badge" id="authSetupBadge">Local setup</div>
+        </div>
+        <p class="page-copy">Use the password from <code>.env</code>. This is a lightweight local gate for internal intake review, not full production authentication.</p>
+        <div class="login-helper-grid">
+          <div class="login-helper-card">
+            <strong>1. Configure it</strong>
+            <p id="passwordSetupHint">Copy <code>.env.example</code> to <code>.env</code>, set a dashboard password, then restart <code>node server.js</code>.</p>
+          </div>
+          <div class="login-helper-card">
+            <strong>2. Verify it</strong>
+            <p id="passwordTestHint">Log in here, or post to <code>/api/dashboard/login</code> with your password to verify the flow before using the inbox.</p>
+          </div>
+          <div class="login-helper-card wide-helper-card">
+            <strong>3. Keep it local</strong>
+            <p>Keep this dashboard local by default. If you ever allow remote access, use a real password and understand the exposure first.</p>
+          </div>
+        </div>
+        <div class="setup-command-card" id="setupCommandCard">
+          <div>
+            <span class="result-label">Quick local check</span>
+            <code id="setupCurl">curl -i -X POST http://localhost:8080/api/dashboard/login -H 'Content-Type: application/json' -d '{"password":"your-password"}'</code>
+          </div>
+          <button class="button button-secondary" type="button" id="copySetupCommandBtn">Copy check command</button>
+        </div>
+        <form id="loginForm" class="auth-form">
+          <label class="toolbar-field grow">
+            <span>Password</span>
+            <input id="passwordInput" type="password" autocomplete="current-password" placeholder="Dashboard password" required />
+          </label>
+          <button class="button" id="loginBtn" type="submit">Unlock dashboard</button>
+        </form>
+        <p id="loginMessage" class="page-meta"></p>
+      </section>
+
+      <section id="dashboardApp" class="dashboard-app hidden">
+        <section class="dashboard-toolbar cardish premium-toolbar">
+          <div class="toolbar-row toolbar-row-wide">
+            <label class="toolbar-field grow">
+              <span>Search</span>
+              <input id="searchInput" type="search" placeholder="Name, email, phone, city, accident type, notes…" />
+            </label>
+            <label class="toolbar-field">
+              <span>Status</span>
+              <select id="statusFilter"></select>
+            </label>
+            <label class="toolbar-field">
+              <span>Bucket</span>
+              <select id="bucketFilter"></select>
+            </label>
+            <button class="button button-secondary" id="refreshBtn" type="button">Refresh</button>
+          </div>
+          <div class="dashboard-stats-grid" id="dashboardStats"></div>
+          <div class="status-chip-row" id="countChips"></div>
+        </section>
+
+        <section class="dashboard-grid">
+          <aside class="lead-list-panel cardish premium-panel">
+            <div class="panel-heading">
+              <div>
+                <h2>Inbox</h2>
+                <span id="leadCountLabel" class="panel-meta"></span>
+              </div>
+              <span id="selectionSummary" class="panel-meta"></span>
+            </div>
+            <div id="leadList" class="lead-list"></div>
+          </aside>
+
+          <section class="lead-detail-panel cardish premium-panel">
+            <div id="leadEmptyState" class="empty-state">
+              <h2>Select a review request</h2>
+              <p>Choose a submission to review the intake, track missing items, set follow-up timing, and prepare a clean summary for onward handoff if appropriate.</p>
+            </div>
+
+            <article id="leadDetail" class="lead-detail hidden">
+              <div class="detail-head">
+                <div>
+                  <p class="eyebrow">Request detail</p>
+                  <h2 id="detailName">—</h2>
+                  <p id="detailMeta" class="page-meta"></p>
+                </div>
+                <div class="detail-head-actions">
+                  <span id="detailBucket" class="score-pill"></span>
+                  <span id="detailStatusPill" class="status-pill"></span>
+                </div>
+              </div>
+
+              <section class="detail-quickbar detail-block premium-detail-block">
+                <div class="quickbar-metric">
+                  <span class="quickbar-label">Review priority</span>
+                  <strong id="priorityText">—</strong>
+                </div>
+                <div class="quickbar-metric">
+                  <span class="quickbar-label">Uploads</span>
+                  <strong id="uploadsCount">0</strong>
+                </div>
+                <div class="quickbar-metric">
+                  <span class="quickbar-label">Follow-up due</span>
+                  <strong id="followUpDueText">—</strong>
+                </div>
+                <div class="quickbar-metric">
+                  <span class="quickbar-label">Tracked docs</span>
+                  <strong id="requestedDocsCount">0</strong>
+                </div>
+                <div class="quickbar-metric quickbar-metric-accent">
+                  <span class="quickbar-label">Sent to firm</span>
+                  <strong id="sentToFirmText">Not sent</strong>
+                </div>
+              </section>
+
+              <div class="detail-columns detail-columns-tight">
+                <section class="detail-block sticky-workflow premium-detail-block">
+                  <div class="workflow-header-row">
+                    <div>
+                      <h3>Workflow</h3>
+                      <p class="page-meta">Review, track missing items, set follow-up, then hand off when ready.</p>
+                    </div>
+                    <button class="button" id="markSentBtn" type="button">Mark sent to firm</button>
+                  </div>
+                  <label class="toolbar-field">
+                    <span>Status</span>
+                    <select id="detailStatus"></select>
+                  </label>
+                  <div class="workflow-shortcuts" id="workflowShortcuts"></div>
+
+                  <div class="followup-grid">
+                    <label class="toolbar-field">
+                      <span>Follow-up priority</span>
+                      <select id="followUpPriority"></select>
+                    </label>
+                    <label class="toolbar-field">
+                      <span>Follow-up on</span>
+                      <input id="followUpOn" type="date" />
+                    </label>
+                  </div>
+
+                  <label class="toolbar-field">
+                    <span>Follow-up note</span>
+                    <textarea id="followUpNote" rows="4" placeholder="What is missing, who should be contacted, and what should happen next?"></textarea>
+                  </label>
+
+                  <div class="detail-subsection">
+                    <div class="subsection-head">
+                      <h4>Requested docs</h4>
+                      <span class="page-meta">Track what you may want before onward handoff.</span>
+                    </div>
+                    <div id="requestedDocsChoices" class="check-grid"></div>
+                    <label class="toolbar-field top-gap">
+                      <span>Other requested docs</span>
+                      <input id="customRequestedDocs" type="text" placeholder="Comma-separated custom items" />
+                    </label>
+                  </div>
+
+                  <div class="detail-subsection">
+                    <div class="subsection-head">
+                      <h4>Internal checklist</h4>
+                      <span class="page-meta">Practical prep before referral onward.</span>
+                    </div>
+                    <div class="check-grid compact-check-grid">
+                      <label class="check-toggle"><input id="checkConflict" type="checkbox" /> Conflict check done</label>
+                      <label class="check-toggle"><input id="checkDocsRequested" type="checkbox" /> Docs requested / tracked</label>
+                      <label class="check-toggle"><input id="checkClientFollowUp" type="checkbox" /> Client follow-up sent</label>
+                      <label class="check-toggle"><input id="checkSummaryReady" type="checkbox" /> Summary package ready</label>
+                      <label class="check-toggle"><input id="checkReferralReady" type="checkbox" /> Ready for onward handoff</label>
+                    </div>
+                  </div>
+
+                  <div class="followup-grid">
+                    <label class="toolbar-field">
+                      <span>Last client contact</span>
+                      <input id="lastContactedAt" type="datetime-local" />
+                    </label>
+                  </div>
+
+                  <label class="toolbar-field">
+                    <span>Notes</span>
+                    <textarea id="detailNotes" rows="8" placeholder="Review notes, fit concerns, callback details, handoff notes, etc."></textarea>
+                  </label>
+                  <div class="form-actions workflow-actions">
+                    <button class="button" id="saveLeadBtn" type="button">Save workflow</button>
+                    <button class="button button-secondary" id="copySummaryBtn" type="button">Copy summary</button>
+                    <button class="button button-secondary" id="downloadJsonBtn" type="button">Download JSON</button>
+                    <button class="button button-secondary" id="downloadTextBtn" type="button">Download handoff</button>
+                    <button class="button button-secondary" id="openHandoffBtn" type="button">Open handoff page</button>
+                    <span id="saveMessage" class="page-meta"></span>
+                  </div>
+                </section>
+
+                <section class="detail-block premium-detail-block">
+                  <h3>Contact</h3>
+                  <dl class="detail-list" id="contactList"></dl>
+                </section>
+              </div>
+
+              <div class="detail-columns">
+                <section class="detail-block premium-detail-block">
+                  <h3>Accident summary</h3>
+                  <dl class="detail-list" id="matterList"></dl>
+                </section>
+                <section class="detail-block premium-detail-block">
+                  <h3>Referral readiness</h3>
+                  <div id="handoffChecklist" class="checklist-grid"></div>
+                </section>
+              </div>
+
+              <section class="detail-block premium-detail-block">
+                <h3>Submitted summary</h3>
+                <p id="detailSummary" class="summary-box"></p>
+              </section>
+
+              <section class="detail-columns">
+                <section class="detail-block premium-detail-block">
+                  <h3>Seriousness signals</h3>
+                  <div id="seriousnessSignals" class="tag-list"></div>
+                </section>
+                <section class="detail-block premium-detail-block">
+                  <h3>Documents</h3>
+                  <div id="documentSignals" class="tag-list"></div>
+                  <div id="uploadsList" class="uploads-list"></div>
+                </section>
+              </section>
+
+              <section class="detail-block premium-detail-block">
+                <h3>Delivery + source</h3>
+                <pre id="detailDelivery" class="json-box"></pre>
+              </section>
+            </article>
+          </section>
+        </section>
+      </section>
+    </div>
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
