@@ -1,16 +1,20 @@
 export function CtaSection() {
   return (
-    <section className="section section-muted">
+    <section className="section section-dark">
       <div className="container">
-        <div className="notice-box premium-notice-box quiet-notice-box">
-          <p className="eyebrow">Ready to start?</p>
-          <h2>Ask for a simple initial review</h2>
+        <div className="cta-block">
+          <p className="eyebrow">Take the first step</p>
+          <h2>Find out whether your Ontario accident may be worth pursuing</h2>
           <p>
-            If you want a low-pressure first step after an Ontario accident, start with the
-            review form above. No insurance details. No uploads in v1.
+            Submit a short review request — no insurance details, no document uploads.
+            A representative will review your situation and may follow up if it appears
+            to qualify.
           </p>
           <div className="hero-actions">
-            <a className="button" href="#intake">Start Your Review</a>
+            <a className="button button-light" href="#intake">Start Your Review</a>
+            <span className="cta-note">
+              Not a law firm. Does not provide legal advice or representation.
+            </span>
           </div>
         </div>
       </div>

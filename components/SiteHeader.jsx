@@ -13,10 +13,13 @@ export function SiteHeader() {
               {link.label}
             </a>
           ))}
-          <a className="button button-secondary" href="#intake">
+          <a className="button button-secondary nav-cta" href="#intake">
             Start Your Review
           </a>
         </div>
+        <a className="button button-secondary nav-cta mobile-only" href="#intake">
+          Start Your Review
+        </a>
       </div>
     </header>
   );

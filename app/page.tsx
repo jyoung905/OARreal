@@ -1,7 +1,8 @@
+import { CtaSection } from '@/components/CtaSection';
 import { FaqSection } from '@/components/FaqSection';
 import { FitSection } from '@/components/FitSection';
+import { IntakeModal } from '@/components/IntakeModal';
 import { ProcessSection } from '@/components/ProcessSection';
-import { QualificationForm } from '@/components/QualificationForm';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
 import { TrustBar } from '@/components/TrustBar';
@@ -18,10 +19,11 @@ export default function HomePage() {
         <ProcessSection />
         <FitSection />
         <ValueSection />
-        <QualificationForm />
         <FaqSection />
+        <CtaSection />
       </main>
       <SiteFooter />
+      <IntakeModal />
     </>
   );
 }

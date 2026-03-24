@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#101a2b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f0cc87"/>
+      <stop offset="100%" stop-color="#d2a85a"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="15%" cy="20%" r="40%">
+      <stop offset="0%" stop-color="rgba(210,168,90,0.18)"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="85%" cy="15%" r="35%">
+      <stop offset="0%" stop-color="rgba(79,107,176,0.18)"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+
+  <!-- Brand mark -->
+  <rect x="80" y="80" width="64" height="64" rx="18" fill="rgba(244,209,138,0.14)" stroke="rgba(244,209,138,0.22)" stroke-width="1.5"/>
+  <text x="112" y="120" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="800" fill="#f4d18a" letter-spacing="2">OAR</text>
+
+  <!-- Brand name -->
+  <text x="165" y="101" font-family="system-ui,sans-serif" font-size="22" font-weight="800" fill="#ffffff" letter-spacing="-0.5">Ontario Accident Review</text>
+  <text x="165" y="128" font-family="system-ui,sans-serif" font-size="16" font-weight="500" fill="rgba(222,230,241,0.68)">A simple first step for Ontario accident situations</text>
+
+  <!-- Divider -->
+  <line x1="80" y1="180" x2="1120" y2="180" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <!-- Headline -->
+  <text x="80" y="280" font-family="system-ui,sans-serif" font-size="52" font-weight="800" fill="#ffffff" letter-spacing="-2">Find out whether your</text>
+  <text x="80" y="348" font-family="system-ui,sans-serif" font-size="52" font-weight="800" fill="#ffffff" letter-spacing="-2">Ontario accident may be</text>
+  <text x="80" y="416" font-family="system-ui,sans-serif" font-size="52" font-weight="800" fill="url(#accent)" letter-spacing="-2">worth pursuing</text>
+
+  <!-- Subtext -->
+  <text x="80" y="480" font-family="system-ui,sans-serif" font-size="20" fill="rgba(222,230,241,0.78)">A low-pressure first step. No insurance details. No uploads.</text>
+
+  <!-- CTA pill -->
+  <rect x="80" y="515" width="220" height="50" rx="25" fill="rgba(210,168,90,0.12)" stroke="rgba(210,168,90,0.25)" stroke-width="1.5"/>
+  <text x="190" y="546" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" font-weight="700" fill="#f4d18a">Start Your Review →</text>
+
+  <!-- Disclaimer -->
+  <text x="80" y="596" font-family="system-ui,sans-serif" font-size="13" fill="rgba(222,230,241,0.42)">Not a law firm. No legal advice. No legal representation.</text>
+</svg>
