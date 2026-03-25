@@ -1,4 +1,5 @@
 import '@/styles/globals.css';
+import Script from 'next/script';
 import { Inter, Manrope } from 'next/font/google';
 import type { ReactNode } from 'react';
 import { site } from '@/lib/site';
@@ -55,10 +56,26 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en-CA">
-            <head>
+      <head>
         <script dangerouslySetInnerHTML={{ __html: "try { if (location.hash && location.hash !== '#intake') { history.replaceState(null, '', location.pathname); } } catch(e) {}" }} />
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-XXXXXXXXXX');
+            `,
+          }}
+        />
       </head>
-<body className={`${inter.variable} ${manrope.variable}`}>{children}</body>
+      <body className={`${inter.variable} ${manrope.variable}`}>{children}</body>
     </html>
   );
 }
