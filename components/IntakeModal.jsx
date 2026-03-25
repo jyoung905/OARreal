@@ -74,6 +74,17 @@ export function IntakeModal() {
       if (link) {
         e.preventDefault();
         openModal();
+        return;
+      }
+      // Intercept hash nav links so they scroll without adding hash to URL
+      // (prevents "page starts in middle" on next visit when hash persists)
+      const hashLink = e.target.closest('a[href^="#"]:not([href="#intake"])');
+      if (hashLink) {
+        const target = document.querySelector(hashLink.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
       }
     };
     document.addEventListener('click', handleClick);
