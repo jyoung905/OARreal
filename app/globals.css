@@ -802,8 +802,9 @@ li,
 }
 .compact-inline label { gap: 0; }
 .compact-inline label:has(input:checked) {
-  background: #001b441a !important;
-  border-color: #001b4466 !important;
+  background: #001b44 !important;
+  border-color: #001b44 !important;
+  color: #fff !important;
 }
 
 /* Hide radio dot inside compact pills */
