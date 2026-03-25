@@ -55,7 +55,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en-CA">
-      <body className={`${inter.variable} ${manrope.variable}`}>{children}</body>
+            <head>
+        <script dangerouslySetInnerHTML={{ __html: "try { if (location.hash && location.hash !== '#intake') { history.replaceState(null, '', location.pathname); } } catch(e) {}" }} />
+      </head>
+<body className={`${inter.variable} ${manrope.variable}`}>{children}</body>
     </html>
   );
 }
