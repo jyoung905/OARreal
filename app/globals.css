@@ -792,6 +792,48 @@ li,
   box-shadow: none !important;
 }
 
+/* Hide radio dot inside compact pills */
+.compact-inline input[type="radio"] {
+  position: absolute;
+  width: 1px; height: 1px;
+  opacity: 0;
+  clip-path: inset(50%);
+  pointer-events: none;
+}
+.compact-inline label { gap: 0; }
+.compact-inline label:has(input:checked) {
+  background: #001b441a !important;
+  border-color: #001b4466 !important;
+}
+
+/* Hide radio dot inside compact pills */
+.compact-inline input[type="radio"] {
+  position: absolute;
+  width: 1px; height: 1px;
+  opacity: 0; overflow: hidden;
+  clip-path: inset(50%);
+  pointer-events: none;
+}
+.compact-inline label { gap: 0; }
+.compact-inline label:has(input:checked) {
+  background: rgba(0, 27, 68, 0.10) !important;
+  border-color: rgba(0, 27, 68, 0.40) !important;
+}
+
+/* Hide radio dot inside compact pills — pill border/bg shows selection */
+.compact-inline input[type="radio"] {
+  position: absolute;
+  width: 1px; height: 1px;
+  opacity: 0; overflow: hidden;
+  clip: rect(0,0,0,0);
+  pointer-events: none;
+}
+.compact-inline label { gap: 0; }
+.compact-inline label:has(input:checked) {
+  background: rgba(0, 27, 68, 0.10) !important;
+  border-color: rgba(0, 27, 68, 0.40) !important;
+}
+
 .consent-block {
   align-items: flex-start;
 }
