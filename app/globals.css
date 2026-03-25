@@ -758,12 +758,9 @@ li,
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 0.65rem;
-  /* Fallback for older Safari without gap support */
-  margin: -0.3rem;
 }
-.inline-list > * {
-  margin: 0.3rem;
-}
+/* Remove the old margin-based gap fallback — modern browsers apply both
+   gap AND margin, causing ~1.25rem double-spacing that breaks 3-pill rows */
 
 /* Compact pill-style inline options
    Use combined selector (.compact-inline.radio-list) for higher specificity
@@ -785,6 +782,7 @@ li,
   transition: 150ms ease;
   box-shadow: none !important;
   line-height: 1.4;
+  white-space: nowrap; /* prevent “Not sure” / “Not yet” from wrapping inside the pill */
 }
 
 .compact-inline.radio-list label:hover,
@@ -1844,6 +1842,18 @@ body.modal-open {
   @keyframes modalInMobile {
     from { opacity: 0; transform: translateY(40px); }
     to   { opacity: 1; transform: none; }
+  }
+
+  /* Tighter pills on mobile so 3-option rows fit without overflowing */
+  .compact-inline.radio-list label,
+  .compact-inline label {
+    padding: 0.32rem 0.65rem !important;
+    font-size: 0.82rem;
+    gap: 0.35rem;
+  }
+
+  .inline-list {
+    gap: 0.45rem;
   }
 
   .modal-step-list {
