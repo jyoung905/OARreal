@@ -1,12 +1,12 @@
 import Link from 'next/link';
-import { Logo } from '@/components/Logo';
+import Image from 'next/image';
 
 export function SiteFooter() {
   return (
     <footer className="site-footer premium-site-footer">
       <div className="container footer-grid">
         <div>
-          <Logo showTagline={false} className="footer-logo" />
+          <Image src="/logo-placeholder.svg" alt="Ontario Accident Review" width={220} height={50} />
           <p>Ontario Accident Review is not a law firm. No legal advice. No legal representation.</p>
         </div>
         <div>
