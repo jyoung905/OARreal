@@ -2287,3 +2287,274 @@ body.modal-open {
     gap: 1.5rem;
   }
 }
+
+
+/* ============================================
+   STITCH DESIGN SYSTEM — HEADER (v2)
+   ============================================ */
+.stitch-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  background: #f8f9fb;
+  border-bottom: 1px solid rgba(197,198,208,0.3);
+  box-shadow: 0 1px 8px rgba(0,27,68,0.06);
+}
+.stitch-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  height: 72px;
+  gap: 24px;
+}
+.stitch-brand {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #001b44 !important;
+  text-decoration: none !important;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.stitch-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin: 0 auto;
+}
+.stitch-nav-link {
+  color: rgba(0,27,68,0.65) !important;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none !important;
+  transition: color 0.2s;
+}
+.stitch-nav-link:hover { color: #735c00 !important; }
+.stitch-nav-cta {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, #00020a, #001b44);
+  color: #fff !important;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.stitch-nav-cta:hover {
+  transform: scale(0.97);
+  box-shadow: 0 4px 16px rgba(0,2,10,0.3);
+}
+
+/* ============================================
+   STITCH DESIGN SYSTEM — HERO (SPLIT LAYOUT v2)
+   ============================================ */
+.hero-section {
+  position: relative !important;
+  min-height: 700px !important;
+  display: flex !important;
+  align-items: center !important;
+  background:
+    linear-gradient(135deg, rgba(0,2,10,0.92) 0%, rgba(0,27,68,0.84) 55%, rgba(0,27,68,0.6) 100%),
+    url('https://lh3.googleusercontent.com/aida-public/AB6AXuAYjwKll9NwHvJuDdcBB21V_p8shsbqm5Ot_KS9RdND7Nookj0qCS0fmVkmF5vZKP-BzetWcFygUKG7m7Gopw6zf48hI_-SZ2IwUj-6pZPSDC2Big9uTrPBISc5rdEnPAcwIDcZaX3vQgZcpQC2wk0QwfjbwxsovWn4bhA33CMIAsDYEkN02x4xpygWx25iM_rNkMwbyRzG369OkxX87EJ8SmPeV1sWwx5G0VaFoIGegBNCRLFtd5VkF7OmDIj9jU1jQDQCgy4Lhcv3') center/cover no-repeat !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+.hero-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 56px;
+  align-items: center;
+  width: 100%;
+}
+.hero-eyebrow {
+  display: inline-block !important;
+  color: #e9c349 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+  font-size: 0.75rem !important;
+  margin-bottom: 20px !important;
+  padding: 0 !important;
+  border: none !important;
+  background: none !important;
+}
+.hero-h1 {
+  color: #fff !important;
+  font-size: 3rem !important;
+  font-weight: 800 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.02em !important;
+  margin: 0 0 24px 0 !important;
+}
+.hero-h1-accent {
+  color: #e9c349;
+  display: block;
+  margin-top: 4px;
+}
+.hero-lead {
+  color: rgba(243,244,246,0.88) !important;
+  font-size: 1.05rem !important;
+  line-height: 1.75 !important;
+  max-width: 500px !important;
+  margin-bottom: 40px !important;
+}
+.hero-stats {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0 !important;
+  background: none !important;
+  padding: 0 !important;
+  border: none !important;
+  margin: 0 !important;
+}
+.hero-stat {
+  display: flex !important;
+  flex-direction: column !important;
+  padding-right: 32px !important;
+  background: none !important;
+  border: none !important;
+  text-align: left !important;
+}
+.hero-stat strong {
+  color: #e9c349 !important;
+  font-size: 2rem !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  display: block !important;
+}
+.hero-stat span {
+  color: rgba(243,244,246,0.6) !important;
+  font-size: 0.68rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  margin-top: 4px !important;
+  display: block !important;
+}
+.hero-stat-divider {
+  width: 1px;
+  height: 48px;
+  background: rgba(197,198,208,0.25);
+  margin-right: 32px;
+  flex-shrink: 0;
+}
+.hero-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-card {
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 36px 32px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  border-top: 4px solid #e9c349;
+  width: 100%;
+  max-width: 420px;
+}
+.hero-card-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #735c00;
+  margin-bottom: 8px;
+  display: block;
+}
+.hero-card-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #00020a;
+  line-height: 1.25;
+  margin: 0 0 10px 0;
+}
+.hero-card-sub {
+  color: #44474f;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.hero-card-checklist {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 0 28px 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hero-card-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: #191c1e;
+  line-height: 1.5;
+}
+.hero-card-checklist li::before {
+  content: '✓';
+  color: #735c00;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.hero-card-cta {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+  background: linear-gradient(135deg, #00020a, #001b44) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 16px 24px !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+  margin-bottom: 12px !important;
+  box-sizing: border-box !important;
+}
+.hero-card-cta:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 8px 24px rgba(0,2,10,0.4) !important;
+  color: #fff !important;
+}
+.hero-card-note {
+  text-align: center !important;
+  font-size: 0.72rem !important;
+  color: #75777f !important;
+  margin: 0 !important;
+}
+
+/* Mobile */
+@media (max-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    padding: 60px 24px !important;
+    gap: 40px !important;
+  }
+  .hero-h1 { font-size: 2.2rem !important; }
+  .stitch-nav-links { display: none !important; }
+  .stitch-nav { padding: 0 20px !important; }
+}
+@media (max-width: 600px) {
+  .stitch-brand { font-size: 0.8rem !important; letter-spacing: 0.07em !important; }
+  .hero-h1 { font-size: 1.85rem !important; }
+  .hero-grid { padding: 48px 20px !important; }
+}
