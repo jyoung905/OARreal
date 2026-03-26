@@ -60,7 +60,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <script dangerouslySetInnerHTML={{ __html: "try { if (location.hash && location.hash !== '#intake') { history.replaceState(null, '', location.pathname); } } catch(e) {}" }} />
         <Script
           strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18043625605"
         />
         <Script
           id="gtag-init"
@@ -70,7 +70,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'AW-XXXXXXXXXX');
+              gtag('config', 'AW-18043625605');
             `,
           }}
         />
