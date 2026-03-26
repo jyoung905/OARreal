@@ -1,19 +1,10 @@
 'use client';
-import { useEffect, useState } from 'react';
 import { IntakeModal } from './IntakeModal';
 
 export function HeroSection() {
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    const handler = () => setOpen(true);
-    window.addEventListener('open-intake', handler);
-    return () => window.removeEventListener('open-intake', handler);
-  }, []);
-
   return (
     <>
-      <section className="hero-section" id="intake">
+      <section className="hero-section">
         <div className="hero-inner">
           <p className="hero-eyebrow">Ontario Accident Review</p>
           <h1 className="hero-h1">
@@ -31,12 +22,12 @@ export function HeroSection() {
             <li>No obligation created by submitting</li>
           </ul>
           <div className="hero-cta-row">
-            <button
+            <a
+              href="#intake"
               className="button button-primary hero-cta-btn"
-              onClick={() => setOpen(true)}
             >
               Start Your Free Review
-            </button>
+            </a>
             <span className="hero-cta-note">~2 min · No documents required</span>
           </div>
           <div className="hero-stats">
@@ -59,7 +50,7 @@ export function HeroSection() {
           </p>
         </div>
       </section>
-      {open && <IntakeModal onClose={() => setOpen(false)} />}
+      <IntakeModal />
     </>
   );
 }
