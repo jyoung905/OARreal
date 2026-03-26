@@ -15,7 +15,6 @@ const initialData = {
   accidentType: '',
   accidentDate: '',
   cityArea: '',
-  inOntario: '',
   accidentSummary: '',
   injured: '',
   medicalAttention: '',
@@ -33,7 +32,7 @@ const initialData = {
 
 const requiredByStep = [
   ['fullName', 'phone', 'email', 'bestTime', 'contactMethod'],
-  ['accidentType', 'accidentDate', 'cityArea', 'inOntario', 'accidentSummary'],
+  ['accidentType', 'accidentDate', 'cityArea', 'accidentSummary'],
   ['injured', 'medicalAttention', 'workImpact', 'ongoingSymptoms'],
   ['spokenWithLawyer', 'currentlyRepresented', 'thirdPartyInvolved'],
   ['consentTruth', 'consentNotLawFirm', 'consentToContact']
@@ -270,7 +269,6 @@ export function IntakeModal() {
               <Field label="City or town in Ontario">
                 <input required value={data.cityArea} placeholder="Toronto, Brampton, Mississauga, Hamilton, etc." onChange={(e) => updateField(setData, 'cityArea', e.target.value)} />
               </Field>
-              <RadioGroup compact label="Did the accident happen in Ontario?" name="inOntario" value={data.inOntario} onChange={(v) => updateField(setData, 'inOntario', v)} options={['Yes', 'No']} />
             </div>
             <Field label="Briefly describe what happened">
               <textarea required rows={5} placeholder="A short summary is enough. Tell us what happened and what problems you are dealing with now." value={data.accidentSummary} onChange={(e) => updateField(setData, 'accidentSummary', e.target.value)} />
