@@ -60,7 +60,28 @@ export async function POST(request) {
       <b>Current status:</b> ${currentStatus || '—'}</p>
     `;
 
-    const tgText = `🚨 <b>New Lead</b>\n<b>Name:</b> ${fullName || '—'}\n<b>Phone:</b> ${phone || '—'}\n<b>Email:</b> ${email || '—'}\n<b>Accident:</b> ${accidentType || '—'} on ${accidentDate || '—'}\n<b>Contact pref:</b> ${preferredContact || '—'}, ${bestTime || '—'}`;
+    const lawyerFlag = hasLawyer && hasLawyer.toLowerCase().includes('yes') ? '⚠️ HAS LAWYER' : '';
+    const atFaultFlag = atFault && atFault.toLowerCase().includes('yes') ? '⚠️ AT FAULT' : '';
+    const flags = [lawyerFlag, atFaultFlag].filter(Boolean).join('  ');
+
+    const tgText = `🚨 <b>New Lead${flags ? ' — ' + flags : ''}</b>
+
+👤 <b>${fullName || '—'}</b>
+📞 ${phone || '—'}  |  📧 ${email || '—'}
+🕐 Best time: ${bestTime || '—'} via ${preferredContact || '—'}
+
+💥 <b>Accident:</b> ${accidentType || '—'}
+📅 Date: ${accidentDate || '—'}
+📍 ${location || '—'}
+⚖️ At fault: ${atFault || '—'}
+
+🩹 <b>Injuries:</b> ${injuries || '—'}
+🏥 Treatment sought: ${treatment || '—'}
+💼 Missed work: ${missedWork || '—'}
+
+🔑 <b>Has lawyer:</b> ${hasLawyer || '—'}
+📋 Reported to insurance: ${reportedToInsurance || '—'}
+📝 Status: ${currentStatus || '—'}`;
 
     await Promise.all([
       transporter.sendMail({
