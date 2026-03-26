@@ -2558,3 +2558,18 @@ body.modal-open {
   .hero-h1 { font-size: 1.85rem !important; }
   .hero-grid { padding: 48px 20px !important; }
 }
+
+
+/* ── Logo image in header ── */
+.stitch-brand img {
+  display: block;
+  height: 44px;
+  width: auto;
+  max-width: 220px;
+}
+
+.stitch-brand {
+  text-decoration: none !important;
+  display: flex;
+  align-items: center;
+}
