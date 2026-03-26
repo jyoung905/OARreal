@@ -1,6 +1,11 @@
+'use client';
 import Link from 'next/link';
 import { Logo } from '@/components/Logo';
 import { site } from '@/lib/site';
+
+function openIntake() {
+  window.dispatchEvent(new Event('open-intake'));
+}
 
 export function SiteHeader() {
   return (
@@ -13,13 +18,13 @@ export function SiteHeader() {
               {link.label}
             </a>
           ))}
-          <a className="button button-secondary nav-cta" href="#intake">
+          <button className="button button-secondary nav-cta" onClick={openIntake}>
             Start Your Review
-          </a>
+          </button>
         </div>
-        <a className="button button-secondary nav-cta mobile-only" href="#intake">
+        <button className="button button-secondary nav-cta mobile-only" onClick={openIntake}>
           Start Your Review
-        </a>
+        </button>
       </div>
     </header>
   );
