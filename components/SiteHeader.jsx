@@ -1,25 +1,19 @@
 import Link from 'next/link';
-import { Logo } from '@/components/Logo';
 import { site } from '@/lib/site';
 
 export function SiteHeader() {
   return (
-    <header className="site-header premium-site-header">
-      <div className="container nav">
-        <Logo />
-        <div className="nav-actions desktop-only">
+    <header className="stitch-header">
+      <div className="stitch-nav">
+        <Link href="/" className="stitch-brand" aria-label={site.name}>
+          {site.name}
+        </Link>
+        <nav className="stitch-nav-links desktop-only">
           {site.navLinks.map((link) => (
-            <a key={link.href} className="text-link" href={link.href}>
-              {link.label}
-            </a>
+            <a key={link.href} className="stitch-nav-link" href={link.href}>{link.label}</a>
           ))}
-          <a className="button button-secondary nav-cta" href="#intake">
-            Start Your Review
-          </a>
-        </div>
-        <a className="button button-secondary nav-cta mobile-only" href="#intake">
-          Start Your Review
-        </a>
+        </nav>
+        <a className="stitch-nav-cta" href="#intake">Start Your Review</a>
       </div>
     </header>
   );
@@ -27,12 +21,10 @@ export function SiteHeader() {
 
 export function SimpleHeader() {
   return (
-    <header className="site-header">
-      <div className="container nav">
-        <Logo />
-        <Link className="text-link" href="/">
-          Back to home
-        </Link>
+    <header className="stitch-header">
+      <div className="stitch-nav">
+        <Link href="/" className="stitch-brand" aria-label={site.name}>{site.name}</Link>
+        <Link className="stitch-nav-link" href="/">Back to home</Link>
       </div>
     </header>
   );
