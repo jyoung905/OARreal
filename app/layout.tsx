@@ -51,7 +51,10 @@ export const metadata = {
   robots: {
     index: true,
     follow: true
-  }
+  },
+  verification: {
+    google: 'gZVToI6H0XF_MBF1XiZczKJ8Op2PzA8X5ALxAaLLpPU',
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
