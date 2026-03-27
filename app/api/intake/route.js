@@ -27,10 +27,21 @@ export async function POST(request) {
   try {
     const body = await request.json();
     const {
-      fullName, phone, email, bestTime, preferredContact,
-      accidentDate, accidentType, location, atFault, description,
-      injuries, treatment, missedWork, vehicleDamage,
-      hasLawyer, reportedToInsurance, currentStatus,
+      fullName, phone, email, bestTime,
+      contactMethod,
+      accidentType, accidentDate,
+      cityArea,
+      accidentSummary,
+      injured,
+      injuryDetails,
+      medicalAttention,
+      workImpact,
+      ongoingSymptoms,
+      spokenWithLawyer,
+      currentlyRepresented,
+      thirdPartyInvolved,
+      additionalNotes,
+      inOntario,
     } = body;
 
     const subject = `New lead: ${fullName || 'Unknown'} — ${phone || email || '—'}`;
@@ -42,46 +53,53 @@ export async function POST(request) {
       <b>Phone:</b> ${phone || '—'}<br>
       <b>Email:</b> ${email || '—'}<br>
       <b>Best time:</b> ${bestTime || '—'}<br>
-      <b>Preferred contact:</b> ${preferredContact || '—'}</p>
+      <b>Preferred contact:</b> ${contactMethod || '—'}</p>
       <h3>Accident</h3>
       <p><b>Date:</b> ${accidentDate || '—'}<br>
       <b>Type:</b> ${accidentType || '—'}<br>
-      <b>Location:</b> ${location || '—'}<br>
-      <b>At fault:</b> ${atFault || '—'}<br>
-      <b>Description:</b> ${description || '—'}</p>
+      <b>Location:</b> ${cityArea || '—'}<br>
+      <b>In Ontario:</b> ${inOntario || '—'}<br>
+      <b>Description:</b> ${accidentSummary || '—'}</p>
       <h3>Impact</h3>
-      <p><b>Injuries:</b> ${injuries || '—'}<br>
-      <b>Treatment:</b> ${treatment || '—'}<br>
-      <b>Missed work:</b> ${missedWork || '—'}<br>
-      <b>Vehicle damage:</b> ${vehicleDamage || '—'}</p>
-      <h3>Current Status</h3>
-      <p><b>Has lawyer:</b> ${hasLawyer || '—'}<br>
-      <b>Reported to insurance:</b> ${reportedToInsurance || '—'}<br>
-      <b>Current status:</b> ${currentStatus || '—'}</p>
+      <p><b>Injured:</b> ${injured || '—'}<br>
+      <b>Medical attention:</b> ${medicalAttention || '—'}<br>
+      <b>Work/life impact:</b> ${workImpact || '—'}<br>
+      <b>Ongoing symptoms:</b> ${ongoingSymptoms || '—'}<br>
+      <b>Injury details:</b> ${injuryDetails || '—'}</p>
+      <h3>Legal Status</h3>
+      <p><b>Spoken with lawyer:</b> ${spokenWithLawyer || '—'}<br>
+      <b>Currently represented:</b> ${currentlyRepresented || '—'}<br>
+      <b>Third party involved:</b> ${thirdPartyInvolved || '—'}</p>
+      ${additionalNotes ? `<h3>Additional Notes</h3><p>${additionalNotes}</p>` : ''}
     `;
 
-    const lawyerFlag = hasLawyer && hasLawyer.toLowerCase().includes('yes') ? '⚠️ HAS LAWYER' : '';
-    const atFaultFlag = atFault && atFault.toLowerCase().includes('yes') ? '⚠️ AT FAULT' : '';
-    const flags = [lawyerFlag, atFaultFlag].filter(Boolean).join('  ');
+    const hasLawyerFlag = currentlyRepresented && currentlyRepresented.toLowerCase().includes('yes') ? '⚠️ HAS LAWYER' : '';
+    const flags = [hasLawyerFlag].filter(Boolean).join('  ');
 
     const tgText = `🚨 <b>New Lead${flags ? ' — ' + flags : ''}</b>
 
 👤 <b>${fullName || '—'}</b>
 📞 ${phone || '—'}  |  📧 ${email || '—'}
-🕐 Best time: ${bestTime || '—'} via ${preferredContact || '—'}
+🕐 Best time: ${bestTime || '—'} via ${contactMethod || '—'}
 
 💥 <b>Accident:</b> ${accidentType || '—'}
 📅 Date: ${accidentDate || '—'}
-📍 ${location || '—'}
-⚖️ At fault: ${atFault || '—'}
+📍 ${cityArea || '—'}${inOntario ? ` (Ontario: ${inOntario})` : ''}
 
-🩹 <b>Injuries:</b> ${injuries || '—'}
-🏥 Treatment sought: ${treatment || '—'}
-💼 Missed work: ${missedWork || '—'}
+🩹 <b>Injured:</b> ${injured || '—'}
+🏥 Medical attention: ${medicalAttention || '—'}
+💼 Work/life impact: ${workImpact || '—'}
+🔄 Ongoing symptoms: ${ongoingSymptoms || '—'}
+${injuryDetails ? `📝 ${injuryDetails}` : ''}
 
-🔑 <b>Has lawyer:</b> ${hasLawyer || '—'}
-📋 Reported to insurance: ${reportedToInsurance || '—'}
-📝 Status: ${currentStatus || '—'}`;
+⚖️ Spoken with lawyer: ${spokenWithLawyer || '—'}
+🔑 Currently represented: ${currentlyRepresented || '—'}
+👥 Third party involved: ${thirdPartyInvolved || '—'}
+${additionalNotes ? `
+💬 Notes: ${additionalNotes}` : ''}
+
+📋 <b>Accident summary:</b>
+${accidentSummary || '—'}`;
 
     await Promise.all([
       transporter.sendMail({
