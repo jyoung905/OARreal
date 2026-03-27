@@ -3,7 +3,7 @@ import { SiteFooter } from '@/components/SiteFooter';
 
 export const metadata = {
   title: 'Contact',
-  description: 'Placeholder contact details for the Ontario Accident Review launch site.'
+  description: 'Get in touch with Ontario Accident Review. We\'re here to help with your initial accident review inquiry.'
 };
 
 export default function ContactPage() {
@@ -15,19 +15,23 @@ export default function ContactPage() {
           <div className="page-head">
             <p className="eyebrow">Contact</p>
             <h1>Contact Ontario Accident Review</h1>
-            <p className="page-copy">Before launch, replace the placeholders below with the approved contact details for the Ontario Accident Review intake operation.</p>
+            <p className="page-copy">Have a question before starting your review? Reach out using any of the options below. For the fastest response, use our online review form — it takes about two minutes and lets us assess your situation right away.</p>
           </div>
           <div className="contact-grid">
             <section className="contact-card">
-              <h3>General inquiry</h3>
-              <p>Email: intake@example.com</p>
-              <p>Phone: 416-555-0100</p>
-              <p>Hours: Monday to Friday, 9:00 AM to 5:00 PM</p>
+              <h3>Get in touch</h3>
+              <p>Email: <a href="mailto:ontarioaccidentreview@gmail.com">ontarioaccidentreview@gmail.com</a></p>
+              <p>Hours: Available 24/7</p>
             </section>
             <section className="contact-card">
-              <h3>Important note</h3>
-              <p>The homepage review form is the preferred first step for new accident situations.</p>
-              <p>Do not send urgent deadlines, limitation-period issues, or highly sensitive information through unapproved channels.</p>
+              <h3>Start your free review</h3>
+              <p>The fastest way to get a response is to complete our short online review form. It takes about two minutes and helps us understand your situation before we reach out.</p>
+              <a className="button" href="/#intake" style={{ display: 'inline-block', marginTop: '0.75rem' }}>Begin Free Review</a>
+            </section>
+            <section className="contact-card">
+              <h3>Important notice</h3>
+              <p>Ontario Accident Review is not a law firm and does not provide legal advice. If you have an urgent legal deadline or limitation period concern, please contact a licensed Ontario lawyer directly.</p>
+              <p>Do not send sensitive personal, financial, or insurance details by email — our review form is the appropriate channel for submitting your information securely.</p>
             </section>
           </div>
         </div>
