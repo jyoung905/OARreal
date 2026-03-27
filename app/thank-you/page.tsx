@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Script from 'next/script';
+import TrackLead from '@/components/TrackLead';
 
 export const metadata = {
   title: 'Thank You | Ontario Accident Review',
@@ -15,6 +16,7 @@ export const metadata = {
 export default function ThankYouPage() {
   return (
     <>
+      <TrackLead />
       {/* Google Ads Conversion */}
       <Script id="google-ads-conversion" strategy="afterInteractive">
         {`gtag('event', 'conversion', {'send_to': 'AW-18043625605/8oKiCPKi4vIaEOr6xaED','value': 1.0,'currency': 'CAD'});`}

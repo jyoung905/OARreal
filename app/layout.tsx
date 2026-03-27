@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { Inter, Manrope } from 'next/font/google';
 import type { ReactNode } from 'react';
 import { site } from '@/lib/site';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -75,7 +76,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           }}
         />
       </head>
-      <body className={`${inter.variable} ${manrope.variable}`}>{children}</body>
+      <body className={`${inter.variable} ${manrope.variable}`}><GoogleAnalytics />{children}</body>
     </html>
   );
 }
