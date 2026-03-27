@@ -26,7 +26,7 @@ export function HeroSection() {
           <div className="hero-card">
             <span className="hero-card-label">Start Your Review</span>
             <h2 className="hero-card-title">Tell us the basics of your accident</h2>
-            <p className="hero-card-sub">Keep it simple — we only ask what\'s needed for an initial review.</p>
+            <p className="hero-card-sub">Keep it simple — we only ask what&apos;s needed for an initial review.</p>
             <ul className="hero-card-checklist">
               <li>No insurance details required at this stage</li>
               <li>No documents or uploads needed</li>
