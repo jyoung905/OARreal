@@ -1,15 +1,14 @@
-export const GA_CONVERSION_ID = 'AW-XXXXXXXXXX';
-export const GA_CONVERSION_LABEL = 'YYYYYYYYYYYYY';
+// TODO: Replace G-XXXXXXXXXX with your real GA4 Measurement ID before deploying
+export const GA_ID = 'G-BJN974S0MR';
 
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
+export const pageview = (url: string) => {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('config', GA_ID, { page_path: url });
   }
-}
+};
 
-export function fireFormConversion() {
-  if (typeof window === 'undefined' || !window.gtag) return;
-  window.gtag('event', 'conversion', {
-    send_to: `${GA_CONVERSION_ID}/${GA_CONVERSION_LABEL}`,
-  });
-}
+export const event = (action: string, params?: Record<string, unknown>) => {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('event', action, params);
+  }
+};
