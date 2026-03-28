@@ -1,5 +1,4 @@
 'use client';
-import { fireFormConversion } from '@/lib/gtag';
 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -152,7 +151,6 @@ export function IntakeModal() {
       const result = await response.json().catch(() => ({}));
       if (!response.ok) throw new Error(result.error || 'Submission failed. Please try again.');
       closeModal();
-      fireFormConversion();
       router.push('/thank-you');
     } catch (err) {
       setSubmitState({
