@@ -13,7 +13,6 @@ export default function TrackLead() {
       event_category: 'intake_form',
       event_label: 'ab_claims_ontario',
     });
-    event('conversion', { send_to: 'AW-18043625605/oKibCNji-ZAcEIXB75tD' });
   }, []);
 
   return null;
