@@ -17,9 +17,9 @@ export default function ThankYouPage() {
   return (
     <>
       <TrackLead />
-      {/* Google Ads Conversion */}
+      {/* Google Ads Conversion — Submit lead form (primary) */}
       <Script id="google-ads-conversion" strategy="afterInteractive">
-        {`gtag('event', 'conversion', {'send_to': 'AW-18043625605/8oKiCPKi4vIaEOr6xaED','value': 1.0,'currency': 'CAD'});`}
+        {`gtag('event', 'conversion', {'send_to': 'AW-18043625605/HwLYCIypipAcEIXB75tD','value': 1.0,'currency': 'CAD'});`}
       </Script>
       {/* Header */}
       <header className="stitch-header">
