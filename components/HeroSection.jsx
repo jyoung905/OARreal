@@ -5,14 +5,15 @@ export function HeroSection() {
     <section className="hero-section">
       <div className="hero-grid">
         <div className="hero-left">
-          <p className="hero-eyebrow">Free Case Evaluation</p>
+          <p className="hero-eyebrow">Free Accident Benefits Review</p>
           <h1 className="hero-h1">
-            Injured in an Ontario accident?{' '}
-            <span className="hero-h1-accent">Find out if your situation may be worth pursuing.</span>
+            Don&apos;t let your insurance company{' '}
+            <span className="hero-h1-accent">decide what your claim is worth.</span>
           </h1>
           <p className="hero-lead">
-            Answer a few simple questions about your situation. If it appears to fit our criteria,
-            a representative will reach out to explain possible next steps — at no cost or obligation.
+            Get a free review of your accident benefits situation — before you accept anything from your insurer.
+            If your case fits our criteria, a licensed Ontario legal professional will reach out
+            with a real assessment of your options. No cost, no obligation.
           </p>
           <div className="hero-stats">
             <div className="hero-stat"><strong>$0</strong><span>to start</span></div>
