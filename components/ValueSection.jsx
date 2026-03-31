@@ -1,19 +1,19 @@
 export function ValueSection() {
   const items = [
     {
-      label: 'Less pressure',
-      title: 'An easier place to start',
-      body: 'Many people feel anxious about contacting a lawyer right away. This gives you a simpler way to begin.'
+      label: 'Know your rights',
+      title: 'Insurance companies count on you not knowing',
+      body: 'Most accident victims don\'t know what they\'re entitled to under Ontario law. Insurers count on that. A review helps level the playing field before you accept anything.'
     },
     {
-      label: 'More clarity',
-      title: 'Review first, then next steps',
-      body: 'The goal is to understand whether your accident may be worth pursuing so you are not left guessing.'
+      label: 'Real advice',
+      title: 'A licensed professional reviews your case',
+      body: 'If your situation qualifies, a licensed Ontario legal professional — not a call centre — will reach out with a genuine assessment of what your case may be worth.'
     },
     {
-      label: 'Simple review',
-      title: 'Only the basics at first',
-      body: 'We only ask for the basic information needed for an initial review and possible callback.'
+      label: 'No commitment',
+      title: 'Understand your options first',
+      body: 'You may be owed far more than your insurer has offered. Find out before you decide — no documents, no insurance details, no obligation at this stage.'
     }
   ];
 
