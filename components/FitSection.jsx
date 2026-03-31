@@ -9,8 +9,8 @@ export function FitSection() {
       body: 'You want someone to review the basics before you decide whether to go further.'
     },
     {
-      title: 'You want clarity before contacting a lawyer',
-      body: 'This gives you a softer first step if reaching out to a lawyer directly feels intimidating.'
+      title: 'You want to understand your rights before dealing with your insurer',
+      body: 'Insurance companies have legal teams on their side. A free review helps you understand where you stand before you respond to any offer or denial.'
     },
     {
       title: 'You want a simple first review',
