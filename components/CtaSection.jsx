@@ -4,11 +4,11 @@ export function CtaSection() {
       <div className="container">
         <div className="cta-block">
           <p className="eyebrow">Take the first step</p>
-          <h2>Find out whether your Ontario accident may be worth pursuing</h2>
+          <h2>Find out what your claim is actually worth — before your insurer decides for you</h2>
           <p>
             Submit a short review request — no insurance details, no document uploads.
-            A representative will review your situation and may follow up if it appears
-            to qualify.
+            If your situation qualifies, a licensed Ontario legal professional will follow up
+            with a real assessment of your case.
           </p>
           <div className="hero-actions">
             <a className="button button-light" href="#intake">Start Your Review</a>
