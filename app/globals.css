@@ -2573,3 +2573,62 @@ body.modal-open {
   display: flex;
   align-items: center;
 }
+
+
+/* ── Mobile hamburger ── */
+.stitch-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-left: 12px;
+}
+.stitch-hamburger-line {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #cba72f;
+  transition: transform 0.2s, opacity 0.2s;
+  border-radius: 2px;
+}
+
+/* ── Mobile nav dropdown ── */
+.stitch-mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  padding: 1.25rem 1.5rem 1.5rem;
+  background: #060b16;
+  border-top: 1px solid rgba(203,167,47,0.2);
+}
+.stitch-mobile-link {
+  color: #f8f5ee;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.25rem 0;
+  transition: color 0.15s;
+}
+.stitch-mobile-link:hover { color: #cba72f; }
+.stitch-mobile-cta {
+  display: block;
+  text-align: center;
+  margin-top: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #cba72f;
+  color: #1a0f00;
+  font-weight: 700;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.stitch-mobile-cta:hover { background: #e0ba44; }
+
+@media (max-width: 960px) {
+  .stitch-hamburger { display: flex; }
+  .stitch-nav-cta { display: none !important; }
+}
