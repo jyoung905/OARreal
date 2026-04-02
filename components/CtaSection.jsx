@@ -1,22 +1,17 @@
 export function CtaSection() {
   return (
-    <section className="section section-dark">
-      <div className="container">
-        <div className="cta-block">
-          <p className="eyebrow">Take the first step</p>
-          <h2>Find out what your claim is actually worth — before your insurer decides for you</h2>
-          <p>
-            Submit a short review request — no insurance details, no document uploads.
-            If your situation qualifies, a licensed Ontario legal professional will follow up
-            with a real assessment of your case.
-          </p>
-          <div className="hero-actions">
-            <a className="button button-light" href="#intake">Start Your Review</a>
-            <span className="cta-note">
-              Not a law firm. Does not provide legal advice or representation.
-            </span>
-          </div>
-        </div>
+    <section style={{background:'#060b16',padding:'100px 0',borderTop:'1px solid rgba(203,167,47,0.2)'}}>
+      <div style={{maxWidth:800,margin:'0 auto',padding:'0 24px',textAlign:'center'}}>
+        <p style={{color:'#cba72f',fontFamily:'Manrope,sans-serif',fontWeight:700,letterSpacing:'0.12em',textTransform:'uppercase',fontSize:'0.75rem',marginBottom:16,marginTop:0}}>Take the first step</p>
+        <h2 style={{color:'#fff',fontFamily:'Manrope,sans-serif',fontSize:'clamp(1.8rem,4vw,3rem)',fontWeight:800,marginBottom:20,marginTop:0,lineHeight:1.2}}>
+          Find out what your claim is actually worth — before your insurer decides for you
+        </h2>
+        <p style={{color:'#8fa3be',fontFamily:'Inter,sans-serif',fontSize:'1.05rem',lineHeight:1.7,marginBottom:40,marginTop:0}}>
+          No lawyers, no commitment, no pressure. Just an honest first look at your situation under Ontario law.
+        </p>
+        <a href="#intake" style={{display:'inline-block',background:'#cba72f',color:'#0a1628',fontFamily:'Manrope,sans-serif',fontWeight:800,fontSize:'1rem',padding:'16px 40px',borderRadius:4,textDecoration:'none',letterSpacing:'0.05em'}}>
+          Start Your Free Review
+        </a>
       </div>
     </section>
   );
