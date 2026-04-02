@@ -1,32 +1,23 @@
 export function ValueSection() {
   const items = [
-    {
-      label: 'Know your rights',
-      title: 'Insurance companies count on you not knowing',
-      body: 'Most accident victims don\'t know what they\'re entitled to under Ontario law. Insurers count on that. A review helps level the playing field before you accept anything.'
-    },
-    {
-      label: 'Real advice',
-      title: 'A licensed professional reviews your case',
-      body: 'If your situation qualifies, a licensed Ontario legal professional — not a call centre — will reach out with a genuine assessment of what your case may be worth.'
-    },
-    {
-      label: 'No commitment',
-      title: 'Understand your options first',
-      body: 'You may be owed far more than your insurer has offered. Find out before you decide — no documents, no insurance details, no obligation at this stage.'
-    }
+    { icon: '⚖️', title: 'Know your rights', body: "Ontario accident law is complex. We break it down so you can understand your situation — without hiring anyone first." },
+    { icon: '💬', title: 'Real advice, not generic info', body: "Your review is based on your specific situation, not a generic FAQ. We assess what Ontario's rules say about your case." },
+    { icon: '🤝', title: 'No commitment required', body: "Submitting a review doesn't start any legal process. It's simply a first step — you decide what to do from there." },
   ];
-
   return (
-    <section className="section section-muted">
-      <div className="container premium-metrics-grid calm-metrics-grid">
-        {items.map((item) => (
-          <article key={item.title} className="metric-card quiet-card">
-            <span className="metric-label">{item.label}</span>
-            <strong>{item.title}</strong>
-            <p>{item.body}</p>
-          </article>
-        ))}
+    <section style={{background:'#0e1c30',padding:'80px 0'}}>
+      <div style={{maxWidth:1100,margin:'0 auto',padding:'0 24px'}}>
+        <p style={{color:'#cba72f',fontFamily:'Manrope,sans-serif',fontWeight:700,letterSpacing:'0.12em',textTransform:'uppercase',fontSize:'0.75rem',marginBottom:16,marginTop:0}}>Why Ontario Accident Review</p>
+        <h2 style={{color:'#fff',fontFamily:'Manrope,sans-serif',fontSize:'clamp(1.6rem,3vw,2.4rem)',fontWeight:800,marginBottom:56,marginTop:0}}>Built for people who want clarity — not pressure</h2>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))',gap:40}}>
+          {items.map(item => (
+            <div key={item.title} style={{borderTop:'1px solid rgba(203,167,47,0.3)',paddingTop:28}}>
+              <div style={{fontSize:'2rem',marginBottom:16}}>{item.icon}</div>
+              <h3 style={{color:'#fff',fontFamily:'Manrope,sans-serif',fontSize:'1.05rem',fontWeight:700,marginBottom:10,marginTop:0}}>{item.title}</h3>
+              <p style={{color:'#8fa3be',fontFamily:'Inter,sans-serif',fontSize:'0.95rem',lineHeight:1.7,margin:0}}>{item.body}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
