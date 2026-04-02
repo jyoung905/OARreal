@@ -19,6 +19,7 @@ export function SiteHeader() {
           {site.navLinks.map((link) => (
             <a key={link.href} className="stitch-nav-link" href={link.href}>{link.label}</a>
           ))}
+          <a className="stitch-nav-link" href="/blog">Blog</a>
         </nav>
         <a className="stitch-nav-cta" href="#intake">Start Your Review</a>
       </div>
