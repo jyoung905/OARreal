@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Blog & Resources | Ontario Accident Review</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode:"class",
+    theme:{extend:{
+      colors:{"tertiary-container":"#cba72f","secondary-container":"#d8e3fa","background":"#f8f9fb","tertiary":"#735c00","surface-container-high":"#e7e8ea","on-primary-container":"#7084b3","error":"#ba1a1a","on-tertiary":"#ffffff","on-background":"#191c1e","error-container":"#ffdad6","on-primary":"#ffffff","surface-container":"#edeef0","on-secondary-container":"#5a6578","surface-container-highest":"#e1e2e4","surface":"#f8f9fb","on-tertiary-container":"#4e3d00","surface-container-low":"#f3f4f6","surface-container-lowest":"#ffffff","primary-container":"#001b44","on-secondary-fixed":"#111c2c","on-surface-variant":"#44474f","on-surface":"#191c1e","surface-variant":"#e1e2e4","surface-dim":"#d9dadc","on-secondary":"#ffffff","outline-variant":"#c5c6d0","outline":"#75777f","secondary":"#545f72","primary":"#00020a"},
+      fontFamily:{"headline":["Manrope"],"body":["Inter"],"label":["Inter"]},
+      borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"}
+    }}
+  }
+</script>
+<style>
+  .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
+  .glass-header{background:rgba(6,11,22,0.90);backdrop-filter:blur(14px);}
+  .dark-section{background:#060b16;}
+  .dark-card{background:#0e1c30;border:1px solid rgba(255,255,255,0.06);transition:border-color 0.2s ease,background 0.2s ease;}
+  .dark-card:hover{border-color:rgba(203,167,47,0.35);background:#112037;}
+  .gold-label{color:#cba72f;font-size:0.68rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;font-family:Inter,sans-serif;}
+  .gold-line{width:44px;height:2px;background:linear-gradient(90deg,#735c00,#cba72f);}
+  .gold-btn{background:#cba72f;color:#1a0f00;font-weight:700;transition:background 0.2s ease,transform 0.15s ease;}
+  .gold-btn:hover{background:#e0ba44;}
+  .ghost-btn{border:1.5px solid rgba(203,167,47,0.5);color:#cba72f;font-weight:700;transition:background 0.2s ease,border-color 0.2s ease;}
+  .ghost-btn:hover{background:rgba(203,167,47,0.08);border-color:#cba72f;}
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.5s ease,transform 0.5s ease;}
+  .reveal.visible{opacity:1;transform:translateY(0);}
+  .hover-lift{transition:transform 0.2s ease;}
+  .hover-lift:hover{transform:translateY(-3px);}
+  .blog-arrow{transition:transform 0.2s ease;}
+  .group:hover .blog-arrow{transform:translateX(4px);}
+  .tag{display:inline-block;padding:2px 10px;border-radius:999px;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;font-family:Inter,sans-serif;background:rgba(203,167,47,0.12);color:#cba72f;border:1px solid rgba(203,167,47,0.2);}
+</style>
+</head>
+<body class="font-body flex flex-col min-h-screen" style="background:#060b16;">
+
+<!-- HEADER -->
+<header class="fixed top-0 w-full z-50 glass-header border-b border-white/5">
+  <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+    <a href="index.html" class="flex items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 100" fill="none" height="40" style="width:auto">
+        <path d="M 72 64 A 28 28 0 1 1 48 22" stroke="#e8f0ff" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <path d="M 48 22 A 28 28 0 0 1 72 64" stroke="#3a82c8" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <line x1="48" y1="30" x2="48" y2="42" stroke="#3a82c8" stroke-width="4" stroke-linecap="round"/>
+        <line x1="48" y1="42" x2="48" y2="58" stroke="#3a82c8" stroke-width="4" stroke-linecap="round"/>
+        <polyline points="38,50 48,62 58,50" stroke="#3a82c8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <text x="92" y="44" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="25" fill="#e8f0ff">Ontario</text>
+        <text x="92" y="74" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="25" fill="#e8f0ff">Accident Review</text>
+      </svg>
+    </a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a class="text-white/70 font-medium hover:text-white transition-colors text-sm font-label" href="index.html#how-it-works">How it works</a>
+      <a class="text-white/70 font-medium hover:text-white transition-colors text-sm font-label" href="index.html#who-this-is-for">Who this is for</a>
+      <a class="text-white font-semibold transition-colors text-sm font-label border-b border-tertiary-container" href="blog.html">Blog</a>
+      <a class="text-white/70 font-medium hover:text-white transition-colors text-sm font-label" href="index.html#faq">FAQ</a>
+    </nav>
+    <a href="code.html" class="gold-btn px-6 py-2.5 rounded-md text-sm tracking-wide shadow-sm font-label">
+      Start Your Review
+    </a>
+  </div>
+</header>
+
+<!-- BLOG HERO -->
+<section class="pt-36 pb-20 px-6" style="background:linear-gradient(145deg,#04090f 0%,#001b44 55%,#050d1a 100%);">
+  <div class="max-w-7xl mx-auto">
+    <div class="max-w-2xl">
+      <div class="gold-label mb-4">Resources &amp; Insights</div>
+      <h1 class="text-5xl font-extrabold text-white font-headline leading-tight mb-5">Know Before<br/>You Claim.</h1>
+      <div class="gold-line mb-5"></div>
+      <p class="text-white/55 leading-relaxed font-body max-w-lg">Ontario's accident benefits system is complex. These articles are written to help claimants understand their rights, timelines, and options â before making any decisions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED POST -->
+<section class="px-6 py-16" style="background:#08101d;">
+  <div class="max-w-7xl mx-auto">
+    <div class="gold-label mb-8">Featured</div>
+    <a href="blog-deadlines.html" class="group grid grid-cols-1 lg:grid-cols-5 gap-0 dark-card rounded-xl overflow-hidden reveal hover-lift">
+      <div class="lg:col-span-2 h-64 lg:h-auto flex items-center justify-center" style="background:linear-gradient(135deg,#001b44,#002e6e); min-height: 280px;">
+        <span class="material-symbols-outlined text-8xl" style="color:rgba(203,167,47,0.25);font-variation-settings:'FILL' 1;">calendar_clock</span>
+      </div>
+      <div class="lg:col-span-3 p-10 flex flex-col justify-center space-y-4">
+        <span class="tag">Deadlines &amp; Timelines</span>
+        <h2 class="text-2xl font-extrabold text-white font-headline leading-snug group-hover:opacity-80 transition-opacity">The 5 Deadlines Ontario Accident Victims Miss â And What Happens When They Do</h2>
+        <p class="text-white/45 text-sm leading-relaxed font-body">Missing a notice or application deadline can permanently eliminate benefits you're otherwise legally entitled to under Ontario law. This article breaks down the five most commonly missed windows and what your options are if you've already passed one.</p>
+        <div class="flex items-center justify-between pt-4 border-t border-white/6">
+          <div class="text-xs text-white/30 font-label">8 min read Â· Deadlines</div>
+          <div class="flex items-center gap-1.5 text-sm font-semibold font-label" style="color:#cba72f">
+            Read article <span class="material-symbols-outlined text-base blog-arrow">arrow_forward</span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ALL POSTS GRID -->
+<section class="px-6 py-16" style="background:#060b16;">
+  <div class="max-w-7xl mx-auto">
+    <div class="gold-label mb-10">All Articles</div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Post 1 -->
+      <a href="blog-sabs.html" class="group dark-card reveal rounded-xl overflow-hidden hover-lift block">
+        <div class="h-44 flex items-center justify-center" style="background:linear-gradient(135deg,#0d1f38,#001b44)">
+          <span class="material-symbols-outlined text-7xl" style="color:rgba(203,167,47,0.28);font-variation-settings:'FILL' 1;">account_balance</span>
+        </div>
+        <div class="p-6 space-y-3">
+          <span class="tag">Insurance Rights</span>
+          <h3 class="text-base font-bold text-white font-headline leading-snug group-hover:opacity-75 transition-opacity">What Ontario's SABS Actually Covers: A Plain-Language Breakdown</h3>
+          <p class="text-white/40 text-xs leading-relaxed font-body">The Statutory Accident Benefits Schedule is long and technical. We translate it into what actually matters for your claim.</p>
+          <div class="pt-3 flex items-center justify-between border-t border-white/6">
+            <div class="text-xs text-white/25 font-label">6 min read</div>
+            <div class="flex items-center gap-1 text-xs font-semibold font-label" style="color:#cba72f">Read <span class="material-symbols-outlined text-sm blog-arrow">arrow_forward</span></div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Post 2 -->
+      <a href="blog-settlement.html" class="group dark-card reveal rounded-xl overflow-hidden hover-lift block" style="transition-delay:0.07s">
+        <div class="h-44 flex items-center justify-center" style="background:linear-gradient(135deg,#091625,#001b44)">
+          <span class="material-symbols-outlined text-7xl" style="color:rgba(203,167,47,0.28);font-variation-settings:'FILL' 1;">handshake</span>
+        </div>
+        <div class="p-6 space-y-3">
+          <span class="tag">Settlements</span>
+          <h3 class="text-base font-bold text-white font-headline leading-snug group-hover:opacity-75 transition-opacity">Should You Accept the First Offer? What Most Claimants Don't Know</h3>
+          <p class="text-white/40 text-xs leading-relaxed font-body">Initial settlement offers routinely undervalue future costs. Here's what's negotiable and what isn't.</p>
+          <div class="pt-3 flex items-center justify-between border-t border-white/6">
+            <div class="text-xs text-white/25 font-label">7 min read</div>
+            <div class="flex items-center gap-1 text-xs font-semibold font-label" style="color:#cba72f">Read <span class="material-symbols-outlined text-sm blog-arrow">arrow_forward</span></div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Post 3 â placeholder -->
+      <div class="dark-card reveal rounded-xl overflow-hidden" style="transition-delay:0.14s; opacity:0.5; pointer-events:none;">
+        <div class="h-44 flex items-center justify-center" style="background:linear-gradient(135deg,#0a1728,#001b44)">
+          <span class="material-symbols-outlined text-7xl" style="color:rgba(203,167,47,0.18);font-variation-settings:'FILL' 1;">medical_services</span>
+        </div>
+        <div class="p-6 space-y-3">
+          <span class="tag">Medical Benefits</span>
+          <h3 class="text-base font-bold text-white/60 font-headline leading-snug">Income Replacement &amp; Rehab Benefits: What You're Entitled To After an Ontario Accident</h3>
+          <p class="text-white/30 text-xs leading-relaxed font-body">Coming soon â a detailed look at IRB and rehab benefit structures under SABS.</p>
+          <div class="pt-3 flex items-center justify-between border-t border-white/6">
+            <div class="text-xs text-white/20 font-label">Coming soon</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Post 4 â placeholder -->
+      <div class="dark-card reveal rounded-xl overflow-hidden" style="transition-delay:0.21s; opacity:0.5; pointer-events:none;">
+        <div class="h-44 flex items-center justify-center" style="background:linear-gradient(135deg,#06111f,#001b44)">
+          <span class="material-symbols-outlined text-7xl" style="color:rgba(203,167,47,0.18);font-variation-settings:'FILL' 1;">gavel</span>
+        </div>
+        <div class="p-6 space-y-3">
+          <span class="tag">Insurer Disputes</span>
+          <h3 class="text-base font-bold text-white/60 font-headline leading-snug">When Your Insurer Denies Your Claim: The Ontario Dispute Process Explained</h3>
+          <p class="text-white/30 text-xs leading-relaxed font-body">Coming soon â FSRA mediation, arbitration, and your rights when a denial is issued.</p>
+          <div class="pt-3 flex items-center justify-between border-t border-white/6">
+            <div class="text-xs text-white/20 font-label">Coming soon</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Post 5 â placeholder -->
+      <div class="dark-card reveal rounded-xl overflow-hidden" style="transition-delay:0.28s; opacity:0.5; pointer-events:none;">
+        <div class="h-44 flex items-center justify-center" style="background:linear-gradient(135deg,#071220,#001b44)">
+          <span class="material-symbols-outlined text-7xl" style="color:rgba(203,167,47,0.18);font-variation-settings:'FILL' 1;">directions_car</span>
+        </div>
+        <div class="p-6 space-y-3">
+          <span class="tag">Motor Vehicle</span>
+          <h3 class="text-base font-bold text-white/60 font-headline leading-snug">At-Fault vs. Not-At-Fault: How Fault Affects Your Accident Benefits in Ontario</h3>
+          <p class="text-white/30 text-xs leading-relaxed font-body">Coming soon â fault determination rules and how they affect what you can claim.</p>
+          <div class="pt-3 flex items-center justify-between border-t border-white/6">
+            <div class="text-xs text-white/20 font-label">Coming soon</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Post 6 â placeholder -->
+      <div class="dark-card reveal rounded-xl overflow-hidden" style="transition-delay:0.35s; opacity:0.5; pointer-events:none;">
+        <div class="h-44 flex items-center justify-center" style="background:linear-gradient(135deg,#081422,#001b44)">
+          <span class="material-symbols-outlined text-7xl" style="color:rgba(203,167,47,0.18);font-variation-settings:'FILL' 1;">person_raised_hand</span>
+        </div>
+        <div class="p-6 space-y-3">
+          <span class="tag">Slip &amp; Fall</span>
+          <h3 class="text-base font-bold text-white/60 font-headline leading-snug">Slip and Fall in Ontario: How the Occupiers' Liability Act Affects Your Claim</h3>
+          <p class="text-white/30 text-xs leading-relaxed font-body">Coming soon â premises liability, notice requirements, and what you need to prove.</p>
+          <div class="pt-3 flex items-center justify-between border-t border-white/6">
+            <div class="text-xs text-white/20 font-label">Coming soon</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="px-6 py-20" style="background:linear-gradient(145deg,#04090f 0%,#001228 50%,#040810 100%);">
+  <div class="max-w-3xl mx-auto text-center reveal">
+    <div class="gold-label mb-5 inline-block">Free Review</div>
+    <h2 class="text-4xl font-extrabold text-white font-headline mb-4">Ready to understand your claim?</h2>
+    <p class="text-white/45 mb-8 font-body leading-relaxed">Submit your details and we'll review your situation â free, confidential, and with no obligation to proceed.</p>
+    <a href="code.html" class="gold-btn inline-flex items-center gap-3 px-10 py-4 rounded-md font-bold text-sm font-label">
+      Start My Free Review <span class="material-symbols-outlined">arrow_forward</span>
+    </a>
+    <p class="text-white/20 text-xs font-label mt-5">Free Â· Confidential Â· No obligation Â· ~2 minutes</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="dark-section border-t border-white/5">
+  <div class="max-w-7xl mx-auto px-8 pt-12 pb-8">
+    <div class="flex flex-col md:flex-row justify-between items-start gap-10 pb-10 border-b border-white/5">
+      <div class="space-y-4 max-w-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 100" fill="none" height="32" style="width:auto">
+          <path d="M 72 64 A 28 28 0 1 1 48 22" stroke="#e8f0ff" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <path d="M 48 22 A 28 28 0 0 1 72 64" stroke="#3a82c8" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <line x1="48" y1="30" x2="48" y2="42" stroke="#3a82c8" stroke-width="4" stroke-linecap="round"/>
+          <line x1="48" y1="42" x2="48" y2="58" stroke="#3a82c8" stroke-width="4" stroke-linecap="round"/>
+          <polyline points="38,50 48,62 58,50" stroke="#3a82c8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <text x="92" y="44" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="25" fill="#e8f0ff">Ontario</text>
+          <text x="92" y="74" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="25" fill="#e8f0ff">Accident Review</text>
+        </svg>
+        <p class="text-white/30 text-sm font-body leading-relaxed">Ontario Accident Review is not a law firm and does not provide legal advice or representation. For assessment purposes only.</p>
+      </div>
+      <div class="flex gap-12 flex-wrap">
+        <div>
+          <div class="text-xs font-bold uppercase tracking-widest text-white/25 font-label mb-4">Site</div>
+          <div class="space-y-2">
+            <a href="index.html" class="block text-sm text-white/45 hover:text-white transition-colors font-body">Home</a>
+            <a href="blog.html" class="block text-sm text-white font-semibold font-body">Blog</a>
+            <a href="code.html" class="block text-sm font-semibold font-body" style="color:#cba72f">Start Review â</a>
+          </div>
+        </div>
+        <div>
+          <div class="text-xs font-bold uppercase tracking-widest text-white/25 font-label mb-4">Legal</div>
+          <div class="space-y-2">
+            <a href="#" class="block text-sm text-white/45 hover:text-white transition-colors font-body">Privacy Policy</a>
+            <a href="#" class="block text-sm text-white/45 hover:text-white transition-colors font-body">Terms of Service</a>
+            <a href="#" class="block text-sm text-white/45 hover:text-white transition-colors font-body">Disclaimer</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pt-5 text-xs text-white/20 font-label">Â© 2024 Ontario Accident Review. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  const ro = new IntersectionObserver((e)=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')}),{threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>
