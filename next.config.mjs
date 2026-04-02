@@ -6,6 +6,10 @@ const nextConfig = {
       { source: '/blog/deadlines', destination: '/blog-deadlines.html' },
       { source: '/blog/sabs', destination: '/blog-sabs.html' },
       { source: '/blog/settlement', destination: '/blog-settlement.html' },
+      { source: '/resources', destination: '/blog.html' },
+      { source: '/resources/deadlines', destination: '/blog-deadlines.html' },
+      { source: '/resources/sabs', destination: '/blog-sabs.html' },
+      { source: '/resources/settlement', destination: '/blog-settlement.html' },
     ];
   },
 };
