@@ -18,7 +18,7 @@ const manrope = Manrope({
 export const metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: site.name,
+    default: site.seoTitle,
     template: `%s | ${site.name}`
   },
   description: site.description,
@@ -34,7 +34,7 @@ export const metadata = {
     'slip and fall Ontario'
   ],
   openGraph: {
-    title: site.name,
+    title: site.seoTitle,
     description: site.description,
     url: site.url,
     siteName: site.name,
@@ -44,7 +44,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: site.name,
+    title: site.seoTitle,
     description: site.description,
     images: [site.ogImage]
   },
@@ -71,11 +71,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-18043625605');
-            `,
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18043625605');
+  `,
           }}
         />
       </head>
