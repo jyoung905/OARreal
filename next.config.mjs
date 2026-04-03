@@ -1,5 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      { source: '/privacy.html', destination: '/privacy', permanent: true },
+      { source: '/disclaimer.html', destination: '/disclaimer', permanent: true },
+      { source: '/contact.html', destination: '/contact', permanent: true },
+    ];
+  },
   async rewrites() {
     return [
       { source: '/blog', destination: '/blog.html' },
