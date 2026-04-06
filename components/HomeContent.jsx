@@ -318,41 +318,30 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* WHY START HERE FIRST */}
-      <section id="why-start-here" style={{background:DARK_BG,padding:'6rem 1.5rem'}}>
-        <div className="hc-grid-2" style={{...maxW,display:'grid',gridTemplateColumns:'1fr 1fr',gap:'4rem',alignItems:'center'}}>
-          <div className="hc-reveal" style={{display:'flex',flexDirection:'column',gap:'1.75rem'}}>
-            <GoldLabel>Why Start Here</GoldLabel>
-            <h2 style={{fontSize:'2.5rem',fontWeight:800,color:'#fff',lineHeight:1.15,...headlineFont}}>
-              Why Not Go Directly to a Lawyer?
+      {/* WHAT YOU GET SECTION */}
+      <section style={{background:LIGHT_BG,padding:'6rem 1.5rem'}}>
+        <div style={{...maxW}}>
+          <div style={{textAlign:'center',marginBottom:'3rem'}}>
+            <GoldLabel>Free Review</GoldLabel>
+            <h2 style={{fontSize:'clamp(1.8rem,3.5vw,2.5rem)',fontWeight:800,color:NAVY,lineHeight:1.2,...headlineFont,marginTop:'0.75rem',marginBottom:'1rem'}}>
+              What You&apos;ll Get From Your Free Review
             </h2>
-            <GoldLine />
-            <p style={{color:'rgba(255,255,255,0.6)',lineHeight:1.7,fontSize:'1rem',...bodyFont}}>
-              Starting here helps you understand your situation before committing to anything.
+            <GoldLine style={{margin:'0 auto 1.25rem'}} />
+            <p style={{color:ON_SURFACE_VARIANT,fontSize:'1rem',lineHeight:1.7,...bodyFont,maxWidth:600,margin:'0 auto'}}>
+              Before you rely on the insurer or make decisions, get a plain-language review of what may apply to your situation.
             </p>
-            <p style={{color:TEXT_DIM,fontWeight:600,fontSize:'0.9rem',...bodyFont}}>Here&apos;s why people use this first:</p>
-            <div style={{display:'flex',flexDirection:'column',gap:'0.875rem'}}>
-              {WHY_START_HERE.map(item => (
-                <div key={item} style={{display:'flex',alignItems:'center',gap:'0.75rem'}}>
-                  <Icon name="check_circle" size="1.125rem" fill />
-                  <span style={{color:'rgba(255,255,255,0.75)',fontSize:'0.9rem',...bodyFont}}>{item}</span>
-                </div>
-              ))}
-            </div>
-            <p style={{color:GOLD,fontSize:'1rem',fontWeight:600,lineHeight:1.7,...bodyFont}}>
-              This gives you direction &mdash; without obligation.
-            </p>
-            <div>
-              <GoldBtn>Check If I Qualify Now <Icon name="arrow_forward" size="1.25rem" color="#1a0f00" /></GoldBtn>
-            </div>
           </div>
-          <div className="hc-reveal" style={{display:'flex',flexDirection:'column',gap:'1.25rem'}}>
-            {WHY_START_HERE.map((item, i) => (
-              <div key={item} className="hc-dark-card hc-hover-lift" style={{borderRadius:'0.75rem',padding:'1.25rem 1.5rem',display:'flex',alignItems:'center',gap:'1rem'}}>
-                <div style={{width:44,height:44,borderRadius:'50%',display:'flex',alignItems:'center',justifyContent:'center',background:'rgba(203,167,47,0.12)',flexShrink:0}}>
-                  <span style={{fontSize:'1.25rem',fontWeight:800,color:GOLD,...headlineFont}}>0{i+1}</span>
-                </div>
-                <span style={{color:'rgba(255,255,255,0.75)',fontSize:'0.9rem',fontWeight:500,...bodyFont}}>{item}</span>
+          <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:'1.5rem'}}>
+            {[
+              {icon:'description',title:'Benefits Summary',body:'A plain-language breakdown of what you may be entitled to under Ontario’s SABS — including medical, income replacement, and rehab benefits.'},
+              {icon:'gavel',title:'Tort Claim Assessment',body:'An assessment of whether your situation meets the threshold for a tort claim against the at-fault driver for pain and suffering damages.'},
+              {icon:'schedule',title:'Deadline Clarity',body:'Clarity on any critical deadlines that may apply to your claim — before a missed date costs you your right to dispute or sue.'},
+              {icon:'lightbulb',title:'Next-Step Recommendation',body:'A clear recommendation on whether pursuing your claim further makes sense — with no pressure to commit to anything.'},
+            ].map((item, i) => (
+              <div key={i} style={{background:'#fff',borderRadius:10,padding:'2rem 1.75rem',border:'1px solid #e8eaf0',display:'flex',flexDirection:'column',gap:'0.75rem'}}>
+                <span className="material-symbols-outlined" style={{fontSize:'2rem',color:GOLD,fontVariationSettings:"'FILL' 1,'wght' 400"}}>{item.icon}</span>
+                <h3 style={{fontSize:'1.05rem',fontWeight:700,color:NAVY,...headlineFont,margin:0}}>{item.title}</h3>
+                <p style={{fontSize:'0.9rem',color:ON_SURFACE_VARIANT,lineHeight:1.7,...bodyFont,margin:0}}>{item.body}</p>
               </div>
             ))}
           </div>
