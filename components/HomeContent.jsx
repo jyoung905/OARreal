@@ -1,11 +1,11 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 
-/* ═══════════════════════════════════════════════════
-   HomeContent — HIGH-CONVERTING CRO HOMEPAGE
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
+   HomeContent â HIGH-CONVERTING CRO HOMEPAGE
    All styles inline to guarantee rendering.
    Links to intake form use #intake to trigger IntakeModal.
-   ═══════════════════════════════════════════════════ */
+   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
 
 const GOLD = '#cba72f';
 const GOLD_HOVER = '#e0ba44';
@@ -126,8 +126,8 @@ export default function HomeContent() {
 
   return (
     <>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
       <style>{`
-        @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap");
         .hc-reveal{opacity:1;transform:translateY(0);transition:opacity 0.55s ease,transform 0.55s ease}
         .hc-reveal.hc-hidden{opacity:0;transform:translateY(20px)}
         .hc-reveal.hc-visible{opacity:1;transform:translateY(0)}
