@@ -65,10 +65,20 @@ export default function HomeContent() {
 
   useEffect(() => {
     if (typeof IntersectionObserver === 'undefined') return;
+    // First, set initial hidden state on elements not yet in viewport
+    const els = document.querySelectorAll('.hc-reveal');
+    els.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top > window.innerHeight) {
+        el.classList.add('hc-hidden');
+      } else {
+        el.classList.add('hc-visible');
+      }
+    });
     const ro = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('hc-visible'); });
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.remove('hc-hidden'); e.target.classList.add('hc-visible'); } });
     }, { threshold: 0.10 });
-    document.querySelectorAll('.hc-reveal').forEach(el => ro.observe(el));
+    els.forEach(el => ro.observe(el));
     return () => ro.disconnect();
   }, []);
 
@@ -118,7 +128,8 @@ export default function HomeContent() {
     <>
       <style>{`
         @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap");
-        .hc-reveal{opacity:0;transform:translateY(20px);transition:opacity 0.55s ease,transform 0.55s ease}
+        .hc-reveal{opacity:1;transform:translateY(0);transition:opacity 0.55s ease,transform 0.55s ease}
+        .hc-reveal.hc-hidden{opacity:0;transform:translateY(20px)}
         .hc-reveal.hc-visible{opacity:1;transform:translateY(0)}
         .hc-hover-lift{transition:transform 0.2s ease,box-shadow 0.2s ease}
         .hc-hover-lift:hover{transform:translateY(-3px)}
