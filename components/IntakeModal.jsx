@@ -48,6 +48,12 @@ export function IntakeModal() {
     return () => window.removeEventListener('hashchange', onHash);
   }, []);
 
+  useEffect(() => {
+    if (isOpen) document.body.classList.add('modal-open');
+    else document.body.classList.remove('modal-open');
+    return () => document.body.classList.remove('modal-open');
+  }, [isOpen]);
+
   const [step, setStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState({});
@@ -158,29 +164,29 @@ export function IntakeModal() {
   if (!isOpen) return null;
 
   return (
-    <div className="modal-backdrop" onClick={handleClose}>
-      <div className="modal-box" onClick={e => e.stopPropagation()}>
+    <div className="intake-modal-overlay" style={{position:'fixed',top:0,left:0,right:0,bottom:0,background:'rgba(0,0,0,0.6)',zIndex:9999,display:'flex',alignItems:'center',justifyContent:'center',overflow:'auto'}} onClick={handleClose}>
+      <div className="intake-modal-container" style={{background:'#fff',borderRadius:'12px',maxWidth:'540px',width:'90%',maxHeight:'90vh',overflow:'auto',position:'relative'}} onClick={e => e.stopPropagation()}>
 
         {/* Progress header */}
-        <div className="modal-header">
-          <div className="modal-progress-track">
-            <div className="modal-progress-bar" style={{ width: `${(step / 4) * 100}%` }} />
+        <div className="modal-header" style={{padding:'16px 24px 8px'}}>
+          <div className="modal-progress-track" style={{height:'4px',background:'#e5e7eb',borderRadius:'2px',overflow:'hidden'}}>
+            <div className="modal-progress-bar" style={{ height:'100%',background:'#b8860b',borderRadius:'2px',transition:'width 0.3s', width: `${(step / 4) * 100}%` }} />
           </div>
-          <div className="modal-header-row">
+          <div className="modal-header-row" style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginTop:'8px'}}>
             <span className="modal-step-label">Step {step} of 4</span>
-            <button className="modal-close" onClick={handleClose} aria-label="Close">&#x2715;</button>
+            <button className="modal-close" style={{background:'none',border:'none',fontSize:'20px',cursor:'pointer',padding:'4px 8px',color:'#666'}} onClick={handleClose} aria-label="Close">&#x2715;</button>
           </div>
           <p className="modal-trust-line">Free &middot; Private &middot; No obligation</p>
         </div>
 
         {/* ââ Step 1: Qualification ââ */}
         {step === 1 && (
-          <div className="modal-body">
+          <div className="modal-body" style={{padding:'16px 24px 24px'}}>
             <h2 className="modal-title">Tell us about your accident</h2>
             <p className="modal-sub">We&apos;ll use this to match you with the right review.</p>
 
             <p className="modal-label">What type of accident was it?</p>
-            <div className="modal-option-grid">
+            <div className="modal-option-grid" style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'8px',marginBottom:'16px'}}>
               {ACCIDENT_TYPES.map(t => (
                 <button
                   key={t.id}
@@ -222,7 +228,7 @@ export function IntakeModal() {
             />
             {errors.accidentDate && <p className="modal-error">{errors.accidentDate}</p>}
 
-            <button type="button" className="modal-btn-primary" onClick={nextStep}>
+            <button type="button" className="modal-btn-primary" style={{width:'100%',padding:'14px',background:'#1a1a2e',color:'#fff',border:'none',borderRadius:'8px',fontSize:'16px',fontWeight:600,cursor:'pointer'}} onClick={nextStep}>
               Continue &#8594;
             </button>
           </div>
@@ -230,7 +236,7 @@ export function IntakeModal() {
 
         {/* ââ Step 2: Impact ââ */}
         {step === 2 && (
-          <div className="modal-body">
+          <div className="modal-body" style={{padding:'16px 24px 24px'}}>
             <h2 className="modal-title">How did the accident affect you?</h2>
             <p className="modal-sub">Select all that apply â this helps us understand the full picture.</p>
 
@@ -263,16 +269,16 @@ export function IntakeModal() {
               ))}
             </div>
 
-            <div className="modal-nav">
-              <button type="button" className="modal-btn-back" onClick={() => setStep(1)}>&#8592; Back</button>
-              <button type="button" className="modal-btn-primary" onClick={nextStep}>Continue &#8594;</button>
+            <div className="modal-nav" style={{display:'flex',gap:'12px',marginTop:'20px',alignItems:'center'}}>
+              <button type="button" className="modal-btn-back" style={{padding:'10px 16px',background:'none',border:'1px solid #d1d5db',borderRadius:'8px',cursor:'pointer',color:'#374151'}} onClick={() => setStep(1)}>&#8592; Back</button>
+              <button type="button" className="modal-btn-primary" style={{width:'100%',padding:'14px',background:'#1a1a2e',color:'#fff',border:'none',borderRadius:'8px',fontSize:'16px',fontWeight:600,cursor:'pointer'}} onClick={nextStep}>Continue &#8594;</button>
             </div>
           </div>
         )}
 
         {/* ââ Step 3: Intent ââ */}
         {step === 3 && (
-          <div className="modal-body">
+          <div className="modal-body" style={{padding:'16px 24px 24px'}}>
             <h2 className="modal-title">What kind of help are you looking for?</h2>
             <p className="modal-sub">Choose the option that best describes your situation.</p>
 
@@ -301,16 +307,16 @@ export function IntakeModal() {
             />
             <p className="modal-char-count">{additionalInfo.length}/400</p>
 
-            <div className="modal-nav">
-              <button type="button" className="modal-btn-back" onClick={() => setStep(2)}>&#8592; Back</button>
-              <button type="button" className="modal-btn-primary" onClick={nextStep}>Continue &#8594;</button>
+            <div className="modal-nav" style={{display:'flex',gap:'12px',marginTop:'20px',alignItems:'center'}}>
+              <button type="button" className="modal-btn-back" style={{padding:'10px 16px',background:'none',border:'1px solid #d1d5db',borderRadius:'8px',cursor:'pointer',color:'#374151'}} onClick={() => setStep(2)}>&#8592; Back</button>
+              <button type="button" className="modal-btn-primary" style={{width:'100%',padding:'14px',background:'#1a1a2e',color:'#fff',border:'none',borderRadius:'8px',fontSize:'16px',fontWeight:600,cursor:'pointer'}} onClick={nextStep}>Continue &#8594;</button>
             </div>
           </div>
         )}
 
         {/* ââ Step 4: Contact ââ */}
         {step === 4 && (
-          <form onSubmit={handleSubmit} className="modal-body">
+          <form onSubmit={handleSubmit} className="modal-body" style={{padding:'16px 24px 24px'}}>
             <h2 className="modal-title">Almost done â where should we send your review?</h2>
             <p className="modal-sub">A licensed Ontario professional will personally review your situation. No spam, no sales calls â just answers.</p>
 
@@ -366,7 +372,7 @@ export function IntakeModal() {
             <div className="modal-field">
               <label className="modal-label">Best time to reach you <span className="modal-optional">(optional)</span></label>
               <select
-                className="modal-input"
+                className="modal-input" style={{width:'100%',padding:'10px 12px',border:'1px solid #d1d5db',borderRadius:'6px',fontSize:'15px'}}
                 value={bestTime}
                 onChange={e => setBestTime(e.target.value)}
               >
@@ -381,9 +387,9 @@ export function IntakeModal() {
 
             <p className="modal-privacy-note">&#128274; Your information is private and protected. We never share or sell your data.</p>
 
-            <div className="modal-nav">
-              <button type="button" className="modal-btn-back" onClick={() => setStep(3)}>&#8592; Back</button>
-              <button type="submit" className="modal-btn-submit" disabled={isSubmitting}>
+            <div className="modal-nav" style={{display:'flex',gap:'12px',marginTop:'20px',alignItems:'center'}}>
+              <button type="button" className="modal-btn-back" style={{padding:'10px 16px',background:'none',border:'1px solid #d1d5db',borderRadius:'8px',cursor:'pointer',color:'#374151'}} onClick={() => setStep(3)}>&#8592; Back</button>
+              <button type="submit" className="modal-btn-submit" style={{flex:1,padding:'14px',background:'#b8860b',color:'#fff',border:'none',borderRadius:'8px',fontSize:'16px',fontWeight:600,cursor:'pointer'}} disabled={isSubmitting}>
                 {isSubmitting ? 'Submitting\u2026' : 'Get My Free Review \u2192'}
               </button>
             </div>
