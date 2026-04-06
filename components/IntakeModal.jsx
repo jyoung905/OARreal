@@ -134,7 +134,7 @@ export function IntakeModal({ isOpen, onClose }) {
         setErrors({ submit: 'Something went wrong. Please try again.' });
         setIsSubmitting(false);
       }
-    } catch {
+    } catch (err) {
       setErrors({ submit: 'Network error. Please try again.' });
       setIsSubmitting(false);
     }
