@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
 const ACCIDENT_TYPES = [
@@ -37,8 +37,17 @@ const INTENT_OPTIONS = [
   { id: 'connect-lawyer', label: 'Connect with a lawyer', description: 'Speak with a licensed Ontario legal professional' },
 ];
 
-export function IntakeModal({ isOpen, onClose }) {
+export function IntakeModal() {
   const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const onHash = () => setIsOpen(window.location.hash === '#intake');
+    onHash();
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
+  }, []);
+
   const [step, setStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState({});
@@ -142,7 +151,8 @@ export function IntakeModal({ isOpen, onClose }) {
 
   const handleClose = () => {
     pushEvent('form_abandon', { step, accident_type: accidentType });
-    onClose();
+    setIsOpen(false);
+    window.history.pushState(null, '', window.location.pathname);
   };
 
   if (!isOpen) return null;
