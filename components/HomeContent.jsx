@@ -132,6 +132,8 @@ export default function HomeContent() {
   return (
     <>
       <style>{`
+        @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap");
+
         .hc-reveal{opacity:0;transform:translateY(20px);transition:opacity 0.55s ease,transform 0.55s ease}
         .hc-reveal.hc-visible{opacity:1;transform:translateY(0)}
         .hc-hover-lift{transition:transform 0.2s ease,box-shadow 0.2s ease}
@@ -179,7 +181,7 @@ export default function HomeContent() {
           <div style={{position:'relative',zIndex:10}}>
             <div style={{display:'inline-flex',alignItems:'center',gap:'0.5rem',background:'rgba(255,255,255,0.08)',border:'1px solid rgba(255,255,255,0.1)',borderRadius:'9999px',padding:'0.375rem 1rem',marginBottom:'2rem'}}>
               <span className="hc-pulse" style={{width:8,height:8,borderRadius:'50%',background:GOLD}} />
-              <span style={{fontSize:'0.75rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'rgba(255,255,255,0.7)',...labelFont}}>Free Â· No Obligation Â· Confidential</span>
+              <span style={{fontSize:'0.75rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'rgba(255,255,255,0.7)',...labelFont}}>Free · No Obligation · Confidential</span>
             </div>
             <h1 style={{fontSize:'3.75rem',fontWeight:800,color:'#fff',lineHeight:1.08,letterSpacing:'-0.01em',marginBottom:'2rem',...headlineFont}}>
               Most Ontario accident victims don&apos;t know what they&apos;re actually entitled to.<br/>
@@ -266,7 +268,7 @@ export default function HomeContent() {
                   <Icon name="workspace_premium" fill />
                 </div>
                 <div>
-                  <div style={{color:'#fff',fontWeight:700,fontSize:'0.875rem',...headlineFont}}>&ldquo;No cost Â· No obligation&rdquo;</div>
+                  <div style={{color:'#fff',fontWeight:700,fontSize:'0.875rem',...headlineFont}}>&ldquo;No cost · No obligation&rdquo;</div>
                   <div style={{color:'rgba(255,255,255,0.45)',fontSize:'0.75rem',...labelFont,marginTop:'0.125rem'}}>Ontario Accident Review â Free for all claimants</div>
                 </div>
               </div>
@@ -444,7 +446,7 @@ export default function HomeContent() {
             <GoldBtn style={{padding:'1rem 2.5rem',boxShadow:'0 10px 15px -3px rgba(0,0,0,0.1)'}}>Start Your Free Review <Icon name="arrow_forward" size="1.25rem" color="#1a0f00" /></GoldBtn>
             <GhostBtn href="#faq" style={{padding:'1rem 2.5rem'}}>Common Questions</GhostBtn>
           </div>
-          <p style={{color:'rgba(255,255,255,0.25)',fontSize:'0.75rem',marginTop:'1.75rem',...labelFont}}>Free Â· Confidential Â· No obligation Â· Takes ~2 minutes</p>
+          <p style={{color:'rgba(255,255,255,0.25)',fontSize:'0.75rem',marginTop:'1.75rem',...labelFont}}>Free · Confidential · No obligation · Takes ~2 minutes</p>
         </div>
       </section>
 
@@ -495,7 +497,7 @@ export default function HomeContent() {
         <div style={{display:'flex',alignItems:'center',gap:'0.75rem'}}>
           <div style={{flex:1,minWidth:0}}>
             <div style={{color:'#fff',fontWeight:700,fontSize:'0.875rem',lineHeight:1.2,...headlineFont}}>Free Accident Review</div>
-            <div style={{color:'rgba(255,255,255,0.5)',fontSize:'0.75rem',...labelFont}}>About 2 min Â· No obligation</div>
+            <div style={{color:'rgba(255,255,255,0.5)',fontSize:'0.75rem',...labelFont}}>About 2 min · No obligation</div>
           </div>
           <a href="#intake" className="hc-gold-btn" style={{flexShrink:0,display:'inline-flex',alignItems:'center',gap:'0.5rem',padding:'0.75rem 1.25rem',borderRadius:'0.375rem',fontSize:'0.875rem',textDecoration:'none',...labelFont}}>
             Start Free Review <Icon name="arrow_forward" size="1rem" color="#1a0f00" />
