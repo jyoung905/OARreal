@@ -1,13 +1,5 @@
-import { CtaSection } from '@/components/CtaSection';
-import { FaqSection } from '@/components/FaqSection';
-import { FitSection } from '@/components/FitSection';
+import HomeContent from '@/components/HomeContent';
 import { IntakeModal } from '@/components/IntakeModal';
-import { ProcessSection } from '@/components/ProcessSection';
-import { SiteFooter } from '@/components/SiteFooter';
-import { SiteHeader } from '@/components/SiteHeader';
-import { TrustBar } from '@/components/TrustBar';
-import { ValueSection } from '@/components/ValueSection';
-import { HeroSection } from '@/components/HeroSection';
 
 const organizationJsonLd = {
   '@context': 'https://schema.org',
@@ -23,10 +15,8 @@ const organizationJsonLd = {
       },
       contactPoint: {
         '@type': 'ContactPoint',
-        email: 'info@ontarioaccidentreview.ca',
-        contactType: 'customer support',
+        contactType: 'customer service',
         areaServed: 'CA-ON',
-        availableLanguage: 'English',
       },
     },
     {
@@ -34,7 +24,9 @@ const organizationJsonLd = {
       '@id': 'https://www.ontarioaccidentreview.ca/#website',
       url: 'https://www.ontarioaccidentreview.ca',
       name: 'Ontario Accident Review',
-      publisher: { '@id': 'https://www.ontarioaccidentreview.ca/#organization' },
+      publisher: {
+        '@id': 'https://www.ontarioaccidentreview.ca/#organization',
+      },
     },
   ],
 };
@@ -45,26 +37,26 @@ const faqJsonLd = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What is Ontario Accident Review?',
+      name: 'What does the free review include?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Ontario Accident Review is a free service that helps Ontario residents who have been injured in accidents understand whether they may be entitled to accident benefits under their auto insurance policy.',
+        text: 'Our review covers a comprehensive analysis of your accident benefits entitlements under Ontario\'s Statutory Accident Benefits Schedule (SABS), including income replacement, medical and rehabilitation benefits, attendant care, and non-earner benefits.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is this service free?',
+      name: 'How long does the review process take?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Our accident benefits review is completely free with no obligation. You do not need to provide insurance details or upload any documents to get started.',
+        text: 'The initial intake form takes about 2 minutes to complete. Our team then reviews your situation and responds within 24 hours with a detailed assessment of your potential entitlements.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Who can use Ontario Accident Review?',
+      name: 'Is my information kept confidential?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'This service is for people who have been injured in an accident in Ontario, including car accidents, pedestrian accidents, and cycling accidents. You must be in Ontario and your accident must have occurred in Ontario.',
+        text: 'Yes. All information you provide is treated with strict confidentiality. We use encrypted communications and never share your details with third parties without your explicit consent.',
       },
     },
     {
@@ -72,21 +64,21 @@ const faqJsonLd = {
       name: 'Do I need a lawyer to use this service?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. You do not need a lawyer to submit a review request. Ontario Accident Review is not a law firm and does not provide legal advice, but we can help you understand if your situation is worth discussing with a licensed Ontario legal professional.',
+        text: 'No. Ontario Accident Review is not a law firm. We provide independent assessment and advocacy services. If legal representation is recommended based on your situation, we can provide referrals to qualified personal injury lawyers.',
       },
     },
     {
       '@type': 'Question',
-      name: 'What happens after I submit a review?',
+      name: 'What types of accidents are covered?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'After you submit your review request, our team will assess your situation and follow up within one business day to let you know whether your circumstances may qualify for accident benefits and what your next steps could be.',
+        text: 'We review claims arising from motor vehicle collisions, pedestrian accidents, cycling incidents, rideshare accidents, commercial vehicle collisions, and public transit accidents \u2014 any accident covered under Ontario\u2019s automobile insurance framework.',
       },
     },
   ],
 };
 
-export default function HomePage() {
+export default function Home() {
   return (
     <>
       <script
@@ -97,17 +89,7 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <SiteHeader />
-      <main>
-        <HeroSection />
-        <TrustBar />
-        <ProcessSection />
-        <FitSection />
-        <ValueSection />
-        <FaqSection />
-        <CtaSection />
-      </main>
-      <SiteFooter />
+      <HomeContent />
       <IntakeModal />
     </>
   );
