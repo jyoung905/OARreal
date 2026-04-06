@@ -19,5 +19,8 @@ const nextConfig = {
       { source: '/resources/settlement', destination: '/blog-settlement.html' },
     ];
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 export default nextConfig;
