@@ -160,7 +160,7 @@ export default function HomeContent() {
         <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',padding:'1rem 2rem',...maxW}}>
           <a href="/" style={{display:'flex',alignItems:'center',textDecoration:'none'}}>{SVG_LOGO(40)}</a>
           <nav style={{display:'flex',alignItems:'center',gap:'2rem'}}>
-            {[{t:'How it works',h:'#how-it-works'},{t:'Why start here',h:'#why-start-here'},{t:'FAQ',h:'#faq'}].map(l => (
+            {[{t:'How it works',h:'#how-it-works'},{t:'Why start here',h:'#why-start-here'},{t:'FAQ',h:'#faq'},{t:'Resources',h:'/resources'}].map(l => (
               <a key={l.t} href={l.h} style={{color:'rgba(255,255,255,0.7)',fontWeight:500,fontSize:'0.875rem',textDecoration:'none',...labelFont}}>{l.t}</a>
             ))}
           </nav>
