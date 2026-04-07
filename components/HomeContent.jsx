@@ -222,6 +222,18 @@ export default function HomeContent() {
         </div>
       </section>
 
+      {/* TRUST STRIP */}
+      <section style={{background:'#08101d',padding:'1rem 1.5rem',borderTop:'1px solid rgba(203,167,47,0.15)',borderBottom:'1px solid rgba(203,167,47,0.15)'}}>
+        <div style={{maxWidth:'1100px',margin:'0 auto',display:'flex',flexWrap:'wrap',justifyContent:'center',gap:'0.75rem 2.5rem'}}>
+          {['Ontario-focused review','Plain-language claim guidance','Confidential intake','No obligation to proceed'].map((t,i)=>(
+            <div key={i} style={{display:'flex',alignItems:'center',gap:'0.4rem'}}>
+              <span style={{color:'#cba72f',fontWeight:700,fontSize:'0.85rem'}}>✓</span>
+              <span style={{color:'rgba(255,255,255,0.75)',fontSize:'0.85rem'}}>{t}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* PATTERN INTERRUPT */}
       <section style={{background:DARK_BG,padding:'5rem 1.5rem'}}>
         <div className="hc-reveal" style={{...maxW,maxWidth:'52rem',textAlign:'center'}}>
@@ -268,7 +280,7 @@ export default function HomeContent() {
             </div>
             <div style={{paddingTop:'0.5rem'}}>
               <GoldBtn>
-                <Icon name="search" size="1.25rem" color="#1a0f00" /> Start My Free Review
+                <Icon name="search" size="1.25rem" color="#1a0f00" /> Get My Free Claim Review
               </GoldBtn>
             </div>
           </div>
@@ -282,7 +294,7 @@ export default function HomeContent() {
                 </div>
                 <div>
                   <div style={{color:'#fff',fontWeight:700,fontSize:'0.875rem',...headlineFont}}>&ldquo;No cost {'\u00b7'} No obligation&rdquo;</div>
-                  <div style={{color:'rgba(255,255,255,0.45)',fontSize:'0.75rem',...labelFont,marginTop:'0.125rem'}}>Ontario Accident Review &mdash; Free for all claimants</div>
+                  <div style={{color:'rgba(255,255,255,0.45)',fontSize:'0.75rem',...labelFont,marginTop:'0.125rem'}}>Ontario Accident Review &mdash; Free initial review for Ontario accident victims seeking clarity on benefits, deadlines, and next steps.</div>
                 </div>
               </div>
             </div>
@@ -410,7 +422,7 @@ export default function HomeContent() {
             It takes about 2 minutes. No cost. No obligation.
           </p>
           <GoldBtn style={{padding:'1.125rem 2.75rem',fontSize:'1rem',boxShadow:'0 10px 15px -3px rgba(0,0,0,0.2)'}}>
-            <Icon name="check_circle" size="1.25rem" color="#1a0f00" fill /> Start My Free Review
+            <Icon name="check_circle" size="1.25rem" color="#1a0f00" fill /> Get My Free Claim Review
           </GoldBtn>
           <p style={{color:'rgba(255,255,255,0.25)',fontSize:'0.75rem',marginTop:'1.75rem',...labelFont}}>Free {'\u00b7'} Confidential {'\u00b7'} No obligation {'\u00b7'} Takes ~2 minutes</p>
         </div>
@@ -433,6 +445,25 @@ export default function HomeContent() {
                 <div className="hc-faq-answer">
                   <p style={{color:ON_SURFACE_VARIANT,fontSize:'0.875rem',lineHeight:1.7,paddingBottom:'1.25rem',...bodyFont}}>{f.a}</p>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WHY PEOPLE START HERE FIRST */}
+      <section style={{background:'#0e1c30',padding:'4rem 1.5rem'}}>
+        <div style={{maxWidth:'1100px',margin:'0 auto'}}>
+          <h2 style={{color:'#ffffff',fontFamily:'Manrope,sans-serif',fontSize:'clamp(1.4rem,3vw,2rem)',fontWeight:800,textAlign:'center',marginBottom:'2.5rem'}}>Why People Start Here First</h2>
+          <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:'1.5rem'}}>
+            {[
+              {title:'No lawyers or office visits',body:'Start with a short form. We review your situation and report back in plain language.'},
+              {title:'Your information stays private',body:'The intake form is encrypted. We do not share your details with insurers or third parties.'},
+              {title:'Understand before you decide',body:'You will know what may apply to your claim before taking any next steps — with no pressure to proceed.'},
+            ].map((c,i)=>(
+              <div key={i} style={{background:'#112037',borderRadius:'8px',padding:'1.75rem',borderTop:'2px solid rgba(203,167,47,0.3)'}}>
+                <h3 style={{color:'#ffffff',fontFamily:'Manrope,sans-serif',fontSize:'1rem',fontWeight:700,marginBottom:'0.75rem'}}>{c.title}</h3>
+                <p style={{color:'rgba(255,255,255,0.65)',fontFamily:'Inter,sans-serif',fontSize:'0.9rem',lineHeight:1.6,margin:0}}>{c.body}</p>
               </div>
             ))}
           </div>
@@ -496,7 +527,7 @@ export default function HomeContent() {
             </div>
           </div>
           <div style={{paddingTop:'1.5rem',display:'flex',justifyContent:'space-between',alignItems:'center'}}>
-            <div style={{fontSize:'0.75rem',color:'rgba(255,255,255,0.25)',...labelFont}}>{'\u00A9'} 2025 Ontario Accident Review. All rights reserved.</div>
+            <div style={{fontSize:'0.75rem',color:'rgba(255,255,255,0.25)',...labelFont}}>{'\u00A9'} 2026 Ontario Accident Review. All rights reserved.</div>
             <div style={{fontSize:'0.75rem',color:'rgba(255,255,255,0.2)',...labelFont}}>Ontario, Canada</div>
           </div>
         </div>
