@@ -7,11 +7,11 @@ export function HeroSection() {
         <div className="hero-left">
           <p className="hero-eyebrow">Free Accident Benefits Review</p>
           <h1 className="hero-h1">
-            Most Ontario accident victims don&apos;t know what they&apos;re actually entitled to.{' '}
-            <span className="hero-h1-accent">Find out.</span>
+            Get a Free Ontario Accident Claim Review{' '}
+            <span className="hero-h1-accent">in About 2 Minutes</span>
           </h1>
           <p className="hero-lead">
-            It takes 2 minutes. A licensed Ontario legal professional reviews your situation and tells you exactly where you stand — no cost, no obligation.
+            Find out what accident benefits may apply to your situation — including deadlines you should know and the next steps worth taking.
           </p>
           <div className="hero-stats">
             <div className="hero-stat"><span>Ontario accident claims only</span></div>
@@ -25,7 +25,7 @@ export function HeroSection() {
         </div>
         <div className="hero-right">
           <div className="hero-card">
-            <span className="hero-card-label">Start My Free Review</span>
+            <span className="hero-card-label">Get My Free Claim Review</span>
             <h2 className="hero-card-title">Tell us the basics of your accident</h2>
             <p className="hero-card-sub">Keep it simple — we only ask what&apos;s needed for an initial review.</p>
             <ul className="hero-card-checklist">
@@ -35,10 +35,10 @@ export function HeroSection() {
               <li>No obligation created by submitting</li>
             </ul>
             <a href="#intake" className="hero-card-cta">
-              Start My Free Review
+              Get My Free Claim Review
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
-            <p className="hero-card-note">~2 minutes · Free · No obligation</p>
+            <p className="hero-card-note">Free · Confidential · No obligation · Takes ~2 minutes</p>
           </div>
         </div>
       </div>
