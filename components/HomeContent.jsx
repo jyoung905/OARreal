@@ -97,9 +97,9 @@ export default function HomeContent() {
   ];
 
   const STEPS = [
-    { num:'01', label:'Initial Intake', title:'Tell us what happened', desc:'Answer a few quick questions \u2014 no documents or insurance info needed.', bg:NAVY },
-    { num:'02', label:'Professional Review', title:'We review your situation', desc:'Your information is reviewed to determine if it meets criteria for further consideration.', bg:LABEL_DARK },
-    { num:'03', label:'Clarity on Next Steps', title:'Get clarity on your options', desc:'If appropriate, a licensed Ontario legal professional may contact you to discuss next steps.', bg:NAVY },
+    { num:'01', label:'Initial Intake', title:'We review your submission', desc:'A licensed Ontario professional personally reviews every submission — no AI, no automated screening.', bg:NAVY },
+    { num:'02', label:'Professional Review', title:'You receive a written summary', desc:'We outline what accident benefits and options may apply to your specific situation.', bg:LABEL_DARK },
+    { num:'03', label:'Clarity on Next Steps', title:'You decide next steps', desc:'No pressure, no obligation. The review is yours to keep regardless.', bg:NAVY },
   ];
 
   const WHY_START_HERE = [
@@ -164,7 +164,7 @@ export default function HomeContent() {
               <a key={l.t} href={l.h} style={{color:'rgba(255,255,255,0.7)',fontWeight:500,fontSize:'0.875rem',textDecoration:'none',...labelFont}}>{l.t}</a>
             ))}
           </nav>
-          <a href="#intake" className="hc-gold-btn" style={{padding:'0.625rem 1.5rem',borderRadius:'0.375rem',fontSize:'0.875rem',letterSpacing:'0.025em',textDecoration:'none',...labelFont}}>Check If I Qualify Now</a>
+          <a href="#intake" className="hc-gold-btn" style={{padding:'0.625rem 1.5rem',borderRadius:'0.375rem',fontSize:'0.875rem',letterSpacing:'0.025em',textDecoration:'none',...labelFont}}>Get My Free Claim Review</a>
         </div>
       </header>
 
@@ -179,19 +179,18 @@ export default function HomeContent() {
               <span style={{fontSize:'0.75rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'rgba(255,255,255,0.7)',...labelFont}}>Free {'\u00b7'} No Obligation {'\u00b7'} Confidential</span>
             </div>
             <h1 className="hc-hero-h1" style={{fontSize:'3.25rem',fontWeight:800,color:'#fff',lineHeight:1.12,letterSpacing:'-0.01em',marginBottom:'1.5rem',...headlineFont}}>
-              You Could Be Owed Compensation &mdash;{' '}
-              <span style={{background:'linear-gradient(90deg, #cba72f, #e9c349)',WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent',backgroundClip:'text'}}>Find Out Before Insurance Undervalues Your Claim</span>
+              Get a Free Ontario Accident Claim Review in About 2 Minutes
             </h1>
             <p style={{fontSize:'1.125rem',color:'rgba(255,255,255,0.6)',lineHeight:1.7,maxWidth:'34rem',marginBottom:'2rem',...bodyFont}}>
-              If you&apos;ve been in an accident in Ontario, you may be entitled to compensation. Get a free, no-obligation review in under 2 minutes &mdash; before you make any decisions.
+              Find out what accident benefits may apply to your situation &mdash; including deadlines you should know and the next steps worth taking.
             </p>
             <div style={{marginBottom:'2rem'}}>
               <GoldBtn style={{padding:'1.125rem 2.5rem',fontSize:'1rem'}}>
-                <Icon name="check_circle" size="1.25rem" color="#1a0f00" fill /> Check If I Qualify Now
+                <Icon name="check_circle" size="1.25rem" color="#1a0f00" fill /> Get My Free Claim Review
               </GoldBtn>
             </div>
             <div style={{display:'flex',flexWrap:'wrap',gap:'1.5rem',paddingTop:'0.25rem'}}>
-              {[{icon:'check',text:'Free'},{icon:'check',text:'Private'},{icon:'check',text:'No obligation'},{icon:'check',text:'Takes ~2 minutes'}].map(t => (
+              {[{icon:'check',text:'Free'},{icon:'check',text:'Confidential'},{icon:'check',text:'No obligation'},{icon:'check',text:'Takes ~2 minutes'}].map(t => (
                 <div key={t.text} style={{display:'flex',alignItems:'center',gap:'0.4rem',fontSize:'0.8rem',fontWeight:700,color:'rgba(255,255,255,0.65)',...labelFont}}>
                   <Icon name={t.icon} size="1rem" color={GOLD} fill />{t.text}
                 </div>
@@ -306,8 +305,8 @@ export default function HomeContent() {
       <section id="how-it-works" style={{background:LIGHT_BG,padding:'6rem 1.5rem'}}>
         <div className="hc-grid-2" style={{...maxW,display:'grid',gridTemplateColumns:'2fr 3fr',gap:'4rem',alignItems:'flex-start'}}>
           <div className="hc-reveal">
-            <GoldLabel light>How It Works</GoldLabel>
-            <h2 style={{fontSize:'2.5rem',fontWeight:800,color:NAVY,lineHeight:1.15,margin:'1rem 0 1.25rem',...headlineFont}}>Simple. Private.<br/>No Pressure.</h2>
+            <GoldLabel light>What Happens Next</GoldLabel>
+            <h2 style={{fontSize:'2.5rem',fontWeight:800,color:NAVY,lineHeight:1.15,margin:'1rem 0 1.25rem',...headlineFont}}>What Happens After You Submit</h2>
             <GoldLine />
             <p style={{color:ON_SURFACE_VARIANT,fontSize:'0.875rem',lineHeight:1.7,margin:'1.5rem 0 2rem',...bodyFont}}>
               Our process is designed to give you clarity fast &mdash; with no pressure, no paperwork, and no commitment at any stage.
@@ -416,7 +415,7 @@ export default function HomeContent() {
         <div className="hc-reveal" style={{...maxW,maxWidth:'48rem',textAlign:'center'}}>
           <GoldLabel>Take the next step</GoldLabel>
           <h2 style={{fontSize:'2.75rem',fontWeight:800,color:'#fff',lineHeight:1.15,margin:'1.25rem 0',...headlineFont}}>
-            Find Out What Your Case Could Be Worth
+            Find Out What May Apply to Your Claim
           </h2>
           <p style={{color:TEXT_DIM,maxWidth:'32rem',margin:'0 auto 2.5rem',lineHeight:1.7,fontSize:'1.125rem',...bodyFont}}>
             It takes about 2 minutes. No cost. No obligation.
@@ -485,7 +484,7 @@ export default function HomeContent() {
             Before you rely on insurance &mdash; or make any decisions &mdash; take 2 minutes to understand your situation.
           </p>
           <GoldBtn style={{padding:'1.125rem 2.75rem',fontSize:'1rem',boxShadow:'0 10px 15px -3px rgba(0,0,0,0.1)'}}>
-            <Icon name="rocket_launch" size="1.25rem" color="#1a0f00" /> Check If I Qualify Now
+            <Icon name="rocket_launch" size="1.25rem" color="#1a0f00" /> Get My Free Claim Review
           </GoldBtn>
           <p style={{color:'rgba(255,255,255,0.25)',fontSize:'0.75rem',marginTop:'1.75rem',...labelFont}}>Free {'\u00b7'} Confidential {'\u00b7'} No obligation {'\u00b7'} Takes ~2 minutes</p>
         </div>
