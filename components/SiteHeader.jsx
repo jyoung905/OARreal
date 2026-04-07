@@ -24,7 +24,7 @@ export function SiteHeader() {
           ))}
           <a className="stitch-nav-link" href="/resources">Resources</a>
         </nav>
-        <a className="stitch-nav-cta" href="#intake">Start Your Review</a>
+        <a className="stitch-nav-cta" href="#intake">Get My Free Claim Review</a>
         <button
           className="stitch-hamburger"
           onClick={() => setOpen(!open)}
