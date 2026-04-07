@@ -18,6 +18,8 @@ export function SiteFooter() {
           </ul>
         </div>
       </div>
-    </footer>
+
+      <p className="footer-copyright">© 2026 Ontario Accident Review. All rights reserved.</p>
+        </footer>
   );
 }
