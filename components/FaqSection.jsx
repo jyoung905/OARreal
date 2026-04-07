@@ -3,7 +3,7 @@ import Link from 'next/link';
 export function FaqSection() {
   const faqs = [
     { q: 'Is Ontario Accident Review a law firm?', a: 'No. Ontario Accident Review is not a law firm and does not provide legal advice or legal representation.' },
-    { q: 'What happens after I submit my review?', a: 'A representative of Ontario Accident Review reviews your information. If your situation appears to fit our review criteria, we may contact you to discuss next steps.' },
+    { q: 'What happens after I submit my review?', a: 'A licensed Ontario legal professional reviews your submission, typically within 24 hours on business days. If your situation fits our review criteria, a representative may contact you to discuss possible benefits, deadlines, and next steps.' },
     { q: 'Do I need to provide insurance information?', a: 'No. We do not ask for insurance details in the initial review.' },
     { q: 'Do I need to upload documents?', a: 'No. We are intentionally keeping the first stage simple and do not require uploads.' },
     { q: 'Does submitting a review mean I am starting a legal case?', a: 'No. Submitting the form is only a request for an initial review.' },
@@ -30,9 +30,9 @@ export function FaqSection() {
             </p>
             <p style={{color:'#4a5568',fontFamily:'Inter,sans-serif',fontSize:'0.85rem',lineHeight:1.7,margin:0}}>
               Please review our{' '}
-              <Link href="/privacy.html" style={{color:'#cba72f'}}>Privacy Policy</Link>,{' '}
-              <Link href="/disclaimer.html" style={{color:'#cba72f'}}>Disclaimer</Link>, and{' '}
-              <Link href="/contact.html" style={{color:'#cba72f'}}>Contact</Link> pages.
+              <Link href="/privacy" style={{color:'#cba72f'}}>Privacy Policy</Link>,{' '}
+              <Link href="/disclaimer" style={{color:'#cba72f'}}>Disclaimer</Link>, and{' '}
+              <Link href="/contact" style={{color:'#cba72f'}}>Contact</Link> pages.
             </p>
           </div>
         </div>
