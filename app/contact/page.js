@@ -21,7 +21,7 @@ export default function ContactPage() {
             <section className="contact-card">
               <h3>Get in touch</h3>
               <p>Email: <a href="mailto:info@ontarioaccidentreview.ca">info@ontarioaccidentreview.ca</a></p>
-              <p>Hours: Available 24/7</p>
+              <p>Online review form available 24/7</p>
             </section>
             <section className="contact-card">
               <h3>Start your free review</h3>
