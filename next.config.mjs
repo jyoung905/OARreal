@@ -5,6 +5,7 @@ const nextConfig = {
       { source: '/privacy.html', destination: '/privacy', permanent: true },
       { source: '/disclaimer.html', destination: '/disclaimer', permanent: true },
       { source: '/contact.html', destination: '/contact', permanent: true },
+      { source: '/terms-of-service.html', destination: '/terms-of-service', permanent: true },
     ];
   },
   async rewrites() {
