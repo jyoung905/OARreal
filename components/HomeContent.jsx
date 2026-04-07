@@ -252,6 +252,34 @@ export default function HomeContent() {
         </div>
       </section>
 
+      {/* WHO THIS IS FOR */}
+      <section style={{background:DARK_ALT,padding:'4rem 1.25rem'}}>
+        <div style={{maxWidth:'60rem',margin:'0 auto'}}>
+          <div className="hc-reveal" style={{textAlign:'center',marginBottom:'2.5rem'}}>
+            <GoldLabel light>Who This Is For</GoldLabel>
+            <h2 style={{fontSize:'2rem',fontWeight:800,color:'#fff',lineHeight:1.15,margin:'0.75rem 0 0',...headlineFont}}>This free review may be right for you if&hellip;</h2>
+          </div>
+          <div className="hc-grid-2" style={{display:'grid',gridTemplateColumns:'repeat(2,1fr)',gap:'1rem'}}>
+            {[
+              {num:'01',title:'Recently hurt in Ontario',body:'You were recently injured in a car accident in Ontario.'},
+              {num:'02',title:'Unsure about your benefits',body:"You're not sure if you're entitled to accident benefits."},
+              {num:'03',title:'Denied or received a low offer',body:'You received a denial or low offer from your insurer.'},
+              {num:'04',title:'Symptoms but no claim filed',body:"You're dealing with pain or ongoing symptoms but haven't filed a claim."},
+              {num:'05',title:'Claim closed unexpectedly',body:"Your claim was closed and you're not sure if it should have been."},
+              {num:'06',title:'Want plain-language clarity',body:'You want a plain-language explanation of your options — no lawyers, no pressure.'},
+            ].map((item,i)=>(
+              <div key={i} className="hc-dark-card hc-reveal hc-hover-lift" style={{padding:'1.5rem',borderRadius:'0.75rem',display:'flex',gap:'1rem',alignItems:'flex-start'}}>
+                <span style={{fontSize:'1.25rem',fontWeight:800,color:GOLD,lineHeight:1,...labelFont,minWidth:'2.5rem'}}>{item.num}</span>
+                <div>
+                  <div style={{fontWeight:700,color:'#fff',marginBottom:'0.35rem',...labelFont}}>{item.title}</div>
+                  <div style={{fontSize:'0.9rem',color:'rgba(255,255,255,0.65)',lineHeight:1.6,...bodyFont}}>{item.body}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* VALUE SECTION */}
       <section style={{background:DARK_ALT,padding:'6rem 1.5rem'}}>
         <div className="hc-grid-2" style={{...maxW,display:'grid',gridTemplateColumns:'1fr 1fr',gap:'4rem',alignItems:'center'}}>
