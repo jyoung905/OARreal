@@ -13,6 +13,7 @@ export function SiteFooter() {
           <p className="footer-heading">Pages</p>
           <ul>
             <li><Link href="/privacy">Privacy Policy</Link></li>
+            <li><Link href="/terms-of-service">Terms of Service</Link></li>
             <li><Link href="/disclaimer">Disclaimer</Link></li>
             <li><Link href="/contact">Contact</Link></li>
           </ul>
@@ -20,6 +21,6 @@ export function SiteFooter() {
       </div>
 
       <p className="footer-copyright">© 2026 Ontario Accident Review. All rights reserved.</p>
-        </footer>
+    </footer>
   );
 }
