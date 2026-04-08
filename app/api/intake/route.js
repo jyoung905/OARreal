@@ -101,15 +101,16 @@ ${additionalNotes ? `
 📋 <b>Accident summary:</b>
 ${accidentSummary || '—'}`;
 
-    await Promise.all([
-      transporter.sendMail({
-        from: `"${process.env.SMTP_FROM_NAME || 'Ontario Accident Review'}" <${process.env.SMTP_FROM_EMAIL}>`,
-        to: process.env.LEAD_ALERT_EMAIL_TO || 'ontarioaccidentreview@gmail.com',
-        subject,
-        html,
-      }),
-      sendTelegram(tgText),
-    ]);
+    // Fire Telegram first — never block submission on email
+    await sendTelegram(tgText).catch(err => console.error('Telegram alert failed:', err));
+
+    // Email is best-effort — failure must not block the success response
+    transporter.sendMail({
+      from: `"${process.env.SMTP_FROM_NAME || 'Ontario Accident Review'}" <${process.env.SMTP_FROM_EMAIL}>`,
+      to: process.env.LEAD_ALERT_EMAIL_TO || 'ontarioaccidentreview@gmail.com',
+      subject,
+      html,
+    }).catch(err => console.error('Email alert failed:', err));
 
     return NextResponse.json({ success: true });
   } catch (err) {
