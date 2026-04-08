@@ -48,7 +48,7 @@ const faqJsonLd = {
       name: 'How long does the review process take?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The initial intake form takes about 2 minutes to complete. Our team then reviews your situation and responds within 24 hours with a detailed assessment of your potential entitlements.',
+        text: 'The initial intake form takes about 2 minutes to complete. A licensed Ontario professional personally reviews your submission — typically within 1–2 business days. If your situation qualifies, a representative will reach out with plain-language guidance.',
       },
     },
     {
@@ -64,7 +64,15 @@ const faqJsonLd = {
       name: 'Do I need a lawyer to use this service?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. Ontario Accident Review is not a law firm. We provide independent assessment and advocacy services. If legal representation is recommended based on your situation, we can provide referrals to qualified personal injury lawyers.',
+        text: 'No. Ontario Accident Review is not a law firm. We provide a free, independent assessment to help you understand your situation before deciding on next steps. If legal representation appears appropriate based on your review, we can refer you to qualified Ontario personal injury lawyers — with no obligation.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What if the accident was partly my fault?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Fault does not necessarily disqualify you from accident benefits in Ontario. Ontario uses a no-fault accident benefits system, which means you may still be entitled to certain benefits regardless of fault. Submit your review and we will assess your specific situation.',
       },
     },
     {

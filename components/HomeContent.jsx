@@ -56,6 +56,7 @@ function Icon({ name, size, color, fill }) {
 export default function HomeContent() {
   const [openFaq, setOpenFaq] = useState(-1);
   const [stickyCta, setStickyCta] = useState(false);
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => { if (window.scrollY > 300) setStickyCta(true); };
@@ -98,7 +99,7 @@ export default function HomeContent() {
 
   const STEPS = [
     { num:'01', label:'Initial Intake', title:'We review your submission', desc:'A licensed Ontario professional personally reviews every submission — no AI, no automated screening.', bg:NAVY },
-    { num:'02', label:'Professional Review', title:'You receive a written summary', desc:'We outline what accident benefits and options may apply to your specific situation.', bg:LABEL_DARK },
+    { num:'02', label:'Professional Review', title:'You receive a written summary', desc:'We outline what accident benefits and options may apply to your specific situation — typically within 1–2 business days.', bg:LABEL_DARK },
     { num:'03', label:'Clarity on Next Steps', title:'You decide next steps', desc:'No pressure, no obligation. The review is yours to keep regardless.', bg:NAVY },
   ];
 
@@ -117,11 +118,13 @@ export default function HomeContent() {
   ];
 
   const FAQS = [
-    { q:'Do I have to pay anything?', a:'No. This is completely free.' },
-    { q:'Am I hiring a lawyer by submitting this?', a:'No. This does not create a legal relationship or commitment.' },
-    { q:'What happens after I submit?', a:'Your information is reviewed. If your situation appears to fit review criteria, you may be contacted.' },
-    { q:'Do I need documents or insurance info?', a:'No. Not for the initial review.' },
-    { q:'Is my information private?', a:'Yes. Your information is handled securely and used only for review purposes.' },
+    { q:'Do I have to pay anything?', a:'No. The review is completely free. There is no charge at any stage, and no obligation to proceed.' },
+    { q:'Am I hiring a lawyer by submitting this?', a:'No. Submitting this form does not create a legal relationship, retain a lawyer, or start a case. It is simply an intake so we can review your situation.' },
+    { q:'What happens after I submit?', a:'A licensed Ontario professional personally reviews your submission — typically within 1–2 business days. If your situation appears to qualify, a representative will reach out with plain-language guidance on what may apply to your claim.' },
+    { q:'Do I need documents or insurance info?', a:'No. You do not need any documents, policy numbers, or insurance details to start. Just tell us the basics of what happened.' },
+    { q:'Is my information private?', a:'Yes. Your information is handled with strict confidentiality, stored securely, and is never shared with insurers or third parties without your consent.' },
+    { q:'What if the accident was partly my fault?', a:'Fault does not necessarily disqualify you from accident benefits in Ontario. Ontario uses a no-fault accident benefits system, which means you may still be entitled to certain benefits regardless of fault.' },
+    { q:'What if it has been several months since my accident?', a:'Time limits do apply in Ontario, so it is worth checking your situation now rather than waiting. Submit your review and we will let you know if timing is a concern for your specific claim.' },
   ];
 
   return (
@@ -146,26 +149,49 @@ export default function HomeContent() {
         .hc-gold-btn:active{transform:scale(0.97)}
         @keyframes hcPulse{0%,100%{opacity:1}50%{opacity:0.5}}
         .hc-pulse{animation:hcPulse 2s ease-in-out infinite}
+        .hc-hamburger-line{display:block;width:22px;height:2px;background:${GOLD};border-radius:2px;transition:transform 0.2s,opacity 0.2s}
         @media(max-width:768px){
           .hc-mobile-sticky{display:flex !important}
           .hc-grid-2{grid-template-columns:1fr !important}
           .hc-grid-3{grid-template-columns:1fr !important}
           .hc-hero-grid{grid-template-columns:1fr !important}
           .hc-hero-h1{font-size:2.5rem !important}
+          .hc-desktop-nav{display:none !important}
+          .hc-hamburger{display:flex !important}
+          .hc-header-cta{display:none !important}
+        }
+        @media(min-width:769px){
+          .hc-hamburger{display:none !important}
+          .hc-mobile-menu{display:none !important}
         }
       `}</style>
 
       {/* HEADER */}
       <header style={{position:'fixed',top:0,width:'100%',zIndex:50,background:'rgba(6,11,22,0.90)',backdropFilter:'blur(14px)',borderBottom:'1px solid rgba(255,255,255,0.05)'}}>
-        <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',padding:'1rem 2rem',...maxW}}>
+        <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',padding:'1rem 1.5rem',...maxW}}>
           <a href="/" style={{display:'flex',alignItems:'center',textDecoration:'none'}}>{SVG_LOGO(40)}</a>
-          <nav style={{display:'flex',alignItems:'center',gap:'2rem'}}>
+          <nav className="hc-desktop-nav" style={{display:'flex',alignItems:'center',gap:'2rem'}}>
             {[{t:'How it works',h:'#how-it-works'},{t:'Why start here',h:'#why-start-here'},{t:'FAQ',h:'#faq'},{t:'Resources',h:'/resources'}].map(l => (
               <a key={l.t} href={l.h} style={{color:'rgba(255,255,255,0.7)',fontWeight:500,fontSize:'0.875rem',textDecoration:'none',...labelFont}}>{l.t}</a>
             ))}
           </nav>
-          <a href="#intake" className="hc-gold-btn" style={{padding:'0.625rem 1.5rem',borderRadius:'0.375rem',fontSize:'0.875rem',letterSpacing:'0.025em',textDecoration:'none',...labelFont}}>Get My Free Claim Review</a>
+          <div style={{display:'flex',alignItems:'center',gap:'0.75rem'}}>
+            <a href="#intake" className="hc-gold-btn hc-header-cta" style={{padding:'0.625rem 1.5rem',borderRadius:'0.375rem',fontSize:'0.875rem',letterSpacing:'0.025em',textDecoration:'none',...labelFont}}>Get My Free Review</a>
+            <button className="hc-hamburger" onClick={() => setMobileNavOpen(o => !o)} aria-label="Toggle menu" style={{background:'none',border:'none',cursor:'pointer',padding:'8px',display:'flex',flexDirection:'column',justifyContent:'center',gap:'5px'}}>
+              <span className="hc-hamburger-line" style={mobileNavOpen ? {transform:'translateY(7px) rotate(45deg)'} : {}} />
+              <span className="hc-hamburger-line" style={mobileNavOpen ? {opacity:0} : {}} />
+              <span className="hc-hamburger-line" style={mobileNavOpen ? {transform:'translateY(-7px) rotate(-45deg)'} : {}} />
+            </button>
+          </div>
         </div>
+        {mobileNavOpen && (
+          <nav className="hc-mobile-menu" style={{display:'flex',flexDirection:'column',gap:'0.875rem',padding:'1.25rem 1.5rem 1.5rem',background:'#060b16',borderTop:'1px solid rgba(203,167,47,0.2)'}}>
+            {[{t:'How it works',h:'#how-it-works'},{t:'Why start here',h:'#why-start-here'},{t:'FAQ',h:'#faq'},{t:'Resources',h:'/resources'}].map(l => (
+              <a key={l.t} href={l.h} onClick={() => setMobileNavOpen(false)} style={{color:'rgba(255,255,255,0.85)',fontWeight:500,fontSize:'1rem',textDecoration:'none',padding:'0.25rem 0',...bodyFont}}>{l.t}</a>
+            ))}
+            <a href="#intake" onClick={() => setMobileNavOpen(false)} style={{display:'block',textAlign:'center',marginTop:'0.5rem',padding:'0.875rem 1.5rem',background:GOLD,color:'#1a0f00',fontWeight:700,borderRadius:'0.375rem',fontSize:'0.95rem',textDecoration:'none',...labelFont}}>Get My Free Claim Review</a>
+          </nav>
+        )}
       </header>
 
       {/* HERO SECTION */}
@@ -241,10 +267,10 @@ export default function HomeContent() {
             <span style={{fontSize:'0.8rem',fontWeight:700,color:GOLD,textTransform:'uppercase',letterSpacing:'0.1em',...labelFont}}>Important</span>
           </div>
           <h2 style={{fontSize:'2.5rem',fontWeight:800,color:'#fff',lineHeight:1.15,marginBottom:'1.5rem',...headlineFont}}>
-            Most accident victims accept less than they should.
+            Many accident victims don&apos;t realize what they may be entitled to &mdash; until it&apos;s too late.
           </h2>
           <p style={{color:'rgba(255,255,255,0.55)',fontSize:'1.125rem',lineHeight:1.8,maxWidth:'40rem',margin:'0 auto 1.5rem',...bodyFont}}>
-            Insurance companies don&apos;t explain everything you may be entitled to &mdash; and once you settle, you can&apos;t go back.
+            Insurance information is not always the full picture. A second look can help you understand what may apply before you make any decisions.
           </p>
           <p style={{color:GOLD,fontSize:'1rem',fontWeight:600,lineHeight:1.7,...bodyFont}}>
             That&apos;s why getting a second look before making decisions matters.
@@ -312,7 +338,7 @@ export default function HomeContent() {
             </div>
           </div>
           <div className="hc-reveal" style={{position:'relative',borderRadius:'0.75rem',overflow:'hidden',height:520}}>
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuArsYkOIA4FUvBnpGFLcdqukHA_JQsXw9LgaQ5yuVzNPzge4wJWifuLf-JVUbrm4EnL7PB1LwdEA_HSi129RKeTwQo-Mc2hJKe6XIAXHvbtzzsKghdAvQaAukdjlJIZF8RY-mDO7i9f3MM4C3Ih3WNZhMxWKGtaL4FbCpYmvWbb9ey8_vKE3O2NlHJruJJY4lSUZajd6w9Bi8ufVmLwTSO3wsPx8s5EH-5Rj9xl66WWo-7uECf28sFhGNXAyaWtV8rnKuyy2L1nfzH7" alt="Ontario accident review professional" style={{width:'100%',height:'100%',objectFit:'cover',objectPosition:'top',filter:'brightness(0.75) contrast(1.05)'}} />
+            <img src="/value-section.jpg" alt="Ontario accident review professional consultation" style={{width:'100%',height:'100%',objectFit:'cover',objectPosition:'top',filter:'brightness(0.75) contrast(1.05)'}} />
             <div style={{position:'absolute',inset:0,background:'linear-gradient(to top, #060b16 0%, rgba(6,11,22,0.35) 45%, transparent 100%)'}} />
             <div style={{position:'absolute',bottom:'1.5rem',left:'1.5rem',right:'1.5rem'}}>
               <div className="hc-dark-card" style={{borderRadius:'0.5rem',padding:'1rem 1.25rem',display:'flex',alignItems:'center',gap:'1rem'}}>
@@ -425,13 +451,14 @@ export default function HomeContent() {
           </p>
           <div style={{display:'flex',justifyContent:'center',gap:'3rem',marginTop:'2.5rem',flexWrap:'wrap'}}>
             {[
-              { value:'7 days', label:'To notify your insurer', color:GOLD },
-              { value:'30 days', label:'To complete application', color:'#fff' },
-              { value:'2 years', label:'General limitation period', color:GOLD },
+              { value:'7 days', label:'To notify your insurer', consequence:'Miss this and you may lose access to accident benefits entirely', color:GOLD },
+              { value:'30 days', label:'To complete your benefits application', consequence:'Most people don\'t know this deadline even exists', color:'#fff' },
+              { value:'2 years', label:'General limitation period', consequence:'Many people wait too long assuming they still have time', color:GOLD },
             ].map(s => (
-              <div key={s.label}>
+              <div key={s.label} style={{maxWidth:'16rem'}}>
                 <div style={{fontSize:'2.5rem',fontWeight:800,color:s.color,...headlineFont}}>{s.value}</div>
                 <div style={{fontSize:'0.75rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.05em',color:TEXT_DIMMER,marginTop:'0.5rem',...labelFont}}>{s.label}</div>
+                <div style={{fontSize:'0.78rem',color:'rgba(255,255,255,0.4)',marginTop:'0.4rem',lineHeight:1.5,...bodyFont}}>{s.consequence}</div>
               </div>
             ))}
           </div>
@@ -479,7 +506,7 @@ export default function HomeContent() {
       </section>
 
       {/* WHY PEOPLE START HERE FIRST */}
-      <section style={{background:'#0e1c30',padding:'4rem 1.5rem'}}>
+      <section id="why-start-here" style={{background:'#0e1c30',padding:'4rem 1.5rem'}}>
         <div style={{maxWidth:'1100px',margin:'0 auto'}}>
           <h2 style={{color:'#ffffff',fontFamily:'Manrope,sans-serif',fontSize:'clamp(1.4rem,3vw,2rem)',fontWeight:800,textAlign:'center',marginBottom:'2.5rem'}}>Why People Start Here First</h2>
           <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:'1.5rem'}}>
@@ -547,7 +574,7 @@ export default function HomeContent() {
             <div>
               <div style={{fontSize:'0.75rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'rgba(255,255,255,0.3)',marginBottom:'1.25rem',...labelFont}}>Legal</div>
               <div style={{display:'flex',flexDirection:'column',gap:'0.75rem'}}>
-                {[{t:'Privacy Policy',h:'/privacy'},{t:'Terms of Service',h:'#'},{t:'Legal Disclaimer',h:'/disclaimer'},{t:'Contact',h:'/contact'}].map(l => (
+                {[{t:'Privacy Policy',h:'/privacy'},{t:'Terms of Service',h:'/terms-of-service'},{t:'Legal Disclaimer',h:'/disclaimer'},{t:'Contact',h:'/contact'}].map(l => (
                   <a key={l.t} href={l.h} style={{fontSize:'0.875rem',color:'rgba(255,255,255,0.5)',textDecoration:'none',...bodyFont}}>{l.t}</a>
                 ))}
               </div>

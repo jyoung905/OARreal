@@ -106,32 +106,40 @@ export function IntakeModal() {
     setSubmitting(true);
     setSubmitError('');
 
-    const formData = new FormData();
-    formData.append('access_key', '8ff4fcf1-b876-4049-86d3-e2bc8e3e9db8');
-    formData.append('subject', 'New Ontario Accident Review — ' + (accidentType || 'Unspecified'));
-    formData.append('from_name', firstName + ' ' + lastName);
-    formData.append('email', email);
-    formData.append('phone', phone);
-    formData.append('best_time', bestTime || 'Not specified');
-    formData.append('accident_type', accidentType || 'Not specified');
-    formData.append('ontario', ontario || 'Not specified');
-    formData.append('accident_date', accidentDate || 'Not specified');
-    formData.append('injured', injured || 'Not specified');
-    formData.append('missed_work', missedWork || 'Not specified');
-    formData.append('receiving_treatment', treatment || 'Not specified');
-    formData.append('symptoms', symptoms.length > 0 ? symptoms.join(', ') : 'None selected');
-    formData.append('intent', intent || 'Not specified');
-    formData.append('description', description || 'Not provided');
-    formData.append('botcheck', '');
+    const payload = {
+      fullName: (firstName + ' ' + lastName).trim(),
+      email,
+      phone,
+      bestTime: bestTime || 'Not specified',
+      contactMethod: 'Either',
+      accidentType: accidentType || 'Not specified',
+      accidentDate: accidentDate || 'Not specified',
+      inOntario: ontario || 'Not specified',
+      injured: injured || 'Not specified',
+      medicalAttention: treatment || 'Not specified',
+      workImpact: missedWork || 'Not specified',
+      ongoingSymptoms: symptoms.length > 0 ? symptoms.join(', ') : 'None selected',
+      spokenWithLawyer: 'Not specified',
+      currentlyRepresented: 'No',
+      thirdPartyInvolved: 'Not specified',
+      accidentSummary: description || '',
+      additionalNotes: intent || '',
+      cityArea: 'Ontario',
+      sourcePage: typeof window !== 'undefined' ? window.location.pathname : '/'
+    };
 
     try {
-      const response = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData });
+      const response = await fetch('/api/intake', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
       const data = await response.json();
-      if (data.success) {
+      if (response.ok && data.success !== false) {
         pushEvent('form_submit', { accident_type: accidentType, intent });
         window.location.href = '/thank-you';
       } else {
-        throw new Error(data.message || 'Submission failed');
+        throw new Error(data.error || 'Submission failed');
       }
     } catch (err) {
       setSubmitting(false);
@@ -524,10 +532,10 @@ export function IntakeModal() {
             <p style={{fontSize:'0.75rem',color:'#44474f',lineHeight:1.6,maxWidth:'36rem'}}>Ontario Accident Review is not a law firm and does not provide legal advice or legal representation. Submitting this form does not start a legal case. This intake tool is for assessment purposes only.</p>
             <div style={{display:'flex',gap:'1.25rem',fontSize:'0.75rem',fontWeight:500}}>
               <a href="/privacy" style={{color:'#44474f',textDecoration:'underline'}}>Privacy Policy</a>
-              <a href="/disclaimer" style={{color:'#44474f',textDecoration:'underline'}}>Terms of Service</a>
+              <a href="/terms-of-service" style={{color:'#44474f',textDecoration:'underline'}}>Terms of Service</a>
               <a href="/disclaimer" style={{color:'#44474f',textDecoration:'underline'}}>Legal Disclaimer</a>
             </div>
-            <div style={{fontSize:'0.75rem',color:'#75777f'}}>&copy; 2025 Ontario Accident Review. All rights reserved.</div>
+            <div style={{fontSize:'0.75rem',color:'#75777f'}}>&copy; 2026 Ontario Accident Review. All rights reserved.</div>
           </div>
         </footer>
       </div>
