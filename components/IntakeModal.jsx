@@ -519,7 +519,7 @@ export function IntakeModal() {
                   { icon: 'attach_money', text: 'Free · No Obligation' },
                   { icon: 'timer', text: 'About 2 Minutes' },
                 ].map(item => (
-                  <div key={item.text} style={{display:'flex',alignItems:'center',gap:'0.5rem',fontSize:'0.75rem',fontWeight:700,color:'#44474f',fontFamily:'Open Sans',sans-serif}}>
+                  <div key={item.text} style={{display:'flex',alignItems:'center',gap:'0.5rem',fontSize:'0.75rem',fontWeight:700,color:'#44474f',fontFamily:"'Open Sans',sans-serif"}}>
                     <span className="material-symbols-outlined" style={{fontSize:'0.875rem'}}>{item.icon}</span> {item.text}
                   </div>
                 ))}
