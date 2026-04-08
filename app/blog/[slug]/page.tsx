@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { BLOG_POSTS, getPostBySlug } from '@/lib/blog-posts';
+import { ResourcesHeader } from '@/components/ResourcesHeader';
 
 const BASE_URL = 'https://www.ontarioaccidentreview.ca';
 
@@ -44,30 +45,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         article ul li { margin-bottom: 0.4rem; list-style: disc; }
       `}</style>
 
-      {/* HEADER */}
-      <header style={{ position: 'sticky', top: 0, width: '100%', zIndex: 50, background: 'rgba(6,11,22,0.92)', backdropFilter: 'blur(14px)', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem 2rem', maxWidth: '80rem', margin: '0 auto' }}>
-          <Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 100" fill="none" height={40} style={{ width: 'auto' }}>
-              <path d="M 72 64 A 28 28 0 1 1 48 22" stroke="#e8f0ff" strokeWidth="7" strokeLinecap="round" fill="none" />
-              <path d="M 48 22 A 28 28 0 0 1 72 64" stroke="#3a82c8" strokeWidth="7" strokeLinecap="round" fill="none" />
-              <line x1="48" y1="30" x2="48" y2="42" stroke="#3a82c8" strokeWidth="4" strokeLinecap="round" />
-              <line x1="48" y1="42" x2="48" y2="58" stroke="#3a82c8" strokeWidth="4" strokeLinecap="round" />
-              <polyline points="38,50 48,62 58,50" stroke="#3a82c8" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-              <text x="92" y="44" fontFamily="Arial, Helvetica, sans-serif" fontWeight="700" fontSize="25" fill="#e8f0ff">Ontario</text>
-              <text x="92" y="74" fontFamily="Arial, Helvetica, sans-serif" fontWeight="700" fontSize="25" fill="#e8f0ff">Accident Review</text>
-            </svg>
-          </Link>
-          <nav style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
-            <Link href="/#how-it-works" style={{ color: 'rgba(255,255,255,0.7)', fontWeight: 500, fontSize: '0.875rem', textDecoration: 'none', fontFamily: 'Inter,sans-serif' }}>How it works</Link>
-            <Link href="/resources" style={{ color: 'rgba(255,255,255,0.7)', fontWeight: 500, fontSize: '0.875rem', textDecoration: 'none', fontFamily: 'Inter,sans-serif' }}>Resources</Link>
-            <Link href="/#faq" style={{ color: 'rgba(255,255,255,0.7)', fontWeight: 500, fontSize: '0.875rem', textDecoration: 'none', fontFamily: 'Inter,sans-serif' }}>FAQ</Link>
-          </nav>
-          <a href="/#intake" style={{ background: '#cba72f', color: '#1a0f00', fontWeight: 700, padding: '0.625rem 1.5rem', borderRadius: '0.375rem', fontSize: '0.875rem', textDecoration: 'none', fontFamily: 'Inter,sans-serif' }}>
-            Get My Free Claim Review
-          </a>
-        </div>
-      </header>
+      <ResourcesHeader />
 
       <div className="blog-body" style={{ paddingTop: '5rem' }}>
 

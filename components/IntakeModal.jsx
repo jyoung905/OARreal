@@ -27,6 +27,8 @@ const INTENT_OPTIONS = [
   'Whether insurance is treating me fairly',
   'What my next steps are',
   'Whether it’s worth speaking to a legal professional',
+  'Understanding the deadlines that apply',
+  'What benefits I may be entitled to',
 ];
 
 export function IntakeModal() {
@@ -42,7 +44,7 @@ export function IntakeModal() {
   const [missedWork, setMissedWork] = useState('');
   const [treatment, setTreatment] = useState('');
   const [symptoms, setSymptoms] = useState([]);
-  const [intent, setIntent] = useState('');
+  const [intents, setIntents] = useState([]);
   const [description, setDescription] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -123,7 +125,7 @@ export function IntakeModal() {
       currentlyRepresented: 'No',
       thirdPartyInvolved: 'Not specified',
       accidentSummary: description || '',
-      additionalNotes: intent || '',
+      additionalNotes: intents.length > 0 ? intents.join(', ') : '',
       cityArea: 'Ontario',
       sourcePage: typeof window !== 'undefined' ? window.location.pathname : '/'
     };
@@ -136,7 +138,7 @@ export function IntakeModal() {
       });
       const data = await response.json();
       if (response.ok && data.success !== false) {
-        pushEvent('form_submit', { accident_type: accidentType, intent });
+        pushEvent('form_submit', { accident_type: accidentType, intent: intents.join(', ') });
         window.location.href = '/thank-you';
       } else {
         throw new Error(data.error || 'Submission failed');
@@ -176,7 +178,7 @@ export function IntakeModal() {
         .im-pill:hover{border-color:#735c00;color:#001b44}
         .im-pill.selected{background:#001b44;border-color:#001b44;color:#fff}
 
-        .im-chip{padding:0.45rem 1rem;border-radius:999px;font-size:0.8rem;font-weight:600;font-family:Inter,sans-serif;border:1.5px solid #c5c6d0;background:#fff;color:#44474f;cursor:pointer;transition:all 0.15s;white-space:nowrap;display:inline-flex;align-items:center;gap:0.3rem}
+        .im-chip{padding:0.45rem 1rem;border-radius:999px;font-size:0.8rem;font-weight:600;font-family:Inter,sans-serif;border:1.5px solid #c5c6d0;background:#fff;color:#44474f;cursor:pointer;transition:all 0.15s;white-space:nowrap;display:inline-flex;align-items:center;gap:0.3rem;min-width:0}
         .im-chip:hover{border-color:#735c00;color:#001b44}
         .im-chip.selected{background:#001b44;border-color:#001b44;color:#fff}
 
@@ -351,10 +353,10 @@ export function IntakeModal() {
 
                     <div style={{display:'flex',flexDirection:'column',gap:'0.75rem'}}>
                       <span className="im-label">Any of these apply? <span style={{fontWeight:400,textTransform:'none',letterSpacing:'normal'}}>(select all that fit)</span></span>
-                      <div style={{display:'flex',flexWrap:'wrap',gap:'0.5rem'}}>
+                      <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'0.5rem'}}>
                         {SYMPTOM_OPTIONS.map(s => (
-                          <button key={s} type="button" className={`im-chip${symptoms.includes(s) ? ' selected' : ''}`} onClick={() => toggleSymptom(s)}>
-                            {symptoms.includes(s) && <span className="material-symbols-outlined" style={{fontSize:'0.9rem',fontVariationSettings:"'FILL' 1"}}>check</span>}
+                          <button key={s} type="button" className={`im-chip${symptoms.includes(s) ? ' selected' : ''}`} onClick={() => toggleSymptom(s)} style={{justifyContent:'flex-start',borderRadius:'0.5rem',padding:'0.6rem 0.75rem',whiteSpace:'normal',textAlign:'left',lineHeight:1.3}}>
+                            {symptoms.includes(s) && <span className="material-symbols-outlined" style={{fontSize:'0.9rem',fontVariationSettings:"'FILL' 1",flexShrink:0,marginRight:'0.25rem'}}>check</span>}
                             {s}
                           </button>
                         ))}
@@ -384,12 +386,13 @@ export function IntakeModal() {
                     <p style={{fontSize:'0.875rem',color:'#44474f',lineHeight:1.6}}>Choose what best fits your situation.</p>
 
                     <div style={{display:'flex',flexDirection:'column',gap:'0.75rem'}}>
-                      <span className="im-label">What do you want help understanding?</span>
+                      <span className="im-label">What do you want help understanding? <span style={{fontWeight:400,textTransform:'none',letterSpacing:'normal'}}>(select all that apply)</span></span>
                       <div style={{display:'flex',flexDirection:'column',gap:'0.625rem'}}>
                         {INTENT_OPTIONS.map(opt => (
-                          <button key={opt} type="button" className={`im-intent${intent === opt ? ' selected' : ''}`} onClick={() => setIntent(opt)}>
-                            <span className="im-intent-dot"></span>
-                            <span style={{fontSize:'0.875rem',fontWeight:600,color:'#001b44'}}>{opt}</span>
+                          <button key={opt} type="button" className={`im-intent${intents.includes(opt) ? ' selected' : ''}`} onClick={() => setIntents(prev => prev.includes(opt) ? prev.filter(x => x !== opt) : [...prev, opt])}>
+                            <span className="im-intent-dot" style={intents.includes(opt) ? {background:'#735c00'} : {}}></span>
+                            <span style={{fontSize:'0.875rem',fontWeight:600,color:'#001b44',flex:1,textAlign:'left'}}>{opt}</span>
+                            {intents.includes(opt) && <span className="material-symbols-outlined" style={{fontSize:'1rem',color:'#735c00',flexShrink:0,fontVariationSettings:"'FILL' 1"}}>check_circle</span>}
                           </button>
                         ))}
                       </div>
@@ -482,11 +485,11 @@ export function IntakeModal() {
                       <button type="button" className="im-btn-back" onClick={() => goTo(3)}>
                         <span className="material-symbols-outlined" style={{fontSize:'1.25rem'}}>arrow_back</span> Back
                       </button>
-                      <button type="button" className="im-btn-primary" disabled={submitting} onClick={submitForm}>
+                      <button type="button" className="im-btn-primary" disabled={submitting} onClick={submitForm} style={{padding:'0.75rem 1.25rem',fontSize:'0.875rem',minHeight:'auto'}}>
                         {submitting ? (
-                          <><span className="material-symbols-outlined" style={{animation:'spin 1s linear infinite'}}>progress_activity</span> Submitting&hellip;</>
+                          <><span className="material-symbols-outlined" style={{animation:'spin 1s linear infinite',fontSize:'1rem'}}>progress_activity</span> Submitting&hellip;</>
                         ) : (
-                          <>Submit My Free Review <span className="material-symbols-outlined" style={{fontVariationSettings:"'FILL' 1"}}>send</span></>
+                          <>Submit My Review <span className="material-symbols-outlined" style={{fontVariationSettings:"'FILL' 1",fontSize:'1rem'}}>send</span></>
                         )}
                       </button>
                     </div>
