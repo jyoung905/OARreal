@@ -300,7 +300,7 @@ export function IntakeModal() {
                       )}
                     </div>
 
-                    <div style={{display:'flex',flexDirection:'column',gap:'0.5rem'}}>
+                    <div style={{display:'flex',flexDirection:'column',gap:'0.2rem'}}>
                       <span className="im-label">Approximate date of accident</span>
                       <input type="date" className="im-input" style={{maxWidth:'16rem'}} value={accidentDate} onChange={e => setAccidentDate(e.target.value)} />
                     </div>
