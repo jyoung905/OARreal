@@ -1,18 +1,20 @@
 import '@/styles/globals.css';
 import Script from 'next/script';
-import { Inter, Manrope } from 'next/font/google';
+import { Open_Sans, Raleway } from 'next/font/google';
 import type { ReactNode } from 'react';
 import { site } from '@/lib/site';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 
-const inter = Inter({
+const openSans = Open_Sans({
   subsets: ['latin'],
-  variable: '--font-body'
+  variable: '--font-body',
+  weight: ['400', '500', '600', '700']
 });
 
-const manrope = Manrope({
+const raleway = Raleway({
   subsets: ['latin'],
-  variable: '--font-display'
+  variable: '--font-display',
+  weight: ['400', '500', '600', '700', '800']
 });
 
 export const metadata = {
@@ -80,7 +82,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           }}
         />
       </head>
-      <body className={`${inter.variable} ${manrope.variable}`}><GoogleAnalytics />{children}</body>
+      <body className={`${openSans.variable} ${raleway.variable}`}><GoogleAnalytics />{children}</body>
     </html>
   );
 }

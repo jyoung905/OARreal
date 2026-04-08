@@ -156,11 +156,11 @@ export function IntakeModal() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
-        .im-overlay{position:fixed;top:0;left:0;right:0;bottom:0;z-index:9999;background:#f8f9fb;overflow-y:auto;font-family:Inter,system-ui,sans-serif;color:#191c1e}
-        .im-headline{font-family:Manrope,system-ui,sans-serif}
-        .im-label{font-family:Inter,sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#44474f}
+        .im-overlay{position:fixed;top:0;left:0;right:0;bottom:0;z-index:9999;background:#f8f9fb;overflow-y:auto;font-family:'Open Sans',system-ui,sans-serif;color:#191c1e}
+        .im-headline{font-family:Raleway,system-ui,sans-serif}
+        .im-label{font-family:'Open Sans',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#44474f;margin-bottom:0.2rem}
         .im-glass{background:rgba(248,249,251,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(197,198,208,0.1)}
         .im-card{background:#ffffff;border-radius:0.75rem;padding:1.5rem 2.5rem;box-shadow:0 20px 40px rgba(0,2,10,0.06)}
         .im-prog-track{height:6px;width:100%;background:#edeef0;border-radius:3px;overflow:hidden}
@@ -168,49 +168,49 @@ export function IntakeModal() {
         .im-step-fade{animation:imFadeSlide 0.25s ease both}
         @keyframes imFadeSlide{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 
-        .im-acc-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem;padding:1rem 0.75rem;border-radius:0.5rem;border:2px solid #c5c6d0;background:#f3f4f6;font-family:Inter,sans-serif;font-size:0.82rem;font-weight:600;color:#44474f;cursor:pointer;transition:all 0.15s;text-align:center;line-height:1.3;min-height:80px}
+        .im-acc-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem;padding:1rem 0.75rem;border-radius:0.5rem;border:2px solid #c5c6d0;background:#f3f4f6;font-family:'Open Sans',sans-serif;font-size:0.82rem;font-weight:600;color:#44474f;cursor:pointer;transition:all 0.15s;text-align:center;line-height:1.3;min-height:80px}
         .im-acc-btn:hover{background:#fff;border-color:#001b44;color:#001b44}
         .im-acc-btn.selected{background:#fff;border-color:#735c00;color:#001b44}
         .im-acc-btn.selected .im-acc-icon{color:#735c00}
         .im-acc-icon{font-size:1.5rem;color:#75777f;transition:color 0.15s}
 
-        .im-pill{padding:0.45rem 1.1rem;border-radius:999px;font-size:0.82rem;font-weight:600;font-family:Inter,sans-serif;border:1.5px solid #c5c6d0;background:#fff;color:#44474f;cursor:pointer;transition:all 0.15s;white-space:nowrap}
+        .im-pill{padding:0.45rem 1.1rem;border-radius:999px;font-size:0.82rem;font-weight:600;font-family:'Open Sans',sans-serif;border:1.5px solid #c5c6d0;background:#fff;color:#44474f;cursor:pointer;transition:all 0.15s;white-space:nowrap}
         .im-pill:hover{border-color:#735c00;color:#001b44}
         .im-pill.selected{background:#001b44;border-color:#001b44;color:#fff}
 
-        .im-chip{padding:0.45rem 1rem;border-radius:999px;font-size:0.8rem;font-weight:600;font-family:Inter,sans-serif;border:1.5px solid #c5c6d0;background:#fff;color:#44474f;cursor:pointer;transition:all 0.15s;white-space:nowrap;display:inline-flex;align-items:center;gap:0.3rem;min-width:0}
+        .im-chip{padding:0.45rem 1rem;border-radius:999px;font-size:0.8rem;font-weight:600;font-family:'Open Sans',sans-serif;border:1.5px solid #c5c6d0;background:#fff;color:#44474f;cursor:pointer;transition:all 0.15s;white-space:nowrap;display:inline-flex;align-items:center;gap:0.3rem;min-width:0}
         .im-chip:hover{border-color:#735c00;color:#001b44}
         .im-chip.selected{background:#001b44;border-color:#001b44;color:#fff}
 
-        .im-intent{display:flex;align-items:center;gap:0.75rem;padding:0.875rem 1rem;border-radius:0.5rem;border:2px solid #c5c6d0;background:#f3f4f6;cursor:pointer;transition:all 0.15s;text-align:left;width:100%;font-family:Inter,sans-serif}
+        .im-intent{display:flex;align-items:center;gap:0.75rem;padding:0.875rem 1rem;border-radius:0.5rem;border:2px solid #c5c6d0;background:#f3f4f6;cursor:pointer;transition:all 0.15s;text-align:left;width:100%;font-family:'Open Sans',sans-serif}
         .im-intent:hover{background:#fff;border-color:#001b44}
         .im-intent.selected{background:#fff;border-color:#735c00}
         .im-intent.selected .im-intent-dot{background:#735c00}
         .im-intent-dot{width:10px;height:10px;border-radius:50%;background:#c5c6d0;flex-shrink:0;transition:background 0.15s}
 
-        .im-input{width:100%;background:transparent;border:0;border-bottom:2px solid #c5c6d0;padding:0.75rem 0;font-weight:500;color:#191c1e;font-size:0.95rem;outline:none;font-family:Inter,sans-serif}
+        .im-input{width:100%;background:transparent;border:0;border-bottom:2px solid #c5c6d0;padding:0.4rem 0 0.75rem;font-weight:500;color:#191c1e;font-size:0.95rem;outline:none;font-family:'Open Sans',sans-serif}
         .im-input:focus{border-bottom-color:#735c00}
         .im-input.error{border-bottom-color:#ba1a1a}
         .im-input::placeholder{color:#75777f}
 
-        .im-textarea{width:100%;background:#f3f4f6;border:0;border-bottom:2px solid #c5c6d0;padding:0.75rem 1rem;font-weight:500;color:#191c1e;font-size:0.875rem;outline:none;font-family:Inter,sans-serif;border-top-left-radius:0.5rem;border-top-right-radius:0.5rem;resize:none}
+        .im-textarea{width:100%;background:#f3f4f6;border:0;border-bottom:2px solid #c5c6d0;padding:0.5rem 1rem 0.75rem;font-weight:500;color:#191c1e;font-size:0.875rem;outline:none;font-family:'Open Sans',sans-serif;border-top-left-radius:0.5rem;border-top-right-radius:0.5rem;resize:none}
         .im-textarea:focus{border-bottom-color:#735c00}
         .im-textarea::placeholder{color:#75777f}
 
-        .im-btn-primary{background:linear-gradient(135deg,#001b44,#003180);color:#fff;padding:1rem 2rem;border-radius:0.375rem;font-weight:700;letter-spacing:0.04em;box-shadow:0 10px 25px rgba(0,27,68,0.25);display:inline-flex;align-items:center;gap:0.75rem;font-family:Inter,sans-serif;font-size:0.875rem;cursor:pointer;border:none;transition:all 0.15s}
+        .im-btn-primary{background:linear-gradient(135deg,#001b44,#003180);color:#fff;padding:1rem 2rem;border-radius:0.375rem;font-weight:700;letter-spacing:0.04em;box-shadow:0 10px 25px rgba(0,27,68,0.25);display:inline-flex;align-items:center;gap:0.75rem;font-family:'Open Sans',sans-serif;font-size:0.875rem;cursor:pointer;border:none;transition:all 0.15s}
         .im-btn-primary:hover{box-shadow:0 14px 30px rgba(0,27,68,0.35)}
         .im-btn-primary:active{transform:scale(0.95)}
         .im-btn-primary:disabled{opacity:0.7;cursor:not-allowed}
 
-        .im-btn-back{display:flex;align-items:center;gap:0.5rem;color:#44474f;font-weight:600;font-family:Inter,sans-serif;font-size:0.875rem;cursor:pointer;background:none;border:none;padding:0.5rem 0;transition:color 0.15s}
+        .im-btn-back{display:flex;align-items:center;gap:0.5rem;color:#44474f;font-weight:600;font-family:'Open Sans',sans-serif;font-size:0.875rem;cursor:pointer;background:none;border:none;padding:0.5rem 0;transition:color 0.15s}
         .im-btn-back:hover{color:#001b44}
 
-        .im-trust{display:inline-flex;align-items:center;gap:0.3rem;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#44474f;font-family:Inter,sans-serif}
+        .im-trust{display:inline-flex;align-items:center;gap:0.3rem;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#44474f;font-family:'Open Sans',sans-serif}
         .im-trust-dot{width:5px;height:5px;border-radius:50%;background:#cba72f;flex-shrink:0}
 
         .im-err{color:#ba1a1a;font-size:0.75rem;font-weight:600;margin-top:0.25rem}
 
-        .im-select{width:100%;background:#f3f4f6;border:0;border-bottom:2px solid #c5c6d0;padding:0.75rem 0;font-weight:500;color:#191c1e;font-size:0.95rem;outline:none;font-family:Inter,sans-serif}
+        .im-select{width:100%;background:#f3f4f6;border:0;border-bottom:2px solid #c5c6d0;padding:0.75rem 0;font-weight:500;color:#191c1e;font-size:0.95rem;outline:none;font-family:'Open Sans',sans-serif}
         .im-select:focus{border-bottom-color:#735c00}
 
         .im-yn-row{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.25rem}
@@ -426,38 +426,38 @@ export function IntakeModal() {
 
                 {/* STEP 4 */}
                 {step === 4 && (
-                  <div key={fadeKey} className="im-step-fade" style={{display:'flex',flexDirection:'column',gap:'2rem'}}>
-                    <div style={{background:'#f3f4f6',borderRadius:'0.75rem',padding:'1rem 1.25rem'}}>
-                      <p style={{fontSize:'0.875rem',color:'#44474f',lineHeight:1.6}}>A licensed Ontario legal professional reviews your situation. If it appears to fit our review criteria, a representative may contact you.</p>
+                  <div key={fadeKey} className="im-step-fade" style={{display:'flex',flexDirection:'column',gap:'1.25rem'}}>
+                    <div style={{background:'#f3f4f6',borderRadius:'0.75rem',padding:'0.875rem 1.25rem'}}>
+                      <p style={{fontSize:'0.875rem',color:'#44474f',lineHeight:1.6,margin:0}}>A licensed Ontario legal professional reviews your situation. If it appears to fit our review criteria, a representative may contact you.</p>
                     </div>
 
-                    <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'1.5rem'}}>
-                      <div style={{display:'flex',flexDirection:'column',gap:'0.5rem'}}>
+                    <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'1rem'}}>
+                      <div style={{display:'flex',flexDirection:'column',gap:'0.2rem'}}>
                         <span className="im-label">First name <span style={{color:'#ba1a1a'}}>*</span></span>
                         <input type="text" className={`im-input${fieldErrors.firstName ? ' error' : ''}`} placeholder="First name" autoComplete="given-name" value={firstName} onChange={e => setFirstName(e.target.value)} />
                         {fieldErrors.firstName && <p className="im-err">Please enter your first name.</p>}
                       </div>
-                      <div style={{display:'flex',flexDirection:'column',gap:'0.5rem'}}>
+                      <div style={{display:'flex',flexDirection:'column',gap:'0.2rem'}}>
                         <span className="im-label">Last name <span style={{color:'#ba1a1a'}}>*</span></span>
                         <input type="text" className={`im-input${fieldErrors.lastName ? ' error' : ''}`} placeholder="Last name" autoComplete="family-name" value={lastName} onChange={e => setLastName(e.target.value)} />
                         {fieldErrors.lastName && <p className="im-err">Please enter your last name.</p>}
                       </div>
                     </div>
 
-                    <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'1.5rem'}}>
-                      <div style={{display:'flex',flexDirection:'column',gap:'0.5rem'}}>
+                    <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'1rem'}}>
+                      <div style={{display:'flex',flexDirection:'column',gap:'0.2rem'}}>
                         <span className="im-label">Email address <span style={{color:'#ba1a1a'}}>*</span></span>
                         <input type="email" className={`im-input${fieldErrors.email ? ' error' : ''}`} placeholder="you@email.com" autoComplete="email" value={email} onChange={e => setEmail(e.target.value)} />
                         {fieldErrors.email && <p className="im-err">Please enter a valid email.</p>}
                       </div>
-                      <div style={{display:'flex',flexDirection:'column',gap:'0.5rem'}}>
+                      <div style={{display:'flex',flexDirection:'column',gap:'0.2rem'}}>
                         <span className="im-label">Phone number <span style={{color:'#ba1a1a'}}>*</span></span>
                         <input type="tel" className={`im-input${fieldErrors.phone ? ' error' : ''}`} placeholder="e.g. 416-555-0100" autoComplete="tel" value={phone} onChange={e => setPhone(e.target.value)} />
                         {fieldErrors.phone && <p className="im-err">Please enter a phone number.</p>}
                       </div>
                     </div>
 
-                    <div style={{display:'flex',flexDirection:'column',gap:'0.5rem',maxWidth:'16rem'}}>
+                    <div style={{display:'flex',flexDirection:'column',gap:'0.2rem',maxWidth:'16rem'}}>
                       <span className="im-label">Best time to reach you <span style={{fontWeight:400,textTransform:'none',letterSpacing:'normal'}}>(optional)</span></span>
                       <select className="im-select" value={bestTime} onChange={e => setBestTime(e.target.value)}>
                         <option value="">Select a time</option>
@@ -519,7 +519,7 @@ export function IntakeModal() {
                   { icon: 'attach_money', text: 'Free · No Obligation' },
                   { icon: 'timer', text: 'About 2 Minutes' },
                 ].map(item => (
-                  <div key={item.text} style={{display:'flex',alignItems:'center',gap:'0.5rem',fontSize:'0.75rem',fontWeight:700,color:'#44474f',fontFamily:'Inter,sans-serif'}}>
+                  <div key={item.text} style={{display:'flex',alignItems:'center',gap:'0.5rem',fontSize:'0.75rem',fontWeight:700,color:'#44474f',fontFamily:'Open Sans',sans-serif}}>
                     <span className="material-symbols-outlined" style={{fontSize:'0.875rem'}}>{item.icon}</span> {item.text}
                   </div>
                 ))}

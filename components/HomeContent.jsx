@@ -34,7 +34,7 @@ const SVG_LOGO = (h = 40) => (
 );
 
 function GoldLabel({ children, light }) {
-  return <div style={{color: light ? LABEL_DARK : GOLD, fontSize:'0.68rem', fontWeight:700, letterSpacing:'0.18em', textTransform:'uppercase', fontFamily:'Inter,sans-serif'}}>{children}</div>;
+  return <div style={{color: light ? LABEL_DARK : GOLD, fontSize:'0.68rem', fontWeight:700, letterSpacing:'0.18em', textTransform:'uppercase', fontFamily:'"Open Sans",sans-serif'}}>{children}</div>;
 }
 
 function GoldLine() {
@@ -42,11 +42,11 @@ function GoldLine() {
 }
 
 function GoldBtn({ children, href, style: s }) {
-  return <a href={href || '#intake'} style={{background:GOLD, color:'#1a0f00', fontWeight:700, display:'inline-flex', alignItems:'center', justifyContent:'center', gap:'0.75rem', padding:'1rem 2rem', borderRadius:'0.375rem', fontSize:'0.875rem', letterSpacing:'0.025em', fontFamily:'Inter,sans-serif', textDecoration:'none', ...s}}>{children}</a>;
+  return <a href={href || '#intake'} style={{background:GOLD, color:'#1a0f00', fontWeight:700, display:'inline-flex', alignItems:'center', justifyContent:'center', gap:'0.75rem', padding:'1rem 2rem', borderRadius:'0.375rem', fontSize:'0.875rem', letterSpacing:'0.025em', fontFamily:'"Open Sans",sans-serif', textDecoration:'none', ...s}}>{children}</a>;
 }
 
 function GhostBtn({ children, href, style: s }) {
-  return <a href={href || '#how-it-works'} style={{border:`1.5px solid rgba(203,167,47,0.5)`, color:GOLD, fontWeight:700, display:'inline-flex', alignItems:'center', justifyContent:'center', gap:'0.5rem', padding:'1rem 2rem', borderRadius:'0.375rem', fontSize:'0.875rem', fontFamily:'Inter,sans-serif', textDecoration:'none', ...s}}>{children}</a>;
+  return <a href={href || '#how-it-works'} style={{border:`1.5px solid rgba(203,167,47,0.5)`, color:GOLD, fontWeight:700, display:'inline-flex', alignItems:'center', justifyContent:'center', gap:'0.5rem', padding:'1rem 2rem', borderRadius:'0.375rem', fontSize:'0.875rem', fontFamily:'"Open Sans",sans-serif', textDecoration:'none', ...s}}>{children}</a>;
 }
 
 function Icon({ name, size, color, fill }) {
@@ -86,9 +86,9 @@ export default function HomeContent() {
   const toggleFaq = (i) => setOpenFaq(prev => prev === i ? -1 : i);
 
   const maxW = { maxWidth:'80rem', margin:'0 auto' };
-  const headlineFont = { fontFamily:'Manrope,sans-serif' };
-  const bodyFont = { fontFamily:'Inter,sans-serif' };
-  const labelFont = { fontFamily:'Inter,sans-serif' };
+  const headlineFont = { fontFamily:'Raleway,sans-serif' };
+  const bodyFont = { fontFamily:'"Open Sans",sans-serif' };
+  const labelFont = { fontFamily:'"Open Sans",sans-serif' };
 
   const VALUE_ITEMS = [
     { icon:'visibility', text:'A clearer understanding of what you may be entitled to' },
@@ -508,7 +508,7 @@ export default function HomeContent() {
       {/* WHY PEOPLE START HERE FIRST */}
       <section id="why-start-here" style={{background:'#0e1c30',padding:'4rem 1.5rem'}}>
         <div style={{maxWidth:'1100px',margin:'0 auto'}}>
-          <h2 style={{color:'#ffffff',fontFamily:'Manrope,sans-serif',fontSize:'clamp(1.4rem,3vw,2rem)',fontWeight:800,textAlign:'center',marginBottom:'2.5rem'}}>Why People Start Here First</h2>
+          <h2 style={{color:'#ffffff',fontFamily:'Raleway,sans-serif',fontSize:'clamp(1.4rem,3vw,2rem)',fontWeight:800,textAlign:'center',marginBottom:'2.5rem'}}>Why People Start Here First</h2>
           <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:'1.5rem'}}>
             {[
               {title:'No lawyers or office visits',body:'Start with a short form. We review your situation and report back in plain language.'},
@@ -516,8 +516,8 @@ export default function HomeContent() {
               {title:'Understand before you decide',body:'You will know what may apply to your claim before taking any next steps — with no pressure to proceed.'},
             ].map((c,i)=>(
               <div key={i} style={{background:'#112037',borderRadius:'8px',padding:'1.75rem',borderTop:'2px solid rgba(203,167,47,0.3)'}}>
-                <h3 style={{color:'#ffffff',fontFamily:'Manrope,sans-serif',fontSize:'1rem',fontWeight:700,marginBottom:'0.75rem'}}>{c.title}</h3>
-                <p style={{color:'rgba(255,255,255,0.65)',fontFamily:'Inter,sans-serif',fontSize:'0.9rem',lineHeight:1.6,margin:0}}>{c.body}</p>
+                <h3 style={{color:'#ffffff',fontFamily:'Raleway,sans-serif',fontSize:'1rem',fontWeight:700,marginBottom:'0.75rem'}}>{c.title}</h3>
+                <p style={{color:'rgba(255,255,255,0.65)',fontFamily:'"Open Sans",sans-serif',fontSize:'0.9rem',lineHeight:1.6,margin:0}}>{c.body}</p>
               </div>
             ))}
           </div>

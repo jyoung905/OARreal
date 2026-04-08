@@ -1,6 +1,6 @@
 :root {
-  --font-body: 'Inter', system-ui, sans-serif;
-  --font-display: 'Manrope', 'Inter', system-ui, sans-serif;
+  --font-body: 'Open Sans', system-ui, sans-serif;
+  --font-display: 'Raleway', 'Open Sans', system-ui, sans-serif;
 
   /* Light editorial theme — Stitch "Provincial Trust" palette */
   --bg: #f8f9fa;
