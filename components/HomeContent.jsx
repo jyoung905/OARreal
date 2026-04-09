@@ -159,7 +159,7 @@ export default function HomeContent() {
           .hc-desktop-nav{display:none !important}
           .hc-hamburger{display:flex !important}
           .hc-header-cta{display:none !important}
-          .hc-hero-section{padding-top:4.5rem !important;padding-bottom:4rem !important}
+          .hc-hero-section{padding-top:6rem !important;padding-bottom:4rem !important}
         }
         @media(min-width:769px){
           .hc-hamburger{display:none !important}
