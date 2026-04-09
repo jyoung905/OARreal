@@ -188,7 +188,7 @@ export function IntakeModal() {
         .im-intent.selected .im-intent-dot{background:#735c00}
         .im-intent-dot{width:10px;height:10px;border-radius:50%;background:#c5c6d0;flex-shrink:0;transition:background 0.15s}
 
-        .im-input{width:100%;background:transparent;border:0;border-bottom:2px solid #c5c6d0;padding:0.4rem 0 0.75rem;font-weight:500;color:#191c1e;font-size:0.95rem;outline:none;font-family:'Open Sans',sans-serif}
+        .im-input{width:100%;background:transparent;border:0;border-bottom:2px solid #c5c6d0;padding:0.1rem 0 0.6rem;font-weight:500;color:#191c1e;font-size:0.95rem;outline:none;font-family:'Open Sans',sans-serif}
         .im-input:focus{border-bottom-color:#735c00}
         .im-input.error{border-bottom-color:#ba1a1a}
         .im-input::placeholder{color:#75777f}

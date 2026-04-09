@@ -159,6 +159,7 @@ export default function HomeContent() {
           .hc-desktop-nav{display:none !important}
           .hc-hamburger{display:flex !important}
           .hc-header-cta{display:none !important}
+          .hc-hero-section{padding-top:4.5rem !important;padding-bottom:4rem !important}
         }
         @media(min-width:769px){
           .hc-hamburger{display:none !important}
@@ -195,7 +196,7 @@ export default function HomeContent() {
       </header>
 
       {/* HERO SECTION */}
-      <section style={{background:'linear-gradient(145deg, #04090f 0%, #001b44 55%, #050d1a 100%)',padding:'10rem 1.5rem 7rem',position:'relative',overflow:'hidden'}}>
+      <section className="hc-hero-section" style={{background:'linear-gradient(145deg, #04090f 0%, #001b44 55%, #050d1a 100%)',padding:'10rem 1.5rem 7rem',position:'relative',overflow:'hidden'}}>
         <div style={{position:'absolute',top:'-30%',right:'-8%',width:620,height:620,background:'radial-gradient(circle, rgba(203,167,47,0.13) 0%, transparent 68%)',pointerEvents:'none'}} />
         <div style={{position:'absolute',bottom:'-25%',left:'-6%',width:440,height:440,background:'radial-gradient(circle, rgba(58,130,200,0.10) 0%, transparent 68%)',pointerEvents:'none'}} />
         <div className="hc-hero-grid" style={{...maxW,display:'grid',gridTemplateColumns:'1fr 1fr',gap:'4rem',alignItems:'center'}}>
