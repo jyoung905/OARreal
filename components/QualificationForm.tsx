@@ -210,14 +210,14 @@ export function QualificationForm() {
               </section>
 
               <section className={`form-step ${step === 1 ? 'active' : ''}`}>
-                <div className="step-heading step-heading-card"><span className="step-kicker">Step 2</span><h3>Tell us the basics</h3><p className="step-copy">A short summary is enough. We are just looking for the essentials needed for an initial review.</p></div>
+                <div className="step-heading step-heading-card"><span className="step-kicker">Step 2</span><h3>Tell us the basics</h3><p className="step-copy">A short summary is enough. Rough answers are okay — you do not need documents or insurance details right now.</p></div>
                 <div className="field-grid">
                   <Field label="What type of accident was it?">
                     <select required value={data.accidentType} onChange={(e) => updateField(setData, 'accidentType', e.target.value)}>
                       <option value="">Select one</option><option>Car accident</option><option>Truck accident</option><option>Motorcycle accident</option><option>Pedestrian accident</option><option>Bicycle accident</option><option>Slip and fall</option><option>Other</option>
                     </select>
                   </Field>
-                  <Field label="Date of accident"><input required type="date" value={data.accidentDate} onChange={(e) => updateField(setData, 'accidentDate', e.target.value)} /></Field>
+                  <Field label="Date of accident" hint="Approximate is fine — exact date not required"><input required type="date" value={data.accidentDate} onChange={(e) => updateField(setData, 'accidentDate', e.target.value)} /></Field>
                   <Field label="City or town in Ontario"><input required value={data.cityArea} placeholder="Toronto, Brampton, Mississauga, Hamilton, etc." onChange={(e) => updateField(setData, 'cityArea', e.target.value)} /></Field>
                   <RadioGroup compact label="Did the accident happen in Ontario?" name="inOntario" value={data.inOntario} onChange={(value) => updateField(setData, 'inOntario', value)} options={['Yes', 'No']} />
                 </div>
@@ -249,7 +249,7 @@ export function QualificationForm() {
                 <div className="step-heading step-heading-card">
                   <span className="step-kicker">Step 5</span>
                   <h3>Review and submit</h3>
-                  <p className="step-copy">Submitting this form is only a request for an initial review.</p>
+                  <p className="step-copy">Submitting this form is only a request for an initial review. Your answers are encrypted and confidential.</p>
                 </div>
                 <Consent checked={data.consentTruth} onChange={(value) => updateField(setData, 'consentTruth', value)} label="I confirm the information I provided is true to the best of my knowledge." />
                 <Consent checked={data.consentNotLawFirm} onChange={(value) => updateField(setData, 'consentNotLawFirm', value)} label="I understand Ontario Accident Review is not a law firm and does not provide legal advice or legal representation." />
@@ -282,10 +282,10 @@ export function QualificationForm() {
   );
 }
 
-function Field({ label, children }: { label: string; children: React.ReactNode }) {
+function Field({ label, hint, children }: { label: string; hint?: string; children: React.ReactNode }) {
   return (
     <div className="field-group">
-      <label>{label}</label>
+      <label>{label}{hint && <span style={{fontWeight:400,fontSize:'0.78rem',color:'#6b7280',marginLeft:'0.4rem'}}>({hint})</span>}</label>
       {children}
     </div>
   );

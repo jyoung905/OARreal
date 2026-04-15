@@ -99,8 +99,8 @@ export default function HomeContent() {
 
   const STEPS = [
     { num:'01', label:'Initial Intake', title:'We review your submission', desc:'A licensed Ontario professional personally reviews every submission — no AI, no automated screening.', bg:NAVY },
-    { num:'02', label:'Professional Review', title:'You receive a written summary', desc:'We outline what accident benefits and options may apply to your specific situation — typically within 1–2 business days.', bg:LABEL_DARK },
-    { num:'03', label:'Clarity on Next Steps', title:'You decide next steps', desc:'No pressure, no obligation. The review is yours to keep regardless.', bg:NAVY },
+    { num:'02', label:'Professional Review', title:'Your submission is reviewed', desc:'A licensed Ontario professional reviews your information. If your situation fits the criteria, you will receive guidance on possible benefits, deadlines, and next steps — and may be contacted for follow-up.', bg:LABEL_DARK },
+    { num:'03', label:'Clarity on Next Steps', title:'You decide what to do next', desc:'If appropriate, you may be introduced to a legal professional. No pressure, no obligation at any stage.', bg:NAVY },
   ];
 
   const WHY_START_HERE = [
@@ -206,10 +206,10 @@ export default function HomeContent() {
               <span style={{fontSize:'0.75rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'rgba(255,255,255,0.7)',...labelFont}}>Free {'\u00b7'} No Obligation {'\u00b7'} Confidential</span>
             </div>
             <h1 className="hc-hero-h1" style={{fontSize:'3.25rem',fontWeight:800,color:'#fff',lineHeight:1.12,letterSpacing:'-0.01em',marginBottom:'1.5rem',...headlineFont}}>
-              Get a Free Ontario Accident Claim Review in About 2 Minutes
+              Injured in an Ontario Accident? Get a Free Confidential Claim Review.
             </h1>
             <p style={{fontSize:'1.125rem',color:'rgba(255,255,255,0.6)',lineHeight:1.7,maxWidth:'34rem',marginBottom:'2rem',...bodyFont}}>
-              Find out what accident benefits may apply to your situation &mdash; including deadlines you should know and the next steps worth taking.
+              In about 2 minutes, find out what accident benefits, deadlines, and next steps may apply to your situation.
             </p>
             <div style={{marginBottom:'2rem'}}>
               <GoldBtn style={{padding:'1.125rem 2.5rem',fontSize:'1rem'}}>
@@ -243,6 +243,25 @@ export default function HomeContent() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* MINI INTAKE CARD — quick-start below hero */}
+      <section style={{background:'#0a1628',padding:'2.5rem 1.5rem',borderBottom:'1px solid rgba(255,255,255,0.05)'}}>
+        <div style={{maxWidth:'680px',margin:'0 auto'}}>
+          <div style={{background:'#0e1c30',border:'1px solid rgba(203,167,47,0.25)',borderRadius:'0.75rem',padding:'1.75rem 2rem'}}>
+            <p style={{color:GOLD,fontSize:'0.72rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.12em',marginBottom:'0.75rem',fontFamily:'"Open Sans",sans-serif'}}>Start Your Free Review — Takes 2 Minutes</p>
+            <p style={{color:'rgba(255,255,255,0.55)',fontSize:'0.85rem',marginBottom:'1.25rem',fontFamily:'"Open Sans",sans-serif'}}>Tell us the type of accident and whether it happened in Ontario — we’ll take it from there.</p>
+            <div style={{display:'flex',flexWrap:'wrap',gap:'0.5rem',marginBottom:'1.25rem'}}>
+              {['Car accident','Slip & fall','Pedestrian','Motorcycle','Workplace','Other'].map(type => (
+                <a key={type} href="#intake" style={{background:'rgba(203,167,47,0.1)',border:'1px solid rgba(203,167,47,0.3)',color:'rgba(255,255,255,0.8)',borderRadius:'0.375rem',padding:'0.5rem 0.875rem',fontSize:'0.8rem',fontWeight:600,textDecoration:'none',fontFamily:'"Open Sans",sans-serif'}}>{type}</a>
+              ))}
+            </div>
+            <div style={{display:'flex',gap:'0.75rem',flexWrap:'wrap',alignItems:'center'}}>
+              <a href="#intake" style={{background:GOLD,color:'#1a0f00',fontWeight:700,padding:'0.75rem 1.75rem',borderRadius:'0.375rem',fontSize:'0.875rem',textDecoration:'none',display:'inline-flex',alignItems:'center',gap:'0.5rem',fontFamily:'"Open Sans",sans-serif'}}>Start My Free Review →</a>
+              <span style={{color:'rgba(255,255,255,0.3)',fontSize:'0.75rem',fontFamily:'"Open Sans",sans-serif'}}>Free · Confidential · No obligation</span>
             </div>
           </div>
         </div>
