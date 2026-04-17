@@ -13,13 +13,8 @@ export function SiteHeader() {
               {link.label}
             </a>
           ))}
-          <a className="button button-secondary" href="#intake" style={{
-            background: "linear-gradient(135deg, #3730A3, #5B4FE1)",
-            border: "none",
-            padding: "0.55rem 1rem",
-            fontSize: "0.88rem"
-          }}>
-            Start my free review →
+          <a className="button button-secondary" href="#intake">
+            Start Your Review
           </a>
         </div>
       </div>

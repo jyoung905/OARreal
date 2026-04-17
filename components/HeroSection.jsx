@@ -1,110 +1,73 @@
 export function HeroSection() {
   return (
-    <section className="hero premium-hero hero-shell" style={{
-      background: "radial-gradient(circle at top left, rgba(55,48,163,0.09), transparent 40%), radial-gradient(circle at top right, rgba(56,189,248,0.07), transparent 35%), linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%)"
-    }}>
-      <div className="container hero-grid">
+    <section className="hero premium-hero hero-shell">
+      <div className="container hero-grid premium-hero-grid editorial-hero-grid">
         <div className="hero-copy-column">
-          <p className="eyebrow">Ontario Accident Review</p>
-          <h1>
-            Injured in Ontario?{" "}
-            <em style={{
-              fontFamily: "'Instrument Serif', Georgia, serif",
-              fontStyle: "italic",
-              background: "linear-gradient(135deg, #3730A3 0%, #5B4FE1 50%, #38BDF8 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text"
-            }}>
-              Know what you&apos;re owed.
-            </em>
-          </h1>
+          <div className="hero-trust-badges">
+            <span className="hero-badge">Ontario-focused</span>
+            <span className="hero-badge">Simple first step</span>
+            <span className="hero-badge">Reviewed before follow-up</span>
+          </div>
+          <p className="eyebrow">Initial accident review request</p>
+          <h1>Find out whether your Ontario accident may be worth pursuing</h1>
           <p className="hero-copy hero-lead">
-            A free, 2-minute claim review by licensed Ontario specialists. Get a plain-language
-            report on your benefits, deadlines, and options — before you sign anything with anyone.
+            Answer a few simple questions and a representative from Ontario Accident Review
+            will review your situation. If it appears to fit our review criteria, we may
+            contact you to explain the next step.
           </p>
           <div className="hero-actions">
-            <a className="button" href="#intake" style={{
-              background: "linear-gradient(135deg, #3730A3, #5B4FE1)",
-              border: "none",
-              boxShadow: "0 12px 32px rgba(55, 48, 163, 0.3)"
-            }}>
-              Start my free review →
+            <a className="button" href="#intake">
+              Start Your Review
             </a>
             <a className="button button-secondary" href="#how-it-works">
-              How it works
+              How It Works
             </a>
           </div>
-          <div className="hero-trust-badges" style={{marginTop: "0.5rem"}}>
-            <span className="hero-badge" style={{
-              background: "rgba(16, 185, 129, 0.1)",
-              border: "1px solid rgba(16, 185, 129, 0.2)",
-              color: "#065f46"
-            }}>✓ No cost, ever</span>
-            <span className="hero-badge" style={{
-              background: "rgba(16, 185, 129, 0.1)",
-              border: "1px solid rgba(16, 185, 129, 0.2)",
-              color: "#065f46"
-            }}>✓ Confidential</span>
-            <span className="hero-badge" style={{
-              background: "rgba(16, 185, 129, 0.1)",
-              border: "1px solid rgba(16, 185, 129, 0.2)",
-              color: "#065f46"
-            }}>✓ Report in 48h</span>
+          <div className="editorial-note-row">
+            <div className="editorial-note-card">
+              <strong>A simple, low-pressure first step.</strong>
+              <span>
+                You do not need to contact a lawyer directly just to find out whether your
+                situation may be worth pursuing.
+              </span>
+            </div>
+            <div className="editorial-note-card">
+              <strong>Kept intentionally simple.</strong>
+              <span>No insurance details and no document uploads in this first stage.</span>
+            </div>
           </div>
-          <p className="hero-note" style={{marginTop: "1rem"}}>
-            Ontario Accident Review is not a law firm and does not provide legal advice or legal representation.
+          <p className="hero-note">
+            Ontario Accident Review is not a law firm and does not provide legal advice or
+            legal representation.
           </p>
         </div>
 
-        <aside className="hero-panel premium-hero-panel" style={{
-          background: "rgba(255,255,255,0.92)",
-          backdropFilter: "blur(20px)",
-          border: "1px solid rgba(226,232,240,0.9)",
-          borderRadius: "24px",
-          boxShadow: "0 32px 80px rgba(15,23,42,0.10)"
-        }}>
-          <p className="eyebrow" style={{color: "var(--primary)"}}>Free 2-minute review</p>
-          <h2 style={{fontSize: "1.4rem", marginBottom: "0.75rem"}}>See if your claim has been missed</h2>
-          <ol style={{listStyle: "none", padding: 0, margin: "0 0 1.25rem", display: "grid", gap: "0.75rem"}}>
-            {[
-              {n: "1", label: "Tell us what happened", sub: "Accident type, date, how it affected you"},
-              {n: "2", label: "We review your claim", sub: "Licensed Ontario specialist reads your intake"},
-              {n: "3", label: "Get your plain-English report", sub: "Benefits, deadlines, options — in 48 hours"}
-            ].map(step => (
-              <li key={step.n} style={{display: "flex", gap: "0.75rem", alignItems: "flex-start"}}>
-                <span style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "28px",
-                  height: "28px",
-                  borderRadius: "50%",
-                  background: "linear-gradient(135deg, #3730A3, #38BDF8)",
-                  color: "#fff",
-                  fontWeight: 800,
-                  fontSize: "0.8rem",
-                  flexShrink: 0
-                }}>{step.n}</span>
-                <div>
-                  <strong style={{display: "block", fontSize: "0.95rem"}}>{step.label}</strong>
-                  <span style={{color: "var(--muted)", fontSize: "0.85rem"}}>{step.sub}</span>
-                </div>
-              </li>
-            ))}
-          </ol>
-          <a className="button" href="#intake" style={{
-            width: "100%",
-            justifyContent: "center",
-            background: "linear-gradient(135deg, #3730A3, #5B4FE1)",
-            border: "none",
-            boxShadow: "0 8px 24px rgba(55, 48, 163, 0.25)"
-          }}>
-            Start my free review →
-          </a>
-          <p style={{textAlign: "center", color: "var(--muted)", fontSize: "0.83rem", marginTop: "0.75rem"}}>
-            No insurance details required. No obligation.
-          </p>
+        <aside className="hero-panel compact-panel premium-hero-panel hero-evidence-panel">
+          <span className="mini-kicker">Not ready to contact a lawyer directly?</span>
+          <h2>That is exactly why this review exists.</h2>
+          <ul className="editorial-list">
+            <li>Tell us the basics of what happened</li>
+            <li>Share how the accident has affected you</li>
+            <li>We review whether the situation may be worth pursuing</li>
+            <li>If it appears to fit our review criteria, we may contact you</li>
+          </ul>
+          <div className="panel-callout premium-callout">
+            <strong>Usually about 2 minutes to complete.</strong>
+            <span>
+              This is a review request only. It does not create a lawyer-client
+              relationship.
+            </span>
+          </div>
+          <div className="hero-panel-footer split-footer">
+            <div>
+              <span className="result-label">Initial review</span>
+              <strong>No uploads required</strong>
+            </div>
+            <div>
+              <span className="result-label">Follow-up</span>
+              <strong>Ontario Accident Review rep</strong>
+            </div>
+          </div>
         </aside>
       </div>
     </section>
