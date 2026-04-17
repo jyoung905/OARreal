@@ -121,43 +121,62 @@ export function QualificationForm() {
   };
 
   return (
-    <section className="section section-accent intake-priority" id="intake">
-      <div className="container intake-shell premium-intake-shell">
-        <div className="section-head narrow left">
-          <p className="eyebrow">Start Your Review</p>
-          <h2>Tell us the basics of your accident</h2>
-          <p>
-            Keep it simple. We only ask for the information needed for an initial review and
-            possible follow-up.
-          </p>
-        </div>
-
-        <div className="intake-reassurance-grid minimal-reassurance-grid">
-          <article className="intake-reassurance-card">
-            <strong>Takes about 2 minutes</strong>
-            <span>
-              You can answer approximately. The goal is a useful first review, not a perfect
-              legal file.
+    <section className="intake-section-v2" id="intake">
+      <div className="container">
+        <div className="intake-shell-v2">
+          <div className="intake-head-v2">
+            <span className="intake-eyebrow-v2">
+              <span className="dot" />
+              Start your review
             </span>
-          </article>
-          <article className="intake-reassurance-card">
-            <strong>Reviewed before follow-up</strong>
-            <span>A representative from Ontario Accident Review reviews submissions first.</span>
-          </article>
-          <article className="intake-reassurance-card">
-            <strong>Minimal first-stage information</strong>
-            <span>No insurance details. No document uploads. No sensitive IDs.</span>
-          </article>
-        </div>
-
-        <div className="progress-wrap">
-          <div className="progress-bar">
-            <span style={{ width: `${progress}%` }} />
+            <h2>
+              Tell us the basics of <span className="serif-italic">your accident.</span>
+            </h2>
+            <p>
+              Keep it simple. We only ask for the information needed for an initial review and
+              possible follow-up.
+            </p>
           </div>
-          <div className="progress-label">{progressLabel}</div>
-        </div>
 
-        <form className="intake-form" onSubmit={submit}>
+          <div className="intake-reassurance-v2">
+            <article>
+              <strong>Takes about 2 minutes</strong>
+              <span>
+                Answer approximately. The goal is a useful first review, not a perfect legal
+                file.
+              </span>
+            </article>
+            <article>
+              <strong>Reviewed before follow-up</strong>
+              <span>A representative from Ontario Accident Review reviews submissions first.</span>
+            </article>
+            <article>
+              <strong>Minimal information</strong>
+              <span>No insurance details. No document uploads. No sensitive IDs.</span>
+            </article>
+          </div>
+
+          <div className="intake-stepper" aria-hidden="true">
+            {formSteps.map((s, i) => (
+              <div
+                key={s.id}
+                className={`step-pill ${i < step ? 'is-done' : ''} ${i === step ? 'is-active' : ''}`}
+              >
+                <span className="bar" />
+                <span className="label">{s.label}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="intake-progress-v2" role="status" aria-live="polite">
+            <span>{progressLabel}</span>
+            <div className="track">
+              <span style={{ width: `${progress}%` }} />
+            </div>
+            <span>{`${Math.round(progress)}%`}</span>
+          </div>
+
+          <form className="intake-form intake-form-v2" onSubmit={submit}>
           <section className={`form-step ${step === 0 ? 'active' : ''}`}>
             <div className="step-heading">
               <span className="step-kicker">Step 1</span>
@@ -233,19 +252,24 @@ export function QualificationForm() {
             <p className="disclaimer">Submitting information through this site is only a request for an initial review and does not create a lawyer-client relationship.</p>
           </section>
 
-          {submitState.error ? <p className="disclaimer" role="alert">{submitState.error}</p> : null}
+            {submitState.error ? <p className="disclaimer" role="alert">{submitState.error}</p> : null}
 
-          <div className="form-actions">
-            <button type="button" className={`button button-secondary ${step === 0 ? 'hidden' : ''}`} onClick={previous}>Back</button>
-            {step < formSteps.length - 1 ? (
-              <button type="button" className="button" onClick={next}>Continue</button>
-            ) : (
-              <button type="submit" className="button" disabled={submitState.status === 'submitting'}>
-                {submitState.status === 'submitting' ? 'Submitting...' : 'Submit My Review'}
-              </button>
-            )}
+            <div className="form-actions">
+              <button type="button" className={`button button-secondary ${step === 0 ? 'hidden' : ''}`} onClick={previous}>Back</button>
+              {step < formSteps.length - 1 ? (
+                <button type="button" className="button" onClick={next}>Continue</button>
+              ) : (
+                <button type="submit" className="button" disabled={submitState.status === 'submitting'}>
+                  {submitState.status === 'submitting' ? 'Submitting...' : 'Submit My Review'}
+                </button>
+              )}
+            </div>
+          </form>
+          <div className="intake-footnote">
+            Your answers are reviewed by a person. Ontario Accident Review is not a law firm and
+            does not provide legal advice or legal representation.
           </div>
-        </form>
+        </div>
       </div>
     </section>
   );
