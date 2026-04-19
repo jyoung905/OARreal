@@ -49,7 +49,7 @@ export function SiteFooter() {
             <p className="footer-v2-cta-copy">
               Takes about 2 minutes. No insurance details needed.
             </p>
-            <Link className="button footer-v2-cta" href="/#intake">
+            <Link className="button footer-v2-cta" href="/review">
               Begin review
             </Link>
           </div>

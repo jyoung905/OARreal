@@ -62,7 +62,7 @@ export function HeroSection() {
             reach out to explain the next step &mdash; no pressure, no law-firm intake.
           </p>
           <div className="hero-v2-actions">
-            <Link className="button hero-v2-cta" href="#intake">
+            <Link className="button hero-v2-cta" href="/review">
               Start my free review <Arrow />
             </Link>
             <Link className="button button-secondary" href="#how-it-works">

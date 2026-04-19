@@ -34,7 +34,7 @@ export function CtaSection() {
             </p>
           </div>
           <div className="cta-v2-actions">
-            <Link className="button cta-v2-primary" href="#intake">
+            <Link className="button cta-v2-primary" href="/review">
               Start my free review <Arrow />
             </Link>
             <Link className="button button-secondary cta-v2-secondary" href="/resources">

@@ -13,9 +13,9 @@ export function SiteHeader() {
               {link.label}
             </a>
           ))}
-          <a className="button button-secondary" href="#intake">
+          <Link className="button button-secondary" href="/review">
             Start Your Review
-          </a>
+          </Link>
         </div>
       </div>
     </header>

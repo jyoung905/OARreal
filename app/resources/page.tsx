@@ -262,7 +262,7 @@ export default function ResourcesPage() {
                   no pressure.
                 </p>
               </div>
-              <Link className="resources-cta-btn" href="/#intake">
+              <Link className="resources-cta-btn" href="/review">
                 Start your review <ArrowIcon />
               </Link>
             </div>
