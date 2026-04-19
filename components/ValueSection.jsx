@@ -1,32 +1,43 @@
 export function ValueSection() {
-  const items = [
+  const stats = [
     {
-      label: 'Less pressure',
-      title: 'An easier place to start',
-      body: 'Many people feel anxious about contacting a lawyer right away. This gives you a simpler way to begin.'
+      number: '2 min',
+      label: 'Typical intake time',
+      body: 'Short, plain-language questions — no legal jargon and no policy numbers to look up.'
     },
     {
-      label: 'More clarity',
-      title: 'Review first, then next steps',
-      body: 'The goal is to understand whether your accident may be worth pursuing so you are not left guessing.'
+      number: '100%',
+      label: 'Reviewed by a person',
+      body: 'Every submission is read by a representative from Ontario Accident Review before any follow-up.'
     },
     {
-      label: 'Simple review',
-      title: 'Only the basics at first',
-      body: 'We only ask for the basic information needed for an initial review and possible callback.'
+      number: 'Free',
+      label: 'Initial review',
+      body: 'The first-step review costs nothing. You only continue if you want to, on your own terms.'
     }
   ];
 
   return (
-    <section className="section section-muted">
-      <div className="container premium-metrics-grid calm-metrics-grid">
-        {items.map((item) => (
-          <article key={item.title} className="metric-card quiet-card">
-            <span className="metric-label">{item.label}</span>
-            <strong>{item.title}</strong>
-            <p>{item.body}</p>
-          </article>
-        ))}
+    <section className="stats-v2" aria-label="At a glance">
+      <div className="container stats-v2-inner">
+        <div className="stats-v2-head">
+          <span className="stats-v2-eyebrow">
+            <span className="dot" aria-hidden="true" />
+            At a glance
+          </span>
+          <h2>
+            A review process built around <span className="serif-italic">clarity.</span>
+          </h2>
+        </div>
+        <div className="stats-v2-grid">
+          {stats.map((stat) => (
+            <article key={stat.label} className="stats-v2-card">
+              <span className="stats-v2-number">{stat.number}</span>
+              <strong className="stats-v2-label">{stat.label}</strong>
+              <p>{stat.body}</p>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

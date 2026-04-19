@@ -10,27 +10,32 @@ export function ProcessSection() {
     },
     {
       title: 'We may contact you',
-      body: 'If your situation appears to fit our review criteria, a representative from Ontario Accident Review may contact you to discuss the next step.'
+      body: 'If your situation appears to fit our review criteria, a representative will contact you to discuss the next step.'
     }
   ];
 
   return (
-    <section className="section section-muted" id="how-it-works">
-      <div className="container process-shell">
-        <div className="section-head narrow">
-          <p className="eyebrow">How it works</p>
-          <h2>A simpler first step after an accident</h2>
+    <section className="process-v2" id="how-it-works">
+      <div className="container process-v2-inner">
+        <div className="process-v2-head">
+          <span className="process-v2-eyebrow">
+            <span className="dot" aria-hidden="true" />
+            How it works
+          </span>
+          <h2>
+            Three steps, no <span className="serif-italic">pressure.</span>
+          </h2>
           <p>This is built for people who want clarity before deciding what to do next.</p>
         </div>
-        <div className="process-grid">
+        <ol className="process-v2-grid">
           {steps.map((step, index) => (
-            <div key={step.title} className="process-card premium-step">
-              <span className="step-number">{index + 1}</span>
+            <li key={step.title} className="process-v2-step">
+              <span className="process-v2-number">{String(index + 1).padStart(2, '0')}</span>
               <h3>{step.title}</h3>
               <p>{step.body}</p>
-            </div>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );
