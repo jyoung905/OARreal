@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
+import { Analytics } from '@/lib/analytics';
 
 /* âââââââââââââââââââââââââââââââââââââââââââââââââââ
    HomeContent â HIGH-CONVERTING CRO HOMEPAGE
@@ -41,8 +42,8 @@ function GoldLine() {
   return <div style={{width:44, height:2, background:`linear-gradient(90deg, ${LABEL_DARK}, ${GOLD})`}} />;
 }
 
-function GoldBtn({ children, href, style: s }) {
-  return <a href={href || '#intake'} style={{background:GOLD, color:'#1a0f00', fontWeight:700, display:'inline-flex', alignItems:'center', justifyContent:'center', gap:'0.75rem', padding:'1rem 2rem', borderRadius:'0.375rem', fontSize:'0.875rem', letterSpacing:'0.025em', fontFamily:'"Open Sans",sans-serif', textDecoration:'none', ...s}}>{children}</a>;
+function GoldBtn({ children, href, style: s, onClickTrack }) {
+  return <a href={href || '#intake'} onClick={onClickTrack} style={{background:GOLD, color:'#1a0f00', fontWeight:700, display:'inline-flex', alignItems:'center', justifyContent:'center', gap:'0.75rem', padding:'1rem 2rem', borderRadius:'0.375rem', fontSize:'0.875rem', letterSpacing:'0.025em', fontFamily:'"Open Sans",sans-serif', textDecoration:'none', ...s}}>{children}</a>;
 }
 
 function GhostBtn({ children, href, style: s }) {
@@ -57,7 +58,12 @@ export default function HomeContent() {
   const [openFaq, setOpenFaq] = useState(-1);
   const [stickyCta, setStickyCta] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const intakeStartTime = useRef(null);
 
+  // Homepage view
+  useEffect(() => { Analytics.homepageView(); }, []);
+
+  // Sticky CTA show
   useEffect(() => {
     const onScroll = () => { if (window.scrollY > 300) setStickyCta(true); };
     window.addEventListener('scroll', onScroll, { passive: true });
@@ -83,7 +89,19 @@ export default function HomeContent() {
     return () => ro.disconnect();
   }, []);
 
-  const toggleFaq = (i) => setOpenFaq(prev => prev === i ? -1 : i);
+  const toggleFaq = (i) => {
+    const next = openFaq === i ? -1 : i;
+    if (next !== -1) {
+      Analytics.faqExpand({ question: FAQS[i]?.q ?? '', question_index: i });
+    }
+    setOpenFaq(next);
+  };
+
+  const trackCta = (text, location) => {
+    Analytics.ctaClick({ cta_text: text, cta_location: location });
+    intakeStartTime.current = Date.now();
+    Analytics.intakeStart({ trigger: location });
+  };
 
   const maxW = { maxWidth:'80rem', margin:'0 auto' };
   const headlineFont = { fontFamily:'Raleway,sans-serif' };
@@ -179,7 +197,7 @@ export default function HomeContent() {
             ))}
           </nav>
           <div style={{display:'flex',alignItems:'center',gap:'0.75rem'}}>
-            <a href="#intake" className="hc-gold-btn hc-header-cta" style={{padding:'0.625rem 1.5rem',borderRadius:'0.375rem',fontSize:'0.875rem',letterSpacing:'0.025em',textDecoration:'none',...labelFont}}>Get My Free Review</a>
+            <a href="#intake" className="hc-gold-btn hc-header-cta" onClick={() => trackCta('Get My Free Review','header')} style={{padding:'0.625rem 1.5rem',borderRadius:'0.375rem',fontSize:'0.875rem',letterSpacing:'0.025em',textDecoration:'none',...labelFont}}>Get My Free Review</a>
             <button className="hc-hamburger" onClick={() => setMobileNavOpen(o => !o)} aria-label="Toggle menu" style={{background:'none',border:'none',cursor:'pointer',padding:'8px',display:'flex',flexDirection:'column',justifyContent:'center',gap:'5px'}}>
               <span className="hc-hamburger-line" style={mobileNavOpen ? {transform:'translateY(7px) rotate(45deg)'} : {}} />
               <span className="hc-hamburger-line" style={mobileNavOpen ? {opacity:0} : {}} />
@@ -192,7 +210,7 @@ export default function HomeContent() {
             {[{t:'How it works',h:'#how-it-works'},{t:'Why start here',h:'#why-start-here'},{t:'FAQ',h:'#faq'},{t:'Resources',h:'/resources'}].map(l => (
               <a key={l.t} href={l.h} onClick={() => setMobileNavOpen(false)} style={{color:'rgba(255,255,255,0.85)',fontWeight:500,fontSize:'1rem',textDecoration:'none',padding:'0.25rem 0',...bodyFont}}>{l.t}</a>
             ))}
-            <a href="#intake" onClick={() => setMobileNavOpen(false)} style={{display:'block',textAlign:'center',marginTop:'0.5rem',padding:'0.875rem 1.5rem',background:GOLD,color:'#1a0f00',fontWeight:700,borderRadius:'0.375rem',fontSize:'0.95rem',textDecoration:'none',...labelFont}}>Get My Free Claim Review</a>
+            <a href="#intake" onClick={() => { setMobileNavOpen(false); trackCta('Get My Free Claim Review','mobile_nav'); }} style={{display:'block',textAlign:'center',marginTop:'0.5rem',padding:'0.875rem 1.5rem',background:GOLD,color:'#1a0f00',fontWeight:700,borderRadius:'0.375rem',fontSize:'0.95rem',textDecoration:'none',...labelFont}}>Get My Free Claim Review</a>
           </nav>
         )}
       </header>
@@ -214,7 +232,7 @@ export default function HomeContent() {
               In about 2 minutes, tell us what happened. We review your situation and, if it fits our criteria, reach out with plain-language guidance on benefits, deadlines, and next steps &mdash; at no cost.
             </p>
             <div style={{marginBottom:'2rem'}}>
-              <GoldBtn style={{padding:'1.125rem 2.5rem',fontSize:'1rem'}}>
+              <GoldBtn onClickTrack={() => trackCta('Get My Free Claim Review','hero')} style={{padding:'1.125rem 2.5rem',fontSize:'1rem',minHeight:'52px'}}>
                 <Icon name="check_circle" size="1.25rem" color="#1a0f00" fill /> Get My Free Claim Review
               </GoldBtn>
             </div>
@@ -258,11 +276,11 @@ export default function HomeContent() {
             <p style={{color:'rgba(255,255,255,0.55)',fontSize:'0.85rem',marginBottom:'1.25rem',fontFamily:'"Open Sans",sans-serif'}}>Tell us the type of accident and whether it happened in Ontario - we'll take it from there.</p>
             <div style={{display:'flex',flexWrap:'wrap',gap:'0.5rem',marginBottom:'1.25rem'}}>
               {['Car accident','Slip & fall','Pedestrian','Motorcycle','Workplace','Other'].map(type => (
-                <a key={type} href="#intake" style={{background:'rgba(203,167,47,0.1)',border:'1px solid rgba(203,167,47,0.3)',color:'rgba(255,255,255,0.8)',borderRadius:'0.375rem',padding:'0.5rem 0.875rem',fontSize:'0.8rem',fontWeight:600,textDecoration:'none',fontFamily:'"Open Sans",sans-serif'}}>{type}</a>
+                <a key={type} href="#intake" onClick={() => trackCta(type,'mini_card_type')} style={{background:'rgba(203,167,47,0.1)',border:'1px solid rgba(203,167,47,0.3)',color:'rgba(255,255,255,0.8)',borderRadius:'0.375rem',padding:'0.5rem 0.875rem',fontSize:'0.8rem',fontWeight:600,textDecoration:'none',fontFamily:'"Open Sans",sans-serif'}}>{type}</a>
               ))}
             </div>
             <div style={{display:'flex',gap:'0.75rem',flexWrap:'wrap',alignItems:'center'}}>
-              <a href="#intake" style={{background:GOLD,color:'#1a0f00',fontWeight:700,padding:'0.75rem 1.75rem',borderRadius:'0.375rem',fontSize:'0.875rem',textDecoration:'none',display:'inline-flex',alignItems:'center',gap:'0.5rem',fontFamily:'"Open Sans",sans-serif'}}>Start My Free Review →</a>
+              <a href="#intake" onClick={() => trackCta('Start My Free Review','mini_card')} style={{background:GOLD,color:'#1a0f00',fontWeight:700,padding:'0.875rem 1.75rem',borderRadius:'0.375rem',fontSize:'0.9rem',textDecoration:'none',display:'inline-flex',alignItems:'center',gap:'0.5rem',fontFamily:'"Open Sans",sans-serif',minHeight:'48px'}}>Start My Free Review →</a>
               <span style={{color:'rgba(255,255,255,0.3)',fontSize:'0.75rem',fontFamily:'"Open Sans",sans-serif'}}>Free · Confidential · No obligation</span>
             </div>
           </div>
@@ -354,7 +372,7 @@ export default function HomeContent() {
               ))}
             </div>
             <div style={{paddingTop:'0.5rem'}}>
-              <GoldBtn>
+              <GoldBtn onClickTrack={() => trackCta('Get My Free Claim Review','value_section')}>
                 <Icon name="search" size="1.25rem" color="#1a0f00" /> Get My Free Claim Review
               </GoldBtn>
             </div>
@@ -387,7 +405,7 @@ export default function HomeContent() {
             <p style={{color:ON_SURFACE_VARIANT,fontSize:'0.875rem',lineHeight:1.7,margin:'1.5rem 0 2rem',...bodyFont}}>
               Our process is designed to give you clarity fast &mdash; with no pressure, no paperwork, and no commitment at any stage.
             </p>
-            <a href="#intake" style={{display:'inline-flex',alignItems:'center',gap:'0.5rem',fontSize:'0.875rem',fontWeight:700,color:NAVY,textDecoration:'none',borderBottom:`1.5px solid ${GOLD}`,paddingBottom:2,...labelFont}}>
+            <a href="#intake" onClick={() => trackCta('Start Your Free Review','how_it_works')} style={{display:'inline-flex',alignItems:'center',gap:'0.5rem',fontSize:'0.875rem',fontWeight:700,color:NAVY,textDecoration:'none',borderBottom:`1.5px solid ${GOLD}`,paddingBottom:2,...labelFont}}>
               Start Your Free Review <Icon name="arrow_forward" size="1rem" color={NAVY} />
             </a>
           </div>
@@ -500,7 +518,7 @@ export default function HomeContent() {
           <p style={{color:TEXT_DIM,maxWidth:'32rem',margin:'0 auto 2.5rem',lineHeight:1.7,fontSize:'1.125rem',...bodyFont}}>
             It takes about 2 minutes. No cost. No obligation.
           </p>
-          <GoldBtn style={{padding:'1.125rem 2.75rem',fontSize:'1rem',boxShadow:'0 10px 15px -3px rgba(0,0,0,0.2)'}}>
+          <GoldBtn onClickTrack={() => trackCta('Get My Free Claim Review','mid_page')} style={{padding:'1.125rem 2.75rem',fontSize:'1rem',boxShadow:'0 10px 15px -3px rgba(0,0,0,0.2)'}}>
             <Icon name="check_circle" size="1.25rem" color="#1a0f00" fill /> Get My Free Claim Review
           </GoldBtn>
           <p style={{color:'rgba(255,255,255,0.25)',fontSize:'0.75rem',marginTop:'1.75rem',...labelFont}}>Free {'\u00b7'} Confidential {'\u00b7'} No obligation {'\u00b7'} Takes ~2 minutes</p>
@@ -563,7 +581,7 @@ export default function HomeContent() {
           <p style={{color:TEXT_DIM,maxWidth:'36rem',margin:'0 auto 2.5rem',lineHeight:1.7,...bodyFont}}>
             Two minutes. Free. No obligation. No pressure. Just a clearer picture — before you decide what to do next.
           </p>
-          <GoldBtn style={{padding:'1.125rem 2.75rem',fontSize:'1rem',boxShadow:'0 10px 15px -3px rgba(0,0,0,0.1)'}}>
+          <GoldBtn onClickTrack={() => trackCta('Get My Free Claim Review','final_cta')} style={{padding:'1.125rem 2.75rem',fontSize:'1rem',boxShadow:'0 10px 15px -3px rgba(0,0,0,0.1)'}}>
             <Icon name="rocket_launch" size="1.25rem" color="#1a0f00" /> Get My Free Claim Review
           </GoldBtn>
           <p style={{color:'rgba(255,255,255,0.25)',fontSize:'0.75rem',marginTop:'1.75rem',...labelFont}}>Free {'\u00b7'} Confidential {'\u00b7'} No obligation {'\u00b7'} Takes ~2 minutes</p>
@@ -593,7 +611,7 @@ export default function HomeContent() {
                 {[{t:'How it works',h:'#how-it-works'},{t:'Why start here',h:'#why-start-here'},{t:'FAQ',h:'#faq'}].map(l => (
                   <a key={l.t} href={l.h} style={{fontSize:'0.875rem',color:'rgba(255,255,255,0.5)',textDecoration:'none',...bodyFont}}>{l.t}</a>
                 ))}
-                <a href="#intake" style={{fontSize:'0.875rem',fontWeight:600,color:GOLD,textDecoration:'none',...bodyFont}}>Start Your Free Review &rarr;</a>
+                <a href="#intake" onClick={() => trackCta('Start Your Free Review','footer_nav')} style={{fontSize:'0.875rem',fontWeight:600,color:GOLD,textDecoration:'none',...bodyFont}}>Start Your Free Review &rarr;</a>
               </div>
             </div>
             <div>
@@ -619,7 +637,7 @@ export default function HomeContent() {
             <div style={{color:'#fff',fontWeight:700,fontSize:'0.875rem',lineHeight:1.2,...headlineFont}}>Free Accident Review</div>
             <div style={{color:'rgba(255,255,255,0.5)',fontSize:'0.75rem',...labelFont}}>~2 min {'\u00b7'} No obligation</div>
           </div>
-          <a href="#intake" className="hc-gold-btn" style={{flexShrink:0,display:'inline-flex',alignItems:'center',gap:'0.5rem',padding:'0.75rem 1.25rem',borderRadius:'0.375rem',fontSize:'0.875rem',textDecoration:'none',...labelFont}}>
+          <a href="#intake" className="hc-gold-btn" onClick={() => trackCta('Get My Free Review','sticky_bar')} style={{flexShrink:0,display:'inline-flex',alignItems:'center',gap:'0.5rem',padding:'0.875rem 1.25rem',borderRadius:'0.375rem',fontSize:'0.875rem',textDecoration:'none',minHeight:'48px',...labelFont}}>
             Check If I Qualify <Icon name="arrow_forward" size="1rem" color="#1a0f00" />
           </a>
         </div>

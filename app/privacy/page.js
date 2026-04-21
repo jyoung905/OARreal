@@ -1,5 +1,6 @@
 import { ContentPage } from '@/components/ContentPage';
 import { SiteFooter } from '@/components/SiteFooter';
+import TrackPageView from '@/components/TrackPageView';
 
 export const metadata = {
   title: 'Privacy Policy',
@@ -9,6 +10,7 @@ export const metadata = {
 export default function PrivacyPage() {
   return (
     <>
+      <TrackPageView view="privacy_policy" />
       <ContentPage
         eyebrow="Privacy Policy"
         title="How Ontario Accident Review handles your information"

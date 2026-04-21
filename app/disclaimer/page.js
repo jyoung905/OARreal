@@ -1,5 +1,6 @@
 import { ContentPage } from '@/components/ContentPage';
 import { SiteFooter } from '@/components/SiteFooter';
+import TrackPageView from '@/components/TrackPageView';
 
 export const metadata = {
   title: 'Disclaimer',
@@ -9,6 +10,7 @@ export const metadata = {
 export default function DisclaimerPage() {
   return (
     <>
+      <TrackPageView view="legal_disclaimer" />
       <ContentPage
         eyebrow="Disclaimer"
         title="Important limits on this website and review form"

@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { Analytics } from '@/lib/analytics';
 
 /* ── Step metadata ── */
 const META = [
@@ -51,10 +52,19 @@ export function IntakeModal() {
   const [fieldErrors, setFieldErrors]     = useState({});
   const [submitError, setSubmitError]     = useState('');
   const [submitting, setSubmitting]       = useState(false);
+  const intakeOpenTime                    = useRef(null);
 
   /* Hash-based open/close */
   useEffect(() => {
-    const onHash = () => setIsOpen(window.location.hash === '#intake');
+    const onHash = () => {
+      const open = window.location.hash === '#intake';
+      setIsOpen(open);
+      if (open) {
+        intakeOpenTime.current = Date.now();
+        Analytics.intakeStart();
+        Analytics.intakeStepView({ step: 1, step_label: 'Accident basics' });
+      }
+    };
     onHash();
     window.addEventListener('hashchange', onHash);
     return () => window.removeEventListener('hashchange', onHash);
@@ -66,13 +76,6 @@ export function IntakeModal() {
     return () => { document.body.style.overflow = ''; };
   }, [isOpen]);
 
-  const pushEvent = (name, params) => {
-    if (typeof window !== 'undefined') {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: name, ...params });
-    }
-  };
-
   const goTo = (n) => { setStep(n); setFadeKey(k => k + 1); };
 
   const handleClose = () => {
@@ -80,8 +83,29 @@ export function IntakeModal() {
     window.history.pushState(null, '', window.location.pathname);
   };
 
-  const goStep1to2 = () => { pushEvent('intake_step1_complete', { accident_type: accidentType }); goTo(2); };
-  const goStep2to3 = () => { pushEvent('intake_step2_complete'); goTo(3); };
+  const goStep1to2 = () => {
+    Analytics.intakeStepComplete({
+      step: 1, step_label: 'Accident basics',
+      accident_type: accidentType,
+      claim_status: claimStatus,
+      ontario_yn: ontario,
+    });
+    goTo(2);
+    Analytics.intakeStepView({ step: 2, step_label: 'Impact' });
+  };
+
+  const goStep2to3 = () => {
+    Analytics.intakeStepComplete({
+      step: 2, step_label: 'Impact',
+      injured,
+      missed_work: missedWork,
+      treatment,
+      ongoing_symptoms: ongoingSymptoms,
+      has_description: description.trim().length > 0,
+    });
+    goTo(3);
+    Analytics.intakeStepView({ step: 3, step_label: 'Contact' });
+  };
 
   const submitForm = async () => {
     const errs = {};
@@ -94,6 +118,15 @@ export function IntakeModal() {
 
     setSubmitting(true);
     setSubmitError('');
+
+    const elapsed = intakeOpenTime.current ? Date.now() - intakeOpenTime.current : undefined;
+    Analytics.intakeSubmit({
+      accident_type: accidentType,
+      claim_status: claimStatus,
+      ontario_yn: ontario,
+      injured,
+      time_to_submit_ms: elapsed,
+    });
 
     const payload = {
       fullName:           (firstName + ' ' + lastName).trim(),
@@ -126,7 +159,11 @@ export function IntakeModal() {
       });
       const data = await response.json();
       if (response.ok && data.success !== false) {
-        pushEvent('form_submit_success', { accident_type: accidentType, claim_status: claimStatus });
+        Analytics.submissionSuccess({
+          accident_type: accidentType,
+          claim_status: claimStatus,
+          time_to_complete_ms: intakeOpenTime.current ? Date.now() - intakeOpenTime.current : undefined,
+        });
         window.location.href = '/thank-you';
       } else {
         throw new Error(data.error || 'Submission failed');
