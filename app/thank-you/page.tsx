@@ -4,9 +4,9 @@ import Script from 'next/script';
 import TrackLead from '@/components/TrackLead';
 
 export const metadata = {
-  title: 'Thank You | Ontario Accident Review',
+  title: 'Review Request Received | Ontario Accident Review',
   description:
-    'Your Ontario Accident Review request has been received. A representative may follow up after the submission is reviewed.',
+    'Your Ontario Accident Review request has been received. A representative will review your submission. No obligation, no legal case started.',
   robots: {
     index: false,
     follow: false
@@ -33,100 +33,124 @@ export default function ThankYouPage() {
         </div>
       </header>
 
-      <main style={{ background: '#f4f6fa', minHeight: '100vh', padding: 'clamp(32px,6vw,60px) 16px clamp(48px,8vw,80px)' }}>
-        <div style={{ maxWidth: 720, margin: '0 auto' }}>
+      <style>{`
+        .ty-card { background: #fff; border-radius: 14px; box-shadow: 0 2px 16px rgba(26,48,96,0.07); }
+        .ty-step { display: flex; gap: 16px; align-items: flex-start; padding: 18px 0; border-bottom: 1px solid #edf0f5; }
+        .ty-step:last-child { border-bottom: none; padding-bottom: 0; }
+        .ty-num { width: 32px; height: 32px; border-radius: 50%; background: #1a3060; color: #fff; font-weight: 800; font-size: 0.8rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; font-family: system-ui, sans-serif; }
+        .ty-step-title { font-weight: 700; color: #1a3060; font-size: 0.95rem; margin-bottom: 4px; }
+        .ty-step-body { color: #556; font-size: 0.88rem; line-height: 1.6; margin: 0; }
+        .ty-urgent { background: #fff8e1; border: 1px solid #e8c84a; border-radius: 10px; padding: 20px 24px; display: flex; gap: 14px; align-items: flex-start; }
+        .ty-reassure { display: flex; align-items: flex-start; gap: 10px; padding: 10px 0; }
+        .ty-reassure-text { font-size: 0.875rem; color: #445; line-height: 1.5; }
+        @media (max-width: 480px) {
+          .ty-main-card { padding: 28px 20px 24px !important; }
+          .ty-section { padding: 20px !important; }
+        }
+      `}</style>
 
-          {/* Success card */}
-          <div style={{
-            background: '#fff',
-            borderRadius: 16,
-            padding: '48px 48px 40px',
-            boxShadow: '0 4px 24px rgba(26,48,96,0.08)',
-            marginBottom: 24
-          }}>
-            {/* Icon */}
-            <div style={{
-              width: 64, height: 64, borderRadius: '50%',
-              background: 'linear-gradient(135deg, #1a3060 0%, #3a82c8 100%)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              marginBottom: 24
-            }}>
-              <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+      <main style={{ background: '#f4f6fa', minHeight: '100vh', padding: 'clamp(28px,5vw,56px) 16px clamp(48px,8vw,80px)' }}>
+        <div style={{ maxWidth: 660, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 20 }}>
+
+          {/* ── Hero confirmation card ── */}
+          <div className="ty-card ty-main-card" style={{ padding: '40px 40px 36px' }}>
+            <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'linear-gradient(135deg, #1a3060 0%, #3a82c8 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 20 }}>
+              <svg width="26" height="26" viewBox="0 0 30 30" fill="none">
                 <path d="M6 15.5l6 6L24 9" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
 
-            <p style={{ color: '#3a82c8', fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: 12 }}>
-              Submitted Successfully
+            <p style={{ color: '#3a82c8', fontWeight: 700, fontSize: '0.75rem', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: 10, fontFamily: 'system-ui, sans-serif' }}>
+              Review request received
             </p>
-            <h1 style={{ color: '#1a3060', fontSize: 'clamp(2rem, 5vw, 2.8rem)', fontWeight: 800, lineHeight: 1.15, marginBottom: 20 }}>
-              Your review request has been received
+            <h1 style={{ color: '#1a3060', fontSize: 'clamp(1.75rem, 4vw, 2.4rem)', fontWeight: 800, lineHeight: 1.15, marginBottom: 16, fontFamily: 'system-ui, sans-serif' }}>
+              You&apos;re done. We&apos;ll take it from here.
             </h1>
-            <p style={{ color: '#445', fontSize: '1.05rem', lineHeight: 1.7, maxWidth: 560 }}>
-              A representative from Ontario Accident Review will review your submission. If
-              your situation appears to fit our intake criteria, someone may contact you
-              using the information you provided. Not every submission results in follow-up.
+            <p style={{ color: '#445', fontSize: '1rem', lineHeight: 1.75, margin: 0 }}>
+              Your submission has been received. You don&apos;t need to do anything else right now.
+              A representative will review your information and, if your situation fits our criteria,
+              reach out to you using the contact details you provided.
             </p>
           </div>
 
-          {/* Info panels */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: 16, marginBottom: 32 }}>
+          {/* ── What happens next ── */}
+          <div className="ty-card ty-section" style={{ padding: '28px 32px' }}>
+            <p style={{ color: '#3a82c8', fontWeight: 700, fontSize: '0.72rem', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: 18, fontFamily: 'system-ui, sans-serif' }}>What happens next</p>
 
-            <div style={{ background: '#fff', borderRadius: 12, padding: '28px 28px 24px', boxShadow: '0 2px 12px rgba(26,48,96,0.06)', borderTop: '3px solid #3a82c8' }}>
-              <p style={{ color: '#3a82c8', fontWeight: 700, fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 10 }}>
-                What happens next
-              </p>
-              <h3 style={{ color: '#1a3060', fontWeight: 700, fontSize: '1.05rem', marginBottom: 10 }}>
-                No pressure, no obligation
-              </h3>
-              <p style={{ color: '#556', fontSize: '0.92rem', lineHeight: 1.65 }}>
-                Submitting this review does not hire a lawyer, start a legal case, or commit
-                you to anything. If we follow up, it’s to explain what may apply — nothing more.
-              </p>
+            <div className="ty-step">
+              <div className="ty-num">1</div>
+              <div>
+                <p className="ty-step-title">Your submission is reviewed</p>
+                <p className="ty-step-body">A representative reviews what you&apos;ve shared to assess whether your situation appears to fit our intake criteria. This typically happens within 1&ndash;2 business days.</p>
+              </div>
             </div>
 
-            <div style={{ background: '#fff', borderRadius: 12, padding: '28px 28px 24px', boxShadow: '0 2px 12px rgba(26,48,96,0.06)', borderTop: '3px solid #1a3060' }}>
-              <p style={{ color: '#3a82c8', fontWeight: 700, fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 10 }}>
-                Important reminder
-              </p>
-              <h3 style={{ color: '#1a3060', fontWeight: 700, fontSize: '1.05rem', marginBottom: 10 }}>
-                Your information is kept confidential
-              </h3>
-              <p style={{ color: '#556', fontSize: '0.92rem', lineHeight: 1.65 }}>
-                Your submission is not shared with your insurance company. Ontario Accident
-                Review has no affiliation with any insurer. Your information is handled
-                securely and kept confidential.
-              </p>
+            <div className="ty-step">
+              <div className="ty-num">2</div>
+              <div>
+                <p className="ty-step-title">We reach out if your situation fits</p>
+                <p className="ty-step-body">If your situation appears suitable, a representative will contact you using the method and time you specified &mdash; to walk you through what may apply in plain language. Not every submission results in follow-up.</p>
+              </div>
             </div>
 
+            <div className="ty-step">
+              <div className="ty-num">3</div>
+              <div>
+                <p className="ty-step-title">You decide what to do next</p>
+                <p className="ty-step-body">If appropriate, we may suggest connecting with a licensed Ontario personal injury lawyer who can explain your options. There is no obligation at any stage &mdash; nothing moves forward unless you choose it to.</p>
+              </div>
+            </div>
           </div>
 
-          {/* CTA */}
-          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', flexDirection: 'column' }}>
-            <Link href="/" style={{
-              display: 'block', textAlign: 'center',
-              background: 'linear-gradient(135deg, #1a3060 0%, #2a5298 100%)',
-              color: '#fff', fontWeight: 700, fontSize: '0.95rem',
-              padding: '16px 32px', borderRadius: 8, textDecoration: 'none',
-              boxShadow: '0 4px 14px rgba(26,48,96,0.25)', minHeight: 52
-            }}>
-              Back to home
+          {/* ── Reassurance block ── */}
+          <div className="ty-card ty-section" style={{ padding: '24px 32px' }}>
+            <p style={{ color: '#3a82c8', fontWeight: 700, fontSize: '0.72rem', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: 16, fontFamily: 'system-ui, sans-serif' }}>A few things to know</p>
+            {[
+              { icon: '✓', text: 'Submitting this form does not start a legal case or hire a lawyer. No legal relationship has been created.' },
+              { icon: '✓', text: 'Your information is not shared with your insurance company. Ontario Accident Review has no affiliation with any insurer.' },
+              { icon: '✓', text: 'There is no cost at any stage and no obligation to speak with or retain anyone.' },
+              { icon: '✓', text: 'You do not need to do anything else right now. Simply wait to hear from us if your situation fits.' },
+            ].map((item, i) => (
+              <div key={i} className="ty-reassure">
+                <span style={{ color: '#3a82c8', fontWeight: 800, fontSize: '0.9rem', flexShrink: 0, marginTop: 1 }}>{item.icon}</span>
+                <p className="ty-reassure-text">{item.text}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* ── Urgent/time-sensitive callout ── */}
+          <div className="ty-urgent">
+            <span style={{ fontSize: '1.25rem', flexShrink: 0, marginTop: 2 }}>⚠️</span>
+            <div>
+              <p style={{ fontWeight: 700, color: '#7a5800', fontSize: '0.9rem', marginBottom: 6, fontFamily: 'system-ui, sans-serif' }}>If your matter may be time-sensitive</p>
+              <p style={{ color: '#7a5800', fontSize: '0.85rem', lineHeight: 1.65, margin: 0 }}>
+                Ontario accident claims can involve deadlines for notifying your insurer and filing applications.
+                If you believe your situation is urgent or a deadline may be approaching,
+                please <strong>do not wait for our follow-up</strong> &mdash; seek qualified legal advice promptly.
+                Ontario Accident Review does not provide legal deadline advice.
+              </p>
+            </div>
+          </div>
+
+          {/* ── Links ── */}
+          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+            <Link href="/#faq" style={{ flex: 1, minWidth: 200, display: 'block', textAlign: 'center', background: '#1a3060', color: '#fff', fontWeight: 700, fontSize: '0.9rem', padding: '14px 24px', borderRadius: 8, textDecoration: 'none', minHeight: 48, lineHeight: '20px' }}>
+              Common questions
             </Link>
-            <Link href="/privacy" style={{
-              display: 'block', textAlign: 'center',
-              background: '#fff', color: '#1a3060', fontWeight: 600, fontSize: '0.95rem',
-              padding: '16px 32px', borderRadius: 8, textDecoration: 'none',
-              border: '1.5px solid #d0d8e8'
-            }}>
-              Privacy Policy
+            <Link href="/contact" style={{ flex: 1, minWidth: 200, display: 'block', textAlign: 'center', background: '#fff', color: '#1a3060', fontWeight: 600, fontSize: '0.9rem', padding: '14px 24px', borderRadius: 8, textDecoration: 'none', border: '1.5px solid #d0d8e8', minHeight: 48, lineHeight: '20px' }}>
+              Contact us
             </Link>
           </div>
+
+          <p style={{ textAlign: 'center', fontSize: '0.8rem', color: '#889', lineHeight: 1.5 }}>
+            Ontario Accident Review is not a law firm and does not provide legal advice or legal representation.
+          </p>
 
         </div>
       </main>
 
-      <footer style={{ background: '#1a3060', color: '#a8bdd6', textAlign: 'center', padding: '24px 20px', fontSize: '0.85rem' }}>
-        Ontario Accident Review is not a law firm. No legal advice. No legal representation.
+      <footer style={{ background: '#1a3060', color: '#a8bdd6', textAlign: 'center', padding: '20px', fontSize: '0.82rem' }}>
+        &copy; 2026 Ontario Accident Review &mdash; Not a law firm. No legal advice. No legal representation.
       </footer>
     </>
   );
