@@ -77,11 +77,11 @@ export default function ThankYouPage() {
                 What happens next
               </p>
               <h3 style={{ color: '#1a3060', fontWeight: 700, fontSize: '1.05rem', marginBottom: 10 }}>
-                Reviewed before any follow-up
+                No pressure, no obligation
               </h3>
               <p style={{ color: '#556', fontSize: '0.92rem', lineHeight: 1.65 }}>
-                This is an initial review request only. It does not create a lawyer-client
-                relationship, and Ontario Accident Review is not a law firm.
+                Submitting this review does not hire a lawyer, start a legal case, or commit
+                you to anything. If we follow up, it’s to explain what may apply — nothing more.
               </p>
             </div>
 
@@ -90,11 +90,12 @@ export default function ThankYouPage() {
                 Important reminder
               </p>
               <h3 style={{ color: '#1a3060', fontWeight: 700, fontSize: '1.05rem', marginBottom: 10 }}>
-                Keep sensitive details out of first-step intake
+                Your information is kept confidential
               </h3>
               <p style={{ color: '#556', fontSize: '0.92rem', lineHeight: 1.65 }}>
-                Please do not send insurance policy details, banking information, government
-                IDs, or uploads unless you are asked through an approved follow-up process.
+                Your submission is not shared with your insurance company. Ontario Accident
+                Review has no affiliation with any insurer. Your information is handled
+                securely and kept confidential.
               </p>
             </div>
 

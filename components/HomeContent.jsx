@@ -119,13 +119,14 @@ export default function HomeContent() {
 
   const FAQS = [
     { q:'Is this completely free?', a:'Yes. The review is completely free. There is no cost at any stage and no obligation to proceed with anything.' },
-    { q:'Will I get bombarded with calls after I submit?', a:'No. We review every submission before following up. We only contact you if your situation appears to fit our review criteria, and we respect your preferred contact method.' },
-    { q:'Am I hiring a lawyer by submitting this?', a:'No. Submitting this form does not create a legal relationship, retain a lawyer, or start a case. It is simply a review request so we can assess your situation.' },
-    { q:'What happens after I submit?', a:'A representative reviews your submission. If your situation appears to fit our intake criteria, they may reach out with plain-language context on how accident claims generally work in Ontario and what next steps may be worth considering.' },
-    { q:'Do I need documents or insurance info?', a:'No. You do not need any documents, policy numbers, or insurance details to get started. Just tell us the basics of what happened.' },
-    { q:'Is my information private?', a:'Yes. Your information is handled with strict confidentiality, stored securely, and is never shared with insurers or third parties without your consent.' },
+    { q:'Will I be pressured or bombarded with calls?', a:'No. We review your submission before anyone follows up. If your situation fits our criteria, one representative may reach out — calmly, once — to explain what may apply. We respect your preferred contact time and method, and you are free to say no to anything.' },
+    { q:'Am I hiring a lawyer by submitting this?', a:'No. Submitting this form does not hire a lawyer, start a legal case, or create any obligation of any kind. It is simply a review request. Nothing moves forward unless you choose it to.' },
+    { q:'Is Ontario Accident Review connected to my insurance company?', a:'No. Ontario Accident Review has no connection to your insurer and is not affiliated with any insurance company. We do not notify your insurer that you submitted a review, and your submission is kept confidential.' },
+    { q:'What happens after I submit?', a:'A representative reviews your submission. If your situation appears to fit our criteria, they may reach out to walk you through what may apply — in plain language, at no cost. If we don’t follow up, it means your situation didn’t meet our intake criteria at this time.' },
+    { q:'Do I need documents or insurance info?', a:'No. You do not need any documents, policy numbers, insurance details, or anything in writing to get started. Just tell us the basics of what happened.' },
+    { q:'Is my information private?', a:'Yes. Your information is kept confidential, stored securely, and is never shared with your insurer or any third party without your consent.' },
     { q:'What if the accident was partly my fault?', a:'Generally speaking, fault does not automatically disqualify someone from accident benefits in Ontario — Ontario operates under a no-fault accident benefits system. However, your specific situation may differ. A review can help clarify what may apply to your circumstances.' },
-    { q:'Are there deadlines I should know about?', a:'Ontario accident claims can involve various time-sensitive steps — including notifying your insurer, submitting applications, and filing legal proceedings. The earlier you understand your situation, the more options you may have. This review does not provide legal deadline advice — if you believe a deadline is approaching, seek qualified legal advice promptly.' },
+    { q:'Are there deadlines I should know about?', a:'Ontario accident claims can involve various time-sensitive steps. The earlier you understand your situation, the more options you may have. This review does not provide legal deadline advice — if you believe a deadline is approaching, seek qualified legal advice promptly.' },
   ];
 
   return (
@@ -510,8 +511,8 @@ export default function HomeContent() {
       <section id="faq" style={{background:LIGHT_BG,padding:'6rem 1.5rem'}}>
         <div style={{...maxW,maxWidth:'48rem'}}>
           <div className="hc-reveal" style={{textAlign:'center',marginBottom:'3rem'}}>
-            <GoldLabel light>Common Questions</GoldLabel>
-            <h2 style={{fontSize:'2.25rem',fontWeight:800,color:NAVY,lineHeight:1.15,margin:'1rem 0',...headlineFont}}>Frequently Asked</h2>
+            <GoldLabel light>Plain answers</GoldLabel>
+            <h2 style={{fontSize:'2.25rem',fontWeight:800,color:NAVY,lineHeight:1.15,margin:'1rem 0',...headlineFont}}>Questions people usually have before they start</h2>
           </div>
           <div className="hc-reveal" style={{display:'flex',flexDirection:'column',gap:'0.5rem'}}>
             {FAQS.map((f, i) => (
@@ -535,9 +536,9 @@ export default function HomeContent() {
           <h2 style={{color:'#ffffff',fontFamily:'Raleway,sans-serif',fontSize:'clamp(1.4rem,3vw,2rem)',fontWeight:800,textAlign:'center',marginBottom:'2.5rem'}}>Why People Start Here First</h2>
           <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:'1.5rem'}}>
             {[
-              {title:'No lawyers or office visits',body:'Start with a short form. We review your situation and report back in plain language.'},
-              {title:'Your information stays private',body:'The intake form is encrypted. We do not share your details with insurers or third parties.'},
-              {title:'Understand before you decide',body:'You will know what may apply to your claim before taking any next steps - with no pressure to proceed.'},
+              {title:'No lawyers, no office visits, no calls you didn’t ask for',body:'Fill out a short form. If your situation fits, one representative may follow up — once, calmly. Nothing more unless you want it.'},
+              {title:'Your insurer never finds out you were here',body:'Ontario Accident Review is not connected to any insurance company. Submitting a review does not notify your insurer or affect your policy.'},
+              {title:'Understand your situation before committing to anything',body:'You’ll have plain-language context on what may apply before anyone asks you to take a next step. No pressure, no commitment unless you choose it.'},
             ].map((c,i)=>(
               <div key={i} style={{background:'#112037',borderRadius:'8px',padding:'1.75rem',borderTop:'2px solid rgba(203,167,47,0.3)'}}>
                 <h3 style={{color:'#ffffff',fontFamily:'Raleway,sans-serif',fontSize:'1rem',fontWeight:700,marginBottom:'0.75rem'}}>{c.title}</h3>
@@ -551,16 +552,16 @@ export default function HomeContent() {
       {/* FINAL CLOSE */}
       <section style={{padding:'6rem 1.5rem',background:'linear-gradient(145deg, #04090f 0%, #001228 50%, #040810 100%)'}}>
         <div className="hc-reveal" style={{...maxW,maxWidth:'52rem',textAlign:'center'}}>
-          <GoldLabel>Don&apos;t wait</GoldLabel>
+          <GoldLabel>A calm first step</GoldLabel>
           <h2 style={{fontSize:'3rem',fontWeight:800,color:'#fff',lineHeight:1.15,margin:'1.25rem 0',...headlineFont}}>
-            Don&apos;t Risk Leaving Money on the Table
+            Understand your situation before you make any decisions.
           </h2>
           <div style={{width:44,height:2,background:`linear-gradient(90deg, ${LABEL_DARK}, ${GOLD})`,margin:'1.75rem auto'}} />
           <p style={{color:'rgba(255,255,255,0.55)',fontSize:'1.05rem',lineHeight:1.7,maxWidth:'38rem',margin:'0 auto 1rem',...bodyFont}}>
-            You only get one shot at handling your accident properly.
+            A lot of accident victims don’t realize what may apply to their situation until it’s too late to do anything about it.
           </p>
           <p style={{color:TEXT_DIM,maxWidth:'36rem',margin:'0 auto 2.5rem',lineHeight:1.7,...bodyFont}}>
-            Before you rely on insurance &mdash; or make any decisions &mdash; take 2 minutes to understand your situation.
+            Two minutes. Free. No obligation. No pressure. Just a clearer picture — before you decide what to do next.
           </p>
           <GoldBtn style={{padding:'1.125rem 2.75rem',fontSize:'1rem',boxShadow:'0 10px 15px -3px rgba(0,0,0,0.1)'}}>
             <Icon name="rocket_launch" size="1.25rem" color="#1a0f00" /> Get My Free Claim Review

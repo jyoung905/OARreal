@@ -381,7 +381,7 @@ export function IntakeModal() {
               <div key={fadeKey} className="im-card im-step-fade" style={{display:'flex',flexDirection:'column',gap:'1.75rem'}}>
 
                 <p style={{fontSize:'0.875rem',color:'#44474f',lineHeight:1.6,margin:0}}>
-                  If you&apos;re not sure, pick the closest answer — you can explain more at the end.
+                  If you&apos;re not sure, pick the closest answer — you can explain more at the end. These questions help us understand whether your situation may be worth pursuing. There are no wrong answers.
                 </p>
 
                 {/* Y/N block */}

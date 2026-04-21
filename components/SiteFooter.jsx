@@ -7,7 +7,7 @@ export function SiteFooter() {
       <div className="container footer-grid">
         <div>
           <Image src="/logo-placeholder.svg" alt="Ontario Accident Review" width={220} height={50} />
-          <p>Ontario Accident Review is not a law firm. No legal advice. No legal representation.</p>
+          <p>Ontario Accident Review is a free, independent review service. We are not a law firm, not your insurer, and do not provide legal advice. Submitting a review does not start a case or create any obligation.</p>
         </div>
         <div>
           <p className="footer-heading">Pages</p>
