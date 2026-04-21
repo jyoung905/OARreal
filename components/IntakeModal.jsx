@@ -544,7 +544,7 @@ export function IntakeModal() {
                   <button type="button" className="im-btn-back" onClick={() => goTo(2)}>
                     <span className="material-symbols-outlined" style={{fontSize:'1.25rem'}}>arrow_back</span> Back
                   </button>
-                  <button type="button" className="im-btn-primary" disabled={submitting} onClick={submitForm}>
+                  <button type="button" className="im-btn-primary" disabled={submitting} onClick={submitForm} style={{minHeight:'52px'}}>
                     {submitting ? (
                       <><span className="material-symbols-outlined" style={{animation:'spin 1s linear infinite',fontSize:'1rem'}}>progress_activity</span>Submitting…</>
                     ) : (

@@ -573,7 +573,7 @@ export default function HomeContent() {
       {/* FOOTER */}
       <footer style={{background:DARK_BG,borderTop:'1px solid rgba(255,255,255,0.05)'}}>
         <div style={{...maxW,padding:'3.5rem 2rem 2rem'}}>
-          <div className="hc-grid-3" style={{display:'grid',gridTemplateColumns:'2fr 1fr 1fr',gap:'2.5rem',paddingBottom:'3rem',borderBottom:'1px solid rgba(255,255,255,0.05)'}}>
+          <div className="hc-footer-grid hc-grid-3" style={{display:'grid',gridTemplateColumns:'2fr 1fr 1fr',gap:'2.5rem',paddingBottom:'3rem',borderBottom:'1px solid rgba(255,255,255,0.05)'}}>
             <div style={{display:'flex',flexDirection:'column',gap:'1.25rem'}}>
               {SVG_LOGO(36)}
               <p style={{color:'rgba(255,255,255,0.35)',fontSize:'0.875rem',lineHeight:1.7,maxWidth:'24rem',...bodyFont}}>Ontario Accident Review is not a law firm and does not provide legal advice or legal representation. This service is for assessment purposes only.</p>

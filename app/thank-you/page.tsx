@@ -33,7 +33,7 @@ export default function ThankYouPage() {
         </div>
       </header>
 
-      <main style={{ background: '#f4f6fa', minHeight: '100vh', padding: '60px 20px 80px' }}>
+      <main style={{ background: '#f4f6fa', minHeight: '100vh', padding: 'clamp(32px,6vw,60px) 16px clamp(48px,8vw,80px)' }}>
         <div style={{ maxWidth: 720, margin: '0 auto' }}>
 
           {/* Success card */}
@@ -70,7 +70,7 @@ export default function ThankYouPage() {
           </div>
 
           {/* Info panels */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 32 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: 16, marginBottom: 32 }}>
 
             <div style={{ background: '#fff', borderRadius: 12, padding: '28px 28px 24px', boxShadow: '0 2px 12px rgba(26,48,96,0.06)', borderTop: '3px solid #3a82c8' }}>
               <p style={{ color: '#3a82c8', fontWeight: 700, fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 10 }}>
@@ -102,20 +102,20 @@ export default function ThankYouPage() {
           </div>
 
           {/* CTA */}
-          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', flexDirection: 'column' }}>
             <Link href="/" style={{
-              display: 'inline-block',
+              display: 'block', textAlign: 'center',
               background: 'linear-gradient(135deg, #1a3060 0%, #2a5298 100%)',
               color: '#fff', fontWeight: 700, fontSize: '0.95rem',
-              padding: '14px 32px', borderRadius: 8, textDecoration: 'none',
-              boxShadow: '0 4px 14px rgba(26,48,96,0.25)'
+              padding: '16px 32px', borderRadius: 8, textDecoration: 'none',
+              boxShadow: '0 4px 14px rgba(26,48,96,0.25)', minHeight: 52
             }}>
               Back to home
             </Link>
             <Link href="/privacy" style={{
-              display: 'inline-block',
+              display: 'block', textAlign: 'center',
               background: '#fff', color: '#1a3060', fontWeight: 600, fontSize: '0.95rem',
-              padding: '14px 32px', borderRadius: 8, textDecoration: 'none',
+              padding: '16px 32px', borderRadius: 8, textDecoration: 'none',
               border: '1.5px solid #d0d8e8'
             }}>
               Privacy Policy
