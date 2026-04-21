@@ -472,7 +472,12 @@ export function IntakeModal() {
 
                 <div className="im-info-box">
                   <strong style={{display:'block',marginBottom:'0.25rem'}}>Almost done.</strong>
-                  We only contact you if your situation fits our review criteria. We&apos;ll use the details below to reach out — once, calmly, to explain what may apply.
+                  We only contact you if your situation fits our intake criteria. We&apos;ll use the details below to reach out &mdash; once, calmly, to explain what may apply.
+                </div>
+
+                <div style={{background:'#f3f4f6',border:'1px solid #c5c6d0',borderRadius:'0.5rem',padding:'0.875rem 1rem',fontSize:'0.8rem',color:'#44474f',lineHeight:1.6}}>
+                  <strong style={{display:'block',marginBottom:'0.25rem',color:'#001b44'}}>Disclosure</strong>
+                  Ontario Accident Review operates in connection with a personal injury law firm. If your situation appears suitable for legal follow-up, your information may be referred to that firm or to another qualified Ontario legal professional. You will be informed before any referral is made and are under no obligation to proceed.
                 </div>
 
                 {/* Name */}
@@ -552,7 +557,8 @@ export function IntakeModal() {
                 <div style={{display:'flex',flexDirection:'column',gap:'0.35rem',paddingTop:'0.25rem'}}>
                   {[
                     'Submitting this form does not start a legal case.',
-                    'No lawyer-client relationship is created.',
+                    'No lawyer-client relationship is created by submitting this form.',
+                    'If referred to a legal professional, you will be told before that happens and are free to decline.',
                     'Do not include insurance policy numbers, health card numbers, or banking details.',
                   ].map(text => (
                     <p key={text} style={{fontSize:'0.75rem',color:'#44474f',display:'flex',alignItems:'flex-start',gap:'0.35rem',margin:0,lineHeight:1.5}}>

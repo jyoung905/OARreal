@@ -100,7 +100,7 @@ export default function HomeContent() {
   const STEPS = [
     { num:'01', label:'Initial Intake', title:'You submit a short form', desc:'Tell us the basics of your accident and how it has affected you. No documents, no insurance details, no policy numbers required at this stage.', bg:NAVY },
     { num:'02', label:'Submission Review', title:'Your submission is reviewed', desc:'A representative reviews your information. If your situation appears to fit our intake criteria, we may follow up with plain-language context on what may apply — and what next steps are worth considering.', bg:LABEL_DARK },
-    { num:'03', label:'Your Next Step', title:'You decide what to do next', desc:'If appropriate, we may suggest connecting with a legal professional. There is no obligation at any stage, and no case is started unless you choose to proceed.', bg:NAVY },
+    { num:'03', label:'Your Next Step', title:'You decide what to do next', desc:'If your situation appears suitable, we may suggest connecting with a legal professional — including one associated with Ontario Accident Review. There is no obligation at any stage, and no case is started unless you choose to proceed.', bg:NAVY },
   ];
 
   const WHY_START_HERE = [
