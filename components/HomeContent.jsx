@@ -118,13 +118,14 @@ export default function HomeContent() {
   ];
 
   const FAQS = [
-    { q:'Do I have to pay anything?', a:'No. The review is completely free. There is no charge at any stage, and no obligation to proceed.' },
-    { q:'Am I hiring a lawyer by submitting this?', a:'No. Submitting this form does not create a legal relationship, retain a lawyer, or start a case. It is simply an intake so we can review your situation.' },
-    { q:'What happens after I submit?', a:'A licensed Ontario professional personally reviews your submission — typically within 1–2 business days. If your situation appears to qualify, a representative will reach out with plain-language guidance on what may apply to your claim.' },
-    { q:'Do I need documents or insurance info?', a:'No. You do not need any documents, policy numbers, or insurance details to start. Just tell us the basics of what happened.' },
+    { q:'Is this completely free?', a:'Yes. The review is completely free. There is no cost at any stage and no obligation to proceed with anything.' },
+    { q:'Will I get bombarded with calls after I submit?', a:'No. We review every submission before following up. We only contact you if your situation appears to fit our review criteria, and we respect your preferred contact method.' },
+    { q:'Am I hiring a lawyer by submitting this?', a:'No. Submitting this form does not create a legal relationship, retain a lawyer, or start a case. It is simply a review request so we can assess your situation.' },
+    { q:'What happens after I submit?', a:'A representative personally reviews your submission. If your situation appears to qualify, they will reach out with plain-language guidance on what benefits, options, or next steps may apply to your claim.' },
+    { q:'Do I need documents or insurance info?', a:'No. You do not need any documents, policy numbers, or insurance details to get started. Just tell us the basics of what happened.' },
     { q:'Is my information private?', a:'Yes. Your information is handled with strict confidentiality, stored securely, and is never shared with insurers or third parties without your consent.' },
     { q:'What if the accident was partly my fault?', a:'Fault does not necessarily disqualify you from accident benefits in Ontario. Ontario uses a no-fault accident benefits system, which means you may still be entitled to certain benefits regardless of fault.' },
-    { q:'What if it has been several months since my accident?', a:'Time limits do apply in Ontario, so it is worth checking your situation now rather than waiting. Submit your review and we will let you know if timing is a concern for your specific claim.' },
+    { q:'Are there deadlines I should know about?', a:'Yes. Ontario accident claims have limitation periods and insurer notification deadlines — some as short as 7 days. The earlier you understand your situation, the more options you may have. A free review now closes no doors.' },
   ];
 
   return (
@@ -206,10 +207,10 @@ export default function HomeContent() {
               <span style={{fontSize:'0.75rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.1em',color:'rgba(255,255,255,0.7)',...labelFont}}>Free {'\u00b7'} No Obligation {'\u00b7'} Confidential</span>
             </div>
             <h1 className="hc-hero-h1" style={{fontSize:'3.25rem',fontWeight:800,color:'#fff',lineHeight:1.12,letterSpacing:'-0.01em',marginBottom:'1.5rem',...headlineFont}}>
-              Injured in an Ontario Accident? Get a Free Confidential Claim Review.
+              Injured in an Ontario Accident? Find Out What Benefits May Apply to Your Claim.
             </h1>
             <p style={{fontSize:'1.125rem',color:'rgba(255,255,255,0.6)',lineHeight:1.7,maxWidth:'34rem',marginBottom:'2rem',...bodyFont}}>
-              In about 2 minutes, find out what accident benefits, deadlines, and next steps may apply to your situation.
+              In about 2 minutes, tell us what happened. We review your situation and, if it fits our criteria, reach out with plain-language guidance on benefits, deadlines, and next steps &mdash; at no cost.
             </p>
             <div style={{marginBottom:'2rem'}}>
               <GoldBtn style={{padding:'1.125rem 2.5rem',fontSize:'1rem'}}>
