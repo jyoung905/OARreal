@@ -17,7 +17,7 @@ export default function PrivacyPage() {
         <h2>Who we are</h2>
         <p>Ontario Accident Review operates the website at <strong>www.ontarioaccidentreview.ca</strong>. We offer a free, no-obligation first-step review for individuals who have been involved in accidents in Ontario and want to understand whether their situation may be worth pursuing.</p>
         <p>Ontario Accident Review is not a law firm and does not provide legal advice. Our service is an initial intake and triage process only.</p>
-        <p><strong>Important disclosure:</strong> Ontario Accident Review is a lead generation and intake service. Submissions that appear to meet our intake criteria may be shared with licensed Ontario personal injury lawyers who may contact you about your situation. You will be informed before your information is shared with any legal professional, and you are under no obligation to speak with or retain anyone.</p>
+        <p><strong>How follow-up works:</strong> When your situation appears to be worth pursuing, Ontario Accident Review may connect you with a licensed Ontario personal injury lawyer who can explain your options at no cost. You will be contacted before any such connection is made, and you are under no obligation to speak with or retain anyone.</p>
 
         <h2>What information we collect</h2>
         <p>When you complete our review form, we collect the following information:</p>
@@ -46,7 +46,7 @@ export default function PrivacyPage() {
         <h2>Sharing your information</h2>
         <p>We do not sell, rent, or trade your personal information. We may share your information in the following limited circumstances:</p>
         <ul>
-          <li><strong>Legal referral partners:</strong> Ontario Accident Review is a lead generation and intake service. If your situation appears suitable for legal follow-up, your submission may be shared with licensed Ontario personal injury lawyers. You will be informed before your information is shared with any legal professional, and you are under no obligation to speak with or retain anyone.</li>
+          <li><strong>Legal referral partners:</strong> If your situation appears suitable for follow-up, Ontario Accident Review may connect you with a licensed Ontario personal injury lawyer. You will be contacted before this happens and are under no obligation to speak with or retain anyone. Ontario Accident Review may receive compensation for qualified referrals.</li>
           <li><strong>Service providers:</strong> We use trusted third-party tools (such as cloud hosting and email delivery services) to operate our platform. These providers process data on our behalf and are bound by confidentiality obligations.</li>
           <li><strong>Legal requirements:</strong> We may disclose your information if required by law or to protect the rights, safety, or property of Ontario Accident Review or others.</li>
         </ul>

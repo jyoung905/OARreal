@@ -477,7 +477,7 @@ export function IntakeModal() {
 
                 <div style={{background:'#f3f4f6',border:'1px solid #c5c6d0',borderRadius:'0.5rem',padding:'0.875rem 1rem',fontSize:'0.8rem',color:'#44474f',lineHeight:1.6}}>
                   <strong style={{display:'block',marginBottom:'0.25rem',color:'#001b44'}}>How follow-up works</strong>
-                  Ontario Accident Review is a lead generation and intake service. If your situation appears suitable, your information may be shared with a licensed Ontario personal injury lawyer who may contact you. You will be told before this happens and are under no obligation to speak with or retain anyone.
+                  If your situation appears worth pursuing, we may connect you with a licensed Ontario personal injury lawyer who can walk you through your options at no cost. You’ll be contacted before any connection is made, and you’re under no obligation to speak with or retain anyone.
                 </div>
 
                 {/* Name */}
