@@ -42,6 +42,7 @@ export async function POST(request) {
       thirdPartyInvolved,
       additionalNotes,
       inOntario,
+      claimStatus,
     } = body;
 
     const subject = `New lead: ${fullName || 'Unknown'} — ${phone || email || '—'}`;
@@ -59,6 +60,7 @@ export async function POST(request) {
       <b>Type:</b> ${accidentType || '—'}<br>
       <b>Location:</b> ${cityArea || '—'}<br>
       <b>In Ontario:</b> ${inOntario || '—'}<br>
+      <b>Claim status:</b> ${claimStatus || '—'}<br>
       <b>Description:</b> ${accidentSummary || '—'}</p>
       <h3>Impact</h3>
       <p><b>Injured:</b> ${injured || '—'}<br>
@@ -85,6 +87,7 @@ export async function POST(request) {
 💥 <b>Accident:</b> ${accidentType || '—'}
 📅 Date: ${accidentDate || '—'}
 📍 ${cityArea || '—'}${inOntario ? ` (Ontario: ${inOntario})` : ''}
+📋 Claim status: ${claimStatus || '—'}
 
 🩹 <b>Injured:</b> ${injured || '—'}
 🏥 Medical attention: ${medicalAttention || '—'}
