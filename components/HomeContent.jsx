@@ -91,16 +91,16 @@ export default function HomeContent() {
   const labelFont = { fontFamily:'"Open Sans",sans-serif' };
 
   const VALUE_ITEMS = [
-    { icon:'visibility', text:'A clearer understanding of what you may be entitled to' },
-    { icon:'insights', text:'Insight into whether your situation may qualify for compensation' },
-    { icon:'signpost', text:'Guidance on what steps to take next' },
-    { icon:'handshake', text:'The option to be connected with a legal professional if appropriate' },
+    { icon:'visibility', text:'A clearer picture of what your situation may involve' },
+    { icon:'insights', text:'Plain-language context on how accident claims generally work in Ontario' },
+    { icon:'signpost', text:'Guidance on what next steps may be worth considering' },
+    { icon:'handshake', text:'The option to be connected with a legal professional, if appropriate' },
   ];
 
   const STEPS = [
-    { num:'01', label:'Initial Intake', title:'We review your submission', desc:'A licensed Ontario professional personally reviews every submission — no AI, no automated screening.', bg:NAVY },
-    { num:'02', label:'Professional Review', title:'Your submission is reviewed', desc:'A licensed Ontario professional reviews your information. If your situation fits the criteria, you will receive guidance on possible benefits, deadlines, and next steps — and may be contacted for follow-up.', bg:LABEL_DARK },
-    { num:'03', label:'Clarity on Next Steps', title:'You decide what to do next', desc:'If appropriate, you may be introduced to a legal professional. No pressure, no obligation at any stage.', bg:NAVY },
+    { num:'01', label:'Initial Intake', title:'You submit a short form', desc:'Tell us the basics of your accident and how it has affected you. No documents, no insurance details, no policy numbers required at this stage.', bg:NAVY },
+    { num:'02', label:'Submission Review', title:'Your submission is reviewed', desc:'A representative reviews your information. If your situation appears to fit our intake criteria, we may follow up with plain-language context on what may apply — and what next steps are worth considering.', bg:LABEL_DARK },
+    { num:'03', label:'Your Next Step', title:'You decide what to do next', desc:'If appropriate, we may suggest connecting with a legal professional. There is no obligation at any stage, and no case is started unless you choose to proceed.', bg:NAVY },
   ];
 
   const WHY_START_HERE = [
@@ -121,11 +121,11 @@ export default function HomeContent() {
     { q:'Is this completely free?', a:'Yes. The review is completely free. There is no cost at any stage and no obligation to proceed with anything.' },
     { q:'Will I get bombarded with calls after I submit?', a:'No. We review every submission before following up. We only contact you if your situation appears to fit our review criteria, and we respect your preferred contact method.' },
     { q:'Am I hiring a lawyer by submitting this?', a:'No. Submitting this form does not create a legal relationship, retain a lawyer, or start a case. It is simply a review request so we can assess your situation.' },
-    { q:'What happens after I submit?', a:'A representative personally reviews your submission. If your situation appears to qualify, they will reach out with plain-language guidance on what benefits, options, or next steps may apply to your claim.' },
+    { q:'What happens after I submit?', a:'A representative reviews your submission. If your situation appears to fit our intake criteria, they may reach out with plain-language context on how accident claims generally work in Ontario and what next steps may be worth considering.' },
     { q:'Do I need documents or insurance info?', a:'No. You do not need any documents, policy numbers, or insurance details to get started. Just tell us the basics of what happened.' },
     { q:'Is my information private?', a:'Yes. Your information is handled with strict confidentiality, stored securely, and is never shared with insurers or third parties without your consent.' },
-    { q:'What if the accident was partly my fault?', a:'Fault does not necessarily disqualify you from accident benefits in Ontario. Ontario uses a no-fault accident benefits system, which means you may still be entitled to certain benefits regardless of fault.' },
-    { q:'Are there deadlines I should know about?', a:'Yes. Ontario accident claims have limitation periods and insurer notification deadlines — some as short as 7 days. The earlier you understand your situation, the more options you may have. A free review now closes no doors.' },
+    { q:'What if the accident was partly my fault?', a:'Generally speaking, fault does not automatically disqualify someone from accident benefits in Ontario — Ontario operates under a no-fault accident benefits system. However, your specific situation may differ. A review can help clarify what may apply to your circumstances.' },
+    { q:'Are there deadlines I should know about?', a:'Ontario accident claims can involve various time-sensitive steps — including notifying your insurer, submitting applications, and filing legal proceedings. The earlier you understand your situation, the more options you may have. This review does not provide legal deadline advice — if you believe a deadline is approaching, seek qualified legal advice promptly.' },
   ];
 
   return (
@@ -233,11 +233,11 @@ export default function HomeContent() {
                 </div>
                 <div>
                   <div style={{color:'#fff',fontWeight:700,fontSize:'0.875rem',...headlineFont}}>What We Review</div>
-                  <div style={{color:'rgba(255,255,255,0.4)',fontSize:'0.75rem',...labelFont}}>Assessed for every Ontario claim</div>
+                  <div style={{color:'rgba(255,255,255,0.4)',fontSize:'0.75rem',...labelFont}}>Areas we may consider in your review</div>
                 </div>
               </div>
               <div style={{display:'flex',flexDirection:'column',gap:'0.75rem'}}>
-                {['Accident benefits (SABS)','Income replacement eligibility','Medical & rehabilitation benefits','Caregiver & attendant care','Third-party liability assessment','Insurer deadline awareness'].map(c => (
+                {['Accident benefits (SABS)','Income replacement (general)','Medical & rehabilitation benefits','Caregiver & attendant care','Whether third-party involvement may be relevant','Time-sensitivity of your situation'].map(c => (
                   <div key={c} style={{display:'flex',alignItems:'center',gap:'0.75rem'}}>
                     <Icon name="check_circle" size="1.125rem" fill />
                     <span style={{color:'rgba(255,255,255,0.75)',fontSize:'0.875rem',...bodyFont}}>{c}</span>
@@ -249,12 +249,12 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* MINI INTAKE CARD — quick-start below hero */}
+      {/* MINI INTAKE CARD - quick-start below hero */}
       <section style={{background:'#0a1628',padding:'2.5rem 1.5rem',borderBottom:'1px solid rgba(255,255,255,0.05)'}}>
         <div style={{maxWidth:'680px',margin:'0 auto'}}>
           <div style={{background:'#0e1c30',border:'1px solid rgba(203,167,47,0.25)',borderRadius:'0.75rem',padding:'1.75rem 2rem'}}>
-            <p style={{color:GOLD,fontSize:'0.72rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.12em',marginBottom:'0.75rem',fontFamily:'"Open Sans",sans-serif'}}>Start Your Free Review — Takes 2 Minutes</p>
-            <p style={{color:'rgba(255,255,255,0.55)',fontSize:'0.85rem',marginBottom:'1.25rem',fontFamily:'"Open Sans",sans-serif'}}>Tell us the type of accident and whether it happened in Ontario — we’ll take it from there.</p>
+            <p style={{color:GOLD,fontSize:'0.72rem',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.12em',marginBottom:'0.75rem',fontFamily:'"Open Sans",sans-serif'}}>Start Your Free Review - Takes 2 Minutes</p>
+            <p style={{color:'rgba(255,255,255,0.55)',fontSize:'0.85rem',marginBottom:'1.25rem',fontFamily:'"Open Sans",sans-serif'}}>Tell us the type of accident and whether it happened in Ontario - we'll take it from there.</p>
             <div style={{display:'flex',flexWrap:'wrap',gap:'0.5rem',marginBottom:'1.25rem'}}>
               {['Car accident','Slip & fall','Pedestrian','Motorcycle','Workplace','Other'].map(type => (
                 <a key={type} href="#intake" style={{background:'rgba(203,167,47,0.1)',border:'1px solid rgba(203,167,47,0.3)',color:'rgba(255,255,255,0.8)',borderRadius:'0.375rem',padding:'0.5rem 0.875rem',fontSize:'0.8rem',fontWeight:600,textDecoration:'none',fontFamily:'"Open Sans",sans-serif'}}>{type}</a>
@@ -313,7 +313,7 @@ export default function HomeContent() {
               {num:'03',title:'Denied or received a low offer',body:'You received a denial or low offer from your insurer.'},
               {num:'04',title:'Symptoms but no claim filed',body:"You're dealing with pain or ongoing symptoms but haven't filed a claim."},
               {num:'05',title:'Claim closed unexpectedly',body:"Your claim was closed and you're not sure if it should have been."},
-              {num:'06',title:'Want plain-language clarity',body:'You want a plain-language explanation of your options — no lawyers, no pressure.'},
+              {num:'06',title:'Want plain-language clarity',body:'You want a plain-language explanation of your options - no lawyers, no pressure.'},
             ].map((item,i)=>(
               <div key={i} className="hc-dark-card hc-reveal hc-hover-lift" style={{padding:'1.5rem',borderRadius:'0.75rem',display:'flex',gap:'1rem',alignItems:'flex-start'}}>
                 <span style={{fontSize:'1.25rem',fontWeight:800,color:GOLD,lineHeight:1,...labelFont,minWidth:'2.5rem'}}>{item.num}</span>
@@ -410,19 +410,19 @@ export default function HomeContent() {
           <div style={{textAlign:'center',marginBottom:'3rem'}}>
             <GoldLabel>Free Review</GoldLabel>
             <h2 style={{fontSize:'clamp(1.8rem,3.5vw,2.5rem)',fontWeight:800,color:NAVY,lineHeight:1.2,...headlineFont,marginTop:'0.75rem',marginBottom:'1rem'}}>
-              What You&apos;ll Get From Your Free Review
+              What This Review May Help With
             </h2>
             <GoldLine style={{margin:'0 auto 1.25rem'}} />
             <p style={{color:ON_SURFACE_VARIANT,fontSize:'1rem',lineHeight:1.7,...bodyFont,maxWidth:600,margin:'0 auto'}}>
-              Before you rely on the insurer or make decisions, get a plain-language review of what may apply to your situation.
+              This is a first-step review — not legal advice. It is designed to give you plain-language context before you decide what to do next.
             </p>
           </div>
           <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:'1.5rem'}}>
             {[
-              {icon:'description',title:'Benefits Summary',body:'A plain-language breakdown of what you may be entitled to under Ontario’s SABS — including medical, income replacement, and rehab benefits.'},
-              {icon:'gavel',title:'Tort Claim Assessment',body:'An assessment of whether your situation meets the threshold for a tort claim against the at-fault driver for pain and suffering damages.'},
-              {icon:'schedule',title:'Deadline Clarity',body:'Clarity on any critical deadlines that may apply to your claim — before a missed date costs you your right to dispute or sue.'},
-              {icon:'lightbulb',title:'Next-Step Recommendation',body:'A clear recommendation on whether pursuing your claim further makes sense — with no pressure to commit to anything.'},
+              {icon:'description',title:'Benefits Context',body:'Plain-language context on how accident benefits generally work in Ontario — including common categories like income replacement, medical, and rehabilitation coverage.'},
+              {icon:'search',title:'Situation Assessment',body:'A review of what you\'ve told us to help identify whether your situation may be worth exploring further with a qualified legal professional.'},
+              {icon:'schedule',title:'Time-Sensitivity Check',body:'A flag if your situation may involve time-sensitive steps — so you know whether to seek advice promptly. This is not legal deadline guidance.'},
+              {icon:'lightbulb',title:'Suggested Next Steps',body:'Plain-language suggestions on what next steps may be worth considering — with no pressure to act and no obligation to proceed.'},
             ].map((item, i) => (
               <div key={i} style={{background:'#fff',borderRadius:10,padding:'2rem 1.75rem',border:'1px solid #e8eaf0',display:'flex',flexDirection:'column',gap:'0.75rem'}}>
                 <span className="material-symbols-outlined" style={{fontSize:'2rem',color:GOLD,fontVariationSettings:"'FILL' 1,'wght' 400"}}>{item.icon}</span>
@@ -465,16 +465,19 @@ export default function HomeContent() {
             Timing Matters More Than You Think
           </h2>
           <p style={{color:'rgba(255,255,255,0.55)',fontSize:'1rem',lineHeight:1.8,maxWidth:'40rem',margin:'0 auto 1rem',...bodyFont}}>
-            Deadlines can apply to accident-related claims in Ontario. Waiting too long or making decisions too early could impact your ability to recover compensation.
+            Ontario accident claims can involve various time-sensitive steps. The earlier you understand your situation, the more options you may have.
           </p>
           <p style={{color:GOLD,fontSize:'1rem',fontWeight:600,lineHeight:1.7,...bodyFont}}>
-            It&apos;s better to understand your situation now &mdash; before it&apos;s too late.
+            A free review today costs nothing. Waiting can narrow your options.
+          </p>
+          <p style={{color:'rgba(255,255,255,0.35)',fontSize:'0.78rem',lineHeight:1.6,maxWidth:'36rem',margin:'1rem auto 0',...bodyFont}}>
+            The timeframes below are general illustrations only and do not constitute legal deadline advice. Your specific situation may differ. If you believe a deadline applies to your matter, seek qualified legal advice promptly.
           </p>
           <div style={{display:'flex',justifyContent:'center',gap:'3rem',marginTop:'2.5rem',flexWrap:'wrap'}}>
             {[
-              { value:'7 days', label:'To notify your insurer', consequence:'Miss this and you may lose access to accident benefits entirely', color:GOLD },
-              { value:'30 days', label:'To complete your benefits application', consequence:'Most people don\'t know this deadline even exists', color:'#fff' },
-              { value:'2 years', label:'General limitation period', consequence:'Many people wait too long assuming they still have time', color:GOLD },
+              { value:'7 days', label:'Insurer notification (typical)', consequence:'Many policies require prompt notice after an accident — timelines vary', color:GOLD },
+              { value:'30 days', label:'Benefits application (typical)', consequence:'Application windows are often shorter than people expect', color:'#fff' },
+              { value:'2 years', label:'General limitation period (typical)', consequence:'This is a general civil limitation period — specific claims may differ', color:GOLD },
             ].map(s => (
               <div key={s.label} style={{maxWidth:'16rem'}}>
                 <div style={{fontSize:'2.5rem',fontWeight:800,color:s.color,...headlineFont}}>{s.value}</div>
@@ -534,7 +537,7 @@ export default function HomeContent() {
             {[
               {title:'No lawyers or office visits',body:'Start with a short form. We review your situation and report back in plain language.'},
               {title:'Your information stays private',body:'The intake form is encrypted. We do not share your details with insurers or third parties.'},
-              {title:'Understand before you decide',body:'You will know what may apply to your claim before taking any next steps — with no pressure to proceed.'},
+              {title:'Understand before you decide',body:'You will know what may apply to your claim before taking any next steps - with no pressure to proceed.'},
             ].map((c,i)=>(
               <div key={i} style={{background:'#112037',borderRadius:'8px',padding:'1.75rem',borderTop:'2px solid rgba(203,167,47,0.3)'}}>
                 <h3 style={{color:'#ffffff',fontFamily:'Raleway,sans-serif',fontSize:'1rem',fontWeight:700,marginBottom:'0.75rem'}}>{c.title}</h3>

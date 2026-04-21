@@ -60,12 +60,12 @@ export default function ThankYouPage() {
               Submitted Successfully
             </p>
             <h1 style={{ color: '#1a3060', fontSize: 'clamp(2rem, 5vw, 2.8rem)', fontWeight: 800, lineHeight: 1.15, marginBottom: 20 }}>
-              Your accident is being reviewed
+              Your review request has been received
             </h1>
             <p style={{ color: '#445', fontSize: '1.05rem', lineHeight: 1.7, maxWidth: 560 }}>
               A representative from Ontario Accident Review will review your submission. If
-              your situation appears to fit the review criteria, someone may contact you
-              using the information you provided.
+              your situation appears to fit our intake criteria, someone may contact you
+              using the information you provided. Not every submission results in follow-up.
             </p>
           </div>
 
