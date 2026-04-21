@@ -60,8 +60,18 @@ export default function HomeContent() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const intakeStartTime = useRef(null);
 
-  // Homepage view
-  useEffect(() => { Analytics.homepageView(); }, []);
+  // A/B variant state — SSR-safe defaults (variant A), resolved client-side
+  const [heroCta,     setHeroCta]     = useState('Get My Free Claim Review');
+  const [heroSubhead, setHeroSubhead] = useState('In about 2 minutes, tell us what happened. We review your situation and, if it fits our criteria, reach out with plain-language guidance on benefits, deadlines, and next steps — at no cost.');
+  const [trustPills,  setTrustPills]  = useState(['Free', 'Confidential', 'No obligation', '~2 min']);
+
+  // Homepage view + A/B variant assignment (client-side only)
+  useEffect(() => {
+    Analytics.homepageView();
+    setHeroCta(getVariantContent('hero_cta'));
+    setHeroSubhead(getVariantContent('hero_subhead'));
+    setTrustPills(getVariantContent('trust_strip'));
+  }, []);
 
   // Sticky CTA show
   useEffect(() => {
@@ -101,6 +111,11 @@ export default function HomeContent() {
     Analytics.ctaClick({ cta_text: text, cta_location: location });
     intakeStartTime.current = Date.now();
     Analytics.intakeStart({ trigger: location });
+    if (location === 'hero') {
+      trackAbConversion('hero_cta', 'cta_click');
+      trackAbConversion('hero_subhead', 'cta_click');
+      trackAbConversion('trust_strip', 'cta_click');
+    }
   };
 
   const maxW = { maxWidth:'80rem', margin:'0 auto' };
@@ -229,15 +244,15 @@ export default function HomeContent() {
               Injured in an Ontario Accident? Find Out What Benefits May Apply to Your Claim.
             </h1>
             <p style={{fontSize:'1.125rem',color:'rgba(255,255,255,0.6)',lineHeight:1.7,maxWidth:'34rem',marginBottom:'2rem',...bodyFont}}>
-              In about 2 minutes, tell us what happened. We review your situation and, if it fits our criteria, reach out with plain-language guidance on benefits, deadlines, and next steps &mdash; at no cost.
+              {heroSubhead}
             </p>
             <div style={{marginBottom:'2rem'}}>
-              <GoldBtn onClickTrack={() => trackCta('Get My Free Claim Review','hero')} style={{padding:'1.125rem 2.5rem',fontSize:'1rem',minHeight:'52px'}}>
-                <Icon name="check_circle" size="1.25rem" color="#1a0f00" fill /> Get My Free Claim Review
+              <GoldBtn onClickTrack={() => trackCta(heroCta,'hero')} style={{padding:'1.125rem 2.5rem',fontSize:'1rem',minHeight:'52px'}}>
+                <Icon name="check_circle" size="1.25rem" color="#1a0f00" fill /> {heroCta}
               </GoldBtn>
             </div>
-            <div style={{display:'flex',flexWrap:'wrap',gap:'1.5rem',paddingTop:'0.25rem'}}>
-              {[{icon:'check',text:'Free'},{icon:'check',text:'Confidential'},{icon:'check',text:'No obligation'},{icon:'check',text:'Takes ~2 minutes'}].map(t => (
+            <div style={{display:'flex',flexWrap:'wrap',gap:'1rem',paddingTop:'0.25rem'}}>
+              {trustPills.map(text => ({icon:'check', text})).map(t => (
                 <div key={t.text} style={{display:'flex',alignItems:'center',gap:'0.4rem',fontSize:'0.8rem',fontWeight:700,color:'rgba(255,255,255,0.65)',...labelFont}}>
                   <Icon name={t.icon} size="1rem" color={GOLD} fill />{t.text}
                 </div>
