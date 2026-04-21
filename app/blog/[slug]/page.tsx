@@ -31,7 +31,10 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = getPostBySlug(params.slug);
   if (!post) notFound();
 
-  const relatedPosts = BLOG_POSTS.filter(p => p.slug !== post.slug).slice(0, 3);
+  // Related posts: same category first, then fill with others
+  const sameCategory = BLOG_POSTS.filter(p => p.slug !== post.slug && p.category === post.category);
+  const otherPosts = BLOG_POSTS.filter(p => p.slug !== post.slug && p.category !== post.category);
+  const relatedPosts = [...sameCategory, ...otherPosts].slice(0, 3);
 
   return (
     <>
@@ -73,46 +76,68 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
         {/* ARTICLE BODY */}
         <section style={{ background: '#f8f9fb', padding: '3rem 1.5rem' }}>
-          <div style={{ maxWidth: '52rem', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr', gap: '2rem' }}>
+          <div style={{ maxWidth: '52rem', margin: '0 auto' }}>
+
+            {/* Trust intro strip */}
+            <div style={{ background: '#e8f0ff', border: '1px solid #b8cfee', borderRadius: '0.5rem', padding: '0.75rem 1.25rem', marginBottom: '2rem', fontSize: '0.82rem', color: '#1a3060', display: 'flex', alignItems: 'center', gap: '0.625rem', fontFamily: 'Inter,sans-serif' }}>
+              <span style={{ flexShrink: 0 }}>ℹ️</span>
+              <span>This article is for general information only and does not constitute legal advice. <Link href="/#intake" style={{ color: '#1a3060', fontWeight: 700 }}>Get a free review</Link> if you want to understand how this applies to your specific situation.</span>
+            </div>
+
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
               <article>
-                {post.sections.map((section, i) => (
-                  <div key={i}>
-                    {section.heading && <h3>{section.heading}</h3>}
-                    {section.type === 'callout' ? (
-                      <div className="blog-callout">
-                        {section.body.split('\n\n').map((para, j) => (
-                          <p key={j} style={{ marginBottom: j < section.body.split('\n\n').length - 1 ? '0.75rem' : 0 }}>{para}</p>
-                        ))}
-                      </div>
-                    ) : section.type === 'list' ? (
-                      <ul>
-                        {section.body.split('\n').map((item, j) => (
-                          <li key={j}>{item}</li>
-                        ))}
-                      </ul>
-                    ) : (
-                      section.body.split('\n\n').map((para, j) => (
-                        <p key={j}>{para}</p>
-                      ))
-                    )}
-                  </div>
-                ))}
+                {post.sections.map((section, i) => {
+                  const midPoint = Math.floor(post.sections.length / 2);
+                  const showMidCta = i === midPoint;
+                  return (
+                    <div key={i}>
+                      {/* Mid-article CTA — appears at the halfway point */}
+                      {showMidCta && (
+                        <div style={{ background: '#f3f4f6', border: '1px solid #d8d9e0', borderRadius: '0.625rem', padding: '1.25rem 1.5rem', margin: '1.5rem 0', display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
+                          <p style={{ fontWeight: 700, color: '#001b44', fontSize: '0.9rem', margin: 0, fontFamily: 'Inter,sans-serif' }}>Not sure how this applies to your claim?</p>
+                          <p style={{ color: '#44474f', fontSize: '0.82rem', lineHeight: 1.5, margin: 0, fontFamily: 'Inter,sans-serif' }}>Get a free, plain-language review of your situation. Takes about 2 minutes. No obligation.</p>
+                          <a href="/#intake" style={{ alignSelf: 'flex-start', display: 'inline-flex', alignItems: 'center', gap: '0.4rem', background: '#001b44', color: '#fff', fontWeight: 700, padding: '0.625rem 1.25rem', borderRadius: '0.375rem', fontSize: '0.8rem', textDecoration: 'none', fontFamily: 'Inter,sans-serif', minHeight: '40px' }}>
+                            Get My Free Review →
+                          </a>
+                        </div>
+                      )}
+                      {section.heading && <h3>{section.heading}</h3>}
+                      {section.type === 'callout' ? (
+                        <div className="blog-callout">
+                          {section.body.split('\n\n').map((para, j) => (
+                            <p key={j} style={{ marginBottom: j < section.body.split('\n\n').length - 1 ? '0.75rem' : 0 }}>{para}</p>
+                          ))}
+                        </div>
+                      ) : section.type === 'list' ? (
+                        <ul>
+                          {section.body.split('\n').map((item, j) => (
+                            <li key={j}>{item}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        section.body.split('\n\n').map((para, j) => (
+                          <p key={j}>{para}</p>
+                        ))
+                      )}
+                    </div>
+                  );
+                })}
               </article>
 
-              {/* INLINE CTA */}
+              {/* END-OF-ARTICLE CTA */}
               <div style={{ background: '#001b44', borderRadius: '0.75rem', padding: '2rem', marginTop: '2.5rem', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                <div style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#cba72f', fontFamily: 'Inter,sans-serif' }}>Free Review</div>
+                <div style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#cba72f', fontFamily: 'Inter,sans-serif' }}>Free Ontario Accident Review</div>
                 <h3 style={{ color: '#fff', fontFamily: 'Manrope,sans-serif', fontWeight: 800, fontSize: '1.25rem', lineHeight: 1.25, margin: 0 }}>
-                  Not sure how this applies to your situation?
+                  Want to know how this applies to your specific situation?
                 </h3>
                 <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.875rem', lineHeight: 1.6, margin: 0, fontFamily: 'Inter,sans-serif' }}>
-                  Get a plain-language review of your claim — free, with no obligation. Takes about 2 minutes.
+                  Get a free, plain-language review of your claim. No cost, no obligation, no lawyers required to start. Takes about 2 minutes.
                 </p>
-                <div>
-                  <a href="/#intake" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#cba72f', color: '#1a0f00', fontWeight: 700, padding: '0.875rem 1.75rem', borderRadius: '0.375rem', fontSize: '0.875rem', textDecoration: 'none', fontFamily: 'Inter,sans-serif' }}>
-                    Start My Free Review →
+                <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', alignItems: 'center' }}>
+                  <a href="/#intake" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#cba72f', color: '#1a0f00', fontWeight: 700, padding: '0.875rem 1.75rem', borderRadius: '0.375rem', fontSize: '0.875rem', textDecoration: 'none', fontFamily: 'Inter,sans-serif', minHeight: '48px' }}>
+                    Get My Free Claim Review →
                   </a>
+                  <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.75rem', fontFamily: 'Inter,sans-serif' }}>Free · Confidential · No obligation</span>
                 </div>
               </div>
             </div>

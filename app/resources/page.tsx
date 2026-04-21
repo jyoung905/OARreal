@@ -67,6 +67,15 @@ export default function ResourcesPage() {
           </section>
         )}
 
+        {/* MID-PAGE CTA BAND */}
+        <section style={{ padding: '2.5rem 1.5rem', background: '#0e1c30', borderTop: '1px solid rgba(203,167,47,0.12)', borderBottom: '1px solid rgba(203,167,47,0.12)' }}>
+          <div style={{ maxWidth: '40rem', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '0.625rem', alignItems: 'flex-start' }}>
+            <p style={{ color: '#cba72f', fontWeight: 700, fontSize: '0.68rem', letterSpacing: '0.18em', textTransform: 'uppercase', margin: 0, fontFamily: 'Inter,sans-serif' }}>Free Ontario Accident Review</p>
+            <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.9375rem', lineHeight: 1.6, margin: 0, fontFamily: 'Inter,sans-serif' }}>Understanding how these rules apply to <em>your</em> specific situation is different from reading about them. Get a free, plain-language review — no obligation, no lawyers required to start.</p>
+            <a href="/#intake" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#cba72f', color: '#1a0f00', fontWeight: 700, padding: '0.75rem 1.75rem', borderRadius: '0.375rem', fontSize: '0.875rem', textDecoration: 'none', fontFamily: 'Inter,sans-serif', minHeight: '44px', marginTop: '0.25rem' }}>Get My Free Claim Review →</a>
+          </div>
+        </section>
+
         {/* ALL ARTICLES */}
         <section style={{ padding: '3rem 1.5rem 5rem' }}>
           <div style={{ maxWidth: '64rem', margin: '0 auto' }}>
