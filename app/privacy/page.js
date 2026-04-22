@@ -1,5 +1,4 @@
 import { ContentPage } from '@/components/ContentPage';
-import { SiteFooter } from '@/components/SiteFooter';
 import TrackPageView from '@/components/TrackPageView';
 
 export const metadata = {
@@ -86,7 +85,7 @@ export default function PrivacyPage() {
 
         <p style={{ marginTop: '2rem', fontSize: '0.85em', color: '#6b7280' }}>Last updated: March 2026</p>
       </ContentPage>
-      <SiteFooter />
+      
     </>
   );
 }

@@ -1,5 +1,4 @@
 import { ContentPage } from '@/components/ContentPage';
-import { SiteFooter } from '@/components/SiteFooter';
 import TrackPageView from '@/components/TrackPageView';
 
 export const metadata = {
@@ -31,7 +30,7 @@ export default function DisclaimerPage() {
         </ul>
         <p>References to &ldquo;benefits,&rdquo; &ldquo;deadlines,&rdquo; or &ldquo;claim processes&rdquo; on this site are general in nature. The circumstances of every accident claim differ. Only a qualified legal professional reviewing your specific facts can advise you on your legal rights and options.</p>
       </ContentPage>
-      <SiteFooter />
+      
     </>
   );
 }

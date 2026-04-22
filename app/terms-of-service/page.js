@@ -1,5 +1,4 @@
 import { ContentPage } from '@/components/ContentPage';
-import { SiteFooter } from '@/components/SiteFooter';
 
 export const metadata = {
   title: 'Terms of Service | Ontario Accident Review',
@@ -57,7 +56,7 @@ export default function TermsOfServicePage() {
 
         <p style={{fontSize:'0.8rem',color:'rgba(255,255,255,0.35)',marginTop:'2rem'}}>Last updated: April 7, 2026</p>
       </ContentPage>
-      <SiteFooter />
+      
     </>
   );
 }

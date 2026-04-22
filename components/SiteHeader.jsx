@@ -11,10 +11,10 @@ import { site } from '@/lib/site';
    ───────────────────────────────────────────────────────────────── */
 
 const NAV_LINKS = [
-  { href: '/',           label: 'Home' },
-  { href: '/about',      label: 'About Us' },
-  { href: '/resources',  label: 'Resources' },
-  { href: '/contact',    label: 'Contact' },
+  { href: '/#how-it-works',    label: 'How it works' },
+  { href: '/#who-this-is-for', label: 'Who this is for' },
+  { href: '/#faq',             label: 'FAQ' },
+  { href: '/resources',        label: 'Resources' },
 ];
 
 const headerStyle = {
@@ -78,7 +78,7 @@ export function SiteHeader() {
             onMouseOver={e => e.currentTarget.style.background = 'var(--primary-strong)'}
             onMouseOut={e => e.currentTarget.style.background = 'var(--primary)'}
           >
-            Start Free Review
+            Get My Free Review
           </a>
 
           {/* Hamburger */}
@@ -118,7 +118,7 @@ export function SiteHeader() {
               textDecoration: 'none', marginTop: '0.5rem',
             }}
           >
-            Start Free Review
+            Get My Free Review
           </a>
         </nav>
       )}

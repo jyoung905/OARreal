@@ -67,7 +67,7 @@ export default function HomeContent() {
         overflow: 'hidden', background: 'var(--primary)',
       }}>
         <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-          <img src="/hero.png" alt="" aria-hidden="true" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', opacity: 0.4, mixBlendMode: 'overlay' }} />
+          <img src="/value-section.jpg" alt="" aria-hidden="true" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', opacity: 0.4, mixBlendMode: 'overlay' }} />
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, var(--primary) 0%, rgba(13,27,46,0.8) 50%, rgba(13,27,46,0.4) 100%)' }} />
         </div>
 
@@ -189,8 +189,8 @@ export default function HomeContent() {
 
             {/* Image side with floating quote */}
             <div style={{ position: 'relative' }}>
-              <div style={{ aspectRatio: '4/5', background: 'var(--surface-alt)', position: 'relative', overflow: 'hidden' }}>
-                <img src="/resources.png" alt="Review process" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <div style={{ aspectRatio: '4/5', background: 'var(--primary)', position: 'relative', overflow: 'hidden' }}>
+                <img src="/value-section.jpg" alt="Review process" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', filter: 'brightness(0.65) contrast(1.05)' }} />
                 <div style={{ position: 'absolute', inset: 0, boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.1)' }} />
               </div>
               {/* Floating card -- ORIGINAL OAR POSITIONING */}

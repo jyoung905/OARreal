@@ -4,6 +4,8 @@ import { Inter, Playfair_Display } from 'next/font/google';
 import type { ReactNode } from 'react';
 import { site } from '@/lib/site';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
+import { SiteHeader } from '@/components/SiteHeader';
+import { SiteFooter } from '@/components/SiteFooter';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -83,7 +85,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           }}
         />
       </head>
-      <body className={`${inter.variable} ${playfair.variable}`}><GoogleAnalytics />{children}</body>
+      <body className={`${inter.variable} ${playfair.variable}`}><GoogleAnalytics /><SiteHeader />{children}<SiteFooter /></body>
     </html>
   );
 }

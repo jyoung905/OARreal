@@ -1,5 +1,3 @@
-import { SiteHeader } from '@/components/SiteHeader';
-import { SiteFooter } from '@/components/SiteFooter';
 import { IntakeModal } from '@/components/IntakeModal';
 import Link from 'next/link';
 
@@ -12,7 +10,7 @@ export const metadata = {
 export default function DeniedIRBPage() {
   return (
     <>
-      <SiteHeader />
+      
       <main>
         <div className="container">
           <div className="page-shell">
@@ -186,7 +184,7 @@ export default function DeniedIRBPage() {
           </div>
         </div>
       </main>
-      <SiteFooter />
+      
       <IntakeModal />
     </>
   );
