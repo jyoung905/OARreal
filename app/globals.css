@@ -2646,3 +2646,35 @@ body.modal-open {
 
 .footer-link { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.875rem; transition: color 0.15s; }
 .footer-link:hover { color: var(--accent); }
+
+/* ── Rebrand utility classes (matching Tailwind semantics used in rebrand) ── */
+.font-serif  { font-family: var(--font-display); }
+.font-medium { font-weight: 500; }
+.font-light  { font-weight: 300; }
+.text-secondary { color: var(--accent); }
+.text-primary   { color: var(--primary); }
+.text-muted-foreground { color: var(--muted); }
+.bg-secondary   { background: var(--accent); }
+.bg-primary     { background: var(--primary); }
+.bg-background  { background: var(--bg); }
+.bg-card        { background: var(--surface); }
+.bg-white       { background: #fff; }
+.border-border  { border-color: var(--border); }
+.text-primary-foreground { color: #fff; }
+.tracking-tight { letter-spacing: -0.025em; }
+.tracking-wider { letter-spacing: 0.05em; }
+.leading-tight  { line-height: 1.25; }
+.leading-relaxed { line-height: 1.625; }
+.uppercase { text-transform: uppercase; }
+.italic    { font-style: italic; }
+.underline { text-decoration: underline; }
+.prose { max-width: none; }
+.prose h2 { font-family: var(--font-display); font-weight: 500; color: var(--primary); font-size: 1.75rem; margin: 2rem 0 1rem; }
+.prose h3 { font-family: var(--font-display); font-weight: 500; color: var(--primary); font-size: 1.35rem; margin: 1.75rem 0 0.75rem; }
+.prose p  { color: rgba(0,0,0,0.75); line-height: 1.8; margin-bottom: 1.25rem; }
+.prose ul, .prose ol { color: rgba(0,0,0,0.75); line-height: 1.8; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+.prose li { margin-bottom: 0.5rem; }
+.prose strong { color: var(--text-strong); font-weight: 600; }
+.prose a  { color: var(--accent); }
+.prose-lg p { font-size: 1.125rem; }
+.prose-xl p { font-size: 1.25rem; }

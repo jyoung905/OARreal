@@ -55,8 +55,8 @@ export default function HomeContent() {
           {/* Headline — font-serif text-5xl md:text-7xl */}
           <h1 style={{
             fontFamily: 'var(--font-display)',
-            fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
-            fontWeight: 500, letterSpacing: '-0.02em', lineHeight: 1.1,
+            fontSize: 'clamp(2.75rem, 5.5vw, 4.5rem)',
+            fontWeight: 500, letterSpacing: '-0.03em', lineHeight: 1.1,
             marginBottom: '1.5rem', maxWidth: '750px',
           }}>
             Clarity <em style={{ color: 'var(--accent)', fontStyle: 'italic' }}>before</em> you commit.

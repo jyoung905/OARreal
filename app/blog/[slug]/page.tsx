@@ -2,9 +2,14 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { BLOG_POSTS, getPostBySlug } from '@/lib/blog-posts';
-import { ResourcesHeader } from '@/components/ResourcesHeader';
 
 const BASE_URL = 'https://www.ontarioaccidentreview.ca';
+
+/* ─────────────────────────────────────────────────────────────────
+   Blog/Article page — rebuilt to match rebrand resource-article.tsx
+   Rebrand ref: /Desktop/.openclaw/web/src/pages/resource-article.tsx
+   Logic preserved: generateStaticParams, generateMetadata, getPostBySlug
+   ───────────────────────────────────────────────────────────────── */
 
 export async function generateStaticParams() {
   return BLOG_POSTS.map(post => ({ slug: post.slug }));
@@ -31,154 +36,147 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = getPostBySlug(params.slug);
   if (!post) notFound();
 
-  // Related posts: same category first, then fill with others
-  const sameCategory = BLOG_POSTS.filter(p => p.slug !== post.slug && p.category === post.category);
-  const otherPosts = BLOG_POSTS.filter(p => p.slug !== post.slug && p.category !== post.category);
-  const relatedPosts = [...sameCategory, ...otherPosts].slice(0, 3);
+  const relatedPosts = BLOG_POSTS.filter(p => p.slug !== post.slug).slice(0, 3);
 
   return (
-    <>
-      <style>{`
-        .blog-body { font-family: Inter, system-ui, sans-serif; background: #f8f9fb; min-height: 100vh; }
-        .blog-callout { border-left: 3px solid #cba72f; background: #fffdf0; padding: 1.25rem 1.5rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0; }
-        .blog-callout p { margin: 0; color: #3a3200; font-size: 0.9rem; line-height: 1.7; }
-        article p { color: #44474f; line-height: 1.8; font-size: 0.9375rem; margin-bottom: 1.25rem; }
-        article h3 { color: #001b44; font-family: Manrope, sans-serif; font-weight: 700; font-size: 1.15rem; margin-top: 2.25rem; margin-bottom: 0.75rem; }
-        article ul { color: #44474f; line-height: 1.8; font-size: 0.9375rem; margin-bottom: 1.25rem; padding-left: 1.5rem; }
-        article ul li { margin-bottom: 0.4rem; list-style: disc; }
-      `}</style>
+    <article style={{ background: 'var(--bg)' }}>
+      {/* Header — bg-primary text-primary-foreground py-16 md:py-24 */}
+      <header style={{ background: 'var(--primary)', color: '#fff', padding: 'clamp(4rem,8vw,6rem) 1.5rem' }}>
+        <div style={{ maxWidth: 768, margin: '0 auto' }}>
+          <Link
+            href="/resources"
+            style={{ display: 'inline-flex', alignItems: 'center', fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none', marginBottom: '2rem', transition: 'color 0.15s' }}
+            onMouseOver={e => (e.currentTarget as HTMLElement).style.color = '#fff'}
+            onMouseOut={e => (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.7)'}
+          >
+            <svg style={{ marginRight: '0.5rem' }} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+            Back to Resources
+          </Link>
 
-      <ResourcesHeader />
-
-      <div className="blog-body" style={{ paddingTop: '5rem' }}>
-
-        {/* HERO */}
-        <section style={{ background: 'linear-gradient(145deg, #04090f 0%, #001b44 55%, #050d1a 100%)', padding: '4rem 1.5rem 3rem' }}>
-          <div style={{ maxWidth: '52rem', margin: '0 auto' }}>
-            <Link href="/resources" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: '#cba72f', fontSize: '0.8rem', fontWeight: 700, textDecoration: 'none', marginBottom: '1.5rem', fontFamily: 'Inter,sans-serif' }}>
-              ← All Articles
-            </Link>
-            <div style={{ display: 'inline-block', padding: '2px 10px', borderRadius: '999px', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', fontFamily: 'Inter,sans-serif', background: 'rgba(203,167,47,0.12)', color: '#cba72f', border: '1px solid rgba(203,167,47,0.2)', marginBottom: '1rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
+            <span style={{ fontSize: '0.75rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--accent)' }}>
               {post.category}
-            </div>
-            <h1 style={{ fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 800, color: '#fff', lineHeight: 1.15, marginBottom: '1rem', fontFamily: 'Manrope,sans-serif' }}>
-              {post.title}
-            </h1>
-            <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '1.0625rem', lineHeight: 1.7, marginBottom: '1.5rem', fontFamily: 'Inter,sans-serif' }}>
-              {post.description}
-            </p>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem', fontFamily: 'Inter,sans-serif' }}>
-              <span>{post.readTime}</span>
-              <span>Ontario Accident Review</span>
-            </div>
+            </span>
+            <span style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.5)' }}>
+              {post.readTime}
+            </span>
           </div>
-        </section>
 
-        {/* ARTICLE BODY */}
-        <section style={{ background: '#f8f9fb', padding: '3rem 1.5rem' }}>
-          <div style={{ maxWidth: '52rem', margin: '0 auto' }}>
+          <h1 className="font-serif" style={{
+            fontSize: 'clamp(1.875rem, 4vw, 3rem)',
+            fontWeight: 400, lineHeight: 1.15,
+            marginBottom: '1.5rem', letterSpacing: '-0.01em',
+          }}>
+            {post.title}
+          </h1>
 
-            {/* Trust intro strip */}
-            <div style={{ background: '#e8f0ff', border: '1px solid #b8cfee', borderRadius: '0.5rem', padding: '0.75rem 1.25rem', marginBottom: '2rem', fontSize: '0.82rem', color: '#1a3060', display: 'flex', alignItems: 'center', gap: '0.625rem', fontFamily: 'Inter,sans-serif' }}>
-              <span style={{ flexShrink: 0 }}>ℹ️</span>
-              <span>This article is for general information only and does not constitute legal advice. <Link href="/#intake" style={{ color: '#1a3060', fontWeight: 700 }}>Get a free review</Link> if you want to understand how this applies to your specific situation.</span>
-            </div>
+          <p style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.8)', fontWeight: 300, lineHeight: 1.65 }}>
+            {post.description}
+          </p>
+        </div>
+      </header>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
-              <article>
-                {post.sections.map((section, i) => {
-                  const midPoint = Math.floor(post.sections.length / 2);
-                  const showMidCta = i === midPoint;
-                  return (
-                    <div key={i}>
-                      {/* Mid-article CTA — appears at the halfway point */}
-                      {showMidCta && (
-                        <div style={{ background: '#f3f4f6', border: '1px solid #d8d9e0', borderRadius: '0.625rem', padding: '1.25rem 1.5rem', margin: '1.5rem 0', display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
-                          <p style={{ fontWeight: 700, color: '#001b44', fontSize: '0.9rem', margin: 0, fontFamily: 'Inter,sans-serif' }}>Not sure how this applies to your claim?</p>
-                          <p style={{ color: '#44474f', fontSize: '0.82rem', lineHeight: 1.5, margin: 0, fontFamily: 'Inter,sans-serif' }}>Get a free, plain-language review of your situation. Takes about 2 minutes. No obligation.</p>
-                          <a href="/#intake" style={{ alignSelf: 'flex-start', display: 'inline-flex', alignItems: 'center', gap: '0.4rem', background: '#001b44', color: '#fff', fontWeight: 700, padding: '0.625rem 1.25rem', borderRadius: '0.375rem', fontSize: '0.8rem', textDecoration: 'none', fontFamily: 'Inter,sans-serif', minHeight: '40px' }}>
-                            Get My Free Review →
-                          </a>
-                        </div>
-                      )}
-                      {section.heading && <h3>{section.heading}</h3>}
-                      {section.type === 'callout' ? (
-                        <div className="blog-callout">
-                          {section.body.split('\n\n').map((para, j) => (
-                            <p key={j} style={{ marginBottom: j < section.body.split('\n\n').length - 1 ? '0.75rem' : 0 }}>{para}</p>
-                          ))}
-                        </div>
-                      ) : section.type === 'list' ? (
-                        <ul>
-                          {section.body.split('\n').map((item, j) => (
-                            <li key={j}>{item}</li>
-                          ))}
-                        </ul>
-                      ) : (
-                        section.body.split('\n\n').map((para, j) => (
-                          <p key={j}>{para}</p>
-                        ))
-                      )}
-                    </div>
-                  );
-                })}
-              </article>
+      {/* Article body */}
+      <div style={{ maxWidth: 768, margin: '0 auto', padding: 'clamp(3rem,6vw,5rem) 1.5rem' }}>
+        {/* Share/print bar */}
+        <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '1rem', marginBottom: '3rem', paddingBottom: '1.5rem', borderBottom: '1px solid var(--border)' }}>
+          <button
+            style={{ padding: '0.5rem', color: 'var(--muted)', background: 'none', border: 'none', cursor: 'pointer', transition: 'color 0.15s' }}
+            title="Share"
+            onClick={() => navigator.clipboard?.writeText(window.location.href)}
+            onMouseOver={e => (e.currentTarget as HTMLButtonElement).style.color = 'var(--primary)'}
+            onMouseOut={e => (e.currentTarget as HTMLButtonElement).style.color = 'var(--muted)'}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          </button>
+          <button
+            style={{ padding: '0.5rem', color: 'var(--muted)', background: 'none', border: 'none', cursor: 'pointer', transition: 'color 0.15s' }}
+            title="Print"
+            onClick={() => window.print()}
+            onMouseOver={e => (e.currentTarget as HTMLButtonElement).style.color = 'var(--primary)'}
+            onMouseOut={e => (e.currentTarget as HTMLButtonElement).style.color = 'var(--muted)'}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          </button>
+        </div>
 
-              {/* END-OF-ARTICLE CTA */}
-              <div style={{ background: '#001b44', borderRadius: '0.75rem', padding: '2rem', marginTop: '2.5rem', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                <div style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#cba72f', fontFamily: 'Inter,sans-serif' }}>Free Ontario Accident Review</div>
-                <h3 style={{ color: '#fff', fontFamily: 'Manrope,sans-serif', fontWeight: 800, fontSize: '1.25rem', lineHeight: 1.25, margin: 0 }}>
-                  Want to know how this applies to your specific situation?
-                </h3>
-                <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.875rem', lineHeight: 1.6, margin: 0, fontFamily: 'Inter,sans-serif' }}>
-                  Get a free, plain-language review of your claim. No cost, no obligation, no lawyers required to start. Takes about 2 minutes.
-                </p>
-                <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', alignItems: 'center' }}>
-                  <a href="/#intake" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#cba72f', color: '#1a0f00', fontWeight: 700, padding: '0.875rem 1.75rem', borderRadius: '0.375rem', fontSize: '0.875rem', textDecoration: 'none', fontFamily: 'Inter,sans-serif', minHeight: '48px' }}>
-                    Get My Free Claim Review →
-                  </a>
-                  <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.75rem', fontFamily: 'Inter,sans-serif' }}>Free · Confidential · No obligation</span>
+        {/* Prose content — matches rebrand: prose prose-lg prose-headings:font-serif */}
+        <div className="prose prose-lg">
+          {post.sections.map((section, i) => (
+            <div key={i}>
+              {section.heading && (
+                <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 500, color: 'var(--primary)', fontSize: 'clamp(1.25rem,3vw,1.75rem)', marginTop: '2.5rem', marginBottom: '1rem', lineHeight: 1.25 }}>
+                  {section.heading}
+                </h2>
+              )}
+              {section.type === 'callout' ? (
+                <div style={{ borderLeft: '3px solid var(--accent)', background: 'rgba(138,90,26,0.05)', padding: '1.25rem 1.5rem', margin: '1.5rem 0' }}>
+                  {section.body.split('\n\n').map((para: string, j: number) => (
+                    <p key={j} style={{ margin: j < section.body.split('\n\n').length - 1 ? '0 0 0.75rem' : 0, color: 'var(--text-strong)', lineHeight: 1.7 }}>{para}</p>
+                  ))}
                 </div>
-              </div>
+              ) : section.type === 'list' ? (
+                <ul style={{ paddingLeft: '1.5rem', margin: '0 0 1.25rem' }}>
+                  {section.body.split('\n').filter(Boolean).map((item: string, j: number) => (
+                    <li key={j} style={{ marginBottom: '0.4rem', color: 'rgba(0,0,0,0.75)', lineHeight: 1.8 }}>{item}</li>
+                  ))}
+                </ul>
+              ) : (
+                section.body.split('\n\n').map((para: string, j: number) => (
+                  <p key={j} style={{ color: 'rgba(0,0,0,0.75)', lineHeight: 1.8, fontSize: '1.0625rem', marginBottom: '1.25rem' }}>{para}</p>
+                ))
+              )}
             </div>
-          </div>
-        </section>
+          ))}
+        </div>
 
-        {/* RELATED POSTS */}
+        {/* End CTA — matches rebrand: mt-20 p-8 bg-muted/50 border */}
+        <div style={{ marginTop: '5rem', padding: '2rem', background: 'rgba(214,220,230,0.3)', border: '1px solid var(--border)' }}>
+          <h3 className="font-serif" style={{ fontSize: '1.5rem', fontWeight: 400, color: 'var(--primary)', marginBottom: '1rem' }}>
+            Need personalized clarity?
+          </h3>
+          <p style={{ color: 'var(--muted)', marginBottom: '1.5rem', lineHeight: 1.65, fontSize: '0.95rem' }}>
+            General information can only take you so far. Get a free, confidential review of your specific situation to understand exactly what you are entitled to.
+          </p>
+          <Link
+            href="/#intake"
+            style={{
+              display: 'inline-flex', height: 48, alignItems: 'center',
+              padding: '0 2rem', background: 'var(--primary)',
+              color: '#fff', fontSize: '0.875rem', fontWeight: 500,
+              textDecoration: 'none', transition: 'background 0.15s',
+            }}
+            onMouseOver={e => (e.currentTarget as HTMLElement).style.background = 'var(--primary-strong)'}
+            onMouseOut={e => (e.currentTarget as HTMLElement).style.background = 'var(--primary)'}
+          >
+            Start Free Review
+          </Link>
+        </div>
+
+        {/* Related posts */}
         {relatedPosts.length > 0 && (
-          <section style={{ background: '#f3f4f6', padding: '3rem 1.5rem', borderTop: '1px solid #e1e2e4' }}>
-            <div style={{ maxWidth: '52rem', margin: '0 auto' }}>
-              <div style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#735c00', fontFamily: 'Inter,sans-serif', marginBottom: '1.25rem' }}>More Articles</div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                {relatedPosts.map(p => (
-                  <Link key={p.slug} href={`/blog/${p.slug}`} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem 1.25rem', background: '#fff', borderRadius: '0.5rem', border: '1px solid #e1e2e4', textDecoration: 'none', gap: '1rem' }}>
-                    <div>
-                      <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#735c00', marginBottom: '0.25rem', fontFamily: 'Inter,sans-serif' }}>{p.category}</div>
-                      <div style={{ fontWeight: 600, color: '#001b44', fontSize: '0.9rem', fontFamily: 'Manrope,sans-serif' }}>{p.title}</div>
-                    </div>
-                    <span style={{ color: '#cba72f', flexShrink: 0, fontSize: '0.875rem' }}>→</span>
-                  </Link>
-                ))}
-              </div>
+          <div style={{ marginTop: '4rem' }}>
+            <p style={{ fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--muted)', marginBottom: '1.5rem' }}>More Articles</p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+              {relatedPosts.map(p => (
+                <Link
+                  key={p.slug}
+                  href={`/blog/${p.slug}`}
+                  style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem 1.25rem', background: 'var(--surface)', border: '1px solid var(--border)', textDecoration: 'none', gap: '1rem', transition: 'border-color 0.15s' }}
+                  onMouseOver={e => (e.currentTarget as HTMLElement).style.borderColor = 'rgba(13,27,46,0.3)'}
+                  onMouseOut={e => (e.currentTarget as HTMLElement).style.borderColor = 'var(--border)'}
+                >
+                  <div>
+                    <div style={{ fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--accent)', marginBottom: '0.25rem' }}>{p.category}</div>
+                    <div className="font-serif" style={{ fontWeight: 400, color: 'var(--primary)', fontSize: '0.95rem', lineHeight: 1.35 }}>{p.title}</div>
+                  </div>
+                  <span style={{ color: 'var(--accent)', flexShrink: 0 }}>→</span>
+                </Link>
+              ))}
             </div>
-          </section>
-        )}
-
-        {/* FOOTER */}
-        <footer style={{ background: '#0e1c30', padding: '3rem 1.5rem' }}>
-          <div style={{ maxWidth: '52rem', margin: '0 auto', textAlign: 'center', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <p style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.4)', lineHeight: 1.6, fontFamily: 'Inter,sans-serif' }}>
-              Ontario Accident Review is not a law firm and does not provide legal advice or legal representation. This service is for assessment purposes only.
-            </p>
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', fontSize: '0.75rem' }}>
-              <Link href="/privacy" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'underline', fontFamily: 'Inter,sans-serif' }}>Privacy Policy</Link>
-              <Link href="/disclaimer" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'underline', fontFamily: 'Inter,sans-serif' }}>Disclaimer</Link>
-              <Link href="/contact" style={{ color: 'rgba(255,255,255,0.4)', textDecoration: 'underline', fontFamily: 'Inter,sans-serif' }}>Contact</Link>
-            </div>
-            <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.2)', fontFamily: 'Inter,sans-serif' }}>© 2026 Ontario Accident Review. All rights reserved.</div>
           </div>
-        </footer>
+        )}
       </div>
-    </>
+    </article>
   );
 }

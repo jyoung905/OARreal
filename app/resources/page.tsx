@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { BLOG_POSTS } from '@/lib/blog-posts';
-import { ResourcesHeader } from '@/components/ResourcesHeader';
 
 const BASE_URL = 'https://www.ontarioaccidentreview.ca';
 
@@ -17,110 +16,82 @@ export const metadata: Metadata = {
   },
 };
 
-const FEATURED_SLUG = 'ontario-accident-deadlines';
+/* ─────────────────────────────────────────────────────────────────
+   Resources page — rebuilt to match rebrand resources.tsx exactly
+   Rebrand ref: /Desktop/.openclaw/web/src/pages/resources.tsx
+   ───────────────────────────────────────────────────────────────── */
 
 export default function ResourcesPage() {
-  const featured = BLOG_POSTS.find(p => p.slug === FEATURED_SLUG);
-  const rest = BLOG_POSTS.filter(p => p.slug !== FEATURED_SLUG);
-
   return (
     <>
-      <ResourcesHeader />
+      {/* Header — bg-primary text-primary-foreground py-20 */}
+      <section style={{ background: 'var(--primary)', color: '#fff', padding: 'clamp(4rem,8vw,5rem) 1.5rem' }}>
+        <div style={{ maxWidth: 960, margin: '0 auto' }}>
+          <h1 className="font-serif" style={{ fontSize: 'clamp(2rem,5vw,3.25rem)', fontWeight: 400, marginBottom: '1.5rem', lineHeight: 1.15 }}>
+            Resource Center
+          </h1>
+          <p style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.8)', maxWidth: 560, fontWeight: 300, lineHeight: 1.65 }}>
+            Plain-language guides to understanding Ontario&apos;s Statutory Accident Benefits Schedule. Knowledge is your best defense.
+          </p>
+        </div>
+      </section>
 
-      <div style={{ background: '#060b16', minHeight: '100vh', paddingTop: '4rem', fontFamily: 'Inter,sans-serif' }}>
-
-        {/* HERO */}
-        <section style={{ padding: '4rem 1.5rem 3rem', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
-          <div style={{ maxWidth: '64rem', margin: '0 auto', textAlign: 'center' }}>
-            <div style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#cba72f', marginBottom: '1rem' }}>Resources & Insights</div>
-            <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 800, color: '#fff', lineHeight: 1.12, marginBottom: '1rem', fontFamily: 'Manrope,sans-serif' }}>
-              Know Before You Claim.
-            </h1>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '1.0625rem', lineHeight: 1.8, maxWidth: '40rem', margin: '0 auto' }}>
-              Ontario's accident benefits system is complex. These articles are written to help claimants understand their rights, timelines, and options — before making any decisions.
-            </p>
-          </div>
-        </section>
-
-        {/* FEATURED */}
-        {featured && (
-          <section style={{ padding: '3rem 1.5rem 0' }}>
-            <div style={{ maxWidth: '64rem', margin: '0 auto' }}>
-              <div style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#cba72f', marginBottom: '1.25rem' }}>Featured</div>
-              <Link href={`/blog/${featured.slug}`} style={{ display: 'block', background: '#0e1c30', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '0.75rem', padding: '2rem', textDecoration: 'none', transition: 'border-color 0.2s' }}>
-                <div style={{ display: 'inline-block', padding: '2px 10px', borderRadius: '999px', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', background: 'rgba(203,167,47,0.12)', color: '#cba72f', border: '1px solid rgba(203,167,47,0.2)', marginBottom: '1rem' }}>
-                  {featured.category}
-                </div>
-                <h2 style={{ fontSize: 'clamp(1.25rem, 3vw, 1.75rem)', fontWeight: 800, color: '#fff', lineHeight: 1.2, marginBottom: '0.75rem', fontFamily: 'Manrope,sans-serif' }}>
-                  {featured.title}
-                </h2>
-                <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '1.25rem' }}>
-                  {featured.description}
-                </p>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#cba72f', fontSize: '0.875rem', fontWeight: 700 }}>
-                  <span>{featured.readTime}</span>
-                  <span>·</span>
-                  <span>Read article →</span>
-                </div>
-              </Link>
-            </div>
-          </section>
-        )}
-
-        {/* MID-PAGE CTA BAND */}
-        <section style={{ padding: '2.5rem 1.5rem', background: '#0e1c30', borderTop: '1px solid rgba(203,167,47,0.12)', borderBottom: '1px solid rgba(203,167,47,0.12)' }}>
-          <div style={{ maxWidth: '40rem', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '0.625rem', alignItems: 'flex-start' }}>
-            <p style={{ color: '#cba72f', fontWeight: 700, fontSize: '0.68rem', letterSpacing: '0.18em', textTransform: 'uppercase', margin: 0, fontFamily: 'Inter,sans-serif' }}>Free Ontario Accident Review</p>
-            <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.9375rem', lineHeight: 1.6, margin: 0, fontFamily: 'Inter,sans-serif' }}>Understanding how these rules apply to <em>your</em> specific situation is different from reading about them. Get a free, plain-language review — no obligation, no lawyers required to start.</p>
-            <a href="/#intake" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#cba72f', color: '#1a0f00', fontWeight: 700, padding: '0.75rem 1.75rem', borderRadius: '0.375rem', fontSize: '0.875rem', textDecoration: 'none', fontFamily: 'Inter,sans-serif', minHeight: '44px', marginTop: '0.25rem' }}>Get My Free Claim Review →</a>
-          </div>
-        </section>
-
-        {/* ALL ARTICLES */}
-        <section style={{ padding: '3rem 1.5rem 5rem' }}>
-          <div style={{ maxWidth: '64rem', margin: '0 auto' }}>
-            <div style={{ fontSize: '0.68rem', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#cba72f', marginBottom: '1.25rem' }}>All Articles</div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1rem' }}>
-              {rest.map(post => (
-                <Link key={post.slug} href={`/blog/${post.slug}`} style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', background: '#0e1c30', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '0.75rem', padding: '1.5rem', textDecoration: 'none' }}>
-                  <div style={{ display: 'inline-block', padding: '2px 10px', borderRadius: '999px', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', background: 'rgba(203,167,47,0.12)', color: '#cba72f', border: '1px solid rgba(203,167,47,0.2)', alignSelf: 'flex-start' }}>
-                    {post.category}
-                  </div>
-                  <h3 style={{ fontWeight: 700, color: '#fff', fontSize: '0.9375rem', lineHeight: 1.4, margin: 0, fontFamily: 'Manrope,sans-serif' }}>{post.title}</h3>
-                  <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.825rem', lineHeight: 1.6, margin: 0, flexGrow: 1 }}>{post.description}</p>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.75rem', color: 'rgba(255,255,255,0.3)' }}>
-                    <span>{post.readTime}</span>
-                    <span style={{ color: '#cba72f', fontWeight: 700 }}>Read →</span>
+      {/* Article grid — py-16 bg-background */}
+      <section style={{ padding: 'clamp(3rem,6vw,4rem) 1.5rem', background: 'var(--bg)', minHeight: '60vh' }}>
+        <div style={{ maxWidth: 960, margin: '0 auto' }}>
+          {BLOG_POSTS.length > 0 ? (
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '2rem' }}>
+              {BLOG_POSTS.map(article => (
+                <Link
+                  key={article.slug}
+                  href={`/blog/${article.slug}`}
+                  style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column' }}
+                >
+                  <div style={{
+                    flex: 1, display: 'flex', flexDirection: 'column',
+                    padding: '2rem', border: '1px solid var(--border)',
+                    background: 'var(--surface)', transition: 'border-color 0.2s',
+                  }}
+                    onMouseOver={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(13,27,46,0.3)'; }}
+                    onMouseOut={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--border)'; }}
+                  >
+                    {/* Category + read time */}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
+                      <span style={{ fontSize: '0.72rem', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--accent)' }}>
+                        {article.category}
+                      </span>
+                      <span style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>
+                        {article.readTime}
+                      </span>
+                    </div>
+                    {/* Title */}
+                    <h2 className="font-serif" style={{
+                      fontSize: '1.375rem', fontWeight: 400, color: 'var(--primary)',
+                      marginBottom: '1rem', lineHeight: 1.3,
+                    }}>
+                      {article.title}
+                    </h2>
+                    {/* Summary */}
+                    <p style={{ color: 'var(--muted)', lineHeight: 1.65, flex: 1, marginBottom: '2rem', fontSize: '0.9rem' }}>
+                      {article.description}
+                    </p>
+                    {/* Read link */}
+                    <div style={{ display: 'flex', alignItems: 'center', fontSize: '0.875rem', fontWeight: 500, color: 'var(--primary)' }}>
+                      Read Article
+                      <svg style={{ marginLeft: '0.5rem', transition: 'transform 0.2s' }} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
                   </div>
                 </Link>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* CTA BAND */}
-        <section style={{ background: '#001b44', padding: '4rem 1.5rem', borderTop: '1px solid rgba(203,167,47,0.15)' }}>
-          <div style={{ maxWidth: '40rem', margin: '0 auto', textAlign: 'center' }}>
-            <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#fff', marginBottom: '0.75rem', fontFamily: 'Manrope,sans-serif' }}>Ready to understand your situation?</h2>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.9375rem', lineHeight: 1.7, marginBottom: '1.75rem' }}>Get a free, plain-language review of your claim. No obligation, no lawyers, no pressure.</p>
-            <a href="/#intake" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#cba72f', color: '#1a0f00', fontWeight: 700, padding: '1rem 2.25rem', borderRadius: '0.375rem', fontSize: '0.9375rem', textDecoration: 'none', fontFamily: 'Inter,sans-serif' }}>
-              Get My Free Claim Review →
-            </a>
-          </div>
-        </section>
-
-        {/* FOOTER */}
-        <footer style={{ background: '#0e1c30', padding: '2rem 1.5rem', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
-          <div style={{ maxWidth: '64rem', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
-            <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.25)' }}>© 2026 Ontario Accident Review. All rights reserved.</div>
-            <div style={{ display: 'flex', gap: '1.25rem', fontSize: '0.75rem' }}>
-              <Link href="/privacy" style={{ color: 'rgba(255,255,255,0.35)', textDecoration: 'underline' }}>Privacy</Link>
-              <Link href="/disclaimer" style={{ color: 'rgba(255,255,255,0.35)', textDecoration: 'underline' }}>Disclaimer</Link>
-              <Link href="/contact" style={{ color: 'rgba(255,255,255,0.35)', textDecoration: 'underline' }}>Contact</Link>
+          ) : (
+            <div style={{ textAlign: 'center', padding: '5rem 0', border: '1px dashed var(--border)' }}>
+              <h3 className="font-serif" style={{ fontSize: '1.25rem', color: 'var(--primary)', marginBottom: '0.5rem', fontWeight: 400 }}>No articles found</h3>
+              <p style={{ color: 'var(--muted)' }}>Check back soon.</p>
             </div>
-          </div>
-        </footer>
-      </div>
+          )}
+        </div>
+      </section>
     </>
   );
 }
