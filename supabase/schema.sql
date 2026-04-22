@@ -39,3 +39,32 @@ create index if not exists intake_submissions_review_bucket_idx
   on public.intake_submissions (review_bucket);
 
 comment on table public.intake_submissions is 'Ontario Accident Review v1 intake submissions. No insurance details or uploads.';
+
+-- ── Analytics events table ──────────────────────────────────────────────────
+create table if not exists public.analytics_events (
+  id            bigserial primary key,
+  event         text not null,
+  device        text,
+  traffic_source text,
+  utm_medium    text,
+  utm_campaign  text,
+  landing_page  text,
+  -- intake-specific (nullable)
+  accident_type text,
+  claim_status  text,
+  ontario_yn    text,
+  injured       text,
+  step          integer,
+  step_label    text,
+  cta_text      text,
+  cta_location  text,
+  trigger       text,
+  question      text,
+  -- meta
+  props         jsonb,
+  occurred_at   timestamptz not null default now()
+);
+
+create index if not exists analytics_events_event_idx     on public.analytics_events (event);
+create index if not exists analytics_events_occurred_idx  on public.analytics_events (occurred_at desc);
+create index if not exists analytics_events_accident_idx  on public.analytics_events (accident_type);

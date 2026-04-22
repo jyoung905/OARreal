@@ -59,6 +59,14 @@ export function track(event_name: string, params: Record<string, unknown> = {}) 
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({ event: event_name, ...payload });
 
+  // Server-side persistence (fire-and-forget, never blocks)
+  fetch('/api/track', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ event: event_name, ...payload }),
+    keepalive: true,
+  }).catch(() => {}); // silent fail
+
   // Dev logging
   if (process.env.NODE_ENV === 'development') {
     console.log(`[OAR Analytics] ${event_name}`, payload);
