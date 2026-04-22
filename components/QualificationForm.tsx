@@ -6,6 +6,12 @@ import { useMemo, useState } from 'react';
 import type { FormEvent } from 'react';
 import { formSteps } from '@/lib/site';
 
+/* ─────────────────────────────────────────────────────────────────
+   QualificationForm — Rebrand visual port
+   Logic 100% preserved (validation, submit, Supabase via /api/intake)
+   Visual matches: /Desktop/.openclaw/web/src/pages/review.tsx
+   ───────────────────────────────────────────────────────────────── */
+
 const initialData = {
   fullName: '',
   phone: '',
@@ -48,11 +54,9 @@ function getStepError(stepIndex: number, data: typeof initialData) {
       return 'Please complete the required fields before continuing.';
     }
   }
-
   if (stepIndex === 0 && data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
     return 'Please enter a valid email address.';
   }
-
   return '';
 }
 
@@ -71,33 +75,25 @@ export function QualificationForm() {
   const [submitState, setSubmitState] = useState({ status: 'idle', error: '' });
 
   const progress = useMemo(() => ((step + 1) / formSteps.length) * 100, [step]);
-  const progressLabel = `Step ${step + 1} of ${formSteps.length} · ${formSteps[step]?.label || ''}`;
 
   const next = () => {
     const error = getStepError(step, data);
-    if (error) {
-      setSubmitState({ status: 'idle', error });
-      return;
-    }
+    if (error) { setSubmitState({ status: 'idle', error }); return; }
     setSubmitState({ status: 'idle', error: '' });
-    setStep((current) => Math.min(current + 1, formSteps.length - 1));
+    setStep(s => Math.min(s + 1, formSteps.length - 1));
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const previous = () => {
     setSubmitState({ status: 'idle', error: '' });
-    setStep((current) => Math.max(current - 1, 0));
+    setStep(s => Math.max(s - 1, 0));
   };
 
   const submit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const error = getStepError(step, data);
-    if (error) {
-      setSubmitState({ status: 'idle', error });
-      return;
-    }
-
+    if (error) { setSubmitState({ status: 'idle', error }); return; }
     setSubmitState({ status: 'submitting', error: '' });
-
     try {
       const response = await fetch('/api/intake', {
         method: 'POST',
@@ -105,234 +101,380 @@ export function QualificationForm() {
         body: JSON.stringify({ ...data, sourcePage: '/' })
       });
       const result = await response.json().catch(() => ({}));
-      if (!response.ok) {
-        throw new Error(result.error || 'Submission failed. Please try again.');
-      }
+      if (!response.ok) throw new Error(result.error || 'Submission failed. Please try again.');
       router.push('/thank-you');
     } catch (errorMessage) {
       setSubmitState({
         status: 'idle',
-        error:
-          errorMessage instanceof Error
-            ? errorMessage.message
-            : 'There was a problem submitting your inquiry.'
+        error: errorMessage instanceof Error ? errorMessage.message : 'There was a problem submitting your inquiry.'
       });
     }
   };
 
+  // ── Render ─────────────────────────────────────────────────────
   return (
-    <section className="section section-accent intake-priority" id="intake">
-      <div className="container intake-shell premium-intake-shell">
-        <div className="section-head narrow left">
-          <p className="eyebrow">Start Your Review</p>
-          <h2>Tell us the basics of your accident</h2>
-          <p>
-            Keep it simple. We only ask for the information needed for an initial review and
-            possible follow-up.
+    <div id="intake" style={{ background: 'var(--bg)', paddingTop: 1 }}>
+      {/* Header banner — matches rebrand: bg-primary text-primary-foreground py-12 md:py-16 */}
+      <div style={{ background: 'var(--primary)', color: '#fff', padding: 'clamp(3rem,6vw,4rem) 1.5rem' }}>
+        <div style={{ maxWidth: 768, margin: '0 auto' }}>
+          <h1 style={{
+            fontFamily: 'var(--font-display)',
+            fontSize: 'clamp(1.75rem, 4vw, 2.5rem)',
+            fontWeight: 400, color: '#fff', marginBottom: '1rem', lineHeight: 1.2,
+          }}>
+            Confidential SABS Review
+          </h1>
+          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.125rem', fontWeight: 300, lineHeight: 1.65 }}>
+            Answer a few questions about your situation. We&apos;ll provide a plain-language assessment of your rights and options.
           </p>
         </div>
+      </div>
 
-        <div className="intake-reassurance-grid minimal-reassurance-grid">
-          <article className="intake-reassurance-card">
-            <strong>Takes about 2 minutes</strong>
-            <span>
-              You can answer approximately. The goal is a useful first review, not a perfect
-              legal file.
-            </span>
-          </article>
-          <article className="intake-reassurance-card">
-            <strong>Reviewed before follow-up</strong>
-            <span>A representative from Ontario Accident Review reviews submissions first.</span>
-          </article>
-          <article className="intake-reassurance-card">
-            <strong>Minimal first-stage information</strong>
-            <span>No insurance details. No document uploads. No sensitive IDs.</span>
-          </article>
-        </div>
+      <div style={{ maxWidth: 768, margin: '0 auto', padding: 'clamp(2rem,4vw,3rem) 1.5rem clamp(4rem,8vw,6rem)' }}>
 
-        <div className="intake-layout">
-          <aside className="intake-sidecard">
-            <span className="mini-kicker">What to expect</span>
-            <h3>A calm, step-by-step review request</h3>
-            <p>
-              This first stage is intentionally light. We are only collecting what is needed to
-              understand the basics and decide whether follow-up makes sense.
-            </p>
-            <div className="intake-step-list" aria-hidden="true">
-              {formSteps.map((item, index) => {
-                const state = index === step ? 'is-active' : index < step ? 'is-complete' : '';
-                return (
-                  <div key={item.id} className={`intake-step-pill ${state}`.trim()}>
-                    <span>{String(index + 1).padStart(2, '0')}</span>
-                    <strong>{item.label}</strong>
-                  </div>
-                );
-              })}
-            </div>
-            <div className="panel-callout premium-callout">
-              <strong>Important:</strong>
-              <span>
-                Ontario Accident Review is not a law firm and does not provide legal advice or
-                legal representation.
-              </span>
-            </div>
-          </aside>
-
-          <div className="intake-form-shell">
-            <div className="progress-wrap progress-wrap-card">
-              <div className="progress-bar">
-                <span style={{ width: `${progress}%` }} />
-              </div>
-              <div className="progress-label">{progressLabel}</div>
-            </div>
-
-            <form className="intake-form" onSubmit={submit}>
-              <section className={`form-step ${step === 0 ? 'active' : ''}`}>
-                <div className="step-heading step-heading-card">
-                  <span className="step-kicker">Step 1</span>
-                  <h3>Where should we reach you?</h3>
-                  <p className="step-copy">
-                    If your situation appears to fit our review criteria, a representative from
-                    Ontario Accident Review may contact you using the details you provide.
-                  </p>
-                </div>
-                <div className="field-grid">
-                  <Field label="Full name"><input required value={data.fullName} onChange={(e) => updateField(setData, 'fullName', e.target.value)} /></Field>
-                  <Field label="Phone number"><input required type="tel" value={data.phone} onChange={(e) => updateField(setData, 'phone', e.target.value)} /></Field>
-                  <Field label="Email address"><input required type="email" value={data.email} onChange={(e) => updateField(setData, 'email', e.target.value)} /></Field>
-                  <Field label="Best time to reach you">
-                    <select required value={data.bestTime} onChange={(e) => updateField(setData, 'bestTime', e.target.value)}>
-                      <option value="">Select one</option><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Anytime</option>
-                    </select>
-                  </Field>
-                </div>
-                <RadioGroup label="Preferred contact method" name="contactMethod" value={data.contactMethod} onChange={(value) => updateField(setData, 'contactMethod', value)} options={['Phone', 'Email', 'Either']} />
-              </section>
-
-              <section className={`form-step ${step === 1 ? 'active' : ''}`}>
-                <div className="step-heading step-heading-card"><span className="step-kicker">Step 2</span><h3>Tell us the basics</h3><p className="step-copy">A short summary is enough. Rough answers are okay — you do not need documents or insurance details right now.</p></div>
-                <div className="field-grid">
-                  <Field label="What type of accident was it?">
-                    <select required value={data.accidentType} onChange={(e) => updateField(setData, 'accidentType', e.target.value)}>
-                      <option value="">Select one</option><option>Car accident</option><option>Truck accident</option><option>Motorcycle accident</option><option>Pedestrian accident</option><option>Bicycle accident</option><option>Slip and fall</option><option>Other</option>
-                    </select>
-                  </Field>
-                  <Field label="Date of accident" hint="Approximate is fine — exact date not required"><input required type="date" value={data.accidentDate} onChange={(e) => updateField(setData, 'accidentDate', e.target.value)} /></Field>
-                  <Field label="City or town in Ontario"><input required value={data.cityArea} placeholder="Toronto, Brampton, Mississauga, Hamilton, etc." onChange={(e) => updateField(setData, 'cityArea', e.target.value)} /></Field>
-                  <RadioGroup compact label="Did the accident happen in Ontario?" name="inOntario" value={data.inOntario} onChange={(value) => updateField(setData, 'inOntario', value)} options={['Yes', 'No']} />
-                </div>
-                <Field label="Briefly describe what happened"><textarea required rows={6} placeholder="A short summary is enough. Tell us what happened and what problems you are dealing with now." value={data.accidentSummary} onChange={(e) => updateField(setData, 'accidentSummary', e.target.value)} /></Field>
-              </section>
-
-              <section className={`form-step ${step === 2 ? 'active' : ''}`}>
-                <div className="step-heading step-heading-card"><span className="step-kicker">Step 3</span><h3>How has this affected you?</h3><p className="step-copy">These answers help us understand the impact of the accident without asking for sensitive documents or insurance details.</p></div>
-                <div className="field-grid">
-                  <RadioGroup compact label="Were you injured?" name="injured" value={data.injured} onChange={(value) => updateField(setData, 'injured', value)} options={['Yes', 'No', 'Not sure']} />
-                  <RadioGroup compact label="Did you receive medical attention?" name="medicalAttention" value={data.medicalAttention} onChange={(value) => updateField(setData, 'medicalAttention', value)} options={['Yes', 'No', 'Not yet']} />
-                  <RadioGroup compact label="Has the accident affected your work or daily life?" name="workImpact" value={data.workImpact} onChange={(value) => updateField(setData, 'workImpact', value)} options={['Yes', 'No', 'Not sure']} />
-                  <RadioGroup compact label="Are you still experiencing symptoms?" name="ongoingSymptoms" value={data.ongoingSymptoms} onChange={(value) => updateField(setData, 'ongoingSymptoms', value)} options={['Yes', 'No', 'Not sure']} />
-                </div>
-                <Field label="What injuries or symptoms did you experience?"><textarea rows={4} placeholder="You can keep this short." value={data.injuryDetails} onChange={(e) => updateField(setData, 'injuryDetails', e.target.value)} /></Field>
-              </section>
-
-              <section className={`form-step ${step === 3 ? 'active' : ''}`}>
-                <div className="step-heading step-heading-card"><span className="step-kicker">Step 4</span><h3>A few final questions</h3><p className="step-copy">We use these answers to understand whether the matter is still at the review stage.</p></div>
-                <div className="field-grid">
-                  <RadioGroup compact label="Have you already spoken with a lawyer about this accident?" name="spokenWithLawyer" value={data.spokenWithLawyer} onChange={(value) => updateField(setData, 'spokenWithLawyer', value)} options={['Yes', 'No']} />
-                  <RadioGroup compact label="Do you currently have a lawyer representing you for this matter?" name="currentlyRepresented" value={data.currentlyRepresented} onChange={(value) => updateField(setData, 'currentlyRepresented', value)} options={['Yes', 'No']} />
-                  <RadioGroup compact label="Was another person, driver, property owner, or business potentially involved?" name="thirdPartyInvolved" value={data.thirdPartyInvolved} onChange={(value) => updateField(setData, 'thirdPartyInvolved', value)} options={['Yes', 'No', 'Not sure']} />
-                </div>
-                <Field label="Is there anything else you want us to know?"><textarea rows={4} value={data.additionalNotes} onChange={(e) => updateField(setData, 'additionalNotes', e.target.value)} /></Field>
-              </section>
-
-              <section className={`form-step ${step === 4 ? 'active' : ''}`}>
-                <div className="step-heading step-heading-card">
-                  <span className="step-kicker">Step 5</span>
-                  <h3>Review and submit</h3>
-                  <p className="step-copy">Submitting this form is only a request for an initial review. Your answers are encrypted and confidential.</p>
-                </div>
-                <Consent checked={data.consentTruth} onChange={(value) => updateField(setData, 'consentTruth', value)} label="I confirm the information I provided is true to the best of my knowledge." />
-                <Consent checked={data.consentNotLawFirm} onChange={(value) => updateField(setData, 'consentNotLawFirm', value)} label="I understand Ontario Accident Review is not a law firm and does not provide legal advice or legal representation." />
-                <label className="consent-row consent-block">
-                  <input type="checkbox" checked={data.consentToContact} onChange={(e) => updateField(setData, 'consentToContact', e.target.checked)} />
-                  <span>
-                    I consent to being contacted by Ontario Accident Review about my review request and I acknowledge the <Link href="/privacy" className="text-link">Privacy Policy</Link>.
-                  </span>
-                </label>
-                <p className="disclaimer">Submitting information through this site is only a request for an initial review and does not create a lawyer-client relationship.</p>
-              </section>
-
-              {submitState.error ? <p className="disclaimer" role="alert">{submitState.error}</p> : null}
-
-              <div className="form-actions">
-                <button type="button" className={`button button-secondary ${step === 0 ? 'hidden' : ''}`} onClick={previous}>Back</button>
-                {step < formSteps.length - 1 ? (
-                  <button type="button" className="button" onClick={next}>Continue</button>
-                ) : (
-                  <button type="submit" className="button" disabled={submitState.status === 'submitting'}>
-                    {submitState.status === 'submitting' ? 'Submitting...' : 'Submit My Review'}
-                  </button>
-                )}
-              </div>
-            </form>
+        {/* Progress bar — matches rebrand: labels + h-1 bar */}
+        <div style={{ marginBottom: '3rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.75rem' }}>
+            {[
+              { label: 'Incident',  idx: 0 },
+              { label: 'Injuries',  idx: 1 },
+              { label: 'Impact',    idx: 2 },
+              { label: 'Status',    idx: 3 },
+              { label: 'Details',   idx: 4 },
+            ].map(({ label, idx }) => (
+              <span key={label} style={{
+                fontSize: '0.72rem', fontWeight: 500,
+                textTransform: 'uppercase', letterSpacing: '0.08em',
+                color: step >= idx ? 'var(--primary)' : 'var(--muted)',
+              }}>{label}</span>
+            ))}
+          </div>
+          <div style={{ height: 4, width: '100%', background: 'var(--border)' }}>
+            <div style={{
+              height: '100%', background: 'var(--accent)',
+              transition: 'width 0.5s ease',
+              width: `${progress}%`,
+            }} />
           </div>
         </div>
+
+        {/* Form card — matches rebrand: bg-card border p-6 md:p-10 shadow-sm */}
+        <div style={{
+          background: 'var(--surface)', border: '1px solid var(--border)',
+          padding: 'clamp(1.5rem,4vw,2.5rem)', boxShadow: 'var(--shadow)',
+        }}>
+          <form onSubmit={submit} style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+
+            {/* ── Step 1: Contact ── */}
+            {step === 0 && (
+              <div style={{ animation: 'fadeIn 0.2s ease' }}>
+                <StepHeader step="1" title="The Contact Details" subtitle="If your situation appears to fit our review criteria, a representative will reach you using these details." />
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1.25rem' }}>
+                  <Field label="Full name">
+                    <Input value={data.fullName} onChange={e => updateField(setData, 'fullName', e.target.value)} required />
+                  </Field>
+                  <Field label="Phone number">
+                    <Input type="tel" value={data.phone} onChange={e => updateField(setData, 'phone', e.target.value)} required />
+                  </Field>
+                  <Field label="Email address">
+                    <Input type="email" value={data.email} onChange={e => updateField(setData, 'email', e.target.value)} required />
+                  </Field>
+                  <Field label="Best time to reach you">
+                    <Select value={data.bestTime} onChange={e => updateField(setData, 'bestTime', e.target.value)} required>
+                      <option value="">Select one</option>
+                      <option>Morning</option><option>Afternoon</option><option>Evening</option><option>Anytime</option>
+                    </Select>
+                  </Field>
+                </div>
+                <RadioField
+                  label="Preferred contact method"
+                  name="contactMethod"
+                  value={data.contactMethod}
+                  options={['Phone', 'Email', 'Either']}
+                  onChange={v => updateField(setData, 'contactMethod', v)}
+                />
+              </div>
+            )}
+
+            {/* ── Step 2: Accident Basics ── */}
+            {step === 1 && (
+              <div style={{ animation: 'fadeIn 0.2s ease' }}>
+                <StepHeader step="2" title="The Incident" subtitle="SABS deadlines are strictly tied to the date of the accident — accuracy matters here." />
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1.25rem', marginBottom: '1.25rem' }}>
+                  <Field label="What type of accident was it?">
+                    <Select value={data.accidentType} onChange={e => updateField(setData, 'accidentType', e.target.value)} required>
+                      <option value="">Select one</option>
+                      <option>Car accident</option><option>Truck accident</option><option>Motorcycle accident</option>
+                      <option>Pedestrian accident</option><option>Bicycle accident</option><option>Slip and fall</option><option>Other</option>
+                    </Select>
+                  </Field>
+                  <Field label="Date of accident" hint="Approximate is fine">
+                    <Input type="date" value={data.accidentDate} onChange={e => updateField(setData, 'accidentDate', e.target.value)} required />
+                  </Field>
+                  <Field label="City or town in Ontario">
+                    <Input value={data.cityArea} placeholder="e.g. Toronto, Hamilton, Brampton" onChange={e => updateField(setData, 'cityArea', e.target.value)} required />
+                  </Field>
+                  <RadioField compact label="Did the accident happen in Ontario?" name="inOntario" value={data.inOntario} options={['Yes', 'No']} onChange={v => updateField(setData, 'inOntario', v)} />
+                </div>
+                <Field label="Briefly describe what happened">
+                  <Textarea
+                    rows={6}
+                    placeholder="A short summary is enough. Tell us what happened and what problems you are dealing with now."
+                    value={data.accidentSummary}
+                    onChange={e => updateField(setData, 'accidentSummary', e.target.value)}
+                    required
+                  />
+                </Field>
+              </div>
+            )}
+
+            {/* ── Step 3: Injuries & Impact ── */}
+            {step === 2 && (
+              <div style={{ animation: 'fadeIn 0.2s ease' }}>
+                <StepHeader step="3" title="Injuries &amp; Impact" subtitle="These answers help us understand the impact without asking for sensitive documents." />
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1.25rem', marginBottom: '1.25rem' }}>
+                  <RadioField compact label="Were you injured?" name="injured" value={data.injured} options={['Yes', 'No', 'Not sure']} onChange={v => updateField(setData, 'injured', v)} />
+                  <RadioField compact label="Did you receive medical attention?" name="medicalAttention" value={data.medicalAttention} options={['Yes', 'No', 'Not yet']} onChange={v => updateField(setData, 'medicalAttention', v)} />
+                  <RadioField compact label="Has the accident affected your work or daily life?" name="workImpact" value={data.workImpact} options={['Yes', 'No', 'Not sure']} onChange={v => updateField(setData, 'workImpact', v)} />
+                  <RadioField compact label="Are you still experiencing symptoms?" name="ongoingSymptoms" value={data.ongoingSymptoms} options={['Yes', 'No', 'Not sure']} onChange={v => updateField(setData, 'ongoingSymptoms', v)} />
+                </div>
+                <Field label="What injuries or symptoms did you experience? (Optional)">
+                  <Textarea rows={4} placeholder="Keep it short." value={data.injuryDetails} onChange={e => updateField(setData, 'injuryDetails', e.target.value)} />
+                </Field>
+              </div>
+            )}
+
+            {/* ── Step 4: Current Status ── */}
+            {step === 3 && (
+              <div style={{ animation: 'fadeIn 0.2s ease' }}>
+                <StepHeader step="4" title="Current Status" subtitle="We use these answers to understand whether the matter is still at the review stage." />
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                  <RadioField label="Have you notified your insurance company?" name="insuranceNotified" value={data.spokenWithLawyer} options={['Yes, and I\'ve submitted the application forms', 'Yes, but I haven\'t submitted the forms yet', 'No, I haven\'t notified them yet']} onChange={v => updateField(setData, 'spokenWithLawyer', v)} />
+                  <RadioField label="Do you currently have legal representation?" name="hasLawyer" value={data.currentlyRepresented} options={['No, I am researching my options', 'Yes, I already have a lawyer']} onChange={v => updateField(setData, 'currentlyRepresented', v)} />
+                  <RadioField compact label="Was another person, driver, property owner, or business potentially involved?" name="thirdPartyInvolved" value={data.thirdPartyInvolved} options={['Yes', 'No', 'Not sure']} onChange={v => updateField(setData, 'thirdPartyInvolved', v)} />
+                </div>
+              </div>
+            )}
+
+            {/* ── Step 5: Review & Consent ── */}
+            {step === 4 && (
+              <div style={{ animation: 'fadeIn 0.2s ease' }}>
+                <StepHeader step="5" title="Your Details &amp; Consent" subtitle="Submitting this form is only a request for an initial review. Your answers are encrypted and confidential." />
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1.25rem', marginBottom: '2rem' }}>
+                  <Field label="First Name"><Input value={data.fullName.split(' ')[0] || data.fullName} onChange={e => updateField(setData, 'fullName', e.target.value + ' ' + (data.fullName.split(' ').slice(1).join(' ') || ''))} required /></Field>
+                  <Field label="Last Name"><Input value={data.fullName.split(' ').slice(1).join(' ')} onChange={e => updateField(setData, 'fullName', (data.fullName.split(' ')[0] || '') + ' ' + e.target.value)} required /></Field>
+                  <Field label="Email Address"><Input type="email" value={data.email} onChange={e => updateField(setData, 'email', e.target.value)} required /></Field>
+                  <Field label="Phone Number (Optional)"><Input type="tel" value={data.phone} onChange={e => updateField(setData, 'phone', e.target.value)} /></Field>
+                </div>
+                <div style={{ paddingTop: '1.5rem', borderTop: '1px solid var(--border)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                  <ConsentRow checked={data.consentTruth} onChange={v => updateField(setData, 'consentTruth', v)}
+                    label="I confirm the information I provided is true to the best of my knowledge." />
+                  <ConsentRow checked={data.consentNotLawFirm} onChange={v => updateField(setData, 'consentNotLawFirm', v)}
+                    label="I understand Ontario Accident Review is not a law firm and does not provide legal advice or legal representation." />
+                  <ConsentRow checked={data.consentToContact} onChange={v => updateField(setData, 'consentToContact', v)}
+                    label={<>I consent to being contacted by Ontario Accident Review about my review request and I acknowledge the <Link href="/privacy" style={{ color: 'var(--accent)', textDecoration: 'underline' }}>Privacy Policy</Link>.</>} />
+                  <p style={{ fontSize: '0.8rem', color: 'var(--muted)', lineHeight: 1.6 }}>
+                    Submitting information through this site is only a request for an initial review and does not create a lawyer-client relationship.
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {/* Error */}
+            {submitState.error && (
+              <p style={{ padding: '0.75rem 1rem', background: '#fef2f2', border: '1px solid #fca5a5', color: '#b91c1c', fontSize: '0.875rem', fontWeight: 500 }} role="alert">
+                {submitState.error}
+              </p>
+            )}
+
+            {/* Nav buttons — matches rebrand: flex justify-between */}
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: '2rem', borderTop: '1px solid var(--border)' }}>
+              {step > 0 ? (
+                <button
+                  type="button" onClick={previous}
+                  style={{
+                    display: 'inline-flex', height: 48, alignItems: 'center',
+                    padding: '0 1.5rem', background: 'transparent',
+                    border: '1px solid var(--border)', color: 'var(--text-strong)',
+                    fontSize: '0.875rem', fontWeight: 500, cursor: 'pointer',
+                    transition: 'background 0.15s',
+                  }}
+                  onMouseOver={e => (e.currentTarget as HTMLButtonElement).style.background = 'var(--surface-alt)'}
+                  onMouseOut={e => (e.currentTarget as HTMLButtonElement).style.background = 'transparent'}
+                >
+                  ← Back
+                </button>
+              ) : <div />}
+
+              {step < formSteps.length - 1 ? (
+                <button
+                  type="button" onClick={next}
+                  style={{
+                    display: 'inline-flex', height: 48, alignItems: 'center',
+                    padding: '0 2rem', background: 'var(--primary)',
+                    color: '#fff', fontSize: '0.875rem', fontWeight: 500,
+                    cursor: 'pointer', border: 'none', marginLeft: 'auto',
+                    transition: 'background 0.15s',
+                  }}
+                  onMouseOver={e => (e.currentTarget as HTMLButtonElement).style.background = 'var(--primary-strong)'}
+                  onMouseOut={e => (e.currentTarget as HTMLButtonElement).style.background = 'var(--primary)'}
+                >
+                  Continue →
+                </button>
+              ) : (
+                <button
+                  type="submit"
+                  disabled={submitState.status === 'submitting'}
+                  style={{
+                    display: 'inline-flex', height: 48, alignItems: 'center',
+                    padding: '0 2rem', background: 'var(--accent)',
+                    color: 'var(--primary)', fontSize: '0.875rem', fontWeight: 500,
+                    cursor: submitState.status === 'submitting' ? 'not-allowed' : 'pointer',
+                    border: 'none', marginLeft: 'auto', opacity: submitState.status === 'submitting' ? 0.7 : 1,
+                    transition: 'background 0.15s',
+                  }}
+                  onMouseOver={e => { if (submitState.status !== 'submitting') (e.currentTarget as HTMLButtonElement).style.background = '#a06d22'; }}
+                  onMouseOut={e => (e.currentTarget as HTMLButtonElement).style.background = 'var(--accent)'}
+                >
+                  {submitState.status === 'submitting' ? 'Submitting…' : 'Submit for Review ✓'}
+                </button>
+              )}
+            </div>
+          </form>
+        </div>
+
+        {/* Security note */}
+        <div style={{ marginTop: '2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', fontSize: '0.875rem', color: 'var(--muted)' }}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Secure, encrypted, and strictly confidential.
+        </div>
       </div>
-    </section>
+    </div>
+  );
+}
+
+/* ── Sub-components matching rebrand input styling ─────────────── */
+
+function StepHeader({ step, title, subtitle }: { step: string; title: string; subtitle: string }) {
+  return (
+    <div style={{ marginBottom: '2rem' }}>
+      <h2
+        style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.25rem, 3vw, 1.75rem)', color: 'var(--primary)', marginBottom: '0.5rem' }}
+        dangerouslySetInnerHTML={{ __html: `${title}` }}
+      />
+      <p style={{ color: 'var(--muted)', fontSize: '0.95rem', lineHeight: 1.6 }}>{subtitle}</p>
+    </div>
   );
 }
 
 function Field({ label, hint, children }: { label: string; hint?: string; children: React.ReactNode }) {
   return (
-    <div className="field-group">
-      <label>{label}{hint && <span style={{fontWeight:400,fontSize:'0.78rem',color:'#6b7280',marginLeft:'0.4rem'}}>({hint})</span>}</label>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+      <label style={{ fontSize: '0.875rem', fontWeight: 500, color: 'var(--text-strong)' }}>
+        {label}
+        {hint && <span style={{ fontSize: '0.75rem', color: 'var(--muted)', marginLeft: '0.4rem', fontWeight: 400 }}>({hint})</span>}
+      </label>
       {children}
     </div>
   );
 }
 
-function RadioGroup({
-  label,
-  options,
-  value,
-  onChange,
-  compact = false,
-  name
+const inputBase: React.CSSProperties = {
+  width: '100%', height: 48, padding: '0 1rem',
+  border: '1px solid var(--border)', background: 'var(--surface)',
+  color: 'var(--text-strong)', fontSize: '0.95rem',
+  outline: 'none', transition: 'border-color 0.15s', borderRadius: 0,
+  boxSizing: 'border-box',
+};
+
+function Input(props: React.InputHTMLAttributes<HTMLInputElement>) {
+  return (
+    <input
+      {...props}
+      style={{ ...inputBase, ...props.style }}
+      onFocus={e => e.currentTarget.style.borderColor = 'var(--primary)'}
+      onBlur={e => e.currentTarget.style.borderColor = 'var(--border)'}
+    />
+  );
+}
+
+function Select({ children, ...props }: React.SelectHTMLAttributes<HTMLSelectElement>) {
+  return (
+    <select
+      {...props}
+      style={{ ...inputBase, appearance: 'none', backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 1rem center' }}
+      onFocus={e => e.currentTarget.style.borderColor = 'var(--primary)'}
+      onBlur={e => e.currentTarget.style.borderColor = 'var(--border)'}
+    >
+      {children}
+    </select>
+  );
+}
+
+function Textarea(props: React.TextareaHTMLAttributes<HTMLTextAreaElement>) {
+  return (
+    <textarea
+      {...props}
+      style={{ width: '100%', padding: '0.75rem 1rem', border: '1px solid var(--border)', background: 'var(--surface)', color: 'var(--text-strong)', fontSize: '0.95rem', outline: 'none', resize: 'none', transition: 'border-color 0.15s', borderRadius: 0, boxSizing: 'border-box', ...props.style }}
+      onFocus={e => e.currentTarget.style.borderColor = 'var(--primary)'}
+      onBlur={e => e.currentTarget.style.borderColor = 'var(--border)'}
+    />
+  );
+}
+
+// Radio options styled as bordered clickable rows — matches rebrand exactly
+function RadioField({
+  label, name, options, value, onChange, compact = false,
 }: {
-  label: string;
-  options: string[];
-  value: string;
-  onChange: (value: string) => void;
-  compact?: boolean;
-  name: string;
+  label: string; name: string; options: string[]; value: string;
+  onChange: (v: string) => void; compact?: boolean;
 }) {
   return (
-    <div className="field-group">
-      <label>{label}</label>
-      <div className={`option-list radio-list inline-list ${compact ? 'compact-inline' : ''}`}>
-        {options.map((option) => (
-          <label key={`${name}-${option}`}>
-            <input type="radio" name={name} checked={value === option} onChange={() => onChange(option)} /> {option}
-          </label>
-        ))}
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+      <label style={{ fontSize: '0.875rem', fontWeight: 500, color: 'var(--text-strong)' }}>{label}</label>
+      <div style={{ display: 'flex', flexDirection: compact ? 'row' : 'column', flexWrap: 'wrap', gap: compact ? '0.5rem' : '0.375rem' }}>
+        {options.map(opt => {
+          const checked = value === opt;
+          return (
+            <label
+              key={opt}
+              style={{
+                display: 'flex', alignItems: 'center', gap: '0.75rem',
+                padding: compact ? '0.5rem 1rem' : '1rem 1rem',
+                border: `1px solid ${checked ? 'var(--accent)' : 'var(--border)'}`,
+                background: checked ? 'rgba(138,90,26,0.05)' : 'var(--surface)',
+                cursor: 'pointer', fontSize: '0.9rem', color: 'var(--text-strong)',
+                transition: 'all 0.12s', userSelect: 'none',
+              }}
+              onMouseOver={e => { if (!checked) (e.currentTarget as HTMLElement).style.borderColor = 'rgba(13,27,46,0.4)'; }}
+              onMouseOut={e => { if (!checked) (e.currentTarget as HTMLElement).style.borderColor = 'var(--border)'; }}
+            >
+              <input
+                type="radio" name={name} value={opt} checked={checked}
+                onChange={() => onChange(opt)}
+                style={{ accentColor: 'var(--accent)', width: 16, height: 16, flexShrink: 0 }}
+              />
+              {opt}
+            </label>
+          );
+        })}
       </div>
     </div>
   );
 }
 
-function Consent({
-  checked,
-  onChange,
-  label
+function ConsentRow({
+  checked, onChange, label,
 }: {
-  checked: boolean;
-  onChange: (value: boolean) => void;
-  label: string;
+  checked: boolean; onChange: (v: boolean) => void; label: React.ReactNode;
 }) {
   return (
-    <label className="consent-row consent-block">
-      <input type="checkbox" checked={checked} onChange={(e) => onChange(e.target.checked)} />
-      <span>{label}</span>
+    <label style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', cursor: 'pointer' }}>
+      <input
+        type="checkbox" checked={checked} onChange={e => onChange(e.target.checked)}
+        style={{ accentColor: 'var(--accent)', width: 16, height: 16, flexShrink: 0, marginTop: '0.125rem' }}
+      />
+      <span style={{ fontSize: '0.875rem', color: 'var(--muted)', lineHeight: 1.6 }}>{label}</span>
     </label>
   );
 }

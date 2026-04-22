@@ -1,20 +1,21 @@
 import '@/styles/globals.css';
 import Script from 'next/script';
-import { Open_Sans, Raleway } from 'next/font/google';
+import { Inter, Playfair_Display } from 'next/font/google';
 import type { ReactNode } from 'react';
 import { site } from '@/lib/site';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 
-const openSans = Open_Sans({
+const inter = Inter({
   subsets: ['latin'],
   variable: '--font-body',
   weight: ['400', '500', '600', '700']
 });
 
-const raleway = Raleway({
+const playfair = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-display',
-  weight: ['400', '500', '600', '700', '800']
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic']
 });
 
 export const metadata = {
@@ -82,7 +83,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           }}
         />
       </head>
-      <body className={`${openSans.variable} ${raleway.variable}`}><GoogleAnalytics />{children}</body>
+      <body className={`${inter.variable} ${playfair.variable}`}><GoogleAnalytics />{children}</body>
     </html>
   );
 }
