@@ -231,7 +231,7 @@ export function QualificationForm() {
             {/* ── Step 3: Injuries & Impact ── */}
             {step === 2 && (
               <div style={{ animation: 'fadeIn 0.2s ease' }}>
-                <StepHeader step="3" title="Injuries &amp; Impact" subtitle="These answers help us understand the impact without asking for sensitive documents." />
+                <StepHeader step="3" title="Injuries & Impact" subtitle="These answers help us understand the impact without asking for sensitive documents." />
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1.25rem', marginBottom: '1.25rem' }}>
                   <RadioField compact label="Were you injured?" name="injured" value={data.injured} options={['Yes', 'No', 'Not sure']} onChange={v => updateField(setData, 'injured', v)} />
                   <RadioField compact label="Did you receive medical attention?" name="medicalAttention" value={data.medicalAttention} options={['Yes', 'No', 'Not yet']} onChange={v => updateField(setData, 'medicalAttention', v)} />
@@ -259,7 +259,7 @@ export function QualificationForm() {
             {/* ── Step 5: Review & Consent ── */}
             {step === 4 && (
               <div style={{ animation: 'fadeIn 0.2s ease' }}>
-                <StepHeader step="5" title="Your Details &amp; Consent" subtitle="Submitting this form is only a request for an initial review. Your answers are encrypted and confidential." />
+                <StepHeader step="5" title="Your Details & Consent" subtitle="Submitting this form is only a request for an initial review. Your answers are encrypted and confidential." />
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1.25rem', marginBottom: '2rem' }}>
                   <Field label="First Name"><Input value={data.fullName.split(' ')[0] || data.fullName} onChange={e => updateField(setData, 'fullName', e.target.value + ' ' + (data.fullName.split(' ').slice(1).join(' ') || ''))} required /></Field>
                   <Field label="Last Name"><Input value={data.fullName.split(' ').slice(1).join(' ')} onChange={e => updateField(setData, 'fullName', (data.fullName.split(' ')[0] || '') + ' ' + e.target.value)} required /></Field>
@@ -355,13 +355,12 @@ export function QualificationForm() {
 
 /* ── Sub-components matching rebrand input styling ─────────────── */
 
-function StepHeader({ step, title, subtitle }: { step: string; title: string; subtitle: string }) {
+function StepHeader({ title, subtitle }: { step: string; title: string; subtitle: string }) {
   return (
     <div style={{ marginBottom: '2rem' }}>
-      <h2
-        style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.25rem, 3vw, 1.75rem)', color: 'var(--primary)', marginBottom: '0.5rem' }}
-        dangerouslySetInnerHTML={{ __html: `${title}` }}
-      />
+      <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.25rem, 3vw, 1.75rem)', color: 'var(--primary)', marginBottom: '0.5rem' }}>
+        {title}
+      </h2>
       <p style={{ color: 'var(--muted)', fontSize: '0.95rem', lineHeight: 1.6 }}>{subtitle}</p>
     </div>
   );
