@@ -52,8 +52,6 @@ export default function ResourcesPage() {
                     padding: '2rem', border: '1px solid var(--border)',
                     background: 'var(--surface)', transition: 'border-color 0.2s',
                   }}
-                    onMouseOver={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(13,27,46,0.3)'; }}
-                    onMouseOut={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--border)'; }}
                   >
                     {/* Category + read time */}
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>

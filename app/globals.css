@@ -2678,3 +2678,23 @@ body.modal-open {
 .prose a  { color: var(--accent); }
 .prose-lg p { font-size: 1.125rem; }
 .prose-xl p { font-size: 1.25rem; }
+
+/* ── Hover utility classes (replaces onMouseOver/onMouseOut in Server Components) ── */
+.hover-border:hover  { border-color: rgba(13,27,46,0.3) !important; }
+.hover-navy:hover    { background: var(--primary-strong) !important; }
+.hover-muted:hover   { background: var(--surface-alt) !important; }
+.hover-text-white:hover { color: #fff !important; }
+.hover-text-primary:hover { color: var(--primary) !important; }
+.hover-border-primary:hover { border-color: rgba(13,27,46,0.3) !important; }
+.card-hover { transition: border-color 0.2s; }
+.card-hover:hover { border-color: rgba(13,27,46,0.3) !important; }
+.btn-primary-hover { transition: background 0.15s; }
+.btn-primary-hover:hover { background: var(--primary-strong) !important; }
+.btn-ghost-hover { transition: background 0.15s; }
+.btn-ghost-hover:hover { background: var(--surface-alt) !important; }
+.link-nav-hover { transition: color 0.15s; }
+.link-nav-hover:hover { color: #fff !important; }
+.prose-link-hover { transition: background 0.15s; }
+.prose-link-hover:hover { background: var(--primary-strong) !important; }
+.share-btn:hover { color: var(--primary) !important; }
+.related-post:hover { border-color: rgba(13,27,46,0.3) !important; }

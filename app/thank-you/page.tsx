@@ -90,8 +90,6 @@ export default function ThankYouPage() {
         <Link
           href="/"
           style={{ marginTop: '2.5rem', fontSize: '0.875rem', color: 'var(--muted)', textDecoration: 'none' }}
-          onMouseOver={e => (e.currentTarget as HTMLElement).style.color = 'var(--primary)'}
-          onMouseOut={e => (e.currentTarget as HTMLElement).style.color = 'var(--muted)'}
         >
           ← Return to home
         </Link>

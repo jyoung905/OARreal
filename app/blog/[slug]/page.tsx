@@ -46,8 +46,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           <Link
             href="/resources"
             style={{ display: 'inline-flex', alignItems: 'center', fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none', marginBottom: '2rem', transition: 'color 0.15s' }}
-            onMouseOver={e => (e.currentTarget as HTMLElement).style.color = '#fff'}
-            onMouseOut={e => (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.7)'}
           >
             <svg style={{ marginRight: '0.5rem' }} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
             Back to Resources
@@ -84,8 +82,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             style={{ padding: '0.5rem', color: 'var(--muted)', background: 'none', border: 'none', cursor: 'pointer', transition: 'color 0.15s' }}
             title="Share"
             onClick={() => navigator.clipboard?.writeText(window.location.href)}
-            onMouseOver={e => (e.currentTarget as HTMLButtonElement).style.color = 'var(--primary)'}
-            onMouseOut={e => (e.currentTarget as HTMLButtonElement).style.color = 'var(--muted)'}
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
           </button>
@@ -93,8 +89,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             style={{ padding: '0.5rem', color: 'var(--muted)', background: 'none', border: 'none', cursor: 'pointer', transition: 'color 0.15s' }}
             title="Print"
             onClick={() => window.print()}
-            onMouseOver={e => (e.currentTarget as HTMLButtonElement).style.color = 'var(--primary)'}
-            onMouseOut={e => (e.currentTarget as HTMLButtonElement).style.color = 'var(--muted)'}
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
           </button>
@@ -146,8 +140,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               color: '#fff', fontSize: '0.875rem', fontWeight: 500,
               textDecoration: 'none', transition: 'background 0.15s',
             }}
-            onMouseOver={e => (e.currentTarget as HTMLElement).style.background = 'var(--primary-strong)'}
-            onMouseOut={e => (e.currentTarget as HTMLElement).style.background = 'var(--primary)'}
           >
             Start Free Review
           </Link>
@@ -163,8 +155,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                   key={p.slug}
                   href={`/blog/${p.slug}`}
                   style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem 1.25rem', background: 'var(--surface)', border: '1px solid var(--border)', textDecoration: 'none', gap: '1rem', transition: 'border-color 0.15s' }}
-                  onMouseOver={e => (e.currentTarget as HTMLElement).style.borderColor = 'rgba(13,27,46,0.3)'}
-                  onMouseOut={e => (e.currentTarget as HTMLElement).style.borderColor = 'var(--border)'}
                 >
                   <div>
                     <div style={{ fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--accent)', marginBottom: '0.25rem' }}>{p.category}</div>

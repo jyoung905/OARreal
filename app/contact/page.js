@@ -39,8 +39,6 @@ export default function ContactPage() {
             padding: '2rem', border: '1px solid var(--border)',
             background: 'var(--surface)', transition: 'border-color 0.2s',
           }}
-            onMouseOver={e => e.currentTarget.style.borderColor = 'rgba(13,27,46,0.3)'}
-            onMouseOut={e => e.currentTarget.style.borderColor = 'var(--border)'}
           >
             {/* Icon box — h-12 w-12 bg-secondary/10 flex items-center justify-center mb-6 */}
             <div style={{
@@ -66,8 +64,6 @@ export default function ContactPage() {
                 textDecoration: 'none', transition: 'background 0.15s',
                 alignSelf: 'flex-start',
               }}
-              onMouseOver={e => e.currentTarget.style.background = 'var(--primary-strong)'}
-              onMouseOut={e => e.currentTarget.style.background = 'var(--primary)'}
             >
               Begin Intake Form
               <svg style={{ marginLeft: '0.5rem' }} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -80,8 +76,6 @@ export default function ContactPage() {
             padding: '2rem', border: '1px solid var(--border)',
             background: 'var(--surface)', transition: 'border-color 0.2s',
           }}
-            onMouseOver={e => e.currentTarget.style.borderColor = 'rgba(13,27,46,0.3)'}
-            onMouseOut={e => e.currentTarget.style.borderColor = 'var(--border)'}
           >
             {/* Icon box — bg-primary/10 */}
             <div style={{
@@ -107,8 +101,6 @@ export default function ContactPage() {
                 fontSize: '0.875rem', fontWeight: 500, textDecoration: 'none',
                 transition: 'background 0.15s', alignSelf: 'flex-start',
               }}
-              onMouseOver={e => e.currentTarget.style.background = 'var(--surface-alt)'}
-              onMouseOut={e => e.currentTarget.style.background = 'transparent'}
             >
               info@ontarioaccidentreview.ca
             </a>
