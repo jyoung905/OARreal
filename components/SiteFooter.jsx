@@ -1,3 +1,4 @@
+'use client';
 import Link from 'next/link';
 
 /* ─────────────────────────────────────────────────────────────────
@@ -46,9 +47,7 @@ export function SiteFooter() {
                 { href: '/#intake',   label: 'Start Review' },
               ].map(({ href, label }) => (
                 <li key={href}>
-                  <Link href={href} style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.875rem', textDecoration: 'none' }}
-                    onMouseOver={e => e.currentTarget.style.color = 'var(--accent)'}
-                    onMouseOut={e => e.currentTarget.style.color = 'rgba(255,255,255,0.7)'}
+                  <Link href={href} className="footer-link"
                   >{label}</Link>
                 </li>
               ))}
@@ -66,9 +65,7 @@ export function SiteFooter() {
                 { href: '/resources/first-72-hours',     label: 'First 72 Hours' },
               ].map(({ href, label }) => (
                 <li key={href}>
-                  <Link href={href} style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.875rem', textDecoration: 'none' }}
-                    onMouseOver={e => e.currentTarget.style.color = 'var(--accent)'}
-                    onMouseOut={e => e.currentTarget.style.color = 'rgba(255,255,255,0.7)'}
+                  <Link href={href} className="footer-link"
                   >{label}</Link>
                 </li>
               ))}
@@ -85,9 +82,7 @@ export function SiteFooter() {
                 { href: '/disclaimer',       label: 'Disclaimer' },
               ].map(({ href, label }) => (
                 <li key={href}>
-                  <Link href={href} style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.875rem', textDecoration: 'none' }}
-                    onMouseOver={e => e.currentTarget.style.color = 'var(--accent)'}
-                    onMouseOut={e => e.currentTarget.style.color = 'rgba(255,255,255,0.7)'}
+                  <Link href={href} className="footer-link"
                   >{label}</Link>
                 </li>
               ))}
