@@ -113,10 +113,10 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         {/* End CTA — matches rebrand: mt-20 p-8 bg-muted/50 border */}
         <div style={{ marginTop: '5rem', padding: '2rem', background: 'rgba(214,220,230,0.3)', border: '1px solid var(--border)' }}>
           <h3 className="font-serif" style={{ fontSize: '1.5rem', fontWeight: 400, color: 'var(--primary)', marginBottom: '1rem' }}>
-            Need personalized clarity?
+            Want to know how this applies to your specific situation?
           </h3>
           <p style={{ color: 'var(--muted)', marginBottom: '1.5rem', lineHeight: 1.65, fontSize: '0.95rem' }}>
-            General information can only take you so far. Get a free, confidential review of your specific situation to understand exactly what you are entitled to.
+            Get a free, plain-language review of your claim. No cost, no obligation, no lawyers required to start. Takes about 2 minutes.
           </p>
           <Link
             href="/#intake"
@@ -127,7 +127,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               textDecoration: 'none', transition: 'background 0.15s',
             }}
           >
-            Start Free Review
+            Get My Free Claim Review →
           </Link>
         </div>
 

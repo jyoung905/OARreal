@@ -28,10 +28,10 @@ export default function ResourcesPage() {
       <section style={{ background: 'var(--primary)', color: '#fff', padding: 'clamp(4rem,8vw,5rem) 1.5rem' }}>
         <div style={{ maxWidth: 960, margin: '0 auto' }}>
           <h1 className="font-serif" style={{ fontSize: 'clamp(2rem,5vw,3.25rem)', fontWeight: 400, marginBottom: '1.5rem', lineHeight: 1.15 }}>
-            Resource Center
+            Resources &amp; Insights
           </h1>
           <p style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.8)', maxWidth: 560, fontWeight: 300, lineHeight: 1.65 }}>
-            Plain-language guides to understanding Ontario&apos;s Statutory Accident Benefits Schedule. Knowledge is your best defense.
+            Ontario accident benefits explained in plain language. Know before you claim.
           </p>
         </div>
       </section>
