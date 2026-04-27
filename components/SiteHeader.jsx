@@ -3,6 +3,12 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { site } from '@/lib/site';
+import { Analytics } from '@/lib/analytics';
+
+function trackHeaderCta(location) {
+  Analytics.ctaClick({ cta_text: 'Start My Free Accident Review', cta_location: location });
+  Analytics.intakeStart({ trigger: location });
+}
 
 /* ─────────────────────────────────────────────────────────────────
    SiteHeader — Rebrand visual port
@@ -67,8 +73,9 @@ export function SiteHeader() {
         {/* CTA + mobile burger */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <a
-            href="#intake"
+            href="/#intake"
             className="desktop-only"
+            onClick={() => trackHeaderCta('header')}
             style={{
               display: 'inline-flex', height: 40, alignItems: 'center',
               padding: '0 1.5rem', background: 'var(--primary)',
@@ -78,7 +85,7 @@ export function SiteHeader() {
             onMouseOver={e => e.currentTarget.style.background = 'var(--primary-strong)'}
             onMouseOut={e => e.currentTarget.style.background = 'var(--primary)'}
           >
-            Get My Free Review
+            Start My Free Review
           </a>
 
           {/* Hamburger */}
@@ -110,15 +117,15 @@ export function SiteHeader() {
             <Link key={href} href={href} onClick={() => setOpen(false)} style={{ color: 'var(--text-strong)', fontWeight: 500, textDecoration: 'none' }}>{label}</Link>
           ))}
           <a
-            href="#intake"
-            onClick={() => setOpen(false)}
+            href="/#intake"
+            onClick={() => { setOpen(false); trackHeaderCta('mobile_menu'); }}
             style={{
               display: 'inline-flex', height: 44, alignItems: 'center', justifyContent: 'center',
               background: 'var(--primary)', color: '#fff', fontWeight: 500,
               textDecoration: 'none', marginTop: '0.5rem',
             }}
           >
-            Get My Free Review
+            Start My Free Review
           </a>
         </nav>
       )}

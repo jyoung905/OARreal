@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Script from 'next/script';
 import TrackLead from '@/components/TrackLead';
 
 /* ─────────────────────────────────────────────────────────────────
@@ -28,7 +27,7 @@ const STEPS = [
   {
     n: '3',
     title: 'You decide what to do next',
-    body: 'If appropriate, we may suggest connecting with a licensed Ontario personal injury lawyer who can explain your options. There is no obligation at any stage — nothing moves forward unless you choose it to.',
+    body: 'If appropriate, we may suggest a practical next step or a connection with a legal professional or relevant service provider. There is no obligation at any stage.',
   },
 ];
 
@@ -43,10 +42,6 @@ export default function ThankYouPage() {
   return (
     <>
       <TrackLead />
-      <Script id="google-ads-conversion" strategy="afterInteractive">
-        {`gtag('event', 'conversion', {'send_to': 'AW-18043625605/HwLYCIypipAcEIXB75tD','value': 1.0,'currency': 'CAD'});`}
-      </Script>
-
       {/* Visual: min-h-[80vh] flex flex-col items-center justify-center bg-background px-4 py-20 */}
       <div style={{ minHeight: '80vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: 'var(--bg)', padding: 'clamp(3rem,8vw,5rem) 1.5rem' }}>
         <div style={{ maxWidth: 640, width: '100%' }}>
@@ -66,14 +61,13 @@ export default function ThankYouPage() {
 
             {/* Heading — ORIGINAL OAR COPY */}
             <h1 className="font-serif" style={{ fontSize: 'clamp(1.875rem,4vw,3rem)', fontWeight: 400, color: 'var(--primary)', marginBottom: '1.25rem', letterSpacing: '-0.01em', lineHeight: 1.15 }}>
-              You&apos;re done. We&apos;ll take it from here.
+              Thanks — your free review request was received.
             </h1>
 
             {/* Body — ORIGINAL OAR COPY */}
             <p style={{ fontSize: '1.125rem', color: 'var(--muted)', lineHeight: 1.65, maxWidth: 560 }}>
-              Your submission has been received. You don&apos;t need to do anything else right now.
-              A representative will review your information and, if your situation fits our criteria,
-              reach out to you using the contact details you provided.
+              We&apos;ll review the information and follow up with practical next steps if your situation fits our intake criteria.
+              You don&apos;t need to do anything else right now.
             </p>
           </div>
 

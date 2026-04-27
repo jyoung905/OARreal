@@ -40,7 +40,7 @@ const faqJsonLd = {
       name: 'What does the free review include?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Our review covers a comprehensive analysis of your accident benefits entitlements under Ontario\'s Statutory Accident Benefits Schedule (SABS), including income replacement, medical and rehabilitation benefits, attendant care, and non-earner benefits.',
+        text: 'The free review looks at common Ontario accident benefits issues such as treatment and rehabilitation benefits, income replacement possibility, attendant care or caregiver-related issues if applicable, delays, denials, and practical next steps.',
       },
     },
     {
@@ -48,7 +48,7 @@ const faqJsonLd = {
       name: 'How long does the review process take?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The initial intake form takes about 2 minutes to complete. A licensed Ontario professional personally reviews your submission — typically within 1–2 business days. If your situation qualifies, a representative will reach out with plain-language guidance.',
+        text: 'The initial intake form takes about 2 minutes to complete. Your submission is reviewed and, if your situation appears to fit the intake criteria, a representative may reach out with practical next-step information.',
       },
     },
     {
@@ -56,7 +56,7 @@ const faqJsonLd = {
       name: 'Is my information kept confidential?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. All information you provide is treated with strict confidentiality. We use encrypted communications and never share your details with third parties without your explicit consent.',
+        text: 'Your information is used only to review your accident-benefits situation and follow up about possible next steps. Ontario Accident Review is not connected to your insurer.',
       },
     },
     {
@@ -64,7 +64,7 @@ const faqJsonLd = {
       name: 'Do I need a lawyer to use this service?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. Ontario Accident Review is not a law firm. We provide a free, independent assessment to help you understand your situation before deciding on next steps. If legal representation appears appropriate based on your review, we can refer you to qualified Ontario personal injury lawyers — with no obligation.',
+        text: 'No. Ontario Accident Review is not a law firm and does not provide legal advice. Where appropriate, users may be connected with a legal professional or relevant service provider, with no obligation.',
       },
     },
     {
@@ -72,7 +72,7 @@ const faqJsonLd = {
       name: 'What if the accident was partly my fault?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Fault does not necessarily disqualify you from accident benefits in Ontario. Ontario uses a no-fault accident benefits system, which means you may still be entitled to certain benefits regardless of fault. Submit your review and we will assess your specific situation.',
+        text: 'Fault does not necessarily disqualify someone from accident benefits in Ontario. The free review is a general claim-navigation step and does not provide legal advice about fault or entitlement.',
       },
     },
     {

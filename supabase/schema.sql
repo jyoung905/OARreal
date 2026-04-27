@@ -29,7 +29,30 @@ create table if not exists public.intake_submissions (
   review_score integer not null,
   review_bucket text not null,
   raw_submission jsonb not null,
-  created_at timestamptz not null default timezone('utc', now())
+  created_at timestamptz not null default timezone('utc', now()),
+
+  -- Lead quality and attribution fields
+  first_name text,
+  phone_or_email text,
+  city_region text,
+  happened_in_ontario text,
+  main_issue text,
+  needs_treatment_coverage text,
+  missing_work text,
+  short_message text,
+  best_time_to_reach text,
+  landing_page_url text,
+  referrer text,
+  user_agent text,
+  ip_hash text,
+  utm_source text,
+  utm_medium text,
+  utm_campaign text,
+  utm_term text,
+  utm_content text,
+  gclid text,
+  fbclid text,
+  status text not null default 'new' check (status in ('new','contacted','unreachable','unqualified','qualified','referred','accepted_by_partner','rejected_by_partner','spam','test'))
 );
 
 create index if not exists intake_submissions_submitted_at_idx
@@ -37,6 +60,16 @@ create index if not exists intake_submissions_submitted_at_idx
 
 create index if not exists intake_submissions_review_bucket_idx
   on public.intake_submissions (review_bucket);
+
+create index if not exists intake_submissions_status_idx
+  on public.intake_submissions (status);
+
+create index if not exists intake_submissions_campaign_idx
+  on public.intake_submissions (utm_source, utm_medium, utm_campaign);
+
+create index if not exists intake_submissions_gclid_idx
+  on public.intake_submissions (gclid)
+  where gclid is not null;
 
 comment on table public.intake_submissions is 'Ontario Accident Review v1 intake submissions. No insurance details or uploads.';
 

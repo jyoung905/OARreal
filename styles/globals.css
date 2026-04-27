@@ -1,1 +1,29 @@
 @import '../app/globals.css';
+
+/* Mobile sticky lead CTA for Google Ads landing traffic */
+.oar-mobile-sticky-cta {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .oar-mobile-sticky-cta {
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+    bottom: max(0.85rem, env(safe-area-inset-bottom));
+    z-index: 60;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: 0 12px 30px rgba(0, 27, 68, 0.28);
+  }
+
+  body {
+    padding-bottom: 72px;
+  }
+}

@@ -40,11 +40,11 @@ export function SiteFooter() {
             <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: '1.125rem', color: '#fff', marginBottom: '1rem' }}>Navigation</h3>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               {[
-                { href: '/',          label: 'Home' },
-                { href: '/about',     label: 'About Us' },
-                { href: '/resources', label: 'Resources' },
-                { href: '/contact',   label: 'Contact' },
-                { href: '/#intake',   label: 'Start Review' },
+                { href: '/',                   label: 'Home' },
+                { href: '/#how-it-works',      label: 'How it works' },
+                { href: '/#who-this-is-for',   label: 'Who this is for' },
+                { href: '/resources',          label: 'Resources' },
+                { href: '/#intake',            label: 'Start Review' },
               ].map(({ href, label }) => (
                 <li key={href}>
                   <Link href={href} className="footer-link"
@@ -59,10 +59,10 @@ export function SiteFooter() {
             <h3 style={{ fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: '1.125rem', color: '#fff', marginBottom: '1rem' }}>Resources</h3>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               {[
-                { href: '/resources/sabs-overview',      label: 'SABS Overview' },
-                { href: '/resources/critical-deadlines', label: 'Critical Deadlines' },
-                { href: '/resources/income-replacement', label: 'Income Replacement' },
-                { href: '/resources/first-72-hours',     label: 'First 72 Hours' },
+                { href: '/blog/ontario-sabs-explained',                 label: 'SABS Overview' },
+                { href: '/blog/ontario-accident-deadlines',             label: 'Critical Deadlines' },
+                { href: '/blog/income-replacement-rehab-benefits-ontario', label: 'Income Replacement' },
+                { href: '/income-replacement-denied',                   label: 'Income Replacement Denied' },
               ].map(({ href, label }) => (
                 <li key={href}>
                   <Link href={href} className="footer-link"

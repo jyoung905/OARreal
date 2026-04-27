@@ -128,14 +128,14 @@ export default function DeniedIRBPage() {
 
               <h2>What a free review with us looks at</h2>
               <p>
-                When you submit a review through Ontario Accident Review, a licensed Ontario legal
-                professional looks at your specific situation — not a generic form letter. We assess:
+                When you submit a review through Ontario Accident Review, your information is reviewed
+                for common Ontario accident-benefits issues. The review is not legal advice. We look at:
               </p>
               <ul>
-                <li>Whether the insurer's reason for denial holds up legally</li>
-                <li>Whether the disability test was applied correctly to your type of work</li>
-                <li>Which deadlines are still open and what steps remain available</li>
-                <li>Whether your situation is worth pursuing and what a realistic path looks like</li>
+                <li>Whether a denial, delay, or reduction may be worth a closer look</li>
+                <li>Whether income replacement, treatment, or other benefit questions appear relevant</li>
+                <li>What practical next steps may be worth considering</li>
+                <li>Whether speaking with a legal professional may make sense</li>
               </ul>
               <p>
                 There is no cost and no obligation. You do not need to provide your insurance documents
@@ -175,7 +175,7 @@ export default function DeniedIRBPage() {
                   If you were injured in an Ontario accident and your income replacement benefit
                   was denied or reduced, you may have options you have not been told about.
                 </p>
-                <Link href="/#how-it-works" className="button">
+                <Link href="/#intake" className="button">
                   Start your free review
                 </Link>
               </div>
