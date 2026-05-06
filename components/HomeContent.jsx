@@ -7,203 +7,207 @@ function trackCta(text, location) {
   Analytics.intakeStart({ trigger: location });
 }
 
-const NEED_REVIEW = [
-  'You were injured in a car accident',
-  'Insurance has delayed, denied, or reduced benefits',
-  'You are unsure what accident benefits apply',
-  'You are missing work or paying out of pocket for treatment',
-  'Your claim feels confusing or stalled',
+const TRUST_PILLS = [
+  { icon: 'lock', label: 'Free' },
+  { icon: 'verified_user', label: 'Confidential' },
+  { icon: 'person_check', label: 'No obligation' },
 ];
 
-const REVIEW_CHECKS = [
-  'Treatment and rehabilitation benefits',
-  'Income replacement possibility',
-  'Attendant care or caregiver related issues if applicable',
-  'Denials, delays, and claim next steps',
-  'Whether the claim may be worth speaking to a legal professional about',
+const TRUST_STRIP = [
+  { icon: 'admin_panel_settings', title: 'Private & secure', body: 'Your information is used for your review request.' },
+  { icon: 'map', title: 'Ontario-focused', body: 'Built around Ontario accident benefits and timelines.' },
+  { icon: 'check_circle', title: 'Clear & unbiased', body: 'Plain-language information about possible next steps.' },
+  { icon: 'eco', title: 'Here to help', body: 'Support that feels human, not hard to reach.' },
+];
+
+const FEATURES = [
+  { icon: 'medical_services', title: 'Benefits that may apply', body: 'Treatment, rehabilitation, income replacement, attendant care, and other possible accident benefits.' },
+  { icon: 'event_available', title: 'Deadlines to understand', body: 'A clearer view of common timing issues so you know what may need attention.' },
+  { icon: 'description', title: 'Claim issues and documents', body: 'Denials, delays, missing information, insurer communication, and next-step questions.' },
+  { icon: 'forum', title: 'Questions to ask next', body: 'A practical summary that helps you decide whether to speak with a professional.' },
 ];
 
 const STEPS = [
-  { num: '01', title: 'Answer a few questions', desc: 'Tell us the basics in plain language. No policy number, document upload, or long statement required to start.' },
-  { num: '02', title: 'We review the situation', desc: 'Your answers are reviewed against common Ontario accident benefits issues such as treatment, income replacement, delays, and denials.' },
-  { num: '03', title: 'You receive a practical next step', desc: 'If appropriate, we may suggest a next step or connection with a relevant professional or service provider. No obligation.' },
-];
-
-const WHY_START = [
-  { title: 'Ontario accident benefits are confusing', body: 'Many people do not know what treatment coverage, income replacement, or other benefits may apply after a collision.' },
-  { title: 'Delays and denials are common', body: 'If an insurer has stalled, reduced, or denied something, a plain-language review can help identify what may be worth looking at next.' },
-  { title: 'No pressure to hire anyone', body: 'The first step is only a free review request. It does not create a legal relationship or require you to move forward.' },
+  { title: 'Answer a few questions', body: 'Tell us the basics in plain language. No policy number or document upload required to start.' },
+  { title: 'We review your details', body: 'Your answers are reviewed against common Ontario accident benefits issues and timelines.' },
+  { title: 'Get a practical follow-up', body: 'You receive clear next-step information. If appropriate, you may be connected with a relevant professional.' },
 ];
 
 const FAQS = [
   { q: 'Is this free?', a: 'Yes. The initial accident benefits review is free and there is no obligation to proceed with anything.' },
-  { q: 'Do I need my policy number or documents?', a: 'No. You can start without a policy number, claim number, uploads, or insurance paperwork.' },
-  { q: 'Is Ontario Accident Review a law firm?', a: 'No. Ontario Accident Review is not a law firm and does not provide legal advice. The review is for general claim-navigation purposes only.' },
+  { q: 'Do I need my policy number?', a: 'No. You can start without a policy number, claim number, uploads, or insurance paperwork.' },
   { q: 'Will my insurer be notified?', a: 'No. Ontario Accident Review is not connected to your insurer and does not notify your insurer when you submit a review request.' },
-  { q: 'What happens after I submit?', a: 'Your information is reviewed. If your situation appears to fit, you may be contacted about practical next steps. Where appropriate, you may be connected with a legal professional or relevant service provider.' },
-  { q: 'Are there deadlines?', a: 'Ontario accident claims can involve time-sensitive steps. This site does not provide legal deadline advice. If you believe a deadline is urgent, seek qualified legal advice promptly.' },
+  { q: 'Is this legal advice?', a: 'No. Ontario Accident Review is not a law firm and does not provide legal advice. The review is for general claim-navigation information only.' },
 ];
 
-const TRUST_ITEMS = ['Free review', 'Ontario claims only', 'No obligation', 'Takes about 2 minutes'];
+function OntarioMap() {
+  return (
+    <div className="oar-ontario-map" aria-hidden="true">
+      <svg viewBox="0 0 520 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M151 50L230 24L305 62L390 82L463 137L437 206L468 265L420 317L319 300L252 357L174 330L103 367L66 289L30 222L79 167L62 101L151 50Z" fill="#EAF4FF" stroke="#9FC6EF" strokeWidth="3" strokeDasharray="4 4" />
+        <path d="M74 275C132 240 167 249 218 213C284 166 323 173 411 124" stroke="#C7DFF8" strokeWidth="3" strokeLinecap="round" strokeDasharray="3 7" />
+        <circle cx="395" cy="185" r="32" fill="white" stroke="#D8E8FA" strokeWidth="2" />
+        <path d="M386 176c7 5 10 12 9 22M404 176c-7 5-10 12-9 22M386 176c6-3 12-3 18 0" stroke="#0B5FC7" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </div>
+  );
+}
+
+function HeroProductMockup() {
+  return (
+    <div className="oar-product-stage" aria-hidden="true">
+      <OntarioMap />
+
+      <div className="oar-floating-form oar-card">
+        <h3>Your review starts here</h3>
+        <div className="oar-form-progress"><span className="active">1</span> About you <span>2</span> Accident <span>3</span> Injuries <span>4</span> Review</div>
+        <strong style={{ display: 'block', color: 'var(--primary)', marginBottom: '.65rem' }}>When did the accident occur?</strong>
+        <div className="oar-faux-input"><span className="material-symbols-outlined">calendar_month</span> Select date</div>
+        <div className="oar-faux-continue">Continue</div>
+      </div>
+
+      <div className="oar-benefit-card oar-card">
+        <h3>Possible benefits may include</h3>
+        <div className="oar-benefit-list">
+          {['Treatment & rehabilitation coverage', 'Income replacement benefits', 'Caregiver & attendant benefits', 'Medical assessments & reports'].map(item => (
+            <div className="oar-benefit-row" key={item}><span className="oar-check-dot">✓</span>{item}</div>
+          ))}
+        </div>
+      </div>
+
+      <div className="oar-deadline-card oar-card">
+        <h3>Important deadlines</h3>
+        <div className="oar-timeline">
+          <div className="oar-timeline-row"><span className="oar-timeline-marker done" /><div><strong>Accident occurred</strong><small>April 12, 2024</small></div></div>
+          <div className="oar-timeline-row"><span className="oar-timeline-marker" /><div><strong>Apply for benefits</strong><small>As soon as possible</small></div></div>
+          <div className="oar-timeline-row"><span className="oar-timeline-marker" style={{ borderColor: 'var(--gold)' }} /><div><strong>Respond to insurer</strong><small>Within 30 days</small></div></div>
+        </div>
+      </div>
+
+      <div className="oar-review-card oar-card">
+        <h3>Your review summary</h3>
+        <div className="oar-summary-list">
+          {['Benefits snapshot', 'Next steps', 'Important deadlines', 'Helpful resources'].map(item => <div className="oar-summary-row" key={item}><span className="oar-icon blue" style={{ width: 34, height: 34, borderRadius: 12 }}><span className="material-symbols-outlined" style={{ fontSize: 19 }}>article</span></span>{item}</div>)}
+        </div>
+        <small style={{ display: 'block', marginTop: '1rem', color: 'var(--muted)' }}>This is not legal advice.</small>
+      </div>
+
+      <div className="oar-phone-card"><div className="oar-phone-inner"><div className="oar-phone-line blue"/><div className="oar-phone-line"/><div className="oar-phone-line green"/><div className="oar-phone-line"/><div className="oar-phone-line blue"/><div className="oar-phone-line"/></div></div>
+    </div>
+  );
+}
 
 export default function HomeContent() {
   const [openFaq, setOpenFaq] = useState(null);
 
   return (
     <>
-      <section style={{ position: 'relative', minHeight: '86vh', display: 'flex', alignItems: 'center', overflow: 'hidden', background: 'var(--primary)' }}>
-        <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-          <img src="/value-section.jpg" alt="" aria-hidden="true" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', opacity: 0.28, mixBlendMode: 'overlay' }} />
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(90deg, rgba(13,27,46,0.98) 0%, rgba(13,27,46,0.88) 48%, rgba(13,27,46,0.64) 100%)' }} />
-        </div>
+      <section className="oar-hero">
+        <div className="oar-hero-bg-object" aria-hidden="true" />
+        <div className="oar-container oar-hero-grid">
+          <div className="oar-hero-copy">
+            <div className="oar-section-kicker"><span className="material-symbols-outlined">verified_user</span> Ontario accident benefits review</div>
+            <h1 className="oar-display oar-h1">Injured in an Ontario accident?</h1>
+            <div className="oar-blue-copy">Start with a free, private review.</div>
+            <p className="oar-lede">Understand what benefits, deadlines, and next steps may apply after a motor vehicle accident in Ontario.</p>
 
-        <div style={{ position: 'relative', zIndex: 1, maxWidth: 1180, width: '100%', margin: '0 auto', padding: 'clamp(6.5rem,10vw,10rem) 1.5rem' }}>
-          <div style={{ maxWidth: 760 }}>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.375rem 0.875rem', fontSize: '0.875rem', fontWeight: 600, color: 'var(--accent)', border: '1px solid rgba(138,90,26,0.35)', marginBottom: '1.75rem', background: 'rgba(138,90,26,0.12)' }}>
-              Ontario accident benefits review
-            </div>
-            <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2.35rem,5.4vw,4.2rem)', fontWeight: 500, letterSpacing: '-0.035em', lineHeight: 1.06, color: '#fff', marginBottom: '1.35rem' }}>
-              Injured in an Ontario Car Accident? Get a Free Accident Benefits Review.
-            </h1>
-            <p style={{ fontSize: 'clamp(1.02rem,2.2vw,1.2rem)', color: 'rgba(255,255,255,0.84)', marginBottom: '1.35rem', maxWidth: 660, lineHeight: 1.72, fontWeight: 300 }}>
-              Answer a few plain-language questions and find out whether treatment coverage, income replacement, or other accident benefits may apply to your situation.
-            </p>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginBottom: '2rem' }}>
-              {TRUST_ITEMS.map(item => (
-                <span key={item} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem', color: 'rgba(255,255,255,0.86)', fontSize: '0.9rem' }}>
-                  <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--accent)' }} />{item}
-                </span>
+            <div className="oar-pill-row">
+              {TRUST_PILLS.map(item => (
+                <span className="oar-trust-pill" key={item.label}><span className="material-symbols-outlined" style={{ color: 'var(--teal)' }}>{item.icon}</span>{item.label}</span>
               ))}
             </div>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center' }}>
-              <a href="#intake" onClick={() => trackCta('Start My Free Accident Review', 'hero')} style={{ display: 'inline-flex', minHeight: 56, alignItems: 'center', justifyContent: 'center', padding: '0 2rem', background: 'var(--accent)', color: '#fff', fontSize: '1rem', fontWeight: 700, textDecoration: 'none' }}>
-                Start My Free Accident Review
-              </a>
-              <a href="#how-it-works" style={{ display: 'inline-flex', minHeight: 56, alignItems: 'center', justifyContent: 'center', padding: '0 1.5rem', background: 'transparent', border: '1px solid rgba(255,255,255,0.24)', color: '#fff', fontSize: '1rem', fontWeight: 500, textDecoration: 'none' }}>
-                See how it works
-              </a>
+
+            <div className="oar-hero-actions">
+              <a href="#intake" onClick={() => trackCta('Start My Free Review', 'hero')} className="oar-button">Start My Free Review <span className="oar-button-arrow"><span className="material-symbols-outlined">arrow_forward</span></span></a>
+              <a href="#how-it-works" className="oar-link-cta">See how it works <span className="material-symbols-outlined">arrow_forward</span></a>
             </div>
-            <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: 'rgba(255,255,255,0.62)' }}>
-              No policy number or uploads required to start.
-            </p>
+
+            <div className="oar-disclaimer-strip">
+              <span className="oar-icon gold"><span className="material-symbols-outlined">shield</span></span>
+              <span><strong>Ontario Accident Review is not a law firm</strong> and does not provide legal advice.</span>
+            </div>
           </div>
+
+          <HeroProductMockup />
         </div>
       </section>
 
-      <section style={{ padding: 'clamp(3rem,6vw,5rem) 1.5rem', background: '#fff' }} id="who-this-is-for">
-        <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-          <div style={{ maxWidth: 700, marginBottom: '2rem' }}>
-            <div style={{ fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--accent)', marginBottom: '0.75rem' }}>You may need a review if…</div>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.85rem,4vw,2.8rem)', fontWeight: 400, color: 'var(--primary)', lineHeight: 1.18 }}>
-              You are trying to understand what Ontario accident benefits may apply.
-            </h2>
+      <section className="oar-trust-strip-modern">
+        <div className="oar-container oar-trust-strip-grid">
+          {TRUST_STRIP.map(item => (
+            <div className="oar-trust-item" key={item.title}>
+              <span className="oar-icon blue"><span className="material-symbols-outlined">{item.icon}</span></span>
+              <div><strong>{item.title}</strong><span>{item.body}</span></div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="oar-section" id="who-this-is-for">
+        <div className="oar-container">
+          <div className="oar-section-head">
+            <div className="oar-section-kicker"><span className="material-symbols-outlined">task_alt</span> What we help clarify</div>
+            <h2 className="oar-display oar-h2">A calm first step before you decide what to do next.</h2>
+            <p className="oar-lede">The review is designed for people who feel unsure about benefits, deadlines, treatment coverage, insurer delays, or where to start.</p>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '1rem' }}>
-            {NEED_REVIEW.map((item, i) => (
-              <div key={item} style={{ padding: '1.35rem', border: '1px solid var(--border)', background: 'var(--surface-strong)', display: 'flex', gap: '0.8rem', alignItems: 'flex-start' }}>
-                <span style={{ width: 28, height: 28, borderRadius: '50%', background: 'rgba(138,90,26,0.12)', color: 'var(--accent)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, flexShrink: 0 }}>{i + 1}</span>
-                <p style={{ margin: 0, color: 'var(--text-strong)', lineHeight: 1.55, fontSize: '0.95rem', fontWeight: 600 }}>{item}</p>
-              </div>
+          <div className="oar-grid-4">
+            {FEATURES.map(item => (
+              <article className="oar-feature-card oar-card" key={item.title}>
+                <span className="oar-icon"><span className="material-symbols-outlined">{item.icon}</span></span>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section style={{ padding: 'clamp(3rem,6vw,5rem) 1.5rem', background: 'var(--bg)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', alignItems: 'start' }}>
+      <section className="oar-section" id="how-it-works" style={{ background: 'linear-gradient(180deg, rgba(246,241,232,.55), rgba(255,255,255,.65))', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }}>
+        <div className="oar-container">
+          <div className="oar-section-head">
+            <div className="oar-section-kicker"><span className="material-symbols-outlined">route</span> How it works</div>
+            <h2 className="oar-display oar-h2">Three steps. No pressure.</h2>
+          </div>
+          <div className="oar-grid-3">
+            {STEPS.map((step, i) => (
+              <article className="oar-step-card oar-card" key={step.title}>
+                <div className="oar-step-number">{i + 1}</div>
+                <h3>{step.title}</h3>
+                <p>{step.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="oar-section-tight">
+        <div className="oar-container oar-cta-panel oar-card-soft">
           <div>
-            <div style={{ fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--accent)', marginBottom: '0.75rem' }}>What the free review checks</div>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.85rem,4vw,2.6rem)', fontWeight: 400, color: 'var(--primary)', lineHeight: 1.18, marginBottom: '1rem' }}>
-              A practical look at the benefits and next steps people often miss.
-            </h2>
-            <p style={{ color: 'var(--muted)', lineHeight: 1.7, fontSize: '1rem' }}>
-              This is not legal advice and it is not an approval decision. It is a plain-language review to help identify what may be worth looking at next.
-            </p>
+            <div className="oar-section-kicker"><span className="material-symbols-outlined">lock_open</span> Start your review</div>
+            <h2 className="oar-display oar-h3" style={{ marginTop: '1rem' }}>In about 2 minutes, we’ll help you understand what may be available to you.</h2>
+            <p className="oar-lede">We’ll ask a few simple questions to identify possible benefits, deadlines, delays, denials, and next steps. No policy number or documents needed to begin.</p>
+            <a href="#intake" onClick={() => trackCta('Begin review', 'mid_page_cta')} className="oar-button">Begin review <span className="oar-button-arrow"><span className="material-symbols-outlined">arrow_forward</span></span></a>
           </div>
-          <div style={{ display: 'grid', gap: '0.75rem' }}>
-            {REVIEW_CHECKS.map(item => (
-              <div key={item} style={{ background: '#fff', border: '1px solid var(--border)', padding: '1rem 1.15rem', display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-                <span style={{ color: 'var(--accent)', fontWeight: 800 }}>✓</span>
-                <span style={{ color: 'var(--text-strong)', lineHeight: 1.55, fontWeight: 600 }}>{item}</span>
-              </div>
+          <div className="oar-mini-dashboard">
+            {['About you', 'About the accident', 'Your injuries', 'Review possible next steps'].map((item, i) => (
+              <div className="oar-mini-card" key={item}><span className="oar-icon"><span className="material-symbols-outlined">{['person','directions_car','favorite','fact_check'][i]}</span></span><div><h3>{item}</h3><p style={{ margin: '.2rem 0 0', color: 'var(--muted)' }}>{i === 0 ? 'Contact info and background' : i === 1 ? 'When and how it happened' : i === 2 ? 'What you experienced' : 'See benefits and next steps'}</p></div></div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="how-it-works" style={{ padding: 'clamp(4rem,8vw,7rem) 1.5rem', background: '#fff' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-            <div style={{ fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--accent)', marginBottom: '0.75rem' }}>How it works</div>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.85rem,4vw,2.8rem)', fontWeight: 400, color: 'var(--primary)', lineHeight: 1.18 }}>
-              Three steps. No pressure.
-            </h2>
+      <section className="oar-section" id="faq">
+        <div className="oar-container oar-faq-shell">
+          <div>
+            <div className="oar-section-kicker"><span className="material-symbols-outlined">help</span> Frequently asked questions</div>
+            <h2 className="oar-display oar-h2" style={{ marginTop: '1rem' }}>Built on trust. Focused on you.</h2>
+            <p className="oar-lede">Clear answers before you share your information.</p>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.25rem' }}>
-            {STEPS.map(({ num, title, desc }) => (
-              <div key={num} style={{ padding: '2rem', border: '1px solid var(--border)', background: 'var(--surface-strong)' }}>
-                <div style={{ width: 44, height: 44, background: 'var(--primary)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-display)', marginBottom: '1.2rem' }}>{num}</div>
-                <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem', color: 'var(--primary)', marginBottom: '0.6rem', fontWeight: 400 }}>{title}</h3>
-                <p style={{ color: 'var(--muted)', lineHeight: 1.65, fontSize: '0.95rem' }}>{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section style={{ padding: 'clamp(3rem,6vw,5rem) 1.5rem', background: 'var(--bg)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)' }} id="why-start-here">
-        <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-            <div style={{ fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--accent)', marginBottom: '0.75rem' }}>Why start here</div>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.85rem,4vw,2.6rem)', fontWeight: 400, color: 'var(--primary)', lineHeight: 1.18 }}>
-              Serious, simple, Ontario-specific.
-            </h2>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.25rem' }}>
-            {WHY_START.map(({ title, body }) => (
-              <div key={title} style={{ padding: '1.75rem', border: '1px solid var(--border)', background: '#fff' }}>
-                <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.15rem', color: 'var(--primary)', marginBottom: '0.75rem', fontWeight: 400, lineHeight: 1.3 }}>{title}</h3>
-                <p style={{ color: 'var(--muted)', lineHeight: 1.65, fontSize: '0.93rem' }}>{body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section style={{ padding: 'clamp(4rem,8vw,6rem) 1.5rem', background: 'var(--primary)', textAlign: 'center' }}>
-        <div style={{ maxWidth: 760, margin: '0 auto' }}>
-          <div style={{ fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--accent)', marginBottom: '0.75rem' }}>Start your review</div>
-          <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem,5vw,3rem)', fontWeight: 400, color: '#fff', marginBottom: '1.25rem', lineHeight: 1.2 }}>
-            Find out what may apply before the claim stalls further.
-          </h2>
-          <p style={{ fontSize: '1.08rem', color: 'rgba(255,255,255,0.82)', marginBottom: '2rem', fontWeight: 300, lineHeight: 1.65 }}>
-            The form takes about 2 minutes. No policy number, no uploads, and no obligation.
-          </p>
-          <a href="#intake" onClick={() => trackCta('Start My Free Accident Review', 'final_cta')} style={{ display: 'inline-flex', minHeight: 56, alignItems: 'center', justifyContent: 'center', padding: '0 2.25rem', background: 'var(--accent)', color: '#fff', fontSize: '1.05rem', fontWeight: 700, textDecoration: 'none' }}>
-            Start My Free Accident Review
-          </a>
-          <p style={{ margin: '1.75rem auto 0', maxWidth: 760, fontSize: '0.78rem', color: 'rgba(255,255,255,0.55)', lineHeight: 1.6 }}>
-            Ontario Accident Review is not a law firm and does not provide legal advice. The free review is for general claim-navigation purposes only. Where appropriate, users may be connected with a legal professional or relevant service provider.
-          </p>
-        </div>
-      </section>
-
-      <section id="faq" style={{ padding: 'clamp(4rem,8vw,6rem) 1.5rem', background: '#fff' }}>
-        <div style={{ maxWidth: 768, margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-            <div style={{ fontSize: '0.72rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--accent)', marginBottom: '0.75rem' }}>Plain answers</div>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.75rem,4vw,2.5rem)', fontWeight: 400, color: 'var(--primary)', lineHeight: 1.2 }}>
-              Questions before you start
-            </h2>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <div className="oar-faq-list">
             {FAQS.map((faq, i) => (
-              <div key={i} style={{ borderBottom: '1px solid var(--border)' }}>
-                <button onClick={() => { setOpenFaq(openFaq === i ? null : i); Analytics.faqExpand({ question: faq.q, question_index: i }); }} style={{ width: '100%', textAlign: 'left', padding: '1.25rem 0', background: 'none', border: 'none', cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '1rem' }}>
-                  <span style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', fontWeight: 400, color: 'var(--primary)', lineHeight: 1.4 }}>{faq.q}</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, transition: 'transform 0.2s', transform: openFaq === i ? 'rotate(180deg)' : 'none' }}><polyline points="6 9 12 15 18 9"/></svg>
-                </button>
-                {openFaq === i && <div style={{ paddingBottom: '1.25rem', paddingRight: '2rem' }}><p style={{ color: 'var(--muted)', lineHeight: 1.75, fontSize: '0.94rem' }}>{faq.a}</p></div>}
+              <div key={faq.q} className="oar-faq-card oar-card" onClick={() => { setOpenFaq(openFaq === i ? null : i); Analytics.faqExpand({ question: faq.q, question_index: i }); }} style={{ cursor: 'pointer' }}>
+                <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}><span className="oar-icon blue"><span className="material-symbols-outlined">{['attach_money','article','notifications','gavel'][i]}</span></span><div><h3>{faq.q}</h3>{openFaq === i && <p style={{ marginTop: '.65rem' }}>{faq.a}</p>}</div></div>
+                <span className="material-symbols-outlined" style={{ color: 'var(--blue)' }}>{openFaq === i ? 'remove' : 'add'}</span>
               </div>
             ))}
           </div>
