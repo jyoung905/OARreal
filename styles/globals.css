@@ -1,4 +1,5 @@
 @import '../app/globals.css';
+@import './oar-visual-system.css';
 
 /* Mobile sticky lead CTA for Google Ads landing traffic */
 .oar-mobile-sticky-cta {
