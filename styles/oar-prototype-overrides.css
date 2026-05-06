@@ -231,6 +231,8 @@ body {
   opacity: 0.9;
   padding: 24px;
 }
+.oar-claim-stage .oar-review-card { display: none; }
+.oar-grounded-card { box-shadow: var(--shadow-sm); }
 .oar-floating-form h3,
 .oar-mini-card h3,
 .oar-deadline-card h3,
@@ -295,6 +297,139 @@ body {
   background: #fffdf9;
   border-top: 1px solid var(--line);
 }
+
+.oar-filter-chip {
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: white;
+  font-weight: 800;
+  color: var(--navy-2);
+}
+.oar-filter-chip.active {
+  border-color: rgba(0,87,184,.22);
+  background: #f1f7ff;
+  color: var(--blue);
+}
+.oar-resource-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+.oar-resource-image,
+.oar-resource-visual {
+  min-height: 150px;
+  background:
+    linear-gradient(135deg, rgba(0,87,184,.08), rgba(45,154,108,.12)),
+    repeating-linear-gradient(0deg, rgba(7,27,63,.05), rgba(7,27,63,.05) 1px, transparent 1px, transparent 18px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(7,27,63,.42);
+  font-family: Georgia, serif;
+  font-size: 24px;
+  text-align: center;
+  padding: 20px;
+  line-height: 1.1;
+}
+.oar-resource-body { padding: 22px; display: flex; flex-direction: column; flex: 1; }
+.oar-resource-tag {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  background: #e9f5f1;
+  color: #08775f;
+}
+.oar-resource-tag.orange { background: #fff2dd; color: #a86600; }
+.oar-resource-tag.green { background: #e9f5f1; color: #08775f; }
+.oar-resource-body h2 {
+  font-family: Georgia, serif;
+  color: var(--navy);
+  font-size: 25px;
+  line-height: 1.08;
+  letter-spacing: -.04em;
+  margin: 14px 0 10px;
+}
+.oar-resource-body p { color: var(--muted); line-height: 1.55; flex: 1; }
+.oar-read-link,
+.oar-related-link {
+  color: var(--blue);
+  font-weight: 850;
+  margin-top: 18px;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  text-decoration: none;
+}
+.oar-article-toc,
+.oar-article-card,
+.oar-article-callout,
+.oar-article-sidebar .oar-card {
+  background: rgba(255,255,255,.92);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow-sm);
+}
+.oar-article-toc {
+  padding: 18px;
+  position: sticky;
+  top: 100px;
+}
+.oar-article-toc strong { display: block; color: var(--navy); margin-bottom: .7rem; }
+.oar-article-toc a {
+  display: block;
+  padding: 12px;
+  color: var(--muted);
+  font-weight: 750;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.oar-article-toc a.active { background: #f0f7ff; color: var(--blue); }
+.oar-article-card,
+.oar-article-callout { padding: 28px; margin-bottom: 24px; }
+.oar-article-card h2,
+.oar-article-callout h2,
+.oar-article-sidebar h3 {
+  font-family: Georgia, serif;
+  color: var(--navy);
+  font-size: 32px;
+  line-height: 1.08;
+  letter-spacing: -.04em;
+  margin: 0 0 12px;
+}
+.oar-article-card p,
+.oar-article-callout p,
+.oar-article-card li {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 1.02rem;
+  margin: 0 0 1rem;
+}
+.oar-article-callout {
+  background: #f3f8ff;
+  border-color: rgba(0,87,184,.22);
+}
+.oar-article-sidebar { display: grid; gap: 18px; }
+.oar-related-link {
+  margin: 0;
+  justify-content: space-between;
+  padding: .8rem 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--navy-2);
+}
+.oar-related-link:last-child { border-bottom: 0; }
 
 /* Intake modal prototype correction. The modal injects its own style tag, so
    these rules intentionally use !important to keep brand fidelity. */
@@ -404,6 +539,9 @@ body {
   .oar-trust-strip-grid,
   .oar-grid-4,
   .oar-footer-main { grid-template-columns: 1fr 1fr; }
+  .oar-container[style*="grid-template-columns"],
+  main .oar-container[style*="230px"] { grid-template-columns: 1fr !important; }
+  .oar-article-toc { position: relative; top: auto; }
 }
 
 @media (max-width: 640px) {
