@@ -8,33 +8,33 @@ function trackCta(text, location) {
 }
 
 const TRUST_PILLS = [
-  { icon: 'lock', label: 'Free' },
-  { icon: 'verified_user', label: 'Confidential' },
-  { icon: 'person_check', label: 'No obligation' },
+  { icon: 'lock', label: 'Free review' },
+  { icon: 'verified_user', label: 'Private' },
+  { icon: 'location_on', label: 'Ontario only' },
 ];
 
 const TRUST_STRIP = [
-  { icon: 'admin_panel_settings', title: 'Private & secure', body: 'Your information is used for your review request.' },
-  { icon: 'map', title: 'Ontario-focused', body: 'Built around Ontario accident benefits and timelines.' },
-  { icon: 'check_circle', title: 'Clear & unbiased', body: 'Plain-language information about possible next steps.' },
-  { icon: 'eco', title: 'Here to help', body: 'Support that feels human, not hard to reach.' },
+  { icon: 'admin_panel_settings', title: 'Private & secure', body: 'Your request is not sent to your insurer.' },
+  { icon: 'map', title: 'Ontario accident benefits', body: 'Focused on Ontario claim steps, forms, and timing issues.' },
+  { icon: 'fact_check', title: 'Plain-language review', body: 'No hype, no settlement promises, no legal advice.' },
+  { icon: 'support_agent', title: 'Human follow-up', body: 'You get practical next-step information, not pressure.' },
 ];
 
 const FEATURES = [
-  { icon: 'medical_services', title: 'Benefits that may apply', body: 'Treatment, rehabilitation, income replacement, attendant care, and other possible accident benefits.' },
-  { icon: 'event_available', title: 'Deadlines to understand', body: 'A clearer view of common timing issues so you know what may need attention.' },
-  { icon: 'description', title: 'Claim issues and documents', body: 'Denials, delays, missing information, insurer communication, and next-step questions.' },
-  { icon: 'forum', title: 'Questions to ask next', body: 'A practical summary that helps you decide whether to speak with a professional.' },
+  { icon: 'medical_services', title: 'Treatment and rehabilitation', body: 'We look at whether treatment, assessments, or rehabilitation benefits may be part of the next conversation.' },
+  { icon: 'payments', title: 'Income replacement', body: 'If work has been affected, the review can flag income-replacement questions worth organizing.' },
+  { icon: 'description', title: 'OCF forms and paperwork', body: 'We help you think through application-package issues, missing information, insurer requests, and claim records.' },
+  { icon: 'report_problem', title: 'Denials, delays, and reductions', body: 'If benefits were delayed, denied, or reduced, we help identify what facts and dates may matter next.' },
 ];
 
 const STEPS = [
-  { title: 'Answer a few questions', body: 'Tell us the basics in plain language. No policy number or document upload required to start.' },
-  { title: 'We review your details', body: 'Your answers are reviewed against common Ontario accident benefits issues and timelines.' },
-  { title: 'Get a practical follow-up', body: 'You receive clear next-step information. If appropriate, you may be connected with a relevant professional.' },
+  { title: 'Tell us what happened', body: 'Share the accident date, location, type of accident, injuries, and what feels stalled or unclear.' },
+  { title: 'We organize the claim issues', body: 'Your request is reviewed against common Ontario accident-benefits categories, deadlines, denials, and treatment questions.' },
+  { title: 'You decide the next step', body: 'You receive practical follow-up information. If appropriate, you may be connected with a relevant professional. No obligation.' },
 ];
 
 const FAQS = [
-  { q: 'Is this free?', a: 'Yes. The initial accident benefits review is free and there is no obligation to proceed with anything.' },
+  { q: 'Is this free?', a: 'Yes. The initial Ontario accident benefits review request is free and there is no obligation to proceed.' },
   { q: 'Do I need my policy number?', a: 'No. You can start without a policy number, claim number, uploads, or insurance paperwork.' },
   { q: 'Will my insurer be notified?', a: 'No. Ontario Accident Review is not connected to your insurer and does not notify your insurer when you submit a review request.' },
   { q: 'Is this legal advice?', a: 'No. Ontario Accident Review is not a law firm and does not provide legal advice. The review is for general claim-navigation information only.' },
@@ -55,44 +55,43 @@ function OntarioMap() {
 
 function HeroProductMockup() {
   return (
-    <div className="oar-product-stage" aria-hidden="true">
+    <div className="oar-product-stage oar-claim-stage" aria-label="Ontario accident benefits review preview">
       <OntarioMap />
 
-      <div className="oar-floating-form oar-card">
-        <h3>Your review starts here</h3>
+      <div className="oar-floating-form oar-card oar-grounded-card">
+        <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', alignItems: 'center', marginBottom: '1rem' }}>
+          <h3>Your review starts here</h3>
+          <span style={{ color: 'var(--muted)', fontSize: '.76rem', fontWeight: 700 }}>Private request</span>
+        </div>
         <div className="oar-form-progress"><span className="active">1</span> About you <span>2</span> Accident <span>3</span> Injuries <span>4</span> Review</div>
-        <strong style={{ display: 'block', color: 'var(--primary)', marginBottom: '.65rem' }}>When did the accident occur?</strong>
-        <div className="oar-faux-input"><span className="material-symbols-outlined">calendar_month</span> Select date</div>
-        <div className="oar-faux-continue">Continue</div>
+        <strong style={{ display: 'block', color: 'var(--primary)', marginBottom: '.65rem' }}>A few details help us organize the claim issue.</strong>
+        <div className="oar-faux-input"><span className="material-symbols-outlined">calendar_month</span> Accident date</div>
+        <div className="oar-faux-input"><span className="material-symbols-outlined">location_on</span> City or region in Ontario</div>
+        <div className="oar-faux-continue">Begin review</div>
       </div>
 
-      <div className="oar-benefit-card oar-card">
-        <h3>Possible benefits may include</h3>
+      <div className="oar-benefit-card oar-card oar-grounded-card">
+        <h3>What we look at</h3>
         <div className="oar-benefit-list">
-          {['Treatment & rehabilitation coverage', 'Income replacement benefits', 'Caregiver & attendant benefits', 'Medical assessments & reports'].map(item => (
+          {[
+            'Treatment and rehabilitation benefits',
+            'Income replacement questions',
+            'OCF application-package issues',
+            'Insurer delays, denials, or reductions',
+          ].map(item => (
             <div className="oar-benefit-row" key={item}><span className="oar-check-dot">✓</span>{item}</div>
           ))}
         </div>
       </div>
 
-      <div className="oar-deadline-card oar-card">
-        <h3>Important deadlines</h3>
+      <div className="oar-deadline-card oar-card oar-grounded-card">
+        <h3>Dates worth organizing</h3>
         <div className="oar-timeline">
-          <div className="oar-timeline-row"><span className="oar-timeline-marker done" /><div><strong>Accident occurred</strong><small>April 12, 2024</small></div></div>
-          <div className="oar-timeline-row"><span className="oar-timeline-marker" /><div><strong>Apply for benefits</strong><small>As soon as possible</small></div></div>
-          <div className="oar-timeline-row"><span className="oar-timeline-marker" style={{ borderColor: 'var(--gold)' }} /><div><strong>Respond to insurer</strong><small>Within 30 days</small></div></div>
+          <div className="oar-timeline-row"><span className="oar-timeline-marker done" /><div><strong>Accident date</strong><small>Used to orient the review</small></div></div>
+          <div className="oar-timeline-row"><span className="oar-timeline-marker" /><div><strong>Benefits application</strong><small>OCF-1 / application package timing</small></div></div>
+          <div className="oar-timeline-row"><span className="oar-timeline-marker" style={{ borderColor: 'var(--gold)' }} /><div><strong>Insurer response</strong><small>Denial, delay, reduction, or request</small></div></div>
         </div>
       </div>
-
-      <div className="oar-review-card oar-card">
-        <h3>Your review summary</h3>
-        <div className="oar-summary-list">
-          {['Benefits snapshot', 'Next steps', 'Important deadlines', 'Helpful resources'].map(item => <div className="oar-summary-row" key={item}><span className="oar-icon blue" style={{ width: 34, height: 34, borderRadius: 12 }}><span className="material-symbols-outlined" style={{ fontSize: 19 }}>article</span></span>{item}</div>)}
-        </div>
-        <small style={{ display: 'block', marginTop: '1rem', color: 'var(--muted)' }}>This is not legal advice.</small>
-      </div>
-
-      <div className="oar-phone-card"><div className="oar-phone-inner"><div className="oar-phone-line blue"/><div className="oar-phone-line"/><div className="oar-phone-line green"/><div className="oar-phone-line"/><div className="oar-phone-line blue"/><div className="oar-phone-line"/></div></div>
     </div>
   );
 }
@@ -109,7 +108,7 @@ export default function HomeContent() {
             <div className="oar-section-kicker"><span className="material-symbols-outlined">verified_user</span> Ontario accident benefits review</div>
             <h1 className="oar-display oar-h1">Injured in an Ontario accident?</h1>
             <div className="oar-blue-copy">Start with a free, private review.</div>
-            <p className="oar-lede">Understand what benefits, deadlines, and next steps may apply after a motor vehicle accident in Ontario.</p>
+            <p className="oar-lede">A calm first step to organize possible accident benefits, deadlines, insurer issues, and practical next steps.</p>
 
             <div className="oar-pill-row">
               {TRUST_PILLS.map(item => (
@@ -124,7 +123,7 @@ export default function HomeContent() {
 
             <div className="oar-disclaimer-strip">
               <span className="oar-icon gold"><span className="material-symbols-outlined">shield</span></span>
-              <span><strong>Ontario Accident Review is not a law firm</strong> and does not provide legal advice.</span>
+              <span><strong>Ontario Accident Review is not a law firm</strong> and does not provide legal advice or create a lawyer-client relationship.</span>
             </div>
           </div>
 
@@ -147,8 +146,8 @@ export default function HomeContent() {
         <div className="oar-container">
           <div className="oar-section-head">
             <div className="oar-section-kicker"><span className="material-symbols-outlined">task_alt</span> What we help clarify</div>
-            <h2 className="oar-display oar-h2">A calm first step before you decide what to do next.</h2>
-            <p className="oar-lede">The review is designed for people who feel unsure about benefits, deadlines, treatment coverage, insurer delays, or where to start.</p>
+            <h2 className="oar-display oar-h2">Not a claim promise. A clearer starting point.</h2>
+            <p className="oar-lede">The review is for people who are unsure what benefits may apply, what forms or dates matter, or what to do when an insurer response feels confusing.</p>
           </div>
           <div className="oar-grid-4">
             {FEATURES.map(item => (
@@ -184,13 +183,18 @@ export default function HomeContent() {
         <div className="oar-container oar-cta-panel oar-card-soft">
           <div>
             <div className="oar-section-kicker"><span className="material-symbols-outlined">lock_open</span> Start your review</div>
-            <h2 className="oar-display oar-h3" style={{ marginTop: '1rem' }}>In about 2 minutes, we’ll help you understand what may be available to you.</h2>
-            <p className="oar-lede">We’ll ask a few simple questions to identify possible benefits, deadlines, delays, denials, and next steps. No policy number or documents needed to begin.</p>
+            <h2 className="oar-display oar-h3" style={{ marginTop: '1rem' }}>In about 2 minutes, organize the facts that usually matter first.</h2>
+            <p className="oar-lede">We’ll ask about the accident, injuries, work impact, treatment needs, insurer delays or denials, and how to contact you. You do not need a policy number to begin.</p>
             <a href="#intake" onClick={() => trackCta('Begin review', 'mid_page_cta')} className="oar-button">Begin review <span className="oar-button-arrow"><span className="material-symbols-outlined">arrow_forward</span></span></a>
           </div>
           <div className="oar-mini-dashboard">
-            {['About you', 'About the accident', 'Your injuries', 'Review possible next steps'].map((item, i) => (
-              <div className="oar-mini-card" key={item}><span className="oar-icon"><span className="material-symbols-outlined">{['person','directions_car','favorite','fact_check'][i]}</span></span><div><h3>{item}</h3><p style={{ margin: '.2rem 0 0', color: 'var(--muted)' }}>{i === 0 ? 'Contact info and background' : i === 1 ? 'When and how it happened' : i === 2 ? 'What you experienced' : 'See benefits and next steps'}</p></div></div>
+            {[
+              ['About you', 'Your contact info and preferred follow-up.'],
+              ['About the accident', 'Date, location, and type of motor vehicle accident.'],
+              ['Your injuries', 'Treatment needs, symptoms, and work impact.'],
+              ['Claim issue', 'Delay, denial, reduction, paperwork, or uncertainty.'],
+            ].map(([title, body], i) => (
+              <div className="oar-mini-card" key={title}><span className="oar-icon"><span className="material-symbols-outlined">{['person','directions_car','favorite','folder_open'][i]}</span></span><div><h3>{title}</h3><p style={{ margin: '.2rem 0 0', color: 'var(--muted)' }}>{body}</p></div></div>
             ))}
           </div>
         </div>
@@ -200,7 +204,7 @@ export default function HomeContent() {
         <div className="oar-container oar-faq-shell">
           <div>
             <div className="oar-section-kicker"><span className="material-symbols-outlined">help</span> Frequently asked questions</div>
-            <h2 className="oar-display oar-h2" style={{ marginTop: '1rem' }}>Built on trust. Focused on you.</h2>
+            <h2 className="oar-display oar-h2" style={{ marginTop: '1rem' }}>Built on trust. Focused on clarity.</h2>
             <p className="oar-lede">Clear answers before you share your information.</p>
           </div>
           <div className="oar-faq-list">
