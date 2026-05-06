@@ -1,0 +1,439 @@
+/* OAR prototype alignment overrides
+   Source: user-provided Image 2.0 HTML/CSS export.
+   Purpose: tighten Wave 1 from generic inspiration into the exact supplied
+   prototype values, proportions, radius, shadows, and intake visual language. */
+
+:root {
+  --navy: #071b3f;
+  --navy-2: #10284f;
+  --blue: #0057b8;
+  --blue-strong: #004ba0;
+  --blue-2: #0b68d8;
+  --teal: #178c79;
+  --green: #2d9a6c;
+  --gold: #b99355;
+  --cream: #fbf7ef;
+  --cream-2: #f6efe4;
+  --white: #ffffff;
+  --muted: #5e6a7d;
+  --line: #e5e0d8;
+
+  --bg: var(--cream);
+  --bg-soft: var(--cream-2);
+  --bg-warm: #fffdf9;
+  --surface: var(--white);
+  --surface-strong: #fffdf9;
+  --text: var(--navy-2);
+  --text-strong: var(--navy);
+  --primary: var(--navy);
+  --primary-strong: #03102b;
+  --accent: var(--blue);
+  --border: var(--line);
+  --border-strong: #d9dee8;
+
+  --radius: 18px;
+  --radius-sm: 12px;
+  --radius-lg: 28px;
+  --container: 1180px;
+  --shadow: 0 18px 50px rgba(7, 27, 63, 0.10);
+  --shadow-sm: 0 8px 28px rgba(7, 27, 63, 0.08);
+  --shadow-lg: 0 24px 70px rgba(7, 27, 63, 0.14), 0 8px 24px rgba(7, 27, 63, 0.08);
+}
+
+body {
+  background:
+    radial-gradient(circle at 78% 10%, rgba(20, 117, 190, 0.08), transparent 32%),
+    linear-gradient(180deg, #fffdf9 0%, var(--cream) 48%, #fff 100%);
+}
+
+.oar-container,
+.oar-site-header-inner {
+  width: min(var(--container), calc(100% - 40px));
+}
+
+.oar-site-header {
+  background: rgba(255, 255, 255, 0.88);
+  border-bottom-color: rgba(229, 224, 216, 0.85);
+}
+
+.oar-site-header-inner { height: 78px; }
+
+.oar-wordmark {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--navy);
+  letter-spacing: -0.055em;
+  font-weight: 700;
+}
+
+.oar-nav { gap: 30px; }
+.oar-nav a {
+  color: var(--navy-2);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 28px 0;
+}
+.oar-nav a.is-active::after,
+.oar-nav a:hover::after {
+  bottom: -1px;
+  background: var(--blue);
+}
+
+.oar-header-cta {
+  min-height: 50px;
+  padding: 0 24px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--blue), var(--blue-strong));
+  box-shadow: 0 12px 28px rgba(0, 87, 184, 0.24);
+}
+
+.oar-hero {
+  padding: 58px 0 0;
+  min-height: 760px;
+  background:
+    radial-gradient(circle at 78% 10%, rgba(20, 117, 190, 0.08), transparent 32%),
+    linear-gradient(180deg, #fffdf9 0%, var(--cream) 62%, #fff 100%);
+}
+.oar-hero::after { display: none; }
+.oar-hero-grid {
+  grid-template-columns: 0.92fr 1.08fr;
+  gap: 42px;
+}
+
+.oar-section-kicker {
+  gap: 10px;
+  padding: 10px 17px;
+  border: 1px solid rgba(0, 87, 184, 0.18);
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: 999px;
+  color: var(--blue);
+  font-weight: 800;
+  box-shadow: var(--shadow-sm);
+}
+
+.oar-display {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--navy);
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+.oar-h1 {
+  font-size: clamp(58px, 7.3vw, 104px);
+  max-width: 620px;
+}
+.oar-h2 { font-size: clamp(42px, 5vw, 68px); }
+.oar-h3 { font-size: clamp(38px, 4.2vw, 58px); }
+.oar-blue-copy {
+  color: var(--blue);
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+.oar-lede {
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.45;
+  max-width: 610px;
+}
+
+.oar-card,
+.oar-card-soft {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(229, 224, 216, 0.9);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.oar-button {
+  min-height: 62px;
+  padding: 0 28px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--blue), var(--blue-strong));
+  box-shadow: 0 12px 28px rgba(0, 87, 184, 0.24);
+  font-size: 18px;
+}
+.oar-button .oar-button-arrow {
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+}
+.oar-link-cta {
+  color: var(--blue);
+  border-bottom: 1px solid rgba(0, 87, 184, 0.35);
+  padding-bottom: 4px;
+}
+.oar-trust-pill {
+  min-height: 44px;
+  padding: 0 17px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.75);
+  font-weight: 750;
+  color: var(--navy-2);
+}
+.oar-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #e9f5f1;
+  color: var(--teal);
+}
+.oar-icon.blue { background: #eef5ff; color: var(--blue); }
+.oar-icon.gold { background: #fbf4e8; color: var(--gold); }
+
+.oar-product-stage { min-height: 590px; }
+.oar-hero-bg-object {
+  inset: 120px -120px 0 120px;
+  width: auto;
+  min-width: 0;
+  height: auto;
+  border-radius: 36px 0 0 36px;
+  opacity: 1;
+  background:
+    radial-gradient(circle at 75% 20%, rgba(45, 154, 108, 0.14), transparent 28%),
+    linear-gradient(135deg, rgba(255,255,255,.2), rgba(246,239,228,.72));
+  border: 1px solid rgba(229,224,216,.68);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.8);
+}
+.oar-ontario-map {
+  left: 20px;
+  top: 22px;
+  width: 380px;
+  height: 330px;
+  opacity: 0.38;
+  filter: drop-shadow(0 10px 20px rgba(0, 87, 184, 0.12));
+}
+.oar-floating-form {
+  right: 30px;
+  top: 40px;
+  width: 430px;
+  padding: 24px;
+}
+.oar-benefit-card {
+  left: 100px;
+  top: 310px;
+  width: 280px;
+  padding: 24px;
+}
+.oar-deadline-card {
+  right: 0;
+  top: auto;
+  bottom: 70px;
+  width: 280px;
+  padding: 24px;
+}
+.oar-review-card {
+  right: -145px;
+  bottom: 65px;
+  width: 260px;
+  min-height: auto;
+  transform: rotate(7deg);
+  opacity: 0.9;
+  padding: 24px;
+}
+.oar-floating-form h3,
+.oar-mini-card h3,
+.oar-deadline-card h3,
+.oar-benefit-card h3,
+.oar-review-card h3 {
+  color: var(--navy);
+  font-size: 19px;
+  font-weight: 900;
+}
+.oar-faux-input {
+  height: 48px;
+  border-color: #d9dee8;
+  border-radius: 10px;
+  color: #8a94a6;
+}
+.oar-faux-continue {
+  height: 50px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--blue), var(--blue-strong));
+}
+.oar-benefit-list,
+.oar-summary-list,
+.oar-timeline { gap: 13px; }
+.oar-benefit-row,
+.oar-summary-row {
+  color: var(--navy-2);
+  font-size: 13px;
+  font-weight: 700;
+}
+.oar-timeline-row strong { color: var(--navy-2); font-size: 13px; }
+.oar-timeline-row small { color: var(--muted); font-size: 13px; font-weight: 400; }
+
+.oar-disclaimer-strip {
+  max-width: 620px;
+  margin-top: 14px;
+  border: 1px solid rgba(185, 147, 85, 0.25);
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(255,255,255,.88), rgba(246,239,228,.82));
+  padding: 20px;
+}
+.oar-trust-strip-modern {
+  margin-top: 46px;
+  background: rgba(255,255,255,.88);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.oar-trust-strip-grid { min-height: auto; gap: 0; }
+.oar-trust-item {
+  gap: 16px;
+  align-items: flex-start;
+  padding: 24px 22px;
+  border-right: 1px solid var(--line);
+}
+.oar-feature-card,
+.oar-step-card { border-radius: 20px; }
+.oar-disclaimer-panel {
+  border: 1px solid rgba(185,147,85,.24);
+  border-radius: 20px;
+  background: linear-gradient(135deg, #fff, #fbf4e8);
+}
+.oar-site-footer {
+  background: #fffdf9;
+  border-top: 1px solid var(--line);
+}
+
+/* Intake modal prototype correction. The modal injects its own style tag, so
+   these rules intentionally use !important to keep brand fidelity. */
+.im-overlay {
+  background:
+    radial-gradient(circle at 78% 10%, rgba(20, 117, 190, 0.08), transparent 32%),
+    linear-gradient(180deg, #fffdf9 0%, var(--cream) 48%, #fff 100%) !important;
+  font-family: var(--font-body) !important;
+  color: var(--navy) !important;
+}
+.im-glass {
+  background: rgba(255, 255, 255, 0.88) !important;
+  border-bottom: 1px solid rgba(229, 224, 216, 0.85) !important;
+}
+.im-overlay header a span {
+  font-family: Georgia, 'Times New Roman', serif !important;
+  color: var(--navy) !important;
+  letter-spacing: -0.045em !important;
+}
+.im-card {
+  background: rgba(255,255,255,.93) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 30px !important;
+  box-shadow: var(--shadow) !important;
+}
+.im-headline {
+  font-family: Georgia, 'Times New Roman', serif !important;
+  color: var(--navy) !important;
+  letter-spacing: -0.045em !important;
+  font-weight: 700 !important;
+}
+.im-label {
+  color: var(--blue) !important;
+  font-weight: 900 !important;
+}
+.im-prog-bar {
+  background: linear-gradient(90deg, var(--blue), var(--blue-2)) !important;
+}
+.im-btn-primary {
+  background: linear-gradient(135deg, var(--blue), var(--blue-strong)) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 12px 28px rgba(0,87,184,.24) !important;
+}
+.im-btn-back {
+  color: var(--blue) !important;
+}
+.im-pill.selected,
+.im-issue-btn.selected {
+  border-color: var(--green) !important;
+  background: #f4fbf7 !important;
+  color: var(--navy) !important;
+  box-shadow: 0 0 0 3px rgba(45,154,108,.08) !important;
+}
+.im-issue-btn,
+.im-acc-btn {
+  border-color: #dce1e8 !important;
+  background: #fff !important;
+  border-radius: 14px !important;
+  color: var(--navy-2) !important;
+}
+.im-issue-btn:hover,
+.im-acc-btn:hover {
+  border-color: var(--blue) !important;
+}
+.im-acc-btn.selected {
+  border-color: var(--green) !important;
+  background: #f4fbf7 !important;
+  color: var(--navy) !important;
+  box-shadow: 0 0 0 3px rgba(45,154,108,.08) !important;
+}
+.im-acc-btn.selected .im-acc-icon,
+.im-issue-btn.selected .im-issue-dot {
+  color: var(--green) !important;
+  background: var(--green) !important;
+}
+.im-input,
+.im-textarea,
+.im-select {
+  border-bottom-color: #d9dee8 !important;
+  color: var(--navy) !important;
+}
+.im-input:focus,
+.im-textarea:focus,
+.im-select:focus {
+  border-bottom-color: var(--blue) !important;
+}
+.im-info-box {
+  background: #f3f8ff !important;
+  border-color: rgba(0,87,184,.22) !important;
+  color: var(--navy-2) !important;
+}
+.im-trust-dot {
+  background: var(--teal) !important;
+}
+.im-trust {
+  color: var(--navy-2) !important;
+}
+
+@media (max-width: 980px) {
+  .oar-hero { padding-top: 36px; min-height: auto; }
+  .oar-hero-grid { grid-template-columns: 1fr; }
+  .oar-product-stage { min-height: 640px; display: block; }
+  .oar-floating-form { right: auto; left: 0; width: min(100%, 430px); }
+  .oar-benefit-card { left: 0; top: 300px; width: calc(50% - 10px); }
+  .oar-deadline-card { right: 0; bottom: 70px; width: calc(50% - 10px); }
+  .oar-review-card { display: none; }
+  .oar-trust-strip-grid,
+  .oar-grid-4,
+  .oar-footer-main { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .oar-container,
+  .oar-site-header-inner { width: min(100% - 28px, var(--container)); }
+  .oar-site-header-inner { height: 68px; }
+  .oar-wordmark { font-size: 24px !important; }
+  .oar-h1 { font-size: 48px; }
+  .oar-blue-copy { font-size: 28px; }
+  .oar-lede { font-size: 17px; }
+  .oar-hero-actions .oar-button { width: 100%; }
+  .oar-product-stage { min-height: 860px; }
+  .oar-hero-bg-object,
+  .oar-ontario-map { display: none; }
+  .oar-floating-form,
+  .oar-benefit-card,
+  .oar-deadline-card {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    margin-top: 16px;
+  }
+  .oar-trust-strip-grid,
+  .oar-grid-4,
+  .oar-grid-3,
+  .oar-footer-main,
+  .oar-disclaimer-panel { grid-template-columns: 1fr; }
+  .oar-trust-item {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .im-card { padding: 22px !important; border-radius: 22px !important; }
+}
