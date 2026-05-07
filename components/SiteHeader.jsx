@@ -1,129 +1,157 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { site } from '@/lib/site';
 import { Analytics } from '@/lib/analytics';
 
+/* ─────────────────────────────────────────────────────────────────
+   SiteHeader — Rebrand 2026
+   Matches mockup #1/#2/#3: serif inline brand, light cream nav,
+   underlined active link, blue pill CTA "Start My Free Review".
+   ───────────────────────────────────────────────────────────────── */
+
 function trackHeaderCta(location) {
-  Analytics.ctaClick({ cta_text: 'Start My Free Accident Review', cta_location: location });
+  Analytics.ctaClick({ cta_text: 'Start My Free Review', cta_location: location });
   Analytics.intakeStart({ trigger: location });
 }
 
-/* ─────────────────────────────────────────────────────────────────
-   SiteHeader — Rebrand visual port
-   Matches: /Desktop/.openclaw/web/src/components/layout.tsx header
-   h-20, sticky, backdrop-blur, serif brand name, nav links, CTA
-   ───────────────────────────────────────────────────────────────── */
-
 const NAV_LINKS = [
-  { href: '/#how-it-works',    label: 'How it works' },
-  { href: '/#who-this-is-for', label: 'Who this is for' },
-  { href: '/#faq',             label: 'FAQ' },
-  { href: '/resources',        label: 'Resources' },
+  { href: '/',                 label: 'Home', match: '/' },
+  { href: '/#how-it-works',    label: 'How it works', match: '#how-it-works' },
+  { href: '/#who-this-is-for', label: 'Who this is for', match: '#who-this-is-for' },
+  { href: '/#faq',             label: 'FAQ', match: '#faq' },
+  { href: '/resources',        label: 'Resources', match: '/resources' },
 ];
 
 const headerStyle = {
   position: 'sticky', top: 0, zIndex: 50, width: '100%',
-  borderBottom: '1px solid rgba(0,0,0,0.08)',
-  background: 'rgba(247,246,243,0.95)',
-  backdropFilter: 'blur(12px)',
-  WebkitBackdropFilter: 'blur(12px)',
+  borderBottom: '1px solid var(--border-soft)',
+  background: 'rgba(250, 246, 239, 0.92)',
+  backdropFilter: 'blur(14px)',
+  WebkitBackdropFilter: 'blur(14px)',
 };
 
 const innerStyle = {
-  maxWidth: 1200, margin: '0 auto',
+  maxWidth: 1320, margin: '0 auto',
   padding: '0 1.5rem',
-  height: 80, display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+  height: 76, display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+  gap: '1.5rem',
 };
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [hash, setHash] = useState('');
   const pathname = usePathname();
+
+  useEffect(() => {
+    const updateHash = () => setHash(typeof window !== 'undefined' ? window.location.hash : '');
+    updateHash();
+    window.addEventListener('hashchange', updateHash);
+    return () => window.removeEventListener('hashchange', updateHash);
+  }, []);
+
+  const isActive = (link) => {
+    if (link.href === '/' && pathname === '/' && !hash) return true;
+    if (link.href.startsWith('/#') && pathname === '/' && hash === link.match) return true;
+    if (link.href === '/resources' && pathname?.startsWith('/resources')) return true;
+    if (link.href === pathname) return true;
+    return false;
+  };
 
   return (
     <header style={headerStyle}>
       <div style={innerStyle}>
-        {/* Brand name — matches rebrand: font-serif two-line Ontario / Accident Review */}
-        <Link href="/" style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', lineHeight: 1 }}>
-          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '1.2rem', color: 'var(--primary)', letterSpacing: '-0.01em' }}>Ontario</span>
-          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '1.2rem', color: 'var(--accent)', letterSpacing: '-0.01em' }}>Accident Review</span>
+        {/* Brand — serif single line "Ontario Accident Review" */}
+        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <span style={{
+            fontFamily: 'var(--font-display)',
+            fontWeight: 600,
+            fontSize: 'clamp(1.15rem, 1.6vw, 1.45rem)',
+            color: 'var(--primary)',
+            letterSpacing: '-0.01em',
+            lineHeight: 1,
+          }}>
+            Ontario Accident Review
+          </span>
         </Link>
 
         {/* Desktop nav */}
-        <nav style={{ display: 'flex', alignItems: 'center', gap: '2rem', fontSize: '0.875rem', fontWeight: 500 }}>
-          {NAV_LINKS.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              style={{
-                textDecoration: 'none',
-                color: pathname === href ? 'var(--primary)' : 'var(--muted)',
-                transition: 'color 0.15s',
-              }}
-              onMouseOver={e => e.currentTarget.style.color = 'var(--accent)'}
-              onMouseOut={e => e.currentTarget.style.color = pathname === href ? 'var(--primary)' : 'var(--muted)'}
-              className="desktop-only"
-            >
-              {label}
-            </Link>
-          ))}
+        <nav className="desktop-only" style={{ display: 'flex', alignItems: 'center', gap: '2.25rem', fontSize: '0.9rem', fontWeight: 500 }}>
+          {NAV_LINKS.map((link) => {
+            const active = isActive(link);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                style={{
+                  textDecoration: 'none',
+                  color: active ? 'var(--accent)' : 'var(--text-strong)',
+                  fontWeight: active ? 600 : 500,
+                  paddingBottom: 4,
+                  borderBottom: active ? '2px solid var(--accent)' : '2px solid transparent',
+                  transition: 'color 0.15s, border-color 0.15s',
+                }}
+                onMouseOver={e => { if (!active) e.currentTarget.style.color = 'var(--accent)'; }}
+                onMouseOut={e => { if (!active) e.currentTarget.style.color = 'var(--text-strong)'; }}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* CTA + mobile burger */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
           <a
             href="/#intake"
-            className="desktop-only"
+            className="desktop-only oar-btn oar-btn-primary oar-btn-sm"
             onClick={() => trackHeaderCta('header')}
-            style={{
-              display: 'inline-flex', height: 40, alignItems: 'center',
-              padding: '0 1.5rem', background: 'var(--primary)',
-              color: '#fff', fontSize: '0.875rem', fontWeight: 500,
-              textDecoration: 'none', transition: 'background 0.15s',
-            }}
-            onMouseOver={e => e.currentTarget.style.background = 'var(--primary-strong)'}
-            onMouseOut={e => e.currentTarget.style.background = 'var(--primary)'}
+            style={{ height: 44, padding: '0 1.25rem' }}
           >
             Start My Free Review
           </a>
 
-          {/* Hamburger */}
           <button
             onClick={() => setOpen(!open)}
             aria-label={open ? 'Close menu' : 'Open menu'}
-            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '0.5rem', display: 'flex', flexDirection: 'column', gap: 5 }}
             className="mobile-only"
+            style={{
+              background: 'none', border: '1px solid var(--border-strong)',
+              borderRadius: 'var(--radius-sm)', cursor: 'pointer',
+              width: 44, height: 44, display: 'inline-flex',
+              alignItems: 'center', justifyContent: 'center',
+            }}
           >
-            {[0,1,2].map(i => (
-              <span key={i} style={{
-                display: 'block', width: 22, height: 2, background: 'var(--primary)',
-                borderRadius: 2, transition: 'all 0.2s',
-                transform: open ? (i === 0 ? 'translateY(7px) rotate(45deg)' : i === 2 ? 'translateY(-7px) rotate(-45deg)' : 'none') : 'none',
-                opacity: open && i === 1 ? 0 : 1,
-              }} />
-            ))}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              {open
+                ? <><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></>
+                : <><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></>}
+            </svg>
           </button>
         </div>
       </div>
 
       {/* Mobile dropdown */}
       {open && (
-        <nav style={{
+        <nav className="mobile-only" style={{
           background: 'var(--surface)', borderTop: '1px solid var(--border)',
-          padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem',
+          padding: '1.25rem 1.5rem', display: 'flex', flexDirection: 'column', gap: '0.875rem',
         }}>
-          {NAV_LINKS.map(({ href, label }) => (
-            <Link key={href} href={href} onClick={() => setOpen(false)} style={{ color: 'var(--text-strong)', fontWeight: 500, textDecoration: 'none' }}>{label}</Link>
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              style={{ color: 'var(--text-strong)', fontWeight: 500, textDecoration: 'none', padding: '0.5rem 0' }}
+            >
+              {link.label}
+            </Link>
           ))}
           <a
             href="/#intake"
             onClick={() => { setOpen(false); trackHeaderCta('mobile_menu'); }}
-            style={{
-              display: 'inline-flex', height: 44, alignItems: 'center', justifyContent: 'center',
-              background: 'var(--primary)', color: '#fff', fontWeight: 500,
-              textDecoration: 'none', marginTop: '0.5rem',
-            }}
+            className="oar-btn oar-btn-primary"
+            style={{ marginTop: '0.5rem', width: '100%' }}
           >
             Start My Free Review
           </a>
@@ -137,9 +165,10 @@ export function SimpleHeader() {
   return (
     <header style={headerStyle}>
       <div style={innerStyle}>
-        <Link href="/" style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', lineHeight: 1 }}>
-          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '1.2rem', color: 'var(--primary)' }}>Ontario</span>
-          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '1.2rem', color: 'var(--accent)' }}>Accident Review</span>
+        <Link href="/" style={{ textDecoration: 'none' }}>
+          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '1.35rem', color: 'var(--primary)', letterSpacing: '-0.01em' }}>
+            Ontario Accident Review
+          </span>
         </Link>
         <Link href="/" style={{ fontSize: '0.875rem', color: 'var(--muted)', textDecoration: 'none' }}>← Back to home</Link>
       </div>
