@@ -10,8 +10,9 @@ export async function generateStaticParams() {
   return BLOG_POSTS.map(post => ({ slug: post.slug }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const post = getPostBySlug(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
   if (!post) return {};
   return {
     title: `${post.title} | Ontario Accident Review`,
@@ -31,8 +32,9 @@ function slugify(s: string) {
   return s.toLowerCase().replace(/[^\w]+/g, '-').replace(/(^-|-$)/g, '').slice(0, 60);
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug(params.slug);
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
   if (!post) notFound();
 
   const headings = post.sections

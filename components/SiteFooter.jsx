@@ -12,7 +12,7 @@ const TRUST_CARDS = [
   {
     icon: 'shield',
     title: 'Private & confidential',
-    body: 'Your information is encrypted and never shared without your consent.',
+    body: 'Your information is submitted through a secure form. We do not sell it, and we only share it with a qualified professional or relevant provider with your consent or as described in our Privacy Policy.',
     color: 'blue',
   },
   {
@@ -169,7 +169,7 @@ export function SiteFooter() {
             <div style={{ borderLeft: '1px solid rgba(180, 139, 65, 0.32)', paddingLeft: 'clamp(1.25rem, 3vw, 2rem)' }}>
               <p style={{ fontWeight: 600, color: 'var(--primary)', fontSize: '0.9rem', marginTop: 0, marginBottom: '0.5rem' }}>Need legal advice?</p>
               <p style={{ color: 'var(--gold-strong)', fontSize: '0.85rem', lineHeight: 1.6, marginTop: 0, marginBottom: '0.75rem' }}>
-                If you require legal advice, we can help connect you with a licensed professional.
+                If you require legal advice, we may help connect you with a licensed professional after you consent to that referral.
               </p>
               <Link href="/contact" style={{ color: 'var(--accent)', fontSize: '0.875rem', fontWeight: 600, textDecoration: 'none' }}>
                 Learn more about your options →
@@ -270,7 +270,7 @@ export function SiteFooter() {
               <span style={{ color: 'var(--border-strong)' }}>|</span>
               <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: 'var(--muted)' }}>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                256-bit SSL
+                Secure form
               </span>
             </div>
           </div>

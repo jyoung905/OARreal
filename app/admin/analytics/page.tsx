@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
+import { notFound } from 'next/navigation';
 
 export const dynamic = 'force-dynamic';
 
@@ -190,7 +191,13 @@ const BAR = (val: number, max: number, color: string) => (
 );
 
 // ── Page ─────────────────────────────────────────────────────────
-export default async function OARAnalyticsDashboard() {
+export default async function OARAnalyticsDashboard({ searchParams }: { searchParams?: Promise<{ token?: string }> }) {
+  const token = process.env.OAR_ADMIN_TOKEN;
+  const params = await searchParams;
+  if (!token || params?.token !== token) {
+    notFound();
+  }
+
   let data: Awaited<ReturnType<typeof getData>>;
   let errorMsg = '';
 

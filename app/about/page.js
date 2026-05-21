@@ -6,10 +6,10 @@ export const metadata = {
 };
 
 const VALUES = [
-  { icon: 'shield', title: 'Independent', body: 'We are not a law firm and not connected to your insurer. Our only job is to help you understand your situation.' },
+  { icon: 'shield', title: 'Not affiliated with insurers or government', body: 'We are not a law firm, insurer, or government service. Our role is to provide general claim-navigation information and possible next steps.' },
   { icon: 'leaf',   title: 'Ontario-focused', body: "We work exclusively with Ontario claims and Ontario's Statutory Accident Benefits Schedule." },
   { icon: 'chat',   title: 'Plain language', body: 'No jargon. We explain benefits, deadlines, and processes in language anyone can understand.' },
-  { icon: 'lock',   title: 'Private', body: 'Your information is encrypted, never shared without consent, and never sold.' },
+  { icon: 'lock',   title: 'Private', body: 'Your information is submitted through a secure form, never sold, and only shared with a qualified professional or relevant provider with your consent or as described in our Privacy Policy.' },
 ];
 
 function I({ name, color = 'currentColor' }) {

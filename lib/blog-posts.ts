@@ -12,14 +12,14 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'ontario-accident-deadlines',
     title: 'The 5 Deadlines Ontario Accident Victims Miss — And What Happens When They Do',
-    description: "Missing a single deadline can permanently eliminate benefits you're legally entitled to under Ontario's accident benefits framework. Here's what to know.",
+    description: "Missing a deadline can seriously affect an Ontario accident-benefits claim or dispute. Here are common timing issues to know about.",
     category: 'Deadlines & Timelines',
     readTime: '8 min read',
     oldHtmlPath: '/blog-deadlines.html',
     sections: [
       {
         type: 'paragraph',
-        body: "Ontario's accident benefits system is governed by the Statutory Accident Benefits Schedule (SABS) — a dense piece of legislation with hard deadlines baked in at every step. Unlike other legal matters where a late filing might be excused, missing a SABS deadline can mean the permanent loss of benefits you're entitled to. No extension. No appeal. No second chance.",
+        body: "Ontario's accident benefits system is governed by the Statutory Accident Benefits Schedule (SABS). It includes time-sensitive notice, application, and dispute steps. Missing a deadline can seriously affect your ability to claim or dispute benefits, so urgent timing questions should be reviewed with a qualified legal professional promptly.",
       },
       {
         type: 'paragraph',
@@ -46,9 +46,9 @@ export const BLOG_POSTS: BlogPost[] = [
         body: "When: 2 years from date of accident. What: File a tort (lawsuit) claim against the at-fault party.\n\nIn addition to accident benefits through your own insurer, you may have the right to sue the at-fault party for damages (pain and suffering, future care costs, lost income beyond what SABS covers). This right expires 2 years from the date of the accident under Ontario's Limitations Act.\n\nMissing this deadline is permanent. There are narrow exceptions for minors and certain cases of incapacity, but for most adults, the 2-year window is absolute.",
       },
       {
-        heading: '5. The 2-Year Deadline for Applying to FSRA Dispute Resolution',
+        heading: '5. The Dispute Deadline for LAT-AABS Applications',
         type: 'callout',
-        body: "When: 2 years from the insurer's refusal or denial. What: Apply to FSRA for dispute resolution if insurer denied a benefit.\n\nIf your insurer denies, delays, or reduces a benefit, Ontario has a formal dispute resolution process through FSRA (Financial Services Regulatory Authority of Ontario). You must apply within 2 years of the refusal. Waiting out the dispute or hoping the situation resolves on its own means losing your right to formally challenge the denial.",
+        body: "If you and your insurer disagree about your entitlement to accident benefits or the amount payable, you may be able to apply to the Licence Appeal Tribunal — Automobile Accident Benefits Service (LAT-AABS), subject to applicable rules and deadlines. Consider getting qualified legal advice promptly if a refusal, suspension, or termination letter mentions a deadline. Official source: https://tribunalsontario.ca/lat-aabs/", 
       },
     ],
   },
@@ -106,7 +106,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: 'Bottom Line',
         type: 'paragraph',
-        body: "Most people who have been in an Ontario accident are entitled to more than they receive. The gap between what's available and what gets paid usually comes down to one thing: the claimant not knowing what to ask for. A free review can help identify exactly where that gap exists in your situation.",
+        body: "Some people miss benefits or next steps because Ontario's accident-benefits system is hard to navigate. A private review can help identify practical questions to ask and issues to clarify.",
       },
     ],
   },
@@ -120,7 +120,7 @@ export const BLOG_POSTS: BlogPost[] = [
     sections: [
       {
         type: 'paragraph',
-        body: "After an accident in Ontario, at some point your insurer — or the at-fault driver's insurer — will make you an offer. It might come weeks after the accident or years later. It might seem generous in the moment. And almost always, it's less than what you would be entitled to if you fully understood your situation.",
+        body: "After an accident in Ontario, at some point your insurer — or the at-fault driver's insurer — will make you an offer. It might come weeks after the accident or years later. It might seem generous in the moment. And almost always, it's less than what may be appropriate once the full situation is understood.",
       },
       {
         heading: 'What Is a Settlement Offer, Exactly?',
@@ -134,7 +134,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: 'Why First Offers Are Almost Always Low',
         type: 'paragraph',
-        body: "Insurers are structured to minimize payouts. This is not a conspiracy — it's the basic economics of the insurance industry. Adjusters are evaluated on claim cost management, and initial offers are typically calibrated to close files quickly at the lowest feasible amount.\n\nSeveral structural factors work against claimants: Offers often come before the full extent of injuries is known. Chronic conditions, psychological impacts, and long-term functional limitations frequently don't become clear for months or years. An offer might cover current medical bills but underestimate future treatment, attendant care, or lost earning capacity. Most people accept an offer without knowing whether they're entitled to more under SABS or tort. After a serious accident, many people just want closure — and insurers know that.",
+        body: "Insurers are structured to minimize payouts. This is not a conspiracy — it's the basic economics of the insurance industry. Adjusters are evaluated on claim cost management, and initial offers are typically calibrated to close files quickly at the lowest feasible amount.\n\nSeveral structural factors work against claimants: Offers often come before the full extent of injuries is known. Chronic conditions, psychological impacts, and long-term functional limitations frequently don't become clear for months or years. An offer might cover current medical bills but underestimate future treatment, attendant care, or lost earning capacity. Most people accept an offer without knowing which SABS or tort issues may still need review. After a serious accident, many people just want closure — and insurers know that.",
       },
       {
         heading: 'What You Should Know Before Accepting',
@@ -144,7 +144,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: 'The Bottom Line',
         type: 'paragraph',
-        body: "You are not obligated to accept the first offer — or any offer — on any timeline. The pressure to settle quickly is real, but the consequences of settling for too little are permanent. A free review can help you understand exactly what your claim is worth before you make that decision.",
+        body: "You are not obligated to accept the first offer — or any offer — on any timeline. The pressure to settle quickly is real, but the consequences of settling for too little are permanent. A private review can help you understand exactly what questions to ask before you make that decision.",
       },
     ],
   },
@@ -192,7 +192,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        body: "If your insurer has denied, reduced, or delayed any of these benefits, Ontario's dispute resolution system through FSRA provides a formal mechanism to challenge that decision within 2 years of the refusal.",
+        body: "If you and your insurer disagree about entitlement to statutory accident benefits or the amount payable, you may be able to apply to LAT-AABS, subject to applicable rules and deadlines. Official source: https://tribunalsontario.ca/lat-aabs/",
       },
     ],
   },
@@ -206,7 +206,7 @@ export const BLOG_POSTS: BlogPost[] = [
     sections: [
       {
         type: 'paragraph',
-        body: "Receiving a denial letter from your insurance company can feel like the end of the road. In Ontario, it isn't. The accident benefits system comes with a formal dispute resolution process administered by the Financial Services Regulatory Authority of Ontario (FSRA) — but it's only available to those who understand it exists and act before the deadline.",
+        body: "Receiving a denial letter from your insurance company can feel like the end of the road. In Ontario, it isn't. The accident benefits system comes with a formal dispute resolution process handled through the Licence Appeal Tribunal — Automobile Accident Benefits Service (LAT-AABS) — but it's only available to those who understand it exists and act before the deadline.",
       },
       {
         heading: 'Why Insurers Deny Claims',
@@ -216,22 +216,22 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         heading: 'The 2-Year Deadline to Apply for Dispute Resolution',
         type: 'callout',
-        body: "Critical Deadline: You must apply to FSRA for dispute resolution within 2 years of the date the insurer refused, suspended, or terminated a benefit. Missing this deadline eliminates your right to formally dispute the denial.\n\nThis is not a soft deadline. Once 2 years have passed from the insurer's refusal, your right to challenge is gone. Many claimants assume they can dispute a denial whenever it's convenient — this is incorrect.",
+        body: "Accident-benefit disputes are time-sensitive. If your insurer refused, suspended, or terminated a benefit, consider getting qualified legal advice promptly about any LAT-AABS deadline that may apply. This site is not a law firm and does not provide legal advice.",
       },
       {
         heading: 'Step 1: Internal Review Request',
         type: 'paragraph',
-        body: "Before going to FSRA, you have the option to request an internal review from your insurer within 10 business days of receiving a denial. The insurer must provide a written decision on the internal review. While this step is not mandatory, it can sometimes resolve straightforward disputes without formal proceedings.\n\nHowever, an internal review does not pause the 2-year FSRA deadline. If you request an internal review and the insurer upholds the denial, you still must apply to FSRA within 2 years of the original denial.",
+        body: "Before applying to LAT-AABS, review the insurer's denial letter, request clarification if needed, and gather supporting documents. Do not assume informal discussions pause any formal deadline. Consider qualified legal advice promptly if a denial or deadline is involved.",
       },
       {
-        heading: 'Step 2: FSRA Dispute Resolution',
+        heading: 'Step 2: LAT-AABS Dispute Process',
         type: 'paragraph',
-        body: "The Financial Services Regulatory Authority of Ontario administers the accident benefits dispute resolution process. There are two main dispute resolution streams: Mediation: A neutral mediator helps both parties reach an agreement. This is non-binding — either party can reject the outcome. Arbitration: If mediation fails or is waived, an arbitrator makes a binding decision. The arbitrator has full authority to award the disputed benefit, plus interest and costs.",
+        body: "The Licence Appeal Tribunal — Automobile Accident Benefits Service (LAT-AABS) resolves disputes about an insured person's entitlement to statutory accident benefits or the amount payable. Use official LAT-AABS rules and forms before relying on any general summary. Official source: https://tribunalsontario.ca/lat-aabs/",
       },
       {
         heading: 'What to Do if Your Claim Was Denied',
         type: 'list',
-        body: "Note the date of the denial letter — your 2-year deadline starts from that date\nRead the denial carefully and identify the stated reason\nGather any medical or other evidence that contradicts the insurer's position\nConsider whether an internal review is appropriate, but don't let it distract from the FSRA deadline",
+        body: "Note the date of the denial letter and any deadline language\nRead the denial carefully and identify the stated reason\nGather medical records, treatment plans, and insurer correspondence\nConsider getting qualified legal advice promptly about whether a LAT-AABS application deadline applies",
       },
     ],
   },
@@ -335,7 +335,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { heading: '5. Seek Medical Attention', type: 'paragraph', body: "Even if you do not feel seriously hurt, see a doctor as soon as possible. Many injuries — particularly soft tissue injuries, concussions, and psychological trauma — do not present immediately. A medical record created close to the time of the accident creates a documented link between the accident and your injuries. Waiting weeks or months to seek treatment weakens your claim significantly." },
       { heading: '6. Do Not Admit Fault or Apologize', type: 'callout', body: "Do not apologize at the scene, even out of politeness. In Ontario, statements made at the scene can be used against you in insurance proceedings. Fault is determined by your insurer and the Fault Determination Rules — not by what was said roadside." },
       { heading: '7. Keep Records of Everything', type: 'list', body: "All medical appointments, diagnoses, and treatments related to the accident\nTime missed from work and your income at the time of the accident\nAny expenses related to your injuries — prescriptions, travel to appointments, home help\nAll correspondence with your insurer" },
-      { type: 'paragraph', body: "The days immediately after an accident are when the foundation of your claim is built. A free review can help you understand what your next steps should be based on what has already happened." },
+      { type: 'paragraph', body: "The days immediately after an accident are when the foundation of your claim is built. A private review can help you understand what your next steps should be based on what has already happened." },
     ],
   },
   {
@@ -352,7 +352,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { heading: 'The Tort Claim: Suing the At-Fault Driver', type: 'paragraph', body: "Because you were not at fault, you have the right to bring a tort claim against the at-fault driver. This is separate from your accident benefits claim. A tort claim can compensate you for pain and suffering, loss of enjoyment of life, future income loss, and future care costs that exceed your SABS coverage.\n\nHowever, there is a threshold: Ontario requires that your injuries constitute a \"serious and permanent\" impairment of an important physical, mental, or psychological function before you can claim general damages (non-economic losses like pain and suffering). Minor soft-tissue injuries often don't meet this threshold." },
       { heading: 'The 2-Year Limitation Period for Tort Claims', type: 'callout', body: "If you intend to sue the at-fault driver, you must file a claim within 2 years of the date of the accident. Missing this deadline permanently eliminates your right to sue. Do not assume your accident benefits claim and your tort claim are the same thing — they are separate proceedings with separate timelines." },
       { heading: 'What at-fault Determination Means for Your Future Premiums', type: 'paragraph', body: "If the accident is determined to be 0% your fault, your own insurer is required under Ontario regulations to protect your driving record from being impacted by the at-fault driver's accident. Your premiums cannot be raised solely because you were involved in a not-at-fault accident." },
-      { type: 'paragraph', body: "Understanding exactly what you're entitled to as a not-at-fault victim — and ensuring you've claimed all of it — is what a free review is designed to help with." },
+      { type: 'paragraph', body: "Understanding exactly what may apply as a not-at-fault victim — and ensuring you've claimed all of it — is what a private review is designed to help with." },
     ],
   },
   {
@@ -364,12 +364,12 @@ export const BLOG_POSTS: BlogPost[] = [
     oldHtmlPath: '/blog-denied.html',
     sections: [
       { type: 'paragraph', body: "You filed your accident benefits claim. You did what you were supposed to do. And then your insurer sent a letter telling you the claim is denied. It is a stressful, frustrating moment — and one that many people accept as final when it isn't." },
-      { heading: 'A Denial Is Not the Final Word', type: 'callout', body: "Ontario law provides a formal dispute resolution process for accident benefit denials, administered by the Financial Services Regulatory Authority of Ontario (FSRA). You have the right to challenge your insurer's decision — but you must act before the deadline expires." },
-      { heading: 'Step 1: Note the Date of the Denial Letter', type: 'paragraph', body: "Your right to apply for dispute resolution through FSRA expires 2 years from the date your insurer refused, suspended, or terminated the benefit. The clock starts from the denial letter, not from when you decide to do something about it. Write the date down now." },
+      { heading: 'A Denial Is Not the Final Word', type: 'callout', body: "Ontario law provides a formal dispute resolution process for accident benefit denials, handled through the Licence Appeal Tribunal — Automobile Accident Benefits Service (LAT-AABS). you may be able to challenge your insurer's decision, subject to applicable rules and deadlines." },
+      { heading: 'Step 1: Note the Date of the Denial Letter', type: 'paragraph', body: "Accident-benefit disputes are time-sensitive. Note the denial-letter date and any deadline language immediately, and consider getting qualified legal advice about whether a LAT-AABS application deadline applies." },
       { heading: 'Step 2: Understand Why You Were Denied', type: 'list', body: "Read the denial letter carefully. The most common reasons include:\nYour injury was classified as a minor injury under the Minor Injury Guideline (MIG)\nThe insurer argues the treatment is not reasonable and necessary\nAn independent medical examination (IME) concluded your injuries are less severe than claimed\nYou missed a procedural deadline (late notice, incomplete forms)\nThe insurer disputes whether your condition pre-dates the accident" },
-      { heading: 'Step 3: Request an Internal Review (Optional)', type: 'paragraph', body: "Within 10 business days of a denial, you can request an internal review from your insurer. This is an informal process where the insurer reconsiders the decision. It can sometimes resolve clear-cut errors without formal proceedings. However, an internal review does not pause your 2-year FSRA deadline — the clock keeps running regardless." },
-      { heading: 'Step 4: Apply to FSRA for Dispute Resolution', type: 'callout', body: "If the denial stands, you can apply to FSRA for formal dispute resolution. The two main processes are:\n\nMediation: A neutral mediator helps both sides reach an agreement. Non-binding — either party can reject the outcome.\nArbitration: A binding decision by an arbitrator. The arbitrator can award the disputed benefit plus interest and costs.\n\nYou must apply within 2 years of the denial. Missing this deadline permanently eliminates your right to challenge." },
-      { type: 'paragraph', body: "If your claim has been denied or your benefits have been reduced, a free review can help you understand what your options are and whether the denial is likely worth challenging." },
+      { heading: 'Step 3: Request an Internal Review (Optional)', type: 'paragraph', body: "Within 10 business days of a denial, you can request an internal review from your insurer. This is an informal process where the insurer reconsiders the decision. It can sometimes resolve clear-cut errors without formal proceedings. However, an internal review does not pause your 2-year LAT-AABS deadline — the clock keeps running regardless." },
+      { heading: 'Step 4: Consider LAT-AABS if the Dispute Continues', type: 'callout', body: "If you and your insurer disagree about your entitlement to accident benefits or the amount payable, you may be able to apply to LAT-AABS, subject to applicable rules and deadlines. Official source: https://tribunalsontario.ca/lat-aabs/" },
+      { type: 'paragraph', body: "If your claim has been denied or your benefits have been reduced, a private review can help you understand what your options are and whether the denial is likely worth challenging." },
     ],
   },
   {
@@ -384,9 +384,9 @@ export const BLOG_POSTS: BlogPost[] = [
       { heading: 'What Is the Minor Injury Guideline (MIG)?', type: 'callout', body: "The Minor Injury Guideline is an Ontario regulation that applies to certain soft-tissue injuries: sprains, strains, contusions, abrasions, lacerations, and whiplash-associated disorders (WAD Grade I and II).\n\nUnder the MIG, total treatment costs are capped at $3,500 — regardless of how much treatment you actually need or how long recovery takes. Insurers routinely apply MIG treatment caps to limit exposure on soft-tissue claims." },
       { heading: 'When You Can Argue You Fall Outside the MIG', type: 'paragraph', body: "Not every whiplash case stays in the MIG. You may be able to argue that your injuries fall outside the guideline if: You have a documented pre-existing condition that was worsened by the accident. Your injuries have progressed to WAD Grade III (neurological involvement). You have developed chronic pain, psychological injury (anxiety, depression, PTSD), or cognitive impairment as a result of the accident." },
       { heading: 'What Evidence Supports a MIG Challenge', type: 'list', body: "Medical records showing a pre-existing condition that was aggravated\nDiagnoses of psychological injury from a treating clinician\nEvidence of chronic pain syndrome from a specialist\nNeurological findings supporting WAD Grade III\nTreatment records showing the $3,500 cap was reached and symptoms persist" },
-      { heading: 'The MIG Challenge Process', type: 'paragraph', body: "To dispute a MIG classification, you typically need a medical professional to prepare a report supporting removal from the MIG. Your insurer may then arrange an independent medical examination (IME) to challenge that position. If the dispute is not resolved, it can proceed to formal dispute resolution through FSRA." },
+      { heading: 'The MIG Challenge Process', type: 'paragraph', body: "To dispute a MIG classification, you typically need a medical professional to prepare a report supporting removal from the MIG. Your insurer may then arrange an independent medical examination (IME) to challenge that position. If the dispute is not resolved, it can proceed to a formal LAT-AABS dispute process." },
       { heading: 'Psychological Injuries After an Accident', type: 'callout', body: "Ontario courts and arbitrators have increasingly recognized psychological injuries (anxiety, depression, PTSD) resulting from car accidents as standing outside the MIG. If you are experiencing significant mental health impacts following your accident, this is worth exploring — even if your physical injuries were initially classified as minor." },
-      { type: 'paragraph', body: "If you were placed in the MIG and your symptoms have persisted beyond what $3,500 of treatment has addressed, a free review can help clarify whether your situation may warrant a challenge." },
+      { type: 'paragraph', body: "If you were placed in the MIG and your symptoms have persisted beyond what $3,500 of treatment has addressed, a private review can help clarify whether your situation may warrant a challenge." },
     ],
   },
   {
@@ -403,7 +403,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { heading: 'What Factors Affect the Value of a Pain and Suffering Claim', type: 'list', body: "Severity and permanence of the injury\nImpact on daily activities, relationships, and quality of life\nAge of the claimant (younger victims with permanent impairments receive higher awards)\nPre-accident health and lifestyle\nMedical evidence — the strength and consistency of treating physician reports\nHow well-documented the impact on life has been (journals, testimony from family)\nComparable Ontario case decisions" },
       { heading: 'The Statutory Deductible', type: 'callout', body: "Ontario applies a statutory deductible to pain and suffering awards under $100,000. As of recent adjustments, the deductible is approximately $46,000 — meaning if a jury awards you $60,000 in general damages, the deductible reduces your actual payment to approximately $14,000.\n\nThis deductible does not apply to awards over $100,000. It is one of the most significant and least-understood features of Ontario tort law that affects real settlement values." },
       { heading: 'Why Initial Settlement Offers Are Almost Always Low', type: 'paragraph', body: "Insurers make initial offers knowing most claimants don't understand the full value of their claim. Common tactics include making an early offer before the full extent of injuries is known, bundling accident benefits and tort into a single release, and relying on claimants' desire for closure over maximum recovery." },
-      { type: 'paragraph', body: "Before accepting any settlement that includes pain and suffering, understanding the real value of your claim matters. A free review is a no-pressure first step." },
+      { type: 'paragraph', body: "Before accepting any settlement that includes pain and suffering, understanding the real value of your claim matters. A private review is a no-pressure first step." },
     ],
   },
   {
@@ -418,26 +418,26 @@ export const BLOG_POSTS: BlogPost[] = [
       { heading: 'The Initial Application Phase: 0–60 Days', type: 'callout', body: "Within 7 days: Notify your insurer the accident occurred.\nWithin 10 business days: Your insurer must send you the application forms (OCF forms).\nWithin 30 days of receiving forms: Return completed application.\nWithin 10 business days of receiving your application: Insurer must respond with a determination on accident benefits.\n\nIn practice, initial benefit decisions often take 3–6 weeks after your forms are received." },
       { heading: 'Minor Injury Claims: 3–6 Months', type: 'paragraph', body: "For injuries classified under the Minor Injury Guideline (MIG), the claim is typically short. The $3,500 treatment limit is often reached within a few months of treatment. If there are no disputes, the claim closes when treatment ends or the cap is reached." },
       { heading: 'Non-Catastrophic Injury Claims: 6 Months to 2+ Years', type: 'paragraph', body: "For more serious injuries, the claims process is longer. Treatment, ongoing assessments, and potential disputes about benefit levels can extend a non-catastrophic claim considerably. Income replacement benefits continue while you are off work, which can extend the claim timeline significantly." },
-      { heading: 'Disputed Claims: Add 1–3 Years', type: 'callout', body: "If your insurer denies a benefit or disputes your injury classification, formal dispute resolution through FSRA adds significant time:\n\nInternal review: 1–4 weeks\nFSRA mediation: typically scheduled within 3–6 months of application\nArbitration (if mediation fails): can add another 6–18 months\n\nDisputed catastrophic impairment cases can take 3–5 years to fully resolve." },
+      { heading: 'Disputed Claims: Add 1–3 Years', type: 'callout', body: "If your insurer denies a benefit or disputes your injury classification, a formal LAT-AABS dispute process adds significant time:\n\nInternal review: 1–4 weeks\nLAT-AABS process: typically scheduled within 3–6 months of application\nArbitration (if mediation fails): can add another 6–18 months\n\nDisputed catastrophic impairment cases can take 3–5 years to fully resolve." },
       { heading: 'The 104-Week Transition: A Critical Milestone', type: 'paragraph', body: "At the 2-year mark, your eligibility test for income replacement benefits changes. This is a critical point in the timeline where many claimants see their IRB reduced or eliminated without having been prepared for it. If your claim is approaching the 104-week mark, that should prompt a review of your situation." },
-      { type: 'paragraph', body: "Knowing where your claim stands in the timeline — and what milestones are coming — is exactly what a free review is designed to help with." },
+      { type: 'paragraph', body: "Knowing where your claim stands in the timeline — and what milestones are coming — is exactly what a private review is designed to help with." },
     ],
   },
   {
-    slug: 'insurance-dispute-fsra-mediation-ontario',
-    title: 'How FSRA Mediation Works for Ontario Accident Benefit Disputes',
-    description: 'When your insurer denies a benefit and an internal review fails, FSRA mediation is the next step. Here is what to expect from the process.',
+    slug: 'accident-benefits-dispute-lat-aabs-ontario',
+    title: 'How LAT-AABS Disputes Work for Ontario Accident Benefits',
+    description: 'When your insurer denies or reduces statutory accident benefits, LAT-AABS may be the formal dispute forum. Here is the cautious, plain-language overview.',
     category: 'Insurer Disputes',
     readTime: '6 min read',
     oldHtmlPath: '/blog-fsra.html',
     sections: [
-      { type: 'paragraph', body: "If your Ontario accident benefits claim has been denied and you've exhausted direct discussions with your insurer, the Financial Services Regulatory Authority of Ontario (FSRA) provides a formal dispute resolution process. For most people, mediation is the first formal step." },
-      { heading: 'What Is FSRA Mediation?', type: 'callout', body: "FSRA mediation is a structured, confidential negotiation facilitated by a neutral mediator appointed by FSRA. The mediator does not decide the outcome — they help both sides reach a voluntary agreement. If no agreement is reached, the case can proceed to arbitration.\n\nKey point: Mediation is non-binding. Either party can reject the outcome and proceed to arbitration." },
-      { heading: 'Who Can Apply', type: 'paragraph', body: "Any accident benefits claimant whose insurer has denied, reduced, or terminated a benefit can apply for FSRA dispute resolution. You must apply within 2 years of the insurer's refusal. Applications are submitted through FSRA's online portal." },
-      { heading: 'What to Expect at Mediation', type: 'list', body: "Both parties submit statements of claim and response before the session\nThe session is typically conducted by video or phone (in-person is rare)\nThe mediator meets with both sides — sometimes separately\nA mediation session typically runs 2–4 hours\nIf an agreement is reached, it is documented and binding\nIf no agreement is reached, FSRA issues a certificate allowing you to proceed to arbitration" },
-      { heading: 'What Disputes Can Be Mediated', type: 'list', body: "Denial of income replacement or non-earner benefits\nDisputes about medical and rehabilitation benefit amounts\nMIG classification disputes\nDenials based on independent medical examinations\nCatastrophic impairment designation disputes\nAttendant care disputes" },
-      { heading: 'Preparation Matters', type: 'paragraph', body: "The claimants who do best in mediation are those who have organized medical evidence, understand the basis for the insurer's denial, and have a clear picture of what benefits they are entitled to. Going in without preparation puts you at a significant disadvantage when the insurer has experienced adjusters on their side." },
-      { type: 'paragraph', body: "If you are heading toward a dispute — or already in one — a free review can help you understand what benefits are at stake and what position your situation may support." },
+      { type: 'paragraph', body: "If your Ontario accident benefits claim has been denied or reduced and direct discussions with your insurer do not resolve it, you may be able to apply to the Licence Appeal Tribunal — Automobile Accident Benefits Service (LAT-AABS), subject to rules and deadlines." },
+      { heading: 'What Is LAT-AABS?', type: 'callout', body: "LAT-AABS is the Licence Appeal Tribunal's Automobile Accident Benefits Service. The official LAT-AABS page says it resolves disagreements about an insured person's entitlement to statutory motor vehicle accident benefits or the amount of benefits that should be paid. Official source: https://tribunalsontario.ca/lat-aabs/" },
+      { heading: 'Who Can Apply', type: 'paragraph', body: "A person injured in an automobile accident may be able to apply to LAT-AABS if there is a disagreement about entitlement to accident benefits or the amount payable. Rules, forms, and deadlines should be checked against official LAT-AABS materials: https://tribunalsontario.ca/lat-aabs/" },
+      { heading: 'What to Expect in a LAT-AABS Process', type: 'list', body: "LAT-AABS uses formal rules, forms, and case-management steps\nYour insurer has an opportunity to respond\nSome disputes may resolve before a hearing\nA hearing may be scheduled if the dispute does not resolve\nOfficial forms, rules, and deadlines should be checked directly with LAT-AABS" },
+      { heading: 'Types of Disputes LAT-AABS May Address', type: 'list', body: "Denial of income replacement or non-earner benefits\nDisputes about medical and rehabilitation benefit amounts\nMIG classification disputes\nDenials based on independent medical examinations\nCatastrophic impairment designation disputes\nAttendant care disputes" },
+      { heading: 'Preparation Matters', type: 'paragraph', body: "Preparation matters. Keep denial letters, dates, treatment plans, insurer correspondence, and medical support organized. This article is general information only and is not legal advice." },
+      { type: 'paragraph', body: "If you are heading toward a dispute — or already in one — a private review can help organize the practical questions to ask. This site is not a law firm and does not provide legal advice." },
     ],
   },
   {
@@ -453,7 +453,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { heading: 'What a Pedestrian Victim May Claim', type: 'list', body: "Income replacement benefits if unable to work\nMedical and rehabilitation benefits for treatment\nAttendant care if injuries require daily assistance\nNon-earner benefits if not employed at the time\nDeath and funeral benefits if the accident was fatal (for surviving family members)" },
       { heading: 'The Tort Claim Against the Driver', type: 'paragraph', body: "As a pedestrian who was not at fault, you also have the right to bring a tort claim against the driver who hit you for pain and suffering, future income loss, and future care beyond SABS limits. The 2-year limitation period applies. Pedestrian tort claims are often higher in value than vehicle-on-vehicle claims because pedestrians are typically more severely injured." },
       { heading: 'The 10-Day Municipal Notice — If It Happened on a City Street', type: 'callout', body: "If the accident involved a condition of the road, sidewalk, or intersection that a municipality was responsible for maintaining — poor signage, road defects, inadequate lighting — you may have a separate claim against the municipality. Municipal claims require written notice within 10 days under the Municipal Act. This is one of the shortest deadlines in Ontario personal injury law." },
-      { type: 'paragraph', body: "Pedestrian accident claims involve multiple potential benefit sources and a tort claim. A free review can help clarify which apply to your situation and what steps to take next." },
+      { type: 'paragraph', body: "Pedestrian accident claims involve multiple potential benefit sources and a tort claim. A private review can help clarify which apply to your situation and what steps to take next." },
     ],
   },
   {
@@ -470,7 +470,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { heading: 'What Evidence You Need', type: 'list', body: "A diagnosis from a treating psychologist, psychiatrist, or family physician\nTreatment records showing the psychological condition and its link to the accident\nFunctional capacity evidence showing how the condition limits daily activities" },
       { heading: 'Treatment Benefits for Psychological Injuries', type: 'paragraph', body: "Under SABS, medical and rehabilitation benefits cover psychological treatment — including psychotherapy, counselling, and psychiatric assessment. If your injury falls outside the MIG, the standard non-catastrophic treatment limit applies, which is substantially higher than the MIG cap." },
       { heading: 'Psychological Injuries and the Tort Threshold', type: 'paragraph', body: "Serious psychological injuries — particularly PTSD that causes permanent functional impairment — can also meet Ontario's tort threshold, allowing a claim for pain and suffering against the at-fault driver. Courts have increasingly recognized psychological impairment as meeting the 'serious and permanent' standard." },
-      { type: 'paragraph', body: "If you are dealing with psychological impacts from an accident and your claim has been limited to MIG coverage, a free review can help assess whether your situation may warrant a different treatment." },
+      { type: 'paragraph', body: "If you are dealing with psychological impacts from an accident and your claim has been limited to MIG coverage, a private review can help assess whether your situation may warrant a different treatment." },
     ],
   },
   {
@@ -487,7 +487,7 @@ export const BLOG_POSTS: BlogPost[] = [
       { heading: 'Common Mistakes on OCF Forms', type: 'list', body: "Understating the impact of your injuries — describe your limitations fully, not just your diagnoses\nLeaving sections blank because you're unsure — write your best information and note uncertainty\nMissing the OCF-3 because you haven't seen a doctor yet — seek medical attention promptly and have the form completed\nNot completing the OCF-10 election — failing to elect can delay or forfeit benefits\nNot keeping a copy of everything you submit" },
       { heading: 'What Happens After You Submit', type: 'paragraph', body: "Within 10 business days of receiving your completed application, your insurer must provide a written decision on each benefit. In practice, this often takes longer. The insurer may request additional medical information before deciding, which can extend the timeline." },
       { heading: 'Keep Records of Everything', type: 'callout', body: "Keep a dated copy of every form you submit. Send forms by a method that generates proof of receipt — registered mail or email with confirmation. If your insurer claims they never received your forms, you need proof of submission to protect yourself." },
-      { type: 'paragraph', body: "The application process sets the foundation for your entire accident benefits claim. A free review can help you understand whether your application covered everything you're entitled to — and what to do if something was missed." },
+      { type: 'paragraph', body: "The application process sets the foundation for your entire accident benefits claim. A private review can help you understand whether your application covered everything you're entitled to — and what to do if something was missed." },
     ],
   },
 ];

@@ -1,5 +1,12 @@
+import { fileURLToPath } from 'node:url';
+import { dirname } from 'node:path';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  outputFileTracingRoot: __dirname,
+  turbopack: { root: __dirname },
   async redirects() {
     return [
       // Legacy static HTML pages
@@ -18,6 +25,8 @@ const nextConfig = {
       { source: '/blog-fault.html', destination: '/blog/fault-accident-benefits-ontario', permanent: true },
       { source: '/blog-slip.html', destination: '/blog/slip-and-fall-ontario-occupiers-liability', permanent: true },
 
+      { source: '/blog/insurance-dispute-fsra-mediation-ontario', destination: '/blog/accident-benefits-dispute-lat-aabs-ontario', permanent: true },
+
       // Old short rewrites that may have been shared as links
       { source: '/blog/deadlines', destination: '/blog/ontario-accident-deadlines', permanent: true },
       { source: '/blog/sabs', destination: '/blog/ontario-sabs-explained', permanent: true },
@@ -27,8 +36,25 @@ const nextConfig = {
       { source: '/resources/settlement', destination: '/blog/should-you-accept-first-settlement-offer', permanent: true },
     ];
   },
-  typescript: {
-    ignoreBuildErrors: true,
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+        ],
+      },
+      {
+        source: '/admin/:path*',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow, noarchive' }],
+      },
+      {
+        source: '/thank-you',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow, noarchive' }],
+      },
+    ];
   },
 };
 export default nextConfig;

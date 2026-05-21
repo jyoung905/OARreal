@@ -1,4 +1,6 @@
 import crypto from 'node:crypto';
+import { appendFile, mkdir } from 'node:fs/promises';
+import path from 'node:path';
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 import { appendSubmission, sanitizeLead } from '@/lib/intake';
@@ -46,6 +48,23 @@ function logIntake(event) {
     captureMode: event.captureMode || null,
     error: event.error ? sanitizeError(event.error) : null,
   }));
+}
+
+function isSafeTestMode(request, body) {
+  const requested = request.headers.get('x-oar-test-mode') === 'true' || body?.testMode === true;
+  if (!requested) return false;
+  return process.env.NODE_ENV !== 'production' || process.env.OAR_ENABLE_TEST_INTAKE === 'true';
+}
+
+async function appendTestSubmission(record) {
+  const dir = path.join(process.cwd(), 'data');
+  await mkdir(dir, { recursive: true });
+  await appendFile(
+    path.join(dir, 'test-submissions.jsonl'),
+    JSON.stringify({ ...record, testMode: true, notificationsSuppressed: true }) + '\n',
+    'utf8'
+  );
+  return { mode: 'local_test_file' };
 }
 
 function hasEmailConfig() {
@@ -163,33 +182,40 @@ export async function POST(request) {
       return NextResponse.json({ error: 'Submission rejected.' }, { status: 400 });
     }
 
+    const testMode = isSafeTestMode(request, body);
+
     const record = sanitizeLead({
       ...body,
+      status: testMode ? 'test' : body.status,
       userAgent: body.userAgent || request.headers.get('user-agent') || '',
       ipHash: body.ipHash || hashIp(ip),
     });
     submissionId = record.id;
 
     // Durable capture must happen before any notification and before success response.
-    const capture = await appendSubmission(record);
+    const capture = testMode ? await appendTestSubmission(record) : await appendSubmission(record);
 
     const { data } = record;
     const notificationPayload = buildNotifications(data, submissionId);
-    const notificationResults = { email: 'pending', telegram: 'pending' };
+    const notificationResults = testMode
+      ? { email: 'suppressed_test_mode', telegram: 'suppressed_test_mode' }
+      : { email: 'pending', telegram: 'pending' };
 
-    await Promise.allSettled([
-      sendTelegram(notificationPayload.tgText),
-      sendEmail({ subject: notificationPayload.subject, html: notificationPayload.html }),
-    ]).then(results => {
-      const [telegram, email] = results;
-      notificationResults.telegram = telegram.status === 'fulfilled' ? (telegram.value?.skipped ? 'skipped' : 'sent') : `failed: ${sanitizeError(telegram.reason)}`;
-      notificationResults.email = email.status === 'fulfilled' ? (email.value?.skipped ? 'skipped' : 'sent') : `failed: ${sanitizeError(email.reason)}`;
-    });
+    if (!testMode) {
+      await Promise.allSettled([
+        sendTelegram(notificationPayload.tgText),
+        sendEmail({ subject: notificationPayload.subject, html: notificationPayload.html }),
+      ]).then(results => {
+        const [telegram, email] = results;
+        notificationResults.telegram = telegram.status === 'fulfilled' ? (telegram.value?.skipped ? 'skipped' : 'sent') : `failed: ${sanitizeError(telegram.reason)}`;
+        notificationResults.email = email.status === 'fulfilled' ? (email.value?.skipped ? 'skipped' : 'sent') : `failed: ${sanitizeError(email.reason)}`;
+      });
+    }
 
-    const notificationSuccess = ['sent', 'skipped'].includes(notificationResults.email) && ['sent', 'skipped'].includes(notificationResults.telegram);
+    const notificationSuccess = testMode || (['sent', 'skipped'].includes(notificationResults.email) && ['sent', 'skipped'].includes(notificationResults.telegram));
     logIntake({ submissionId, captureSuccess: true, notificationSuccess, notificationResults, captureMode: capture?.mode });
 
-    return NextResponse.json({ success: true, id: submissionId, status: record.review.status, testLead: record.review.status === 'test', captureMode: capture?.mode });
+    return NextResponse.json({ success: true, id: submissionId, status: record.review.status, testLead: record.review.status === 'test', testMode, notifications: notificationResults, captureMode: capture?.mode });
   } catch (err) {
     logIntake({ submissionId, captureSuccess: false, notificationSuccess: false, error: err });
     const message = err instanceof Error && err.message.startsWith('Missing required field:')

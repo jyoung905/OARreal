@@ -20,12 +20,13 @@ const ACCIDENT_TYPES = [
   { val: 'Other motor vehicle accident', label: 'Other',      icon: 'more' },
 ];
 
-const INSURER_OPTIONS = [
-  { val: 'Yes — delayed',    icon: 'check',   tone: 'delayed' },
-  { val: 'Yes — denied',     icon: 'minus',   tone: 'denied' },
-  { val: 'Yes — reduced',    icon: 'down',    tone: 'reduced' },
-  { val: "No — I haven't had any of these issues", short: 'No, none of these', icon: 'x',  tone: 'none' },
-  { val: "I'm not sure",     icon: 'help',    tone: 'unsure' },
+const CLAIM_STATUS_OPTIONS = [
+  { val: 'I have not started a claim yet', icon: 'doc' },
+  { val: 'I started a claim but I am confused', icon: 'help' },
+  { val: 'My insurer is delayed or not responding', icon: 'check' },
+  { val: 'A benefit was denied or reduced', icon: 'down' },
+  { val: 'I received a settlement offer', icon: 'info' },
+  { val: 'I am not sure', icon: 'help' },
 ];
 
 const MAIN_ISSUES = [
@@ -80,7 +81,7 @@ function isLikelyTestLead({ firstName, email, message }) {
 
 const STEP_META = [
   { num: 1, title: 'About the accident',                   eyebrow: 'Tell us what happened — short answers are fine.', up: 'Insurer status' },
-  { num: 2, title: 'Has your insurer delayed, denied, or reduced benefits?', eyebrow: 'This helps us understand your situation and what to look at in your review.', up: 'Your injuries' },
+  { num: 2, title: 'Where is your claim now?', eyebrow: 'Choose the closest option. This helps us understand timing, urgency, and what to look at in your review.', up: 'Your injuries' },
   { num: 3, title: 'Your injuries and impact',             eyebrow: 'No medical records or detailed history needed at this stage.', up: 'Contact details' },
   { num: 4, title: 'Where can we reach you?',              eyebrow: 'Only used to follow up if your situation appears to fit.',         up: null },
 ];
@@ -124,7 +125,7 @@ export function IntakeModal() {
   const [accidentDate, setAccidentDate] = useState('');
   const [cityArea, setCityArea] = useState('');
   const [inOntario, setInOntario] = useState('Yes');
-  const [insurerStatus, setInsurerStatus] = useState('');
+  const [claimStatus, setClaimStatus] = useState('');
   const [injured, setInjured] = useState('');
   const [mainIssue, setMainIssue] = useState('');
   const [workImpact, setWorkImpact] = useState('');
@@ -135,6 +136,7 @@ export function IntakeModal() {
   const [email, setEmail] = useState('');
   const [bestTime, setBestTime] = useState('');
   const [consent, setConsent] = useState(false);
+  const [referralConsent, setReferralConsent] = useState(false);
 
   useEffect(() => {
     const onHash = () => {
@@ -170,7 +172,7 @@ export function IntakeModal() {
       if (!inOntario) errs.inOntario = true;
     }
     if (n === 2) {
-      if (!insurerStatus) errs.insurerStatus = true;
+      if (!claimStatus) errs.claimStatus = true;
     }
     if (n === 3) {
       if (!injured) errs.injured = true;
@@ -196,9 +198,9 @@ export function IntakeModal() {
     if (!validate(4)) return;
     setSubmitting(true); setSubmitError('');
     const elapsed = intakeOpenTime.current ? Date.now() - intakeOpenTime.current : undefined;
-    Analytics.intakeSubmit({ accident_type: accidentType, claim_status: mainIssue, ontario_yn: inOntario, injured, time_to_submit_ms: elapsed });
+    Analytics.intakeSubmit({ accident_type: accidentType, claim_status: claimStatus, ontario_yn: inOntario, injured, time_to_submit_ms: elapsed });
 
-    const insurerNote = insurerStatus ? `Insurer status: ${insurerStatus}` : '';
+    const insurerNote = claimStatus ? `Claim status: ${claimStatus}` : '';
     const payload = {
       fullName: firstName.trim(),
       email: email.trim(),
@@ -209,7 +211,7 @@ export function IntakeModal() {
       accidentDate: accidentDate || 'Approximate date not provided',
       cityArea: cityArea.trim(),
       inOntario,
-      claimStatus: mainIssue || insurerStatus || 'Not specified',
+      claimStatus,
       injured: injured || 'Not specified',
       medicalAttention: treatment || 'Not specified',
       workImpact: workImpact || 'Not specified',
@@ -223,6 +225,7 @@ export function IntakeModal() {
       consentTruth: true,
       consentNotLawFirm: true,
       consentToContact: consent,
+      consentReferralShare: referralConsent,
       sourcePage: typeof window !== 'undefined' ? window.location.pathname : '/',
       ...getAttribution(),
     };
@@ -230,8 +233,8 @@ export function IntakeModal() {
     try {
       const response = await fetch('/api/intake', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
       const data = await response.json().catch(() => ({}));
-      if (response.ok && data.success !== false) {
-        Analytics.submissionSuccess({ accident_type: accidentType, claim_status: mainIssue, time_to_complete_ms: elapsed });
+      if (response.ok && data.success === true) {
+        Analytics.submissionSuccess({ accident_type: accidentType, claim_status: claimStatus, time_to_complete_ms: elapsed });
         const testLead = data.testLead || isLikelyTestLead({ firstName, email, message });
         if (!testLead) {
           try { sessionStorage.setItem('oar_lead_conversion_pending', data.id || String(Date.now())); } catch {}
@@ -302,7 +305,7 @@ export function IntakeModal() {
           <h1 className="oar-h2" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.125rem)', marginTop: 0, marginBottom: '0.625rem' }}>
             {meta.title}
           </h1>
-          <p style={{ color: 'var(--muted)', fontSize: '0.95rem', lineHeight: 1.6, marginTop: 0, marginBottom: 'clamp(1.5rem, 3vw, 2rem)' }}>
+          <p style={{ color: 'var(--muted)', fontSize: '0.95rem', lineHeight: 1.6, marginTop: 0, marginBottom: 'clamp(1.5rem, 3vw, 2rem)' }} id={`im-step-${step}-help`}>
             {meta.eyebrow}
           </p>
 
@@ -372,16 +375,18 @@ export function IntakeModal() {
             </div>
           )}
 
-          {/* STEP 2 — Insurer status (option cards) */}
+          {/* STEP 2 — Claim status (option cards) */}
           {step === 2 && (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
-              {INSURER_OPTIONS.map(opt => {
-                const selected = insurerStatus === opt.val;
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }} role="radiogroup" aria-describedby="im-step-2-help" aria-label="Claim status">
+              {CLAIM_STATUS_OPTIONS.map(opt => {
+                const selected = claimStatus === opt.val;
                 return (
                   <button
                     key={opt.val}
                     type="button"
-                    onClick={() => setInsurerStatus(opt.val)}
+                    role="radio"
+                    aria-checked={selected}
+                    onClick={() => setClaimStatus(opt.val)}
                     style={{
                       display: 'flex', alignItems: 'center', gap: '1rem',
                       padding: '1.125rem 1.25rem',
@@ -402,7 +407,7 @@ export function IntakeModal() {
                     }}>
                       <Icn name={opt.icon} size={18} />
                     </span>
-                    <span style={{ flex: 1, color: 'var(--text-strong)', fontSize: '0.95rem', fontWeight: 500 }}>{opt.short || opt.val}</span>
+                    <span style={{ flex: 1, color: 'var(--text-strong)', fontSize: '0.95rem', fontWeight: 500 }}>{opt.val}</span>
                     <span style={{
                       width: 22, height: 22, borderRadius: '50%',
                       border: `2px solid ${selected ? 'var(--green)' : 'var(--border-strong)'}`,
@@ -414,7 +419,7 @@ export function IntakeModal() {
                   </button>
                 );
               })}
-              {fieldErrors.insurerStatus && <span style={{ color: '#b91c1c', fontSize: '0.85rem', fontWeight: 500, marginTop: '0.25rem' }}>Please choose the closest option.</span>}
+              {fieldErrors.claimStatus && <span role="alert" style={{ color: '#b91c1c', fontSize: '0.85rem', fontWeight: 500, marginTop: '0.25rem' }}>Please choose the closest option.</span>}
 
               <div className="oar-callout" style={{ marginTop: '1rem' }}>
                 <span className="oar-callout-icon"><Icn name="info" size={12} color="#fff" /></span>
@@ -514,8 +519,8 @@ export function IntakeModal() {
               <div className="oar-callout" style={{ background: 'var(--accent-soft)', borderColor: 'rgba(20,83,184,0.16)' }}>
                 <span className="oar-callout-icon"><Icn name="lock" size={12} color="#fff" /></span>
                 <div>
-                  <strong style={{ display: 'block', marginBottom: '0.15rem', color: 'var(--primary)' }}>Your information stays with us.</strong>
-                  Used only to follow up about possible next steps. Never shared with your insurer or any third party without your consent.
+                  <strong style={{ display: 'block', marginBottom: '0.15rem', color: 'var(--primary)' }}>Secure review request.</strong>
+                  We use your submission to review your request and contact you. We do not sell your information, and we only share it with a qualified professional or relevant provider with your consent or as described in our Privacy Policy.
                 </div>
               </div>
 
@@ -557,6 +562,13 @@ export function IntakeModal() {
               </label>
               {fieldErrors.consent && <span style={{ color: '#b91c1c', fontSize: '0.78rem', fontWeight: 500, marginTop: '-0.75rem' }}>Please confirm consent before submitting.</span>}
 
+              <label style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', padding: '1rem 1.125rem', background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)', cursor: 'pointer' }}>
+                <input type="checkbox" checked={referralConsent} onChange={e => setReferralConsent(e.target.checked)} style={{ accentColor: 'var(--accent)', width: 18, height: 18, marginTop: 2, flexShrink: 0 }} />
+                <span style={{ fontSize: '0.875rem', color: 'var(--text-strong)', lineHeight: 1.55 }}>
+                  Optional: I consent to Ontario Accident Review sharing my submission with a qualified legal professional or relevant service provider if that appears useful for follow-up. I understand this is optional and does not create a lawyer-client relationship.
+                </span>
+              </label>
+
               {submitError && (
                 <div className="oar-callout" style={{ background: '#fdecea', borderColor: '#f5b8b8', color: '#7a1f1f' }}>
                   <span className="oar-callout-icon" style={{ background: '#b91c1c' }}>!</span>
@@ -581,7 +593,7 @@ export function IntakeModal() {
           ) : <span />}
           {step < 4
             ? <button onClick={next} className="oar-btn oar-btn-primary">Continue <Icn name="arrow-right" size={14} /></button>
-            : <button onClick={submitForm} disabled={submitting} className="oar-btn oar-btn-primary">{submitting ? 'Submitting…' : 'Submit My Review'} {!submitting && <Icn name="arrow-right" size={14} />}</button>
+            : <button onClick={submitForm} disabled={submitting} aria-disabled={submitting} className="oar-btn oar-btn-primary">{submitting ? 'Submitting…' : 'Submit My Review'} {!submitting && <Icn name="arrow-right" size={14} />}</button>
           }
         </div>
 

@@ -1,11 +1,12 @@
 export function FitSection() {
   const cards = [
     { num: '01', title: 'Recently hurt in Ontario', body: 'You were recently injured in a car accident in Ontario.' },
-    { num: '02', title: 'Unsure about your benefits', body: "You're not sure if you're entitled to accident benefits." },
+    { num: '02', title: 'Unsure about your benefits', body: "You're not sure what accident benefits may apply." },
     { num: '03', title: 'Denied or received a low offer', body: 'You received a denial or low offer from your insurer.' },
     { num: '04', title: 'Symptoms but no claim filed', body: "You're dealing with pain or ongoing symptoms but haven't filed a claim." },
     { num: '05', title: 'Claim closed unexpectedly', body: "Your claim was closed and you're not sure if it should have been." },
-    { num: '06', title: 'Want plain-language clarity', body: 'You want a plain-language explanation of your options — no lawyers, no pressure.' },
+    { num: '06', title: 'Want plain-language clarity', body: 'You want a plain-language explanation of possible next steps — no pressure.' },
+  ];
   
   return (
     <section id="who-this-is-for" style={{background:'#060b16',padding:'80px 0'}}>

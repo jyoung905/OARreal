@@ -204,7 +204,7 @@ export default function HomeContent() {
         {/* Bottom trust strip */}
         <div className="oar-container-wide" style={{ position: 'relative', zIndex: 1 }}>
           <div className="oar-trust-strip" style={{ borderTop: '1px solid var(--border)' }}>
-            <TrustItem icon="shield" tone="blue" title="Private & secure" body="Your information is encrypted and never shared." />
+            <TrustItem icon="shield" tone="blue" title="Private & secure" body="Your information is submitted through a secure form and used to review your request. We do not sell it, and we only share it with a qualified professional or relevant provider with your consent or as described in our Privacy Policy." />
             <TrustItem icon="leaf"   tone="green" title="Ontario-focused" body="We understand Ontario's benefits system." />
             <TrustItem icon="check"  tone="blue" title="Clear & unbiased" body="Get straightforward information about your options." />
             <TrustItem icon="message" tone="green" title="Here to help" body="Support that's human, not hard to reach." />
