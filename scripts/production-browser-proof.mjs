@@ -37,7 +37,7 @@ async function evalOn(cdp, page, expression){ return cdp.send('Runtime.evaluate'
 async function shot(cdp, page, name){ const res=await cdp.send('Page.captureScreenshot',{format:'png',captureBeyondViewport:true},page.sessionId); await writeFile(`${shots}/${name}.png`, Buffer.from(res.data,'base64')); }
 async function closePage(cdp,page){ await cdp.send('Target.closeTarget',{targetId:page.targetId}).catch(()=>{}); }
 const fill = (sel, val) => `(()=>{const el=document.querySelector(${JSON.stringify(sel)}); if(!el) return false; const proto=Object.getPrototypeOf(el); const desc=Object.getOwnPropertyDescriptor(proto,'value') || Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value') || Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype,'value'); desc.set.call(el, ${JSON.stringify(val)}); el.dispatchEvent(new Event('input',{bubbles:true})); el.dispatchEvent(new Event('change',{bubbles:true})); return true;})()`;
-const clickText = (txt) => `(()=>{const el=[...document.querySelectorAll('button,a')].find(el => (el.textContent||'').trim().includes(${JSON.stringify(txt)})); if(el){el.click(); return true;} return false;})()`;
+const clickText = (txt) => `(()=>{const el=[...document.querySelectorAll('button,a')].find(el => { const r=el.getBoundingClientRect(); return r.width>0 && r.height>0 && (el.textContent||'').trim().includes(${JSON.stringify(txt)}); }); if(el){el.click(); return true;} return false;})()`;
 
 await mkdir(shots,{recursive:true}); await mkdir(raw,{recursive:true});
 const userData=join(tmpdir(),`oar-prod-chrome-${Date.now()}`);
@@ -49,8 +49,12 @@ try{
   page=await newPage(cdp, `${base}/admin/analytics`, 1440, 1000); await shot(cdp,page,'production-admin-analytics-unauth-404'); await closePage(cdp,page);
   page=await newPage(cdp, `${base}/blog/accident-benefits-dispute-lat-aabs-ontario`, 1440, 1100); await shot(cdp,page,'production-lat-aabs-article'); await closePage(cdp,page);
 
-  // Failed validation on production intake: no network submit, no redirect.
-  page=await newPage(cdp, `${base}/#intake`, 1440, 1200); await evalOn(cdp,page,clickText('Submit My Review')); await delay(800); await shot(cdp,page,'production-intake-failed-validation'); await closePage(cdp,page);
+  // Failed validation on production intake: click Continue with required fields empty; no redirect.
+  page=await newPage(cdp, `${base}/#intake`, 1440, 1200);
+  await evalOn(cdp,page, `(()=>{ const btn=document.querySelector('.im-actions button.oar-btn-primary') || [...document.querySelectorAll('button')].find(b => (b.textContent||'').includes('Continue')); if (btn) { btn.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, view: window })); return { clicked: true, text: btn.textContent }; } return { clicked: false, buttons: [...document.querySelectorAll('button')].map(b=>b.textContent?.trim()).slice(0,10) }; })()`);
+  await delay(1200);
+  const failedValidation = await evalOn(cdp,page, `({ href: location.href, stepText: document.body.innerText.match(/Step \\d of \\d/)?.[0] || null, alerts: [...document.querySelectorAll('[role="alert"], .hif-error')].map(el => el.textContent?.trim()).filter(Boolean), bodyHasError: document.body.innerText.includes('Please enter') || document.body.innerText.includes('Please choose') || document.body.innerText.includes('Please complete') })`);
+  await shot(cdp,page,'production-intake-failed-validation'); await closePage(cdp,page);
 
   // Direct thank-you with no marker.
   page=await newPage(cdp, `${base}/thank-you`, 1440, 1000); await delay(2500);
@@ -66,6 +70,7 @@ try{
 
   const proof = {
     base,
+    failedValidation: failedValidation.result.value,
     directThankYou: direct.result.value,
     markerThankYou: success.result.value,
     directConversionEventCount: (direct.result.value.dataLayer || []).filter(x => x[1] === 'conversion' || x[1] === 'generate_lead').length,
@@ -74,6 +79,7 @@ try{
   };
   await writeFile(`${raw}/conversion-browser-proof.json`, JSON.stringify(proof, null, 2));
   console.log(JSON.stringify(proof, null, 2));
+  if (!proof.failedValidation?.bodyHasError || !String(proof.failedValidation?.href || '').includes('#intake')) throw new Error('Failed validation proof did not stay on intake with visible error');
   if (proof.directConversionEventCount !== 0) throw new Error('Direct thank-you fired lead/conversion event without marker');
   if (proof.markerConversionEventCount !== 1 || proof.markerGenerateLeadEventCount !== 1) throw new Error('Marker thank-you did not fire exactly one conversion and one generate_lead');
 } finally { chrome.kill('SIGTERM'); await rm(userData,{recursive:true,force:true}).catch(()=>{}); }

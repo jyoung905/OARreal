@@ -34,7 +34,7 @@ if (!url || !key) {
   process.exit(2);
 }
 const supabase = createClient(url, key, { auth: { autoRefreshToken: false, persistSession: false } });
-const before = await supabase.from(table).select('id,status,email,full_name').eq('id', id).maybeSingle();
+const before = await supabase.from(table).select('id').eq('id', id).maybeSingle();
 let cleanupStatus = 'not_found_before_cleanup';
 let deleteError = null;
 if (before.data) {
@@ -48,7 +48,9 @@ const result = {
   idRedacted: `${id.slice(0, 8)}…${id.slice(-4)}`,
   table,
   existedBeforeCleanup: Boolean(before.data),
+  beforeError: before.error?.message || null,
   deleteError,
+  afterError: after.error?.message || null,
   existsAfterCleanup: Boolean(after.data),
 };
 await writeFile(outPath, JSON.stringify(result, null, 2));
