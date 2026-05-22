@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-05-22T20:48:11.553Z",
+  "productionDomain": "https://www.ontarioaccidentreview.ca",
+  "domainStatus": 200,
+  "supabaseProjectRef": "cxwcsyiadjwizofvqopg",
+  "leadTable": "public.intake_submissions",
+  "analyticsTable": "public.analytics_events",
+  "schemaProbe": {
+    "status": 200,
+    "ok": true,
+    "body": "array(1)"
+  },
+  "trackStartedAt": "2026-05-22T20:48:08.561Z",
+  "trackRes": {
+    "status": 200,
+    "ok": true,
+    "body": {
+      "ok": true
+    }
+  },
+  "storedCount": 1,
+  "cleanup": {
+    "status": 200,
+    "ok": true,
+    "deletedCount": 1
+  },
+  "remainingCount": 0,
+  "marker": "wave3-preflight-track-1779482887987"
+}

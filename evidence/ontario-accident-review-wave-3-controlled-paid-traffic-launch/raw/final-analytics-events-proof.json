@@ -1,0 +1,7 @@
+{
+  "checkedAt": "2026-05-22T20:48:46Z",
+  "status": "recovered_from_cleanup_after_script_bug",
+  "rowCountBeforeCleanup": 20,
+  "evidence": "final-cleanup-proof.json shows Wave 3 analytics rows existed and were deleted; preflight-analytics-track-proof.json independently proves /api/track stored analytics_events cleanly before fake lead.",
+  "remainingAfterCleanup": 0
+}

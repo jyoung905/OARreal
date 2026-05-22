@@ -1,0 +1,23 @@
+HTTP/2 200 
+accept-ranges: bytes
+access-control-allow-origin: *
+age: 2349
+cache-control: public, max-age=0, must-revalidate
+content-disposition: inline
+content-type: text/html; charset=utf-8
+date: Fri, 22 May 2026 20:46:52 GMT
+etag: "2274ce62fc6482829960a9b2fd56b5df"
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+server: Vercel
+strict-transport-security: max-age=63072000
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+x-frame-options: DENY
+x-matched-path: /thank-you
+x-nextjs-prerender: 1
+x-nextjs-stale-time: 300
+x-robots-tag: noindex, nofollow, noarchive
+x-vercel-cache: HIT
+x-vercel-id: yul1::nz7zv-1779482812448-8c669abb508d
+content-length: 68050
+

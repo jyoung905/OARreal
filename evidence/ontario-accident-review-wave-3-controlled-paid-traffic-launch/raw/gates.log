@@ -1,0 +1,270 @@
+=== npm run lint ===
+
+> ontario-accident-review-launch@1.0.0 lint
+> eslint . --max-warnings=0
+
+=== npm run typecheck ===
+
+> ontario-accident-review-launch@1.0.0 typecheck
+> tsc --noEmit
+
+=== npm test ===
+
+> ontario-accident-review-launch@1.0.0 test
+> node --test tests/*.test.js
+
+✔ intake UI posts required claimStatus and supports phone OR email (0.609125ms)
+✔ test mode suppresses notifications and does not weaken production by default (0.079125ms)
+✔ admin analytics is protected before fetching data (0.108583ms)
+✔ conversion is gated to confirmed intake success and thank-you marker (0.117084ms)
+✔ conversion marker present queues exactly one lead and Ads conversion before cleanup (0.094041ms)
+✔ absolute privacy and dated SSL claims are removed from app components (0.52825ms)
+✔ LAT-AABS article is canonical and old FSRA mediation slug redirects (0.181208ms)
+✔ thank-you has page metadata and response header noindex protection (0.084917ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 58.357833
+=== npm run build ===
+
+> ontario-accident-review-launch@1.0.0 build
+> next build
+
+▲ Next.js 16.2.6 (Turbopack)
+- Environments: .env.production.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 1491ms
+  Running TypeScript ...
+  Finished TypeScript in 1294ms ...
+  Collecting page data using 9 workers ...
+  Generating static pages using 9 workers (0/34) ...
+  Generating static pages using 9 workers (8/34) 
+  Generating static pages using 9 workers (16/34) 
+  Generating static pages using 9 workers (25/34) 
+✓ Generating static pages using 9 workers (34/34) in 159ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /about
+├ ƒ /admin/analytics
+├ ƒ /api/intake
+├ ƒ /api/track
+├ ● /blog/[slug]
+│ ├ /blog/ontario-accident-deadlines
+│ ├ /blog/ontario-sabs-explained
+│ ├ /blog/should-you-accept-first-settlement-offer
+│ └ [+14 more paths]
+├ ○ /contact
+├ ○ /disclaimer
+├ ○ /income-replacement-denied
+├ ○ /privacy
+├ ○ /resources
+├ ○ /review
+├ ○ /robots.txt
+├ ○ /settlement-checker
+├ ○ /sitemap.xml
+├ ○ /terms-of-service
+└ ○ /thank-you
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
+=== npm run qa:prod-smoke ===
+
+> ontario-accident-review-launch@1.0.0 qa:prod-smoke
+> node scripts/production-route-smoke.mjs
+
+[
+  {
+    "route": "/",
+    "url": "https://www.ontarioaccidentreview.ca/",
+    "status": 200,
+    "location": null,
+    "xRobotsTag": null,
+    "xVercelId": "yul1::z4qtl-1779483008021-5200a301d57e",
+    "xVercelCache": "HIT",
+    "bytes": 77638
+  },
+  {
+    "route": "/review",
+    "url": "https://www.ontarioaccidentreview.ca/review",
+    "status": 200,
+    "location": null,
+    "xRobotsTag": null,
+    "xVercelId": "yul1::z4qtl-1779483008067-4c3824d4cf7e",
+    "xVercelCache": "HIT",
+    "bytes": 34413
+  },
+  {
+    "route": "/resources",
+    "url": "https://www.ontarioaccidentreview.ca/resources",
+    "status": 200,
+    "location": null,
+    "xRobotsTag": null,
+    "xVercelId": "yul1::z4qtl-1779483008104-8fb33f867147",
+    "xVercelCache": "HIT",
+    "bytes": 146297
+  },
+  {
+    "route": "/privacy",
+    "url": "https://www.ontarioaccidentreview.ca/privacy",
+    "status": 200,
+    "location": null,
+    "xRobotsTag": null,
+    "xVercelId": "yul1::rpzpx-1779483008147-e4ec213bb22e",
+    "xVercelCache": "HIT",
+    "bytes": 51193
+  },
+  {
+    "route": "/disclaimer",
+    "url": "https://www.ontarioaccidentreview.ca/disclaimer",
+    "status": 200,
+    "location": null,
+    "xRobotsTag": null,
+    "xVercelId": "yul1::rpzpx-1779483008194-2f14e2988569",
+    "xVercelCache": "HIT",
+    "bytes": 41854
+  },
+  {
+    "route": "/thank-you",
+    "url": "https://www.ontarioaccidentreview.ca/thank-you",
+    "status": 200,
+    "location": null,
+    "xRobotsTag": "noindex, nofollow, noarchive",
+    "xVercelId": "yul1::rpzpx-1779483008233-14c13fcb1f17",
+    "xVercelCache": "HIT",
+    "bytes": 68019
+  },
+  {
+    "route": "/blog/accident-benefits-dispute-lat-aabs-ontario",
+    "url": "https://www.ontarioaccidentreview.ca/blog/accident-benefits-dispute-lat-aabs-ontario",
+    "status": 200,
+    "location": null,
+    "xRobotsTag": null,
+    "xVercelId": "yul1::rpzpx-1779483008265-ecf673c58974",
+    "xVercelCache": "HIT",
+    "bytes": 88030
+  },
+  {
+    "route": "/blog/insurance-dispute-fsra-mediation-ontario",
+    "url": "https://www.ontarioaccidentreview.ca/blog/insurance-dispute-fsra-mediation-ontario",
+    "status": 308,
+    "location": "/blog/accident-benefits-dispute-lat-aabs-ontario",
+    "xRobotsTag": null,
+    "xVercelId": "yul1::nz7zv-1779483008309-74895e02de18",
+    "xVercelCache": null,
+    "bytes": 15
+  },
+  {
+    "route": "/admin/analytics",
+    "url": "https://www.ontarioaccidentreview.ca/admin/analytics",
+    "status": 404,
+    "location": null,
+    "xRobotsTag": "noindex, nofollow, noarchive",
+    "xVercelId": "yul1::iad1::4r5mt-1779483008418-d58a621d362a",
+    "xVercelCache": "MISS",
+    "bytes": 13251
+  },
+  {
+    "route": "/api/intake",
+    "url": "https://www.ontarioaccidentreview.ca/api/intake",
+    "status": 405,
+    "location": null,
+    "xRobotsTag": null,
+    "xVercelId": "yul1::iad1::nz7zv-1779483008568-e4e65fc10633",
+    "xVercelCache": "MISS",
+    "bytes": 0
+  }
+]
+=== npm run qa:broken-links ===
+
+> ontario-accident-review-launch@1.0.0 qa:broken-links
+> node scripts/qa-broken-links.mjs
+
+checked=18 bad=0
+=== npm audit --audit-level=high ===
+# npm audit report
+
+postcss  <8.5.10
+Severity: moderate
+PostCSS has XSS via Unescaped </style> in its CSS Stringify Output - https://github.com/advisories/GHSA-qx2v-qp2m-jg93
+fix available via `npm audit fix --force`
+Will install next@9.3.3, which is a breaking change
+node_modules/postcss
+  next  9.3.4-canary.0 - 16.3.0-canary.5
+  Depends on vulnerable versions of postcss
+  node_modules/next
+
+2 moderate severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+=== evidence/workspace secret scan ===
+./CHANGES_2026-03-23.md:66:| `SUPABASE_SERVICE_ROLE_KEY` | Supabase service role key | Required — must be set |
+./LEAD_OPERATIONS.md:121:- `SUPABASE_SERVICE_ROLE_KEY`
+./app/admin/analytics/page.tsx:26:  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+./app/admin/analytics/page.tsx:239:                Make sure SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are set in Vercel environment variables, and run the schema migration to create the analytics_events table.
+./app/api/intake/route.js:37:  const salt = process.env.IP_HASH_SALT || process.env.SUPABASE_SERVICE_ROLE_KEY || 'oar-default-ip-salt';
+./evidence/ontario-accident-review-wave-2f-analytics-repair-final-launch-gate/ANALYTICS_SCHEMA_PROOF.md:16:- `SUPABASE_SERVICE_ROLE_KEY`
+./evidence/ontario-accident-review-wave-2f-analytics-repair-final-launch-gate/raw/local-ddl-capability.out:15:SUPABASE_SERVICE_ROLE_KEY
+./evidence/ontario-accident-review-wave-2f-analytics-repair-final-launch-gate/raw/local-ddl-capability.out:43:SUPABASE_SERVICE_ROLE_KEY=[redacted]
+./evidence/ontario-accident-review-wave-2a-production-schema-recovery/raw/ddl-path-check-redacted.out:8:SUPABASE_SERVICE_ROLE_KEY=[REDACTED]
+./evidence/ontario-accident-review-wave-2c-post-sql-full-capture/PRODUCTION_TARGET_PROOF.md:9:- `SUPABASE_SERVICE_ROLE_KEY`: present, value not exposed
+./evidence/ontario-accident-review-wave-0-audit-northstar/CODE_AUDIT.md:11:- Durable storage: Supabase admin client using `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, optional `SUPABASE_INTAKE_TABLE` default `intake_submissions`.
+./evidence/ontario-accident-review-wave-0-audit-northstar/raw/secret-scan.txt:5:./CHANGES_2026-03-23.md:66:| `SUPABASE_SERVICE_ROLE_KEY` | Supabase service role key | Required — must be set |
+./evidence/ontario-accident-review-wave-0-audit-northstar/raw/secret-scan.txt:8:./LEAD_OPERATIONS.md:121:- `SUPABASE_SERVICE_ROLE_KEY`
+./evidence/ontario-accident-review-wave-0-audit-northstar/raw/secret-scan.txt:11:./app/admin/analytics/page.tsx:25:  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+./evidence/ontario-accident-review-wave-0-audit-northstar/raw/secret-scan.txt:12:./app/admin/analytics/page.tsx:232:                Make sure SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are set in Vercel environment variables, and run the schema migration to create the analytics_events table.
+./evidence/ontario-accident-review-wave-0-audit-northstar/raw/secret-scan.txt:13:./app/api/intake/route.js:35:  const salt = process.env.IP_HASH_SALT || process.env.SUPABASE_SERVICE_ROLE_KEY || 'oar-default-ip-salt';
+./evidence/ontario-accident-review-wave-0-audit-northstar/raw/secret-scan.txt:27:./PRODUCTION_LEAD_TEST.md:60:- `SUPABASE_SERVICE_ROLE_KEY`
+./evidence/ontario-accident-review-wave-0-audit-northstar/raw/secret-scan.txt:37:./README.md:40:- `SUPABASE_SERVICE_ROLE_KEY` is required because inserts happen server-side in the Next.js route.
+./evidence/ontario-accident-review-wave-0-audit-northstar/raw/secret-scan.txt:38:./README.md:83:- `SUPABASE_SERVICE_ROLE_KEY`
+./evidence/ontario-accident-review-wave-0-audit-northstar/raw/secret-scan.txt:46:./PRODUCTION_ARCHITECTURE.md:259:- `SUPABASE_SERVICE_ROLE_KEY`
+./evidence/ontario-accident-review-wave-0-audit-northstar/raw/secret-scan.txt:53:./lib/supabase-server.js:17:  const supabaseServiceRoleKey = requireEnv('SUPABASE_SERVICE_ROLE_KEY');
+./evidence/ontario-accident-review-wave-0-audit-northstar/raw/source-discovery.log:24:app/admin/analytics/page.tsx:25:  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+./evidence/ontario-accident-review-wave-0-audit-northstar/raw/source-discovery.log:27:app/admin/analytics/page.tsx:232:                Make sure SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are set in Vercel environment variables, and run the schema migration to create the analytics_events table.
+./evidence/ontario-accident-review-wave-0-audit-northstar/raw/source-discovery.log:29:app/api/intake/route.js:35:  const salt = process.env.IP_HASH_SALT || process.env.SUPABASE_SERVICE_ROLE_KEY || 'oar-default-ip-salt';
+./evidence/ontario-accident-review-wave-0-audit-northstar/raw/source-discovery.log:72:lib/supabase-server.js:17:  const supabaseServiceRoleKey = requireEnv('SUPABASE_SERVICE_ROLE_KEY');
+./evidence/ontario-accident-review-wave-2h-deployment-integrity/raw/gates-extra.log:19:./CHANGES_2026-03-23.md:66:| `SUPABASE_SERVICE_ROLE_KEY` | Supabase service role key | Required — must be set |
+./evidence/ontario-accident-review-wave-2h-deployment-integrity/raw/gates-extra.log:20:./LEAD_OPERATIONS.md:121:- `SUPABASE_SERVICE_ROLE_KEY`
+./evidence/ontario-accident-review-wave-2h-deployment-integrity/raw/gates-extra.log:21:./app/admin/analytics/page.tsx:26:  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+./evidence/ontario-accident-review-wave-2h-deployment-integrity/raw/gates-extra.log:22:./app/admin/analytics/page.tsx:239:                Make sure SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are set in Vercel environment variables, and run the schema migration to create the analytics_events table.
+./evidence/ontario-accident-review-wave-2h-deployment-integrity/raw/gates-extra.log:23:./app/api/intake/route.js:37:  const salt = process.env.IP_HASH_SALT || process.env.SUPABASE_SERVICE_ROLE_KEY || 'oar-default-ip-salt';
+./evidence/ontario-accident-review-wave-2h-deployment-integrity/raw/gates-extra.log:24:./PRODUCTION_LEAD_TEST.md:60:- `SUPABASE_SERVICE_ROLE_KEY`
+./evidence/ontario-accident-review-wave-2h-deployment-integrity/raw/gates-extra.log:25:./README.md:35:SUPABASE_SERVICE_ROLE_KEY=replace-with-your-service-role-key
+./evidence/ontario-accident-review-wave-2h-deployment-integrity/raw/gates-extra.log:26:./README.md:40:- `SUPABASE_SERVICE_ROLE_KEY` is required because inserts happen server-side in the Next.js route.
+./evidence/ontario-accident-review-wave-2h-deployment-integrity/raw/gates-extra.log:27:./README.md:83:- `SUPABASE_SERVICE_ROLE_KEY`
+./evidence/ontario-accident-review-wave-2h-deployment-integrity/raw/gates-extra.log:28:./scripts/wave2g-final-proof.mjs:30:const KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+./evidence/ontario-accident-review-wave-2h-deployment-integrity/raw/gates-extra.log:29:./scripts/wave2h-final-proof.mjs:30:const KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+./evidence/ontario-accident-review-wave-2h-deployment-integrity/raw/gates-extra.log:30:./scripts/cleanup-production-test-lead.mjs:28:const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+./evidence/ontario-accident-review-wave-2h-deployment-integrity/raw/gates-extra.log:31:./scripts/wave2fr2-final-proof.mjs:30:const KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+./evidence/ontario-accident-review-wave-2h-deployment-integrity/raw/gates-extra.log:32:./PRODUCTION_ARCHITECTURE.md:259:- `SUPABASE_SERVICE_ROLE_KEY`
+./evidence/ontario-accident-review-wave-2h-deployment-integrity/raw/gates-extra.log:33:./lib/supabase-server.js:17:  const supabaseServiceRoleKey = requireEnv('SUPABASE_SERVICE_ROLE_KEY');
+./evidence/ontario-accident-review-wave-2b-schema-alignment/PRODUCTION_ENV_ALIGNMENT_REDACTED.md:15:- `SUPABASE_SERVICE_ROLE_KEY`: present, value not reported
+./evidence/ontario-accident-review-wave-2b-schema-alignment/raw/vercel-production-env-supabase-redacted.json:16:  "SUPABASE_SERVICE_ROLE_KEY": {
+./evidence/ontario-accident-review-wave-2b-schema-alignment/raw/intake-write-path-code-grep.out:3:app/admin/analytics/page.tsx:26:  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+./evidence/ontario-accident-review-wave-2b-schema-alignment/raw/intake-write-path-code-grep.out:5:app/admin/analytics/page.tsx:239:                Make sure SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are set in Vercel environment variables, and run the schema migration to create the analytics_events table.
+./evidence/ontario-accident-review-wave-2b-schema-alignment/raw/intake-write-path-code-grep.out:7:app/api/intake/route.js:37:  const salt = process.env.IP_HASH_SALT || process.env.SUPABASE_SERVICE_ROLE_KEY || 'oar-default-ip-salt';
+./evidence/ontario-accident-review-wave-2b-schema-alignment/raw/intake-write-path-code-grep.out:15:lib/supabase-server.js:17:  const supabaseServiceRoleKey = requireEnv('SUPABASE_SERVICE_ROLE_KEY');
+./evidence/ontario-accident-review-wave-2b-schema-alignment/raw/intake-write-path-code-grep.out:18:scripts/cleanup-production-test-lead.mjs:28:const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+./evidence/ontario-accident-review-wave-1r-production-verification/raw/vercel-env-pull-redacted.out:20:+ SUPABASE_SERVICE_ROLE_KEY
+./PRODUCTION_LEAD_TEST.md:60:- `SUPABASE_SERVICE_ROLE_KEY`
+./README.md:35:SUPABASE_SERVICE_ROLE_KEY=replace-with-your-service-role-key
+./README.md:40:- `SUPABASE_SERVICE_ROLE_KEY` is required because inserts happen server-side in the Next.js route.
+./README.md:83:- `SUPABASE_SERVICE_ROLE_KEY`
+./scripts/wave2g-final-proof.mjs:30:const KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+./scripts/wave2h-final-proof.mjs:30:const KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+./scripts/wave3-paid-launch-proof.mjs:30:const KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+./scripts/cleanup-production-test-lead.mjs:28:const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+./scripts/wave2fr2-final-proof.mjs:30:const KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+./PRODUCTION_ARCHITECTURE.md:259:- `SUPABASE_SERVICE_ROLE_KEY`
+./lib/supabase-server.js:17:  const supabaseServiceRoleKey = requireEnv('SUPABASE_SERVICE_ROLE_KEY');

@@ -1,0 +1,24 @@
+{
+  "at": "2026-05-22T20:48:46.654Z",
+  "reason": "error:analyticsRows is not defined",
+  "leadDelete": {
+    "status": 200,
+    "ok": true,
+    "deletedCount": 1
+  },
+  "leadRemaining": {
+    "status": 200,
+    "count": 0,
+    "rows": []
+  },
+  "analyticsDelete": {
+    "status": 200,
+    "ok": true,
+    "deletedCount": 20
+  },
+  "analyticsRemaining": {
+    "status": 200,
+    "count": 0,
+    "rows": []
+  }
+}

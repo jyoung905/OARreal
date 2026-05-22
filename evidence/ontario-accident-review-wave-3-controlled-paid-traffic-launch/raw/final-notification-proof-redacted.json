@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-05-22T20:49:00Z",
+  "rows": [
+    {
+      "timestamp": 1779482915666,
+      "deploymentId": "dpl_2TzeRFo2bFFRJtZkfRYZLSYC1Fj7",
+      "domain": "www.ontarioaccidentreview.ca",
+      "requestMethod": "POST",
+      "requestPath": "/api/intake",
+      "responseStatusCode": 200,
+      "message": "[OAR intake] {\"timestamp\":\"2026-05-22T20:48:36.793Z\",\"submissionId\":\"[redacted-wave3-submission-id]\",\"captureSuccess\":true,\"notificationSuccess\":true,\"notificationResults\":{\"email\":\"sent\",\"telegram\":\"sent\"},\"captureMode\":\"full\",\"error\":null}"
+    }
+  ]
+}
