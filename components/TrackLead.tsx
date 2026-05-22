@@ -1,8 +1,21 @@
 'use client';
 
 import { useEffect } from 'react';
-import { event } from '@/lib/gtag';
 import { Analytics } from '@/lib/analytics';
+
+const CONVERSION_ID = 'AW-18043625605/HwLYCIypipAcEIXB75tD';
+
+function ensureGtag() {
+  window.dataLayer = window.dataLayer || [];
+
+  if (typeof window.gtag !== 'function') {
+    window.gtag = function gtag(...args: unknown[]) {
+      window.dataLayer?.push(args as unknown as Record<string, unknown>);
+    };
+  }
+
+  return window.gtag;
+}
 
 /**
  * Fires lead conversion events only after a confirmed successful API capture.
@@ -20,24 +33,24 @@ export default function TrackLead() {
 
     if (!marker) return;
 
-    try {
-      sessionStorage.removeItem('oar_lead_conversion_pending');
-    } catch {}
+    const gtag = ensureGtag();
 
-    event('generate_lead', {
+    gtag('event', 'generate_lead', {
       event_category: 'intake_form',
       event_label: 'ab_claims_ontario',
       submission_id: marker,
     });
 
-    if (typeof window.gtag === 'function') {
-      window.gtag('event', 'conversion', {
-        send_to: 'AW-18043625605/HwLYCIypipAcEIXB75tD',
-        value: 1.0,
-        currency: 'CAD',
-        transaction_id: marker,
-      });
-    }
+    gtag('event', 'conversion', {
+      send_to: CONVERSION_ID,
+      value: 1.0,
+      currency: 'CAD',
+      transaction_id: marker,
+    });
+
+    try {
+      sessionStorage.removeItem('oar_lead_conversion_pending');
+    } catch {}
 
     Analytics.confirmationPageView();
   }, []);

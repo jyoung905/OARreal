@@ -34,6 +34,20 @@ test('conversion is gated to confirmed intake success and thank-you marker', () 
   assert.match(intakeModal, /throw new Error\(data\.error \|\| 'Submission failed'\)/);
 });
 
+test('conversion marker present queues exactly one lead and Ads conversion before cleanup', () => {
+  const trackLead = fs.readFileSync('components/TrackLead.tsx','utf8');
+  const ensureIdx = trackLead.indexOf('const gtag = ensureGtag();');
+  const leadIdx = trackLead.indexOf("gtag('event', 'generate_lead'");
+  const conversionIdx = trackLead.indexOf("gtag('event', 'conversion'");
+  const cleanupIdx = trackLead.indexOf("sessionStorage.removeItem('oar_lead_conversion_pending')");
+  assert.ok(ensureIdx > -1, 'gtag/dataLayer stub is created');
+  assert.ok(leadIdx > ensureIdx, 'generate_lead is queued through ensured gtag');
+  assert.ok(conversionIdx > leadIdx, 'Ads conversion is queued once after generate_lead');
+  assert.equal(trackLead.match(/gtag\('event', 'generate_lead'/g).length, 1);
+  assert.equal(trackLead.match(/gtag\('event', 'conversion'/g).length, 1);
+  assert.ok(cleanupIdx > conversionIdx, 'pending marker is cleared only after conversion is queued');
+});
+
 test('absolute privacy and dated SSL claims are removed from app components', () => {
   const files = ['components/HomeContent.jsx','components/SiteFooter.jsx','components/IntakeModal.jsx','app/privacy/page.js'];
   for (const file of files) {
