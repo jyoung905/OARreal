@@ -156,9 +156,13 @@ export function IntakeModal() {
   }, []);
 
   useEffect(() => {
+    document.body.classList.toggle('modal-open', isOpen);
     if (isOpen) document.body.style.overflow = 'hidden';
     else document.body.style.overflow = '';
-    return () => { document.body.style.overflow = ''; };
+    return () => {
+      document.body.classList.remove('modal-open');
+      document.body.style.overflow = '';
+    };
   }, [isOpen]);
 
   const goTo = (n) => { setStep(n); setFadeKey(k => k + 1); setSubmitError(''); setFieldErrors({}); window.scrollTo({ top: 0, behavior: 'smooth' }); };

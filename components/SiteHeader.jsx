@@ -60,7 +60,7 @@ export function SiteHeader() {
 
   return (
     <header style={headerStyle}>
-      <div style={innerStyle}>
+      <div className="oar-site-header-inner" style={innerStyle}>
         {/* Brand — serif single line "Ontario Accident Review" */}
         <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           <span style={{
@@ -164,7 +164,7 @@ export function SiteHeader() {
 export function SimpleHeader() {
   return (
     <header style={headerStyle}>
-      <div style={innerStyle}>
+      <div className="oar-site-header-inner" style={innerStyle}>
         <Link href="/" style={{ textDecoration: 'none' }}>
           <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '1.35rem', color: 'var(--primary)', letterSpacing: '-0.01em' }}>
             Ontario Accident Review

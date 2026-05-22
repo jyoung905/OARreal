@@ -1,0 +1,13 @@
+HTTP/2 308 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Fri, 22 May 2026 22:20:32 GMT
+location: /blog/accident-benefits-dispute-lat-aabs-ontario
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+refresh: 0;url=/blog/accident-benefits-dispute-lat-aabs-ontario
+server: Vercel
+strict-transport-security: max-age=63072000
+x-frame-options: DENY
+x-vercel-id: yul1::ssqjw-1779488432849-ea4e446f1820
+

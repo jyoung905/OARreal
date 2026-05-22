@@ -1,0 +1,2787 @@
+{
+  "base": "https://www.ontarioaccidentreview.ca",
+  "checkedAt": "2026-05-22T22:21:40.500Z",
+  "results": [
+    {
+      "vp": "iphone-se-375",
+      "state": "home-top",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=iphone-se-375",
+        "scrollWidth": 375,
+        "innerWidth": 375,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 6,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 182.109375,
+            "h": 17.8125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 302.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-se-375",
+      "state": "home-mid",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=iphone-se-375",
+        "scrollWidth": 375,
+        "innerWidth": 375,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 6,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 182.109375,
+            "h": 17.8125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 302.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-se-375",
+      "state": "footer",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=iphone-se-375",
+        "scrollWidth": 375,
+        "innerWidth": 375,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 6,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 182.109375,
+            "h": 17.8125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 302.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-se-375",
+      "state": "intake-step1",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=iphone-se-375#intake",
+        "scrollWidth": 375,
+        "innerWidth": 375,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 9,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 182.109375,
+            "h": 17.8125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 302.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Approximate accident date",
+            "w": 293,
+            "h": 24.3125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "City or region in Ontario",
+            "w": 293,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-se-375",
+      "state": "intake-validation",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=iphone-se-375#intake",
+        "scrollWidth": 375,
+        "innerWidth": 375,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 9,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 182.109375,
+            "h": 17.8125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 302.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Approximate accident date",
+            "w": 293,
+            "h": 24.3125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "City or region in Ontario",
+            "w": 293,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-se-375",
+      "state": "intake-step2",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=iphone-se-375#intake",
+        "scrollWidth": 375,
+        "innerWidth": 375,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 7,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 182.109375,
+            "h": 17.8125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 302.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-se-375",
+      "state": "intake-step3",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=iphone-se-375#intake",
+        "scrollWidth": 375,
+        "innerWidth": 375,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 13,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 182.109375,
+            "h": 17.8125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 302.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Yes",
+            "w": 57.59375,
+            "h": 39.75
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "No",
+            "w": 52.515625,
+            "h": 39.75
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Not sure",
+            "w": 89.25,
+            "h": 39.75
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Yes",
+            "w": 57.59375,
+            "h": 39.75
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "No",
+            "w": 52.515625,
+            "h": 39.75
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Not sure",
+            "w": 89.25,
+            "h": 39.75
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-se-375",
+      "state": "intake-final",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=iphone-se-375#intake",
+        "scrollWidth": 375,
+        "innerWidth": 375,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 12,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 182.109375,
+            "h": 17.8125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 302.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "First name",
+            "w": 293,
+            "h": 24.3125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Phone",
+            "w": 293,
+            "h": 24.3125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Email",
+            "w": 293,
+            "h": 24.3125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Best time to reach you (optional)",
+            "w": 280,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Privacy Policy",
+            "w": 93.8125,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-se-375",
+      "state": "thank-you-direct",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/thank-you?wave3m=after",
+        "scrollWidth": 375,
+        "innerWidth": 375,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 4,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 182.109375,
+            "h": 17.8125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-se-375",
+      "state": "thank-you-marker",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/thank-you?wave3m_marker=after",
+        "scrollWidth": 375,
+        "innerWidth": 375,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 4,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 182.109375,
+            "h": 17.8125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      },
+      "counts": {
+        "lead": 0,
+        "conversion": 0
+      }
+    },
+    {
+      "vp": "iphone-14-390",
+      "state": "home-top",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=iphone-14-390",
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 6,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 189.390625,
+            "h": 18.515625
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 317.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-14-390",
+      "state": "home-mid",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=iphone-14-390",
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 6,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 189.390625,
+            "h": 18.515625
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 317.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-14-390",
+      "state": "footer",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=iphone-14-390",
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 6,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 189.390625,
+            "h": 18.515625
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 317.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-14-390",
+      "state": "intake-step1",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=iphone-14-390#intake",
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 9,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 189.390625,
+            "h": 18.515625
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 317.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Approximate accident date",
+            "w": 308,
+            "h": 24.3125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "City or region in Ontario",
+            "w": 308,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-14-390",
+      "state": "intake-validation",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=iphone-14-390#intake",
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 9,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 189.390625,
+            "h": 18.515625
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 317.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Approximate accident date",
+            "w": 308,
+            "h": 24.3125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "City or region in Ontario",
+            "w": 308,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-14-390",
+      "state": "intake-step2",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=iphone-14-390#intake",
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 7,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 189.390625,
+            "h": 18.515625
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 317.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-14-390",
+      "state": "intake-step3",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=iphone-14-390#intake",
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 13,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 189.390625,
+            "h": 18.515625
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 317.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Yes",
+            "w": 57.59375,
+            "h": 39.75
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "No",
+            "w": 52.515625,
+            "h": 39.75
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Not sure",
+            "w": 89.25,
+            "h": 39.75
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Yes",
+            "w": 57.59375,
+            "h": 39.75
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "No",
+            "w": 52.515625,
+            "h": 39.75
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Not sure",
+            "w": 89.25,
+            "h": 39.75
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-14-390",
+      "state": "intake-final",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=iphone-14-390#intake",
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 12,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 189.390625,
+            "h": 18.515625
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 317.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "First name",
+            "w": 308,
+            "h": 24.3125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Phone",
+            "w": 308,
+            "h": 24.3125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Email",
+            "w": 308,
+            "h": 24.3125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Best time to reach you (optional)",
+            "w": 280,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Privacy Policy",
+            "w": 93.8125,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-14-390",
+      "state": "thank-you-direct",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/thank-you?wave3m=after",
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 4,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 189.390625,
+            "h": 18.515625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-14-390",
+      "state": "thank-you-marker",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/thank-you?wave3m_marker=after",
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 4,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 189.390625,
+            "h": 18.515625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      },
+      "counts": {
+        "lead": 0,
+        "conversion": 0
+      }
+    },
+    {
+      "vp": "android-412",
+      "state": "home-top",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=android-412",
+        "scrollWidth": 412,
+        "innerWidth": 412,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 6,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 199.984375,
+            "h": 19.5625
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 339.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "android-412",
+      "state": "home-mid",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=android-412",
+        "scrollWidth": 412,
+        "innerWidth": 412,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 6,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 199.984375,
+            "h": 19.5625
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 339.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "android-412",
+      "state": "footer",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=android-412",
+        "scrollWidth": 412,
+        "innerWidth": 412,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 6,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 199.984375,
+            "h": 19.5625
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 339.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "android-412",
+      "state": "intake-step1",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=android-412#intake",
+        "scrollWidth": 412,
+        "innerWidth": 412,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 9,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 199.984375,
+            "h": 19.5625
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 339.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Approximate accident date",
+            "w": 330,
+            "h": 24.3125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "City or region in Ontario",
+            "w": 330,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "android-412",
+      "state": "intake-validation",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=android-412#intake",
+        "scrollWidth": 412,
+        "innerWidth": 412,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 9,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 199.984375,
+            "h": 19.5625
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 339.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Approximate accident date",
+            "w": 330,
+            "h": 24.3125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "City or region in Ontario",
+            "w": 330,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "android-412",
+      "state": "intake-step2",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=android-412#intake",
+        "scrollWidth": 412,
+        "innerWidth": 412,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 7,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 199.984375,
+            "h": 19.5625
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 339.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "android-412",
+      "state": "intake-step3",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=android-412#intake",
+        "scrollWidth": 412,
+        "innerWidth": 412,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 13,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 199.984375,
+            "h": 19.5625
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 339.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Yes",
+            "w": 57.59375,
+            "h": 39.75
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "No",
+            "w": 52.515625,
+            "h": 39.75
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Not sure",
+            "w": 89.25,
+            "h": 39.75
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Yes",
+            "w": 57.59375,
+            "h": 39.75
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "No",
+            "w": 52.515625,
+            "h": 39.75
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Not sure",
+            "w": 89.25,
+            "h": 39.75
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "android-412",
+      "state": "intake-final",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=android-412#intake",
+        "scrollWidth": 412,
+        "innerWidth": 412,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 12,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 199.984375,
+            "h": 19.5625
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 339.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "First name",
+            "w": 330,
+            "h": 24.3125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Phone",
+            "w": 330,
+            "h": 24.3125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Email",
+            "w": 330,
+            "h": 24.3125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Best time to reach you (optional)",
+            "w": 280,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Privacy Policy",
+            "w": 93.8125,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "android-412",
+      "state": "thank-you-direct",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/thank-you?wave3m=after",
+        "scrollWidth": 412,
+        "innerWidth": 412,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 4,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 199.984375,
+            "h": 19.5625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "android-412",
+      "state": "thank-you-marker",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/thank-you?wave3m_marker=after",
+        "scrollWidth": 412,
+        "innerWidth": 412,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 4,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 199.984375,
+            "h": 19.5625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      },
+      "counts": {
+        "lead": 0,
+        "conversion": 0
+      }
+    },
+    {
+      "vp": "iphone-pro-max-430",
+      "state": "home-top",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=iphone-pro-max-430",
+        "scrollWidth": 430,
+        "innerWidth": 430,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 7,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 208.265625,
+            "h": 20.375
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 357.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "View all FAQ →",
+            "w": 102.015625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-pro-max-430",
+      "state": "home-mid",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=iphone-pro-max-430",
+        "scrollWidth": 430,
+        "innerWidth": 430,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 7,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 208.265625,
+            "h": 20.375
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 357.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "View all FAQ →",
+            "w": 102.015625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-pro-max-430",
+      "state": "footer",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=iphone-pro-max-430",
+        "scrollWidth": 430,
+        "innerWidth": 430,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 7,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 208.265625,
+            "h": 20.375
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 357.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "View all FAQ →",
+            "w": 102.015625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-pro-max-430",
+      "state": "intake-step1",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=iphone-pro-max-430#intake",
+        "scrollWidth": 430,
+        "innerWidth": 430,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 10,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 208.265625,
+            "h": 20.375
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 357.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Approximate accident date",
+            "w": 348,
+            "h": 24.3125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "City or region in Ontario",
+            "w": 348,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "View all FAQ →",
+            "w": 102.015625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-pro-max-430",
+      "state": "intake-validation",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=iphone-pro-max-430#intake",
+        "scrollWidth": 430,
+        "innerWidth": 430,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 10,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 208.265625,
+            "h": 20.375
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 357.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Approximate accident date",
+            "w": 348,
+            "h": 24.3125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "City or region in Ontario",
+            "w": 348,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "View all FAQ →",
+            "w": 102.015625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-pro-max-430",
+      "state": "intake-step2",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=iphone-pro-max-430#intake",
+        "scrollWidth": 430,
+        "innerWidth": 430,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 8,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 208.265625,
+            "h": 20.375
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 357.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "View all FAQ →",
+            "w": 102.015625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-pro-max-430",
+      "state": "intake-step3",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=iphone-pro-max-430#intake",
+        "scrollWidth": 430,
+        "innerWidth": 430,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 15,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 208.265625,
+            "h": 20.375
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 357.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Yes",
+            "w": 57.59375,
+            "h": 39.75
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "No",
+            "w": 52.515625,
+            "h": 39.75
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Not sure",
+            "w": 89.25,
+            "h": 39.75
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Yes",
+            "w": 57.59375,
+            "h": 39.75
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "No",
+            "w": 52.515625,
+            "h": 39.75
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Not sure",
+            "w": 89.25,
+            "h": 39.75
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Anything else you want us to know? (optional)",
+            "w": 348,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "View all FAQ →",
+            "w": 102.015625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-pro-max-430",
+      "state": "intake-final",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/?utm_source=google&utm_medium=cpc&utm_campaign=wave3m_after&utm_content=iphone-pro-max-430#intake",
+        "scrollWidth": 430,
+        "innerWidth": 430,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 13,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 208.265625,
+            "h": 20.375
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 357.625,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "First name",
+            "w": 348,
+            "h": 24.3125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Phone",
+            "w": 348,
+            "h": 24.3125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Email",
+            "w": 348,
+            "h": 24.3125
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Best time to reach you (optional)",
+            "w": 280,
+            "h": 24.3125
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Privacy Policy",
+            "w": 249.765625,
+            "h": 38.6875
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "View all FAQ →",
+            "w": 102.015625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-pro-max-430",
+      "state": "thank-you-direct",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/thank-you?wave3m=after",
+        "scrollWidth": 430,
+        "innerWidth": 430,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 5,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 208.265625,
+            "h": 20.375
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "View all FAQ →",
+            "w": 102.015625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "vp": "iphone-pro-max-430",
+      "state": "thank-you-marker",
+      "metrics": {
+        "url": "https://www.ontarioaccidentreview.ca/thank-you?wave3m_marker=after",
+        "scrollWidth": 430,
+        "innerWidth": 430,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 5,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 208.265625,
+            "h": 20.375
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "View all FAQ →",
+            "w": 102.015625,
+            "h": 22.390625
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 44
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 44
+          }
+        ]
+      },
+      "counts": {
+        "lead": 0,
+        "conversion": 0
+      }
+    }
+  ]
+}

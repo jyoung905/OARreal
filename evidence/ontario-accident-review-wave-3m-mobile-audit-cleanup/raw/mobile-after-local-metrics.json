@@ -1,0 +1,934 @@
+[
+  {
+    "vp": "375",
+    "path": "/",
+    "m": {
+      "href": "http://localhost:3002/",
+      "innerWidth": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "overflow": false,
+      "overs": [],
+      "smallTargets": [
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Ontario Accident Review",
+          "w": 182.109375,
+          "h": 17.8125
+        },
+        {
+          "tag": "LABEL",
+          "cls": "oar-field-label",
+          "text": "When did the accident occur?",
+          "w": 302.625,
+          "h": 24.3125
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "See all deadlines",
+          "w": 134.265625,
+          "h": 22.390625
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Learn more about your options →",
+          "w": 226.015625,
+          "h": 17
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Home",
+          "w": 39.234375,
+          "h": 44
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "FAQ",
+          "w": 26.890625,
+          "h": 44
+        }
+      ],
+      "h1": [
+        "Review your Ontario accident benefits situation privately."
+      ],
+      "text": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nA calm first step after an Ontario accident.\n\nShare a few details and understand what benefits, deadlines, denial letters, or next steps may matter — in plain language, without pressure.\n\nFree review\nPrivate review\nNo policy number needed\nNot a law firm\nStart a private review\nLearn what the review checks\nPrivate review preview\nPrivate intake\nWhen did the accident occur?\nContinue\n\n"
+    }
+  },
+  {
+    "vp": "375",
+    "path": "/thank-you",
+    "m": {
+      "href": "http://localhost:3002/thank-you",
+      "innerWidth": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "overflow": false,
+      "overs": [],
+      "smallTargets": [
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Ontario Accident Review",
+          "w": 182.109375,
+          "h": 17.8125
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Learn more about your options →",
+          "w": 226.015625,
+          "h": 17
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Home",
+          "w": 39.234375,
+          "h": 44
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "FAQ",
+          "w": 26.890625,
+          "h": 44
+        }
+      ],
+      "h1": [
+        "Thank you — your\nrequest is in."
+      ],
+      "text": "Ontario Accident Review\nRequest received\nThank you — your\nrequest is in.\n\nWe’ve received your information and our team will review it shortly.\n\nThis is a free, private review. We will assess possible benefits, deadlines, and next steps for your situation.\n\nOntario Accident Review is not a law firm and does not provide legal advice or create a lawyer–client relationship.\nWhat happens next\n1\n\nReview submitted information\n\nWe carefully review the details you provided.\n\n2\n\nWe assess your situation\n\n"
+    }
+  },
+  {
+    "vp": "375",
+    "path": "/admin/analytics",
+    "m": {
+      "href": "http://localhost:3002/admin/analytics",
+      "innerWidth": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "overflow": false,
+      "overs": [],
+      "smallTargets": [
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Ontario Accident Review",
+          "w": 182.109375,
+          "h": 17.8125
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Learn more about your options →",
+          "w": 226.015625,
+          "h": 17
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Home",
+          "w": 39.234375,
+          "h": 44
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "FAQ",
+          "w": 26.890625,
+          "h": 44
+        }
+      ],
+      "h1": [
+        "404"
+      ],
+      "text": "Ontario Accident Review\n404\nThis page could not be found.\nYou’re in good hands\nBuilt on trust. Focused on you.\nPrivate & confidential\n\nYour information is submitted through a secure form. We do not sell it, and we only share it with a qualified professional or relevant provider with your consent or as described in our Privacy Policy.\n\nOntario-focused\n\nWe understand Ontario's accident benefits system and deadlines.\n\nClear plain-language guidance\n\nWe break things down simply so you can make confid"
+    }
+  },
+  {
+    "vp": "375",
+    "path": "/blog/insurance-dispute-fsra-mediation-ontario",
+    "m": {
+      "href": "http://localhost:3002/blog/accident-benefits-dispute-lat-aabs-ontario",
+      "innerWidth": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "overflow": false,
+      "overs": [],
+      "smallTargets": [
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Ontario Accident Review",
+          "w": 182.109375,
+          "h": 17.8125
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "",
+          "w": 14,
+          "h": 14
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Resources",
+          "w": 67.640625,
+          "h": 21.75
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "share-btn",
+          "text": "",
+          "w": 36,
+          "h": 43.59375
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "share-btn",
+          "text": "",
+          "w": 36,
+          "h": 43.59375
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Learn more about your options →",
+          "w": 226.015625,
+          "h": 17
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Home",
+          "w": 39.234375,
+          "h": 44
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "FAQ",
+          "w": 26.890625,
+          "h": 44
+        }
+      ],
+      "h1": [
+        "How LAT-AABS Disputes Work for Ontario Accident Benefits"
+      ],
+      "text": "Ontario Accident Review\n›\nResources\n›\nArticles\n›\nHow LAT-AABS Disputes Work for Ontario Accident Benefits\nHow LAT-AABS Disputes Work for Ontario Accident Benefits\n\nWhen your insurer denies or reduces statutory accident benefits, LAT-AABS may be the formal dispute forum. Here is the cautious, plain-language overview.\n\nInsurer Disputes\n·\n6 min read\nTrust & transparency: This article is for general information only and is not legal advice. Ontario Accident Review is not a law firm and does not prov"
+    }
+  },
+  {
+    "vp": "390",
+    "path": "/",
+    "m": {
+      "href": "http://localhost:3002/",
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "overflow": false,
+      "overs": [],
+      "smallTargets": [
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Ontario Accident Review",
+          "w": 189.390625,
+          "h": 18.515625
+        },
+        {
+          "tag": "LABEL",
+          "cls": "oar-field-label",
+          "text": "When did the accident occur?",
+          "w": 317.625,
+          "h": 24.3125
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "See all deadlines",
+          "w": 134.265625,
+          "h": 22.390625
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Learn more about your options →",
+          "w": 226.015625,
+          "h": 17
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Home",
+          "w": 39.234375,
+          "h": 44
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "FAQ",
+          "w": 26.890625,
+          "h": 44
+        }
+      ],
+      "h1": [
+        "Review your Ontario accident benefits situation privately."
+      ],
+      "text": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nA calm first step after an Ontario accident.\n\nShare a few details and understand what benefits, deadlines, denial letters, or next steps may matter — in plain language, without pressure.\n\nFree review\nPrivate review\nNo policy number needed\nNot a law firm\nStart a private review\nLearn what the review checks\nPrivate review preview\nPrivate intake\nWhen did the accident occur?\nContinue\n\n"
+    }
+  },
+  {
+    "vp": "390",
+    "path": "/thank-you",
+    "m": {
+      "href": "http://localhost:3002/thank-you",
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "overflow": false,
+      "overs": [],
+      "smallTargets": [
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Ontario Accident Review",
+          "w": 189.390625,
+          "h": 18.515625
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Learn more about your options →",
+          "w": 226.015625,
+          "h": 17
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Home",
+          "w": 39.234375,
+          "h": 44
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "FAQ",
+          "w": 26.890625,
+          "h": 44
+        }
+      ],
+      "h1": [
+        "Thank you — your\nrequest is in."
+      ],
+      "text": "Ontario Accident Review\nRequest received\nThank you — your\nrequest is in.\n\nWe’ve received your information and our team will review it shortly.\n\nThis is a free, private review. We will assess possible benefits, deadlines, and next steps for your situation.\n\nOntario Accident Review is not a law firm and does not provide legal advice or create a lawyer–client relationship.\nWhat happens next\n1\n\nReview submitted information\n\nWe carefully review the details you provided.\n\n2\n\nWe assess your situation\n\n"
+    }
+  },
+  {
+    "vp": "390",
+    "path": "/admin/analytics",
+    "m": {
+      "href": "http://localhost:3002/admin/analytics",
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "overflow": false,
+      "overs": [],
+      "smallTargets": [
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Ontario Accident Review",
+          "w": 189.390625,
+          "h": 18.515625
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Learn more about your options →",
+          "w": 226.015625,
+          "h": 17
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Home",
+          "w": 39.234375,
+          "h": 44
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "FAQ",
+          "w": 26.890625,
+          "h": 44
+        }
+      ],
+      "h1": [
+        "404"
+      ],
+      "text": "Ontario Accident Review\n404\nThis page could not be found.\nYou’re in good hands\nBuilt on trust. Focused on you.\nPrivate & confidential\n\nYour information is submitted through a secure form. We do not sell it, and we only share it with a qualified professional or relevant provider with your consent or as described in our Privacy Policy.\n\nOntario-focused\n\nWe understand Ontario's accident benefits system and deadlines.\n\nClear plain-language guidance\n\nWe break things down simply so you can make confid"
+    }
+  },
+  {
+    "vp": "390",
+    "path": "/blog/insurance-dispute-fsra-mediation-ontario",
+    "m": {
+      "href": "http://localhost:3002/blog/accident-benefits-dispute-lat-aabs-ontario",
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "overflow": false,
+      "overs": [],
+      "smallTargets": [
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Ontario Accident Review",
+          "w": 189.390625,
+          "h": 18.515625
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "",
+          "w": 14,
+          "h": 14
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Resources",
+          "w": 67.640625,
+          "h": 21.75
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "share-btn",
+          "text": "",
+          "w": 36,
+          "h": 43.59375
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "share-btn",
+          "text": "",
+          "w": 36,
+          "h": 43.59375
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Learn more about your options →",
+          "w": 226.015625,
+          "h": 17
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Home",
+          "w": 39.234375,
+          "h": 44
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "FAQ",
+          "w": 26.890625,
+          "h": 44
+        }
+      ],
+      "h1": [
+        "How LAT-AABS Disputes Work for Ontario Accident Benefits"
+      ],
+      "text": "Ontario Accident Review\n›\nResources\n›\nArticles\n›\nHow LAT-AABS Disputes Work for Ontario Accident Benefits\nHow LAT-AABS Disputes Work for Ontario Accident Benefits\n\nWhen your insurer denies or reduces statutory accident benefits, LAT-AABS may be the formal dispute forum. Here is the cautious, plain-language overview.\n\nInsurer Disputes\n·\n6 min read\nTrust & transparency: This article is for general information only and is not legal advice. Ontario Accident Review is not a law firm and does not prov"
+    }
+  },
+  {
+    "vp": "412",
+    "path": "/",
+    "m": {
+      "href": "http://localhost:3002/",
+      "innerWidth": 412,
+      "scrollWidth": 412,
+      "bodyScrollWidth": 412,
+      "overflow": false,
+      "overs": [],
+      "smallTargets": [
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Ontario Accident Review",
+          "w": 199.984375,
+          "h": 19.5625
+        },
+        {
+          "tag": "LABEL",
+          "cls": "oar-field-label",
+          "text": "When did the accident occur?",
+          "w": 339.625,
+          "h": 24.3125
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "See all deadlines",
+          "w": 134.265625,
+          "h": 22.390625
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Learn more about your options →",
+          "w": 226.015625,
+          "h": 17
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Home",
+          "w": 39.234375,
+          "h": 44
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "FAQ",
+          "w": 26.890625,
+          "h": 44
+        }
+      ],
+      "h1": [
+        "Review your Ontario accident benefits situation privately."
+      ],
+      "text": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nA calm first step after an Ontario accident.\n\nShare a few details and understand what benefits, deadlines, denial letters, or next steps may matter — in plain language, without pressure.\n\nFree review\nPrivate review\nNo policy number needed\nNot a law firm\nStart a private review\nLearn what the review checks\nPrivate review preview\nPrivate intake\nWhen did the accident occur?\nContinue\n\n"
+    }
+  },
+  {
+    "vp": "412",
+    "path": "/thank-you",
+    "m": {
+      "href": "http://localhost:3002/thank-you",
+      "innerWidth": 412,
+      "scrollWidth": 412,
+      "bodyScrollWidth": 412,
+      "overflow": false,
+      "overs": [],
+      "smallTargets": [
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Ontario Accident Review",
+          "w": 199.984375,
+          "h": 19.5625
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Learn more about your options →",
+          "w": 226.015625,
+          "h": 17
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Home",
+          "w": 39.234375,
+          "h": 44
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "FAQ",
+          "w": 26.890625,
+          "h": 44
+        }
+      ],
+      "h1": [
+        "Thank you — your\nrequest is in."
+      ],
+      "text": "Ontario Accident Review\nRequest received\nThank you — your\nrequest is in.\n\nWe’ve received your information and our team will review it shortly.\n\nThis is a free, private review. We will assess possible benefits, deadlines, and next steps for your situation.\n\nOntario Accident Review is not a law firm and does not provide legal advice or create a lawyer–client relationship.\nWhat happens next\n1\n\nReview submitted information\n\nWe carefully review the details you provided.\n\n2\n\nWe assess your situation\n\n"
+    }
+  },
+  {
+    "vp": "412",
+    "path": "/admin/analytics",
+    "m": {
+      "href": "http://localhost:3002/admin/analytics",
+      "innerWidth": 412,
+      "scrollWidth": 412,
+      "bodyScrollWidth": 412,
+      "overflow": false,
+      "overs": [],
+      "smallTargets": [
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Ontario Accident Review",
+          "w": 199.984375,
+          "h": 19.5625
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Learn more about your options →",
+          "w": 226.015625,
+          "h": 17
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Home",
+          "w": 39.234375,
+          "h": 44
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "FAQ",
+          "w": 26.890625,
+          "h": 44
+        }
+      ],
+      "h1": [
+        "404"
+      ],
+      "text": "Ontario Accident Review\n404\nThis page could not be found.\nYou’re in good hands\nBuilt on trust. Focused on you.\nPrivate & confidential\n\nYour information is submitted through a secure form. We do not sell it, and we only share it with a qualified professional or relevant provider with your consent or as described in our Privacy Policy.\n\nOntario-focused\n\nWe understand Ontario's accident benefits system and deadlines.\n\nClear plain-language guidance\n\nWe break things down simply so you can make confid"
+    }
+  },
+  {
+    "vp": "412",
+    "path": "/blog/insurance-dispute-fsra-mediation-ontario",
+    "m": {
+      "href": "http://localhost:3002/blog/accident-benefits-dispute-lat-aabs-ontario",
+      "innerWidth": 412,
+      "scrollWidth": 412,
+      "bodyScrollWidth": 412,
+      "overflow": false,
+      "overs": [],
+      "smallTargets": [
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Ontario Accident Review",
+          "w": 199.984375,
+          "h": 19.5625
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "",
+          "w": 14,
+          "h": 14
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Resources",
+          "w": 67.640625,
+          "h": 21.75
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "share-btn",
+          "text": "",
+          "w": 36,
+          "h": 43.59375
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "share-btn",
+          "text": "",
+          "w": 36,
+          "h": 43.59375
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Learn more about your options →",
+          "w": 226.015625,
+          "h": 17
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Home",
+          "w": 39.234375,
+          "h": 44
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "FAQ",
+          "w": 26.890625,
+          "h": 44
+        }
+      ],
+      "h1": [
+        "How LAT-AABS Disputes Work for Ontario Accident Benefits"
+      ],
+      "text": "Ontario Accident Review\n›\nResources\n›\nArticles\n›\nHow LAT-AABS Disputes Work for Ontario Accident Benefits\nHow LAT-AABS Disputes Work for Ontario Accident Benefits\n\nWhen your insurer denies or reduces statutory accident benefits, LAT-AABS may be the formal dispute forum. Here is the cautious, plain-language overview.\n\nInsurer Disputes\n·\n6 min read\nTrust & transparency: This article is for general information only and is not legal advice. Ontario Accident Review is not a law firm and does not prov"
+    }
+  },
+  {
+    "vp": "430",
+    "path": "/",
+    "m": {
+      "href": "http://localhost:3002/",
+      "innerWidth": 430,
+      "scrollWidth": 430,
+      "bodyScrollWidth": 430,
+      "overflow": false,
+      "overs": [],
+      "smallTargets": [
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Ontario Accident Review",
+          "w": 208.265625,
+          "h": 20.375
+        },
+        {
+          "tag": "LABEL",
+          "cls": "oar-field-label",
+          "text": "When did the accident occur?",
+          "w": 357.625,
+          "h": 24.3125
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "See all deadlines",
+          "w": 134.265625,
+          "h": 22.390625
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "View all FAQ →",
+          "w": 102.015625,
+          "h": 22.390625
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Learn more about your options →",
+          "w": 226.015625,
+          "h": 17
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Home",
+          "w": 39.234375,
+          "h": 44
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "FAQ",
+          "w": 26.890625,
+          "h": 44
+        }
+      ],
+      "h1": [
+        "Review your Ontario accident benefits situation privately."
+      ],
+      "text": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nA calm first step after an Ontario accident.\n\nShare a few details and understand what benefits, deadlines, denial letters, or next steps may matter — in plain language, without pressure.\n\nFree review\nPrivate review\nNo policy number needed\nNot a law firm\nStart a private review\nLearn what the review checks\nPrivate review preview\nPrivate intake\n1\nAccident details\n2\n3\n4\nWhen did the a"
+    }
+  },
+  {
+    "vp": "430",
+    "path": "/thank-you",
+    "m": {
+      "href": "http://localhost:3002/thank-you",
+      "innerWidth": 430,
+      "scrollWidth": 430,
+      "bodyScrollWidth": 430,
+      "overflow": false,
+      "overs": [],
+      "smallTargets": [
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Ontario Accident Review",
+          "w": 208.265625,
+          "h": 20.375
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "View all FAQ →",
+          "w": 102.015625,
+          "h": 22.390625
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Learn more about your options →",
+          "w": 226.015625,
+          "h": 17
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Home",
+          "w": 39.234375,
+          "h": 44
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "FAQ",
+          "w": 26.890625,
+          "h": 44
+        }
+      ],
+      "h1": [
+        "Thank you — your\nrequest is in."
+      ],
+      "text": "Ontario Accident Review\nRequest received\nThank you — your\nrequest is in.\n\nWe’ve received your information and our team will review it shortly.\n\nThis is a free, private review. We will assess possible benefits, deadlines, and next steps for your situation.\n\nOntario Accident Review is not a law firm and does not provide legal advice or create a lawyer–client relationship.\nWhat happens next\n1\n\nReview submitted information\n\nWe carefully review the details you provided.\n\n2\n\nWe assess your situation\n\n"
+    }
+  },
+  {
+    "vp": "430",
+    "path": "/admin/analytics",
+    "m": {
+      "href": "http://localhost:3002/admin/analytics",
+      "innerWidth": 430,
+      "scrollWidth": 430,
+      "bodyScrollWidth": 430,
+      "overflow": false,
+      "overs": [],
+      "smallTargets": [
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Ontario Accident Review",
+          "w": 208.265625,
+          "h": 20.375
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "View all FAQ →",
+          "w": 102.015625,
+          "h": 22.390625
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Learn more about your options →",
+          "w": 226.015625,
+          "h": 17
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Home",
+          "w": 39.234375,
+          "h": 44
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "FAQ",
+          "w": 26.890625,
+          "h": 44
+        }
+      ],
+      "h1": [
+        "404"
+      ],
+      "text": "Ontario Accident Review\n404\nThis page could not be found.\nYou’re in good hands\nBuilt on trust. Focused on you.\nPrivate & confidential\n\nYour information is submitted through a secure form. We do not sell it, and we only share it with a qualified professional or relevant provider with your consent or as described in our Privacy Policy.\n\nOntario-focused\n\nWe understand Ontario's accident benefits system and deadlines.\n\nClear plain-language guidance\n\nWe break things down simply so you can make confid"
+    }
+  },
+  {
+    "vp": "430",
+    "path": "/blog/insurance-dispute-fsra-mediation-ontario",
+    "m": {
+      "href": "http://localhost:3002/blog/accident-benefits-dispute-lat-aabs-ontario",
+      "innerWidth": 430,
+      "scrollWidth": 430,
+      "bodyScrollWidth": 430,
+      "overflow": false,
+      "overs": [],
+      "smallTargets": [
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Ontario Accident Review",
+          "w": 208.265625,
+          "h": 20.375
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "",
+          "w": 14,
+          "h": 14
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Resources",
+          "w": 67.640625,
+          "h": 21.75
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "share-btn",
+          "text": "",
+          "w": 36,
+          "h": 43.59375
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "share-btn",
+          "text": "",
+          "w": 36,
+          "h": 43.59375
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "View all FAQ →",
+          "w": 102.015625,
+          "h": 22.390625
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Learn more about your options →",
+          "w": 226.015625,
+          "h": 17
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "Home",
+          "w": 39.234375,
+          "h": 44
+        },
+        {
+          "tag": "A",
+          "cls": "",
+          "text": "FAQ",
+          "w": 26.890625,
+          "h": 44
+        }
+      ],
+      "h1": [
+        "How LAT-AABS Disputes Work for Ontario Accident Benefits"
+      ],
+      "text": "Ontario Accident Review\n›\nResources\n›\nArticles\n›\nHow LAT-AABS Disputes Work for Ontario Accident Benefits\nHow LAT-AABS Disputes Work for Ontario Accident Benefits\n\nWhen your insurer denies or reduces statutory accident benefits, LAT-AABS may be the formal dispute forum. Here is the cautious, plain-language overview.\n\nInsurer Disputes\n·\n6 min read\nTrust & transparency: This article is for general information only and is not legal advice. Ontario Accident Review is not a law firm and does not prov"
+    }
+  }
+]

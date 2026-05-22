@@ -348,7 +348,7 @@ export default function HomeContent() {
       {/* ───── TRUST / PRIVACY / CONSENT ───── */}
       <section className="oar-section" style={{ background: '#fff' }}>
         <div className="oar-container">
-          <div className="oar-card oar-card-elevated" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 0.85fr) minmax(0, 1.15fr)', gap: 'clamp(1.5rem, 4vw, 3rem)', alignItems: 'center', background: 'var(--surface-strong)' }}>
+          <div className="oar-card oar-card-elevated oar-privacy-card" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 0.85fr) minmax(0, 1.15fr)', gap: 'clamp(1.5rem, 4vw, 3rem)', alignItems: 'center', background: 'var(--surface-strong)' }}>
             <div>
               <div className="oar-eyebrow oar-eyebrow-gold" style={{ marginBottom: '1rem' }}><Icon name="lock" size={14} /> Privacy &amp; consent</div>
               <h2 className="oar-h2" style={{ marginTop: 0 }}>A private review, with clear referral boundaries.</h2>
