@@ -205,7 +205,7 @@ export function SiteFooter() {
               { href: '/#how-it-works',      label: 'How it works' },
               { href: '/#who-this-is-for',   label: 'Who this is for' },
               { href: '/#faq',               label: 'FAQ' },
-              { href: '/#intake',            label: 'Start My Free Review' },
+              { href: '/#intake',            label: 'Start a private review' },
             ]} />
 
             <FooterCol title="Resources" links={[

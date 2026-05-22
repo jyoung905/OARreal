@@ -7,11 +7,11 @@ import { Analytics } from '@/lib/analytics';
 /* ─────────────────────────────────────────────────────────────────
    SiteHeader — Rebrand 2026
    Matches mockup #1/#2/#3: serif inline brand, light cream nav,
-   underlined active link, blue pill CTA "Start My Free Review".
+   underlined active link, blue pill CTA "Start a private review".
    ───────────────────────────────────────────────────────────────── */
 
 function trackHeaderCta(location) {
-  Analytics.ctaClick({ cta_text: 'Start My Free Review', cta_location: location });
+  Analytics.ctaClick({ cta_text: 'Start a private review', cta_location: location });
   Analytics.intakeStart({ trigger: location });
 }
 
@@ -108,7 +108,7 @@ export function SiteHeader() {
             onClick={() => trackHeaderCta('header')}
             style={{ height: 44, padding: '0 1.25rem' }}
           >
-            Start My Free Review
+            Start a private review
           </a>
 
           <button
@@ -153,7 +153,7 @@ export function SiteHeader() {
             className="oar-btn oar-btn-primary"
             style={{ marginTop: '0.5rem', width: '100%' }}
           >
-            Start My Free Review
+            Start a private review
           </a>
         </nav>
       )}

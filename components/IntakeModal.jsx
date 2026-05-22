@@ -80,10 +80,10 @@ function isLikelyTestLead({ firstName, email, message }) {
 }
 
 const STEP_META = [
-  { num: 1, title: 'About the accident',                   eyebrow: 'Tell us what happened — short answers are fine.', up: 'Insurer status' },
-  { num: 2, title: 'Where is your claim now?', eyebrow: 'Choose the closest option. This helps us understand timing, urgency, and what to look at in your review.', up: 'Your injuries' },
-  { num: 3, title: 'Your injuries and impact',             eyebrow: 'No medical records or detailed history needed at this stage.', up: 'Contact details' },
-  { num: 4, title: 'Where can we reach you?',              eyebrow: 'Only used to follow up if your situation appears to fit.',         up: null },
+  { num: 1, title: 'Accident details', eyebrow: 'Tell us what happened in Ontario — short answers are fine.', up: 'Benefits and claim status' },
+  { num: 2, title: 'Benefits and claim status', eyebrow: 'Choose the closest option. This helps us understand timing, urgency, and what to look at in your review.', up: 'Injuries and impact' },
+  { num: 3, title: 'Injuries and impact', eyebrow: 'No medical records or detailed history needed at this stage.', up: 'Contact preference and consent' },
+  { num: 4, title: 'Contact preference and consent', eyebrow: 'We use this to respond to your review request. Any referral or connection should be based on explicit consent.', up: null },
 ];
 
 function Icn({ name, size = 18, color = 'currentColor' }) {
@@ -519,8 +519,8 @@ export function IntakeModal() {
               <div className="oar-callout" style={{ background: 'var(--accent-soft)', borderColor: 'rgba(20,83,184,0.16)' }}>
                 <span className="oar-callout-icon"><Icn name="lock" size={12} color="#fff" /></span>
                 <div>
-                  <strong style={{ display: 'block', marginBottom: '0.15rem', color: 'var(--primary)' }}>Secure review request.</strong>
-                  We use your submission to review your request and contact you. We do not sell your information, and we only share it with a qualified professional or relevant provider with your consent or as described in our Privacy Policy.
+                  <strong style={{ display: 'block', marginBottom: '0.15rem', color: 'var(--primary)' }}>What happens after you submit.</strong>
+                  We review the accident details, benefit issues, contact preference, and consent choices you provide. We use your submission to respond to the review request. We do not sell your information, and any referral or connection should happen only with explicit consent or as described in our Privacy Policy.
                 </div>
               </div>
 
@@ -581,7 +581,7 @@ export function IntakeModal() {
 
         {/* Privacy badge */}
         <p style={{ marginTop: '0.875rem', textAlign: 'center', fontSize: '0.8rem', color: 'var(--muted)', display: 'inline-flex', alignItems: 'center', gap: '0.4rem', width: '100%', justifyContent: 'center' }}>
-          <Icn name="lock" size={13} color="var(--green)" /> Private &amp; confidential
+          <Icn name="lock" size={13} color="var(--green)" /> Private review
         </p>
 
         {/* Action row */}
@@ -593,7 +593,7 @@ export function IntakeModal() {
           ) : <span />}
           {step < 4
             ? <button onClick={next} className="oar-btn oar-btn-primary">Continue <Icn name="arrow-right" size={14} /></button>
-            : <button onClick={submitForm} disabled={submitting} aria-disabled={submitting} className="oar-btn oar-btn-primary">{submitting ? 'Submitting…' : 'Submit My Review'} {!submitting && <Icn name="arrow-right" size={14} />}</button>
+            : <button onClick={submitForm} disabled={submitting} aria-disabled={submitting} className="oar-btn oar-btn-primary">{submitting ? 'Submitting…' : 'Submit private review'} {!submitting && <Icn name="arrow-right" size={14} />}</button>
           }
         </div>
 

@@ -14,7 +14,7 @@ export default function ReviewRedirectPage() {
         <h1 style={{ fontFamily: 'var(--font-display)', color: 'var(--primary)', fontSize: '2rem', fontWeight: 400, marginBottom: '1rem' }}>Start your free accident review</h1>
         <p style={{ color: 'var(--muted)', lineHeight: 1.6, marginBottom: '1.5rem' }}>If you are not redirected automatically, use the button below to open the review form.</p>
         <Link href="/#intake" style={{ display: 'inline-flex', minHeight: 48, alignItems: 'center', justifyContent: 'center', padding: '0 1.5rem', background: 'var(--accent)', color: '#fff', fontWeight: 700, textDecoration: 'none' }}>
-          Start My Free Accident Review
+          Start a private review
         </Link>
       </div>
     </main>

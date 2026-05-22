@@ -64,7 +64,7 @@ const faqJsonLd = {
       name: 'Do I need a lawyer to use this service?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. Ontario Accident Review is not a law firm and does not provide legal advice. Where appropriate, users may be connected with a legal professional or relevant service provider, with no obligation.',
+        text: 'No. Ontario Accident Review is not a law firm and does not provide legal advice. Where appropriate, users may be connected with a qualified professional or relevant service provider, with consent and no obligation.',
       },
     },
     {

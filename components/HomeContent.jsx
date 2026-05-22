@@ -15,7 +15,7 @@ function trackCta(text, location) {
   Analytics.intakeStart({ trigger: location });
 }
 
-const REASSURANCE = ['Free', 'Confidential', 'No obligation'];
+const REASSURANCE = ['Free review', 'Private review', 'No policy number needed', 'Not a law firm'];
 
 const BENEFITS = [
   'Treatment & rehabilitation coverage',
@@ -33,9 +33,9 @@ const DEADLINES = [
 ];
 
 const STEPS = [
-  { num: '1', title: 'Answer a few questions', desc: 'Takes about 2 minutes. No policy number, claim number, or uploads needed to start.' },
-  { num: '2', title: 'We review your details',  desc: 'Our team looks at what may apply: benefits, deadlines, common delays, and next steps.' },
-  { num: '3', title: 'Get your personalized summary', desc: 'Know your options and a clear next step. No pressure to proceed with anything.' },
+  { num: '1', title: 'Answer a few private questions', desc: 'Share accident details, current benefit issues, and contact preference. No policy number, claim number, or uploads needed to start.' },
+  { num: '2', title: 'We review the key flags',  desc: 'We look for practical issues such as benefit disruption, insurer delays, denial letters, and deadlines that may need attention.' },
+  { num: '3', title: 'Choose a calm next step', desc: 'If appropriate, we can help route next steps or connect you with someone qualified, with consent and no pressure.' },
 ];
 
 const NEED_REVIEW = [
@@ -103,15 +103,15 @@ export default function HomeContent() {
               </div>
 
               <h1 className="oar-h1" style={{ marginTop: 0, marginBottom: '1.5rem' }}>
-                Injured in an<br/>Ontario accident?
+                Review your Ontario accident benefits situation privately.
               </h1>
 
               <p className="oar-lead" style={{ marginTop: 0, marginBottom: '1rem', maxWidth: 540 }}>
-                Start with a free, private review.
+                A calm first step after an Ontario accident.
               </p>
 
-              <p className="oar-body-lg" style={{ marginTop: 0, marginBottom: '2rem', maxWidth: 540 }}>
-                Understand what benefits, deadlines, and next steps may apply &mdash; in plain language, without pressure.
+              <p className="oar-body-lg" style={{ marginTop: 0, marginBottom: '2rem', maxWidth: 560 }}>
+                Share a few details and understand what benefits, deadlines, denial letters, or next steps may matter &mdash; in plain language, without pressure.
               </p>
 
               {/* Reassurance pills */}
@@ -128,12 +128,12 @@ export default function HomeContent() {
               </div>
 
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center', marginBottom: '0.5rem' }}>
-                <a href="#intake" className="oar-btn oar-btn-primary oar-btn-lg" onClick={() => trackCta('Start My Free Review', 'hero')}>
-                  Start My Free Review
+                <a href="#intake" className="oar-btn oar-btn-primary oar-btn-lg" onClick={() => trackCta('Start a private review', 'hero')}>
+                  Start a private review
                   <span className="oar-btn-arrow"><Icon name="arrow-right" size={14} /></span>
                 </a>
                 <a href="#how-it-works" className="oar-btn oar-btn-ghost oar-btn-lg" style={{ height: 'auto', padding: 0 }}>
-                  See how it works
+                  Learn what the review checks
                   <Icon name="arrow-right" size={14} />
                 </a>
               </div>
@@ -146,9 +146,9 @@ export default function HomeContent() {
               </div>
               <div className="oar-hero-card oar-fade-in" style={{ position: 'relative', zIndex: 2, maxWidth: 460, marginLeft: 'auto' }}>
                 <div className="oar-hero-card-header">
-                  <h3 className="oar-hero-card-title">Your review starts here</h3>
+                  <h3 className="oar-hero-card-title">Private review preview</h3>
                   <span className="oar-hero-card-private">
-                    <Icon name="lock" size={12} color="var(--green)" /> Private &amp; confidential
+                    <Icon name="lock" size={12} color="var(--green)" /> Private intake
                   </span>
                 </div>
 
@@ -156,22 +156,22 @@ export default function HomeContent() {
                 <div className="oar-stepper" style={{ marginBottom: '1.5rem' }}>
                   <div className="oar-stepper-item">
                     <span className="oar-step-dot is-active">1</span>
-                    <span className="oar-step-label is-active">About you</span>
+                    <span className="oar-step-label is-active">Accident details</span>
                   </div>
                   <span className="oar-step-rail" />
                   <div className="oar-stepper-item">
                     <span className="oar-step-dot">2</span>
-                    <span className="oar-step-label oar-hide-mobile">Accident</span>
+                    <span className="oar-step-label oar-hide-mobile">Benefits/issues</span>
                   </div>
                   <span className="oar-step-rail" />
                   <div className="oar-stepper-item">
                     <span className="oar-step-dot">3</span>
-                    <span className="oar-step-label oar-hide-mobile">Injuries</span>
+                    <span className="oar-step-label oar-hide-mobile">Contact preference</span>
                   </div>
                   <span className="oar-step-rail" />
                   <div className="oar-stepper-item">
                     <span className="oar-step-dot">4</span>
-                    <span className="oar-step-label oar-hide-mobile">Review</span>
+                    <span className="oar-step-label oar-hide-mobile">Submitted</span>
                   </div>
                 </div>
 
@@ -194,7 +194,7 @@ export default function HomeContent() {
                 </a>
 
                 <p style={{ fontSize: '0.78rem', color: 'var(--muted)', textAlign: 'center', marginTop: '0.875rem', marginBottom: 0, lineHeight: 1.5 }}>
-                  Takes about 2 minutes &middot; No policy number needed
+                  Free private review &middot; no policy number needed &middot; not a law firm
                 </p>
               </div>
             </div>
@@ -220,9 +220,9 @@ export default function HomeContent() {
               <Icon name="shield-check" size={14} />
               What we help clarify
             </div>
-            <h2 className="oar-h2">A practical look at what may apply to your situation.</h2>
+            <h2 className="oar-h2">What this review can help clarify.</h2>
             <p className="oar-body-lg" style={{ marginTop: '1rem' }}>
-              In about 2 minutes, you&rsquo;ll know what benefits, deadlines, and next steps to consider &mdash; without making any commitments.
+              In about 2 minutes, the review helps flag treatment or benefit issues, income disruption, denial letters, deadlines, and whether speaking with a qualified professional may be worth considering.
             </p>
           </div>
 
@@ -344,6 +344,56 @@ export default function HomeContent() {
         </div>
       </section>
 
+
+      {/* ───── TRUST / PRIVACY / CONSENT ───── */}
+      <section className="oar-section" style={{ background: '#fff' }}>
+        <div className="oar-container">
+          <div className="oar-card oar-card-elevated" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 0.85fr) minmax(0, 1.15fr)', gap: 'clamp(1.5rem, 4vw, 3rem)', alignItems: 'center', background: 'var(--surface-strong)' }}>
+            <div>
+              <div className="oar-eyebrow oar-eyebrow-gold" style={{ marginBottom: '1rem' }}><Icon name="lock" size={14} /> Privacy &amp; consent</div>
+              <h2 className="oar-h2" style={{ marginTop: 0 }}>A private review, with clear referral boundaries.</h2>
+              <p className="oar-body-lg" style={{ marginBottom: 0 }}>Your information is used to review your submission and respond. It is not sold. If a referral or connection appears appropriate, consent should be explicit before your submission is shared for that purpose.</p>
+            </div>
+            <div className="oar-bullet-list">
+              {[
+                'Not a law firm and not legal advice.',
+                'No policy number or uploads needed to start.',
+                'We may connect you with a qualified professional if appropriate and with consent.',
+                'You stay in control of whether to continue after the review.'
+              ].map(item => (
+                <div key={item} className="oar-bullet"><span className="oar-bullet-icon"><Icon name="check" size={14} /></span><span className="oar-bullet-text">{item}</span></div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ───── RESOURCE PREVIEW ───── */}
+      <section className="oar-section" style={{ background: 'var(--bg-soft)' }}>
+        <div className="oar-container">
+          <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', alignItems: 'end', marginBottom: '1.5rem', flexWrap: 'wrap' }}>
+            <div style={{ maxWidth: 680 }}>
+              <div className="oar-eyebrow" style={{ marginBottom: '1rem' }}>Ontario accident benefits resources</div>
+              <h2 className="oar-h2" style={{ margin: 0 }}>Helpful reading, secondary to your private review.</h2>
+              <p className="oar-body-lg" style={{ margin: '0.75rem 0 0' }}>These resources explain common Ontario accident-benefits questions. They do not replace advice from a qualified professional.</p>
+            </div>
+            <Link href="/resources" className="oar-btn oar-btn-secondary">View resources <Icon name="arrow-right" size={14} /></Link>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1rem' }}>
+            {[
+              ['Deadlines after an accident', '/blog/ontario-accident-deadlines', 'Notice, application, and dispute timing can matter.'],
+              ['What SABS covers', '/blog/ontario-sabs-explained', 'A plain-language look at Ontario accident benefits.'],
+              ['When benefits are denied', '/blog/ontario-insurer-dispute-process', 'How LAT-AABS may fit when an accident-benefits dispute arises.']
+            ].map(([title, href, body]) => (
+              <Link key={href} href={href} className="oar-card oar-card-hoverable" style={{ display: 'block', background: '#fff' }}>
+                <h3 className="oar-h3" style={{ marginTop: 0, fontSize: '1.25rem' }}>{title}</h3>
+                <p className="oar-body" style={{ margin: 0 }}>{body}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ───── FINAL CTA ───── */}
       <section className="oar-section" style={{ background: 'var(--primary)', color: '#fff' }}>
         <div className="oar-container-narrow" style={{ textAlign: 'center' }}>
@@ -354,12 +404,12 @@ export default function HomeContent() {
           <p style={{ fontSize: '1.125rem', color: 'rgba(255,255,255,0.78)', maxWidth: 560, margin: '0 auto 2rem', lineHeight: 1.6 }}>
             About 2 minutes. No policy number. No uploads. No obligation.
           </p>
-          <a href="#intake" className="oar-btn oar-btn-primary oar-btn-lg" onClick={() => trackCta('Start My Free Review', 'final_cta')}>
-            Start My Free Review
+          <a href="#intake" className="oar-btn oar-btn-primary oar-btn-lg" onClick={() => trackCta('Start a private review', 'final_cta')}>
+            Start a private review
             <span className="oar-btn-arrow"><Icon name="arrow-right" size={14} /></span>
           </a>
           <p style={{ marginTop: '1.75rem', maxWidth: 720, marginInline: 'auto', fontSize: '0.78rem', color: 'rgba(255,255,255,0.55)', lineHeight: 1.6 }}>
-            Ontario Accident Review is not a law firm and does not provide legal advice. The free review is for general claim-navigation purposes only. Where appropriate, users may be connected with a qualified legal professional or relevant service provider.
+            Ontario Accident Review is not a law firm and does not provide legal advice. The free review is for general claim-navigation purposes only. Where appropriate, users may be connected with a qualified legal professional or relevant service provider with consent.
           </p>
         </div>
       </section>
@@ -408,7 +458,7 @@ export default function HomeContent() {
       </section>
 
       {/* Mobile sticky CTA */}
-      <a href="#intake" onClick={() => trackCta('Start Free Review', 'mobile_sticky')} className="oar-mobile-sticky-cta">Start My Free Review</a>
+      <a href="#intake" onClick={() => trackCta('Start private review', 'mobile_sticky')} className="oar-mobile-sticky-cta">Start a private review</a>
 
       {/* Hero responsive */}
       <style>{`

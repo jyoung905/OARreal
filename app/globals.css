@@ -3103,3 +3103,12 @@ body.modal-open {
 
 /* Body weight tweak — denser look */
 body { font-feature-settings: "ss01" on; -webkit-font-smoothing: antialiased; }
+
+/* Wave 2D accessibility polish: visible keyboard focus on interactive controls. */
+a:focus-visible,
+button:focus-visible,
+.oar-btn:focus-visible,
+.oar-option:focus-visible {
+  outline: 3px solid rgba(20, 83, 184, 0.45);
+  outline-offset: 3px;
+}
