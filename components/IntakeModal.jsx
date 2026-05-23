@@ -83,7 +83,7 @@ const STEP_META = [
   { num: 1, title: 'Accident details', eyebrow: 'Tell us what happened in Ontario — short answers are fine.', up: 'Benefits and claim status' },
   { num: 2, title: 'Benefits and claim status', eyebrow: 'Choose the closest option. This helps us understand timing, urgency, and what to look at in your review.', up: 'Injuries and impact' },
   { num: 3, title: 'Injuries and impact', eyebrow: 'No medical records or detailed history needed at this stage.', up: 'Contact preference and consent' },
-  { num: 4, title: 'Contact preference and consent', eyebrow: 'We use this to respond to your review request. Any referral or connection should be based on explicit consent.', up: null },
+  { num: 4, title: 'Contact preference and consent', eyebrow: 'We use this to respond to your review request. No legal advice or representation is created by submitting.', up: null },
 ];
 
 function Icn({ name, size = 18, color = 'currentColor' }) {
@@ -136,7 +136,6 @@ export function IntakeModal() {
   const [email, setEmail] = useState('');
   const [bestTime, setBestTime] = useState('');
   const [consent, setConsent] = useState(false);
-  const [referralConsent, setReferralConsent] = useState(false);
 
   useEffect(() => {
     const onHash = () => {
@@ -229,7 +228,7 @@ export function IntakeModal() {
       consentTruth: true,
       consentNotLawFirm: true,
       consentToContact: consent,
-      consentReferralShare: referralConsent,
+      consentReferralShare: false,
       sourcePage: typeof window !== 'undefined' ? window.location.pathname : '/',
       ...getAttribution(),
     };
@@ -526,7 +525,7 @@ export function IntakeModal() {
                 <span className="oar-callout-icon"><Icn name="lock" size={12} color="#fff" /></span>
                 <div>
                   <strong style={{ display: 'block', marginBottom: '0.15rem', color: 'var(--primary)' }}>What happens after you submit.</strong>
-                  We review the accident details, benefit issues, contact preference, and consent choices you provide. We use your submission to respond to the review request. We do not sell your information, and any referral or connection should happen only with explicit consent or as described in our Privacy Policy.
+                  We review the accident details, benefit issues, and contact preference you provide. We use your submission to respond to the review request. We do not sell your information.
                 </div>
               </div>
 
@@ -568,14 +567,6 @@ export function IntakeModal() {
                 </span>
               </label>
               {fieldErrors.consent && <span style={{ color: '#b91c1c', fontSize: '0.78rem', fontWeight: 500, marginTop: '-0.75rem' }}>Please confirm consent before submitting.</span>}
-
-              <label className="im-consent-card im-consent-optional" style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', padding: '1rem 1.125rem', background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)', cursor: 'pointer' }}>
-                <input type="checkbox" checked={referralConsent} onChange={e => setReferralConsent(e.target.checked)} style={{ accentColor: 'var(--accent)', width: 18, height: 18, marginTop: 2, flexShrink: 0 }} />
-                <span className="im-consent-copy" style={{ fontSize: '0.875rem', color: 'var(--text-strong)', lineHeight: 1.55 }}>
-                  <strong>Optional referral consent.</strong>
-                  <span>I consent to Ontario Accident Review sharing my submission with a qualified legal professional or relevant service provider if that appears useful for follow-up. This is optional and does not create a lawyer-client relationship.</span>
-                </span>
-              </label>
 
               {submitError && (
                 <div className="oar-callout" style={{ background: '#fdecea', borderColor: '#f5b8b8', color: '#7a1f1f' }}>
