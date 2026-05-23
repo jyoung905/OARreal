@@ -1,0 +1,2841 @@
+{
+  "phase": "after",
+  "base": "http://localhost:3002",
+  "checkedAt": "2026-05-23T02:01:53.327Z",
+  "results": [
+    {
+      "vp": "iphone-se-375",
+      "state": "step1",
+      "metrics": {
+        "url": "http://localhost:3002/?utm_source=google&utm_medium=cpc&utm_campaign=wave3ms_mobile&utm_content=after#intake",
+        "innerWidth": 375,
+        "scrollWidth": 375,
+        "bodyHeight": 2784,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 4,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 182.109375,
+            "h": 17.8125,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Approximate accident date",
+            "w": 304.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "City or region in Ontario",
+            "w": 304.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nStart free review\nWhat this review checks\nQuickly see what may matter.\nTreatment coverage\nIncome replacement / missed work\nDelayed or denied benefits\nForms, deadlines, and next steps\nHow it works\nThree simple steps.\n1\nTell us what happened\n2\nWe review the key details\n3\nYou get a clear next step\nCommon situations\nTreatment not covered\nMissing work\nBenefits delayed or denied\nUnsure what to do next\n\nOntario Accident Review is a private first step. It is not a law firm and does not provide legal advice. Where appropriate, you may choose to be connected with a qualified professional.\n\nFrequently asked questions\nPlain answers to common questions.\n?\nIs the review really free?\n\nYes. The initial accident b"
+      }
+    },
+    {
+      "vp": "iphone-se-375",
+      "state": "validation",
+      "metrics": {
+        "url": "http://localhost:3002/?utm_source=google&utm_medium=cpc&utm_campaign=wave3ms_mobile&utm_content=after#intake",
+        "innerWidth": 375,
+        "scrollWidth": 375,
+        "bodyHeight": 2784,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 4,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 182.109375,
+            "h": 17.8125,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Approximate accident date",
+            "w": 304.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "City or region in Ontario",
+            "w": 304.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nStart free review\nWhat this review checks\nQuickly see what may matter.\nTreatment coverage\nIncome replacement / missed work\nDelayed or denied benefits\nForms, deadlines, and next steps\nHow it works\nThree simple steps.\n1\nTell us what happened\n2\nWe review the key details\n3\nYou get a clear next step\nCommon situations\nTreatment not covered\nMissing work\nBenefits delayed or denied\nUnsure what to do next\n\nOntario Accident Review is a private first step. It is not a law firm and does not provide legal advice. Where appropriate, you may choose to be connected with a qualified professional.\n\nFrequently asked questions\nPlain answers to common questions.\n?\nIs the review really free?\n\nYes. The initial accident b"
+      }
+    },
+    {
+      "vp": "iphone-se-375",
+      "state": "step2",
+      "metrics": {
+        "url": "http://localhost:3002/?utm_source=google&utm_medium=cpc&utm_campaign=wave3ms_mobile&utm_content=after#intake",
+        "innerWidth": 375,
+        "scrollWidth": 375,
+        "bodyHeight": 2784,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 2,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 182.109375,
+            "h": 17.8125,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nStart free review\nWhat this review checks\nQuickly see what may matter.\nTreatment coverage\nIncome replacement / missed work\nDelayed or denied benefits\nForms, deadlines, and next steps\nHow it works\nThree simple steps.\n1\nTell us what happened\n2\nWe review the key details\n3\nYou get a clear next step\nCommon situations\nTreatment not covered\nMissing work\nBenefits delayed or denied\nUnsure what to do next\n\nOntario Accident Review is a private first step. It is not a law firm and does not provide legal advice. Where appropriate, you may choose to be connected with a qualified professional.\n\nFrequently asked questions\nPlain answers to common questions.\n?\nIs the review really free?\n\nYes. The initial accident b"
+      }
+    },
+    {
+      "vp": "iphone-se-375",
+      "state": "step3",
+      "metrics": {
+        "url": "http://localhost:3002/?utm_source=google&utm_medium=cpc&utm_campaign=wave3ms_mobile&utm_content=after#intake",
+        "innerWidth": 375,
+        "scrollWidth": 375,
+        "bodyHeight": 2784,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 8,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 182.109375,
+            "h": 17.8125,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Yes",
+            "w": 57.59375,
+            "h": 39.75,
+            "fontSize": "13.6px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "No",
+            "w": 52.515625,
+            "h": 39.75,
+            "fontSize": "13.6px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Not sure",
+            "w": 89.25,
+            "h": 39.75,
+            "fontSize": "13.6px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Yes",
+            "w": 57.59375,
+            "h": 39.75,
+            "fontSize": "13.6px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "No",
+            "w": 52.515625,
+            "h": 39.75,
+            "fontSize": "13.6px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Not sure",
+            "w": 89.25,
+            "h": 39.75,
+            "fontSize": "13.6px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nStart free review\nWhat this review checks\nQuickly see what may matter.\nTreatment coverage\nIncome replacement / missed work\nDelayed or denied benefits\nForms, deadlines, and next steps\nHow it works\nThree simple steps.\n1\nTell us what happened\n2\nWe review the key details\n3\nYou get a clear next step\nCommon situations\nTreatment not covered\nMissing work\nBenefits delayed or denied\nUnsure what to do next\n\nOntario Accident Review is a private first step. It is not a law firm and does not provide legal advice. Where appropriate, you may choose to be connected with a qualified professional.\n\nFrequently asked questions\nPlain answers to common questions.\n?\nIs the review really free?\n\nYes. The initial accident b"
+      }
+    },
+    {
+      "vp": "iphone-se-375",
+      "state": "step4",
+      "metrics": {
+        "url": "http://localhost:3002/?utm_source=google&utm_medium=cpc&utm_campaign=wave3ms_mobile&utm_content=after#intake",
+        "innerWidth": 375,
+        "scrollWidth": 375,
+        "bodyHeight": 2784,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 7,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 182.109375,
+            "h": 17.8125,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "First name",
+            "w": 304.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Phone",
+            "w": 304.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Email",
+            "w": 304.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Best time to reach you (optional)",
+            "w": 280,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Privacy Policy",
+            "w": 90.0625,
+            "h": 16,
+            "fontSize": "13.44px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nStart free review\nWhat this review checks\nQuickly see what may matter.\nTreatment coverage\nIncome replacement / missed work\nDelayed or denied benefits\nForms, deadlines, and next steps\nHow it works\nThree simple steps.\n1\nTell us what happened\n2\nWe review the key details\n3\nYou get a clear next step\nCommon situations\nTreatment not covered\nMissing work\nBenefits delayed or denied\nUnsure what to do next\n\nOntario Accident Review is a private first step. It is not a law firm and does not provide legal advice. Where appropriate, you may choose to be connected with a qualified professional.\n\nFrequently asked questions\nPlain answers to common questions.\n?\nIs the review really free?\n\nYes. The initial accident b"
+      }
+    },
+    {
+      "vp": "iphone-se-375",
+      "state": "step4-consent-closeup",
+      "metrics": {
+        "url": "http://localhost:3002/?utm_source=google&utm_medium=cpc&utm_campaign=wave3ms_mobile&utm_content=after#intake",
+        "innerWidth": 375,
+        "scrollWidth": 375,
+        "bodyHeight": 2784,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 7,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 182.109375,
+            "h": 17.8125,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "First name",
+            "w": 304.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Phone",
+            "w": 304.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Email",
+            "w": 304.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Best time to reach you (optional)",
+            "w": 280,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Privacy Policy",
+            "w": 90.0625,
+            "h": 16,
+            "fontSize": "13.44px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nStart free review\nWhat this review checks\nQuickly see what may matter.\nTreatment coverage\nIncome replacement / missed work\nDelayed or denied benefits\nForms, deadlines, and next steps\nHow it works\nThree simple steps.\n1\nTell us what happened\n2\nWe review the key details\n3\nYou get a clear next step\nCommon situations\nTreatment not covered\nMissing work\nBenefits delayed or denied\nUnsure what to do next\n\nOntario Accident Review is a private first step. It is not a law firm and does not provide legal advice. Where appropriate, you may choose to be connected with a qualified professional.\n\nFrequently asked questions\nPlain answers to common questions.\n?\nIs the review really free?\n\nYes. The initial accident b"
+      }
+    },
+    {
+      "vp": "iphone-se-375",
+      "state": "desktop-intake-smoke",
+      "metrics": {
+        "url": "http://localhost:3002/?desktop_smoke=after#intake",
+        "innerWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 7383,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 33,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 254.28125,
+            "h": 23.046875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 40.984375,
+            "h": 29.046875,
+            "fontSize": "14.4px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "How it works",
+            "w": 89.328125,
+            "h": 29.046875,
+            "fontSize": "14.4px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Who this is for",
+            "w": 99.015625,
+            "h": 29.046875,
+            "fontSize": "14.4px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 27.9375,
+            "h": 29.046875,
+            "fontSize": "14.4px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Resources",
+            "w": 72.53125,
+            "h": 29.046875,
+            "fontSize": "14.4px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "oar-btn oar-btn-ghost oar-btn-lg",
+            "text": "Learn what the review checks",
+            "w": 256.484375,
+            "h": 27.59375,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 402,
+            "h": 22.390625,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "oar-hide-mobile",
+            "text": "Close",
+            "w": 50.03125,
+            "h": 24.390625,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Approximate accident date",
+            "w": 311,
+            "h": 22.390625,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "City or region in Ontario",
+            "w": 311,
+            "h": 22.390625,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "View all FAQ →",
+            "w": 102.015625,
+            "h": 22.390625,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "hello@ontarioaccidentreview.ca",
+            "w": 244.6875,
+            "h": 23.046875,
+            "fontSize": "14.4px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "How it works",
+            "w": 86.015625,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Who this is for",
+            "w": 95.140625,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Start a private review",
+            "w": 140.4375,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "All resources",
+            "w": 86.234375,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Accident benefits overview",
+            "w": 180.078125,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Important deadlines",
+            "w": 131.6875,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Types of benefits",
+            "w": 115.1875,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Helpful guides",
+            "w": 95.703125,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "About us",
+            "w": 59.09375,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Contact us",
+            "w": 71.59375,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Privacy",
+            "w": 49,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "oar-btn oar-btn-secondary oar-btn-sm",
+            "text": "Contact us",
+            "w": 198.5625,
+            "h": 40,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Privacy Policy",
+            "w": 84.640625,
+            "h": 20.46875,
+            "fontSize": "12.8px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Terms of Service",
+            "w": 103.09375,
+            "h": 20.46875,
+            "fontSize": "12.8px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Disclaimer",
+            "w": 63.296875,
+            "h": 20.46875,
+            "fontSize": "12.8px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nHome\nHow it works\nWho this is for\nFAQ\nResources\nStart a private review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nA calm first step after an Ontario accident.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nNot a law firm\nStart a private review\nLearn what the review checks\nPrivate review preview\nPrivate intake\n1\nAccident details\n2\nBenefits/issues\n3\nContact preference\n4\nSubmitted\nWhen did the accident occur?\nContinue\n\nFree private review · no policy number needed · not a law firm\n\nPrivate & secure\n\nYour information is submitted through a secure form and used to review your request. We do not sell it, and we only share it with a qualified professional or relevant provider with your consent or as described in our Privacy Policy.\n\nOntario-focused\n\nWe understand Ontario's benefits system.\n\n"
+      }
+    },
+    {
+      "vp": "iphone-14-390",
+      "state": "step1",
+      "metrics": {
+        "url": "http://localhost:3002/?utm_source=google&utm_medium=cpc&utm_campaign=wave3ms_mobile&utm_content=after#intake",
+        "innerWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 2751,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 4,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 189.390625,
+            "h": 18.515625,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Approximate accident date",
+            "w": 319.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "City or region in Ontario",
+            "w": 319.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nStart free review\nWhat this review checks\nQuickly see what may matter.\nTreatment coverage\nIncome replacement / missed work\nDelayed or denied benefits\nForms, deadlines, and next steps\nHow it works\nThree simple steps.\n1\nTell us what happened\n2\nWe review the key details\n3\nYou get a clear next step\nCommon situations\nTreatment not covered\nMissing work\nBenefits delayed or denied\nUnsure what to do next\n\nOntario Accident Review is a private first step. It is not a law firm and does not provide legal advice. Where appropriate, you may choose to be connected with a qualified professional.\n\nFrequently asked questions\nPlain answers to common questions.\n?\nIs the review really free?\n\nYes. The initial accident b"
+      }
+    },
+    {
+      "vp": "iphone-14-390",
+      "state": "validation",
+      "metrics": {
+        "url": "http://localhost:3002/?utm_source=google&utm_medium=cpc&utm_campaign=wave3ms_mobile&utm_content=after#intake",
+        "innerWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 2751,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 4,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 189.390625,
+            "h": 18.515625,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Approximate accident date",
+            "w": 319.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "City or region in Ontario",
+            "w": 319.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nStart free review\nWhat this review checks\nQuickly see what may matter.\nTreatment coverage\nIncome replacement / missed work\nDelayed or denied benefits\nForms, deadlines, and next steps\nHow it works\nThree simple steps.\n1\nTell us what happened\n2\nWe review the key details\n3\nYou get a clear next step\nCommon situations\nTreatment not covered\nMissing work\nBenefits delayed or denied\nUnsure what to do next\n\nOntario Accident Review is a private first step. It is not a law firm and does not provide legal advice. Where appropriate, you may choose to be connected with a qualified professional.\n\nFrequently asked questions\nPlain answers to common questions.\n?\nIs the review really free?\n\nYes. The initial accident b"
+      }
+    },
+    {
+      "vp": "iphone-14-390",
+      "state": "step2",
+      "metrics": {
+        "url": "http://localhost:3002/?utm_source=google&utm_medium=cpc&utm_campaign=wave3ms_mobile&utm_content=after#intake",
+        "innerWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 2751,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 2,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 189.390625,
+            "h": 18.515625,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nStart free review\nWhat this review checks\nQuickly see what may matter.\nTreatment coverage\nIncome replacement / missed work\nDelayed or denied benefits\nForms, deadlines, and next steps\nHow it works\nThree simple steps.\n1\nTell us what happened\n2\nWe review the key details\n3\nYou get a clear next step\nCommon situations\nTreatment not covered\nMissing work\nBenefits delayed or denied\nUnsure what to do next\n\nOntario Accident Review is a private first step. It is not a law firm and does not provide legal advice. Where appropriate, you may choose to be connected with a qualified professional.\n\nFrequently asked questions\nPlain answers to common questions.\n?\nIs the review really free?\n\nYes. The initial accident b"
+      }
+    },
+    {
+      "vp": "iphone-14-390",
+      "state": "step3",
+      "metrics": {
+        "url": "http://localhost:3002/?utm_source=google&utm_medium=cpc&utm_campaign=wave3ms_mobile&utm_content=after#intake",
+        "innerWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 2751,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 8,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 189.390625,
+            "h": 18.515625,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Yes",
+            "w": 57.59375,
+            "h": 39.75,
+            "fontSize": "13.6px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "No",
+            "w": 52.515625,
+            "h": 39.75,
+            "fontSize": "13.6px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Not sure",
+            "w": 89.25,
+            "h": 39.75,
+            "fontSize": "13.6px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Yes",
+            "w": 57.59375,
+            "h": 39.75,
+            "fontSize": "13.6px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "No",
+            "w": 52.515625,
+            "h": 39.75,
+            "fontSize": "13.6px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Not sure",
+            "w": 89.25,
+            "h": 39.75,
+            "fontSize": "13.6px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nStart free review\nWhat this review checks\nQuickly see what may matter.\nTreatment coverage\nIncome replacement / missed work\nDelayed or denied benefits\nForms, deadlines, and next steps\nHow it works\nThree simple steps.\n1\nTell us what happened\n2\nWe review the key details\n3\nYou get a clear next step\nCommon situations\nTreatment not covered\nMissing work\nBenefits delayed or denied\nUnsure what to do next\n\nOntario Accident Review is a private first step. It is not a law firm and does not provide legal advice. Where appropriate, you may choose to be connected with a qualified professional.\n\nFrequently asked questions\nPlain answers to common questions.\n?\nIs the review really free?\n\nYes. The initial accident b"
+      }
+    },
+    {
+      "vp": "iphone-14-390",
+      "state": "step4",
+      "metrics": {
+        "url": "http://localhost:3002/?utm_source=google&utm_medium=cpc&utm_campaign=wave3ms_mobile&utm_content=after#intake",
+        "innerWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 2751,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 7,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 189.390625,
+            "h": 18.515625,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "First name",
+            "w": 319.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Phone",
+            "w": 319.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Email",
+            "w": 319.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Best time to reach you (optional)",
+            "w": 280,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Privacy Policy",
+            "w": 90.0625,
+            "h": 16,
+            "fontSize": "13.44px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nStart free review\nWhat this review checks\nQuickly see what may matter.\nTreatment coverage\nIncome replacement / missed work\nDelayed or denied benefits\nForms, deadlines, and next steps\nHow it works\nThree simple steps.\n1\nTell us what happened\n2\nWe review the key details\n3\nYou get a clear next step\nCommon situations\nTreatment not covered\nMissing work\nBenefits delayed or denied\nUnsure what to do next\n\nOntario Accident Review is a private first step. It is not a law firm and does not provide legal advice. Where appropriate, you may choose to be connected with a qualified professional.\n\nFrequently asked questions\nPlain answers to common questions.\n?\nIs the review really free?\n\nYes. The initial accident b"
+      }
+    },
+    {
+      "vp": "iphone-14-390",
+      "state": "step4-consent-closeup",
+      "metrics": {
+        "url": "http://localhost:3002/?utm_source=google&utm_medium=cpc&utm_campaign=wave3ms_mobile&utm_content=after#intake",
+        "innerWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 2751,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 7,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 189.390625,
+            "h": 18.515625,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "First name",
+            "w": 319.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Phone",
+            "w": 319.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Email",
+            "w": 319.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Best time to reach you (optional)",
+            "w": 280,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Privacy Policy",
+            "w": 90.0625,
+            "h": 16,
+            "fontSize": "13.44px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nStart free review\nWhat this review checks\nQuickly see what may matter.\nTreatment coverage\nIncome replacement / missed work\nDelayed or denied benefits\nForms, deadlines, and next steps\nHow it works\nThree simple steps.\n1\nTell us what happened\n2\nWe review the key details\n3\nYou get a clear next step\nCommon situations\nTreatment not covered\nMissing work\nBenefits delayed or denied\nUnsure what to do next\n\nOntario Accident Review is a private first step. It is not a law firm and does not provide legal advice. Where appropriate, you may choose to be connected with a qualified professional.\n\nFrequently asked questions\nPlain answers to common questions.\n?\nIs the review really free?\n\nYes. The initial accident b"
+      }
+    },
+    {
+      "vp": "iphone-14-390",
+      "state": "desktop-intake-smoke",
+      "metrics": {
+        "url": "http://localhost:3002/?desktop_smoke=after#intake",
+        "innerWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 7383,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 33,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 254.28125,
+            "h": 23.046875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 40.984375,
+            "h": 29.046875,
+            "fontSize": "14.4px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "How it works",
+            "w": 89.328125,
+            "h": 29.046875,
+            "fontSize": "14.4px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Who this is for",
+            "w": 99.015625,
+            "h": 29.046875,
+            "fontSize": "14.4px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 27.9375,
+            "h": 29.046875,
+            "fontSize": "14.4px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Resources",
+            "w": 72.53125,
+            "h": 29.046875,
+            "fontSize": "14.4px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "oar-btn oar-btn-ghost oar-btn-lg",
+            "text": "Learn what the review checks",
+            "w": 256.484375,
+            "h": 27.59375,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 402,
+            "h": 22.390625,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "oar-hide-mobile",
+            "text": "Close",
+            "w": 50.03125,
+            "h": 24.390625,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Approximate accident date",
+            "w": 311,
+            "h": 22.390625,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "City or region in Ontario",
+            "w": 311,
+            "h": 22.390625,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "View all FAQ →",
+            "w": 102.015625,
+            "h": 22.390625,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "hello@ontarioaccidentreview.ca",
+            "w": 244.6875,
+            "h": 23.046875,
+            "fontSize": "14.4px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "How it works",
+            "w": 86.015625,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Who this is for",
+            "w": 95.140625,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Start a private review",
+            "w": 140.4375,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "All resources",
+            "w": 86.234375,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Accident benefits overview",
+            "w": 180.078125,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Important deadlines",
+            "w": 131.6875,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Types of benefits",
+            "w": 115.1875,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Helpful guides",
+            "w": 95.703125,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "About us",
+            "w": 59.09375,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Contact us",
+            "w": 71.59375,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Privacy",
+            "w": 49,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "oar-btn oar-btn-secondary oar-btn-sm",
+            "text": "Contact us",
+            "w": 198.5625,
+            "h": 40,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Privacy Policy",
+            "w": 84.640625,
+            "h": 20.46875,
+            "fontSize": "12.8px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Terms of Service",
+            "w": 103.09375,
+            "h": 20.46875,
+            "fontSize": "12.8px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Disclaimer",
+            "w": 63.296875,
+            "h": 20.46875,
+            "fontSize": "12.8px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nHome\nHow it works\nWho this is for\nFAQ\nResources\nStart a private review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nA calm first step after an Ontario accident.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nNot a law firm\nStart a private review\nLearn what the review checks\nPrivate review preview\nPrivate intake\n1\nAccident details\n2\nBenefits/issues\n3\nContact preference\n4\nSubmitted\nWhen did the accident occur?\nContinue\n\nFree private review · no policy number needed · not a law firm\n\nPrivate & secure\n\nYour information is submitted through a secure form and used to review your request. We do not sell it, and we only share it with a qualified professional or relevant provider with your consent or as described in our Privacy Policy.\n\nOntario-focused\n\nWe understand Ontario's benefits system.\n\n"
+      }
+    },
+    {
+      "vp": "android-412",
+      "state": "step1",
+      "metrics": {
+        "url": "http://localhost:3002/?utm_source=google&utm_medium=cpc&utm_campaign=wave3ms_mobile&utm_content=after#intake",
+        "innerWidth": 412,
+        "scrollWidth": 412,
+        "bodyHeight": 2713,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 4,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 199.984375,
+            "h": 19.5625,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Approximate accident date",
+            "w": 341.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "City or region in Ontario",
+            "w": 341.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nStart free review\nWhat this review checks\nQuickly see what may matter.\nTreatment coverage\nIncome replacement / missed work\nDelayed or denied benefits\nForms, deadlines, and next steps\nHow it works\nThree simple steps.\n1\nTell us what happened\n2\nWe review the key details\n3\nYou get a clear next step\nCommon situations\nTreatment not covered\nMissing work\nBenefits delayed or denied\nUnsure what to do next\n\nOntario Accident Review is a private first step. It is not a law firm and does not provide legal advice. Where appropriate, you may choose to be connected with a qualified professional.\n\nFrequently asked questions\nPlain answers to common questions.\n?\nIs the review really free?\n\nYes. The initial accident b"
+      }
+    },
+    {
+      "vp": "android-412",
+      "state": "validation",
+      "metrics": {
+        "url": "http://localhost:3002/?utm_source=google&utm_medium=cpc&utm_campaign=wave3ms_mobile&utm_content=after#intake",
+        "innerWidth": 412,
+        "scrollWidth": 412,
+        "bodyHeight": 2713,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 4,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 199.984375,
+            "h": 19.5625,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Approximate accident date",
+            "w": 341.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "City or region in Ontario",
+            "w": 341.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nStart free review\nWhat this review checks\nQuickly see what may matter.\nTreatment coverage\nIncome replacement / missed work\nDelayed or denied benefits\nForms, deadlines, and next steps\nHow it works\nThree simple steps.\n1\nTell us what happened\n2\nWe review the key details\n3\nYou get a clear next step\nCommon situations\nTreatment not covered\nMissing work\nBenefits delayed or denied\nUnsure what to do next\n\nOntario Accident Review is a private first step. It is not a law firm and does not provide legal advice. Where appropriate, you may choose to be connected with a qualified professional.\n\nFrequently asked questions\nPlain answers to common questions.\n?\nIs the review really free?\n\nYes. The initial accident b"
+      }
+    },
+    {
+      "vp": "android-412",
+      "state": "step2",
+      "metrics": {
+        "url": "http://localhost:3002/?utm_source=google&utm_medium=cpc&utm_campaign=wave3ms_mobile&utm_content=after#intake",
+        "innerWidth": 412,
+        "scrollWidth": 412,
+        "bodyHeight": 2713,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 2,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 199.984375,
+            "h": 19.5625,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nStart free review\nWhat this review checks\nQuickly see what may matter.\nTreatment coverage\nIncome replacement / missed work\nDelayed or denied benefits\nForms, deadlines, and next steps\nHow it works\nThree simple steps.\n1\nTell us what happened\n2\nWe review the key details\n3\nYou get a clear next step\nCommon situations\nTreatment not covered\nMissing work\nBenefits delayed or denied\nUnsure what to do next\n\nOntario Accident Review is a private first step. It is not a law firm and does not provide legal advice. Where appropriate, you may choose to be connected with a qualified professional.\n\nFrequently asked questions\nPlain answers to common questions.\n?\nIs the review really free?\n\nYes. The initial accident b"
+      }
+    },
+    {
+      "vp": "android-412",
+      "state": "step3",
+      "metrics": {
+        "url": "http://localhost:3002/?utm_source=google&utm_medium=cpc&utm_campaign=wave3ms_mobile&utm_content=after#intake",
+        "innerWidth": 412,
+        "scrollWidth": 412,
+        "bodyHeight": 2713,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 9,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 199.984375,
+            "h": 19.5625,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Yes",
+            "w": 57.59375,
+            "h": 39.75,
+            "fontSize": "13.6px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "No",
+            "w": 52.515625,
+            "h": 39.75,
+            "fontSize": "13.6px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Not sure",
+            "w": 89.25,
+            "h": 39.75,
+            "fontSize": "13.6px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Yes",
+            "w": 57.59375,
+            "h": 39.75,
+            "fontSize": "13.6px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "No",
+            "w": 52.515625,
+            "h": 39.75,
+            "fontSize": "13.6px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Not sure",
+            "w": 89.25,
+            "h": 39.75,
+            "fontSize": "13.6px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Anything else you want us to know? (optional)",
+            "w": 341.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nStart free review\nWhat this review checks\nQuickly see what may matter.\nTreatment coverage\nIncome replacement / missed work\nDelayed or denied benefits\nForms, deadlines, and next steps\nHow it works\nThree simple steps.\n1\nTell us what happened\n2\nWe review the key details\n3\nYou get a clear next step\nCommon situations\nTreatment not covered\nMissing work\nBenefits delayed or denied\nUnsure what to do next\n\nOntario Accident Review is a private first step. It is not a law firm and does not provide legal advice. Where appropriate, you may choose to be connected with a qualified professional.\n\nFrequently asked questions\nPlain answers to common questions.\n?\nIs the review really free?\n\nYes. The initial accident b"
+      }
+    },
+    {
+      "vp": "android-412",
+      "state": "step4",
+      "metrics": {
+        "url": "http://localhost:3002/?utm_source=google&utm_medium=cpc&utm_campaign=wave3ms_mobile&utm_content=after#intake",
+        "innerWidth": 412,
+        "scrollWidth": 412,
+        "bodyHeight": 2713,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 7,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 199.984375,
+            "h": 19.5625,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "First name",
+            "w": 341.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Phone",
+            "w": 341.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Email",
+            "w": 341.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Best time to reach you (optional)",
+            "w": 280,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Privacy Policy",
+            "w": 90.0625,
+            "h": 16,
+            "fontSize": "13.44px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nStart free review\nWhat this review checks\nQuickly see what may matter.\nTreatment coverage\nIncome replacement / missed work\nDelayed or denied benefits\nForms, deadlines, and next steps\nHow it works\nThree simple steps.\n1\nTell us what happened\n2\nWe review the key details\n3\nYou get a clear next step\nCommon situations\nTreatment not covered\nMissing work\nBenefits delayed or denied\nUnsure what to do next\n\nOntario Accident Review is a private first step. It is not a law firm and does not provide legal advice. Where appropriate, you may choose to be connected with a qualified professional.\n\nFrequently asked questions\nPlain answers to common questions.\n?\nIs the review really free?\n\nYes. The initial accident b"
+      }
+    },
+    {
+      "vp": "android-412",
+      "state": "step4-consent-closeup",
+      "metrics": {
+        "url": "http://localhost:3002/?utm_source=google&utm_medium=cpc&utm_campaign=wave3ms_mobile&utm_content=after#intake",
+        "innerWidth": 412,
+        "scrollWidth": 412,
+        "bodyHeight": 2713,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 7,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 199.984375,
+            "h": 19.5625,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "First name",
+            "w": 341.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Phone",
+            "w": 341.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Email",
+            "w": 341.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Best time to reach you (optional)",
+            "w": 280,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Privacy Policy",
+            "w": 90.0625,
+            "h": 16,
+            "fontSize": "13.44px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nStart free review\nWhat this review checks\nQuickly see what may matter.\nTreatment coverage\nIncome replacement / missed work\nDelayed or denied benefits\nForms, deadlines, and next steps\nHow it works\nThree simple steps.\n1\nTell us what happened\n2\nWe review the key details\n3\nYou get a clear next step\nCommon situations\nTreatment not covered\nMissing work\nBenefits delayed or denied\nUnsure what to do next\n\nOntario Accident Review is a private first step. It is not a law firm and does not provide legal advice. Where appropriate, you may choose to be connected with a qualified professional.\n\nFrequently asked questions\nPlain answers to common questions.\n?\nIs the review really free?\n\nYes. The initial accident b"
+      }
+    },
+    {
+      "vp": "android-412",
+      "state": "desktop-intake-smoke",
+      "metrics": {
+        "url": "http://localhost:3002/?desktop_smoke=after#intake",
+        "innerWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 7383,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 33,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 254.28125,
+            "h": 23.046875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 40.984375,
+            "h": 29.046875,
+            "fontSize": "14.4px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "How it works",
+            "w": 89.328125,
+            "h": 29.046875,
+            "fontSize": "14.4px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Who this is for",
+            "w": 99.015625,
+            "h": 29.046875,
+            "fontSize": "14.4px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 27.9375,
+            "h": 29.046875,
+            "fontSize": "14.4px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Resources",
+            "w": 72.53125,
+            "h": 29.046875,
+            "fontSize": "14.4px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "oar-btn oar-btn-ghost oar-btn-lg",
+            "text": "Learn what the review checks",
+            "w": 256.484375,
+            "h": 27.59375,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 402,
+            "h": 22.390625,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "oar-hide-mobile",
+            "text": "Close",
+            "w": 50.03125,
+            "h": 24.390625,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Approximate accident date",
+            "w": 311,
+            "h": 22.390625,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "City or region in Ontario",
+            "w": 311,
+            "h": 22.390625,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "View all FAQ →",
+            "w": 102.015625,
+            "h": 22.390625,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "hello@ontarioaccidentreview.ca",
+            "w": 244.6875,
+            "h": 23.046875,
+            "fontSize": "14.4px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "How it works",
+            "w": 86.015625,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Who this is for",
+            "w": 95.140625,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Start a private review",
+            "w": 140.4375,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "All resources",
+            "w": 86.234375,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Accident benefits overview",
+            "w": 180.078125,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Important deadlines",
+            "w": 131.6875,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Types of benefits",
+            "w": 115.1875,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Helpful guides",
+            "w": 95.703125,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "About us",
+            "w": 59.09375,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Contact us",
+            "w": 71.59375,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Privacy",
+            "w": 49,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "oar-btn oar-btn-secondary oar-btn-sm",
+            "text": "Contact us",
+            "w": 198.5625,
+            "h": 40,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Privacy Policy",
+            "w": 84.640625,
+            "h": 20.46875,
+            "fontSize": "12.8px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Terms of Service",
+            "w": 103.09375,
+            "h": 20.46875,
+            "fontSize": "12.8px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Disclaimer",
+            "w": 63.296875,
+            "h": 20.46875,
+            "fontSize": "12.8px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nHome\nHow it works\nWho this is for\nFAQ\nResources\nStart a private review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nA calm first step after an Ontario accident.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nNot a law firm\nStart a private review\nLearn what the review checks\nPrivate review preview\nPrivate intake\n1\nAccident details\n2\nBenefits/issues\n3\nContact preference\n4\nSubmitted\nWhen did the accident occur?\nContinue\n\nFree private review · no policy number needed · not a law firm\n\nPrivate & secure\n\nYour information is submitted through a secure form and used to review your request. We do not sell it, and we only share it with a qualified professional or relevant provider with your consent or as described in our Privacy Policy.\n\nOntario-focused\n\nWe understand Ontario's benefits system.\n\n"
+      }
+    },
+    {
+      "vp": "iphone-pro-max-430",
+      "state": "step1",
+      "metrics": {
+        "url": "http://localhost:3002/?utm_source=google&utm_medium=cpc&utm_campaign=wave3ms_mobile&utm_content=after#intake",
+        "innerWidth": 430,
+        "scrollWidth": 430,
+        "bodyHeight": 2687,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 4,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 208.265625,
+            "h": 20.375,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Approximate accident date",
+            "w": 359.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "City or region in Ontario",
+            "w": 359.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nStart free review\nWhat this review checks\nQuickly see what may matter.\nTreatment coverage\nIncome replacement / missed work\nDelayed or denied benefits\nForms, deadlines, and next steps\nHow it works\nThree simple steps.\n1\nTell us what happened\n2\nWe review the key details\n3\nYou get a clear next step\nCommon situations\nTreatment not covered\nMissing work\nBenefits delayed or denied\nUnsure what to do next\n\nOntario Accident Review is a private first step. It is not a law firm and does not provide legal advice. Where appropriate, you may choose to be connected with a qualified professional.\n\nFrequently asked questions\nPlain answers to common questions.\n?\nIs the review really free?\n\nYes. The initial accident b"
+      }
+    },
+    {
+      "vp": "iphone-pro-max-430",
+      "state": "validation",
+      "metrics": {
+        "url": "http://localhost:3002/?utm_source=google&utm_medium=cpc&utm_campaign=wave3ms_mobile&utm_content=after#intake",
+        "innerWidth": 430,
+        "scrollWidth": 430,
+        "bodyHeight": 2687,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 4,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 208.265625,
+            "h": 20.375,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Approximate accident date",
+            "w": 359.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "City or region in Ontario",
+            "w": 359.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nStart free review\nWhat this review checks\nQuickly see what may matter.\nTreatment coverage\nIncome replacement / missed work\nDelayed or denied benefits\nForms, deadlines, and next steps\nHow it works\nThree simple steps.\n1\nTell us what happened\n2\nWe review the key details\n3\nYou get a clear next step\nCommon situations\nTreatment not covered\nMissing work\nBenefits delayed or denied\nUnsure what to do next\n\nOntario Accident Review is a private first step. It is not a law firm and does not provide legal advice. Where appropriate, you may choose to be connected with a qualified professional.\n\nFrequently asked questions\nPlain answers to common questions.\n?\nIs the review really free?\n\nYes. The initial accident b"
+      }
+    },
+    {
+      "vp": "iphone-pro-max-430",
+      "state": "step2",
+      "metrics": {
+        "url": "http://localhost:3002/?utm_source=google&utm_medium=cpc&utm_campaign=wave3ms_mobile&utm_content=after#intake",
+        "innerWidth": 430,
+        "scrollWidth": 430,
+        "bodyHeight": 2687,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 2,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 208.265625,
+            "h": 20.375,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nStart free review\nWhat this review checks\nQuickly see what may matter.\nTreatment coverage\nIncome replacement / missed work\nDelayed or denied benefits\nForms, deadlines, and next steps\nHow it works\nThree simple steps.\n1\nTell us what happened\n2\nWe review the key details\n3\nYou get a clear next step\nCommon situations\nTreatment not covered\nMissing work\nBenefits delayed or denied\nUnsure what to do next\n\nOntario Accident Review is a private first step. It is not a law firm and does not provide legal advice. Where appropriate, you may choose to be connected with a qualified professional.\n\nFrequently asked questions\nPlain answers to common questions.\n?\nIs the review really free?\n\nYes. The initial accident b"
+      }
+    },
+    {
+      "vp": "iphone-pro-max-430",
+      "state": "step3",
+      "metrics": {
+        "url": "http://localhost:3002/?utm_source=google&utm_medium=cpc&utm_campaign=wave3ms_mobile&utm_content=after#intake",
+        "innerWidth": 430,
+        "scrollWidth": 430,
+        "bodyHeight": 2687,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 9,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 208.265625,
+            "h": 20.375,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Yes",
+            "w": 57.59375,
+            "h": 39.75,
+            "fontSize": "13.6px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "No",
+            "w": 52.515625,
+            "h": 39.75,
+            "fontSize": "13.6px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Not sure",
+            "w": 89.25,
+            "h": 39.75,
+            "fontSize": "13.6px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Yes",
+            "w": 57.59375,
+            "h": 39.75,
+            "fontSize": "13.6px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "No",
+            "w": 52.515625,
+            "h": 39.75,
+            "fontSize": "13.6px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "",
+            "text": "Not sure",
+            "w": 89.25,
+            "h": 39.75,
+            "fontSize": "13.6px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Anything else you want us to know? (optional)",
+            "w": 359.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nStart free review\nWhat this review checks\nQuickly see what may matter.\nTreatment coverage\nIncome replacement / missed work\nDelayed or denied benefits\nForms, deadlines, and next steps\nHow it works\nThree simple steps.\n1\nTell us what happened\n2\nWe review the key details\n3\nYou get a clear next step\nCommon situations\nTreatment not covered\nMissing work\nBenefits delayed or denied\nUnsure what to do next\n\nOntario Accident Review is a private first step. It is not a law firm and does not provide legal advice. Where appropriate, you may choose to be connected with a qualified professional.\n\nFrequently asked questions\nPlain answers to common questions.\n?\nIs the review really free?\n\nYes. The initial accident b"
+      }
+    },
+    {
+      "vp": "iphone-pro-max-430",
+      "state": "step4",
+      "metrics": {
+        "url": "http://localhost:3002/?utm_source=google&utm_medium=cpc&utm_campaign=wave3ms_mobile&utm_content=after#intake",
+        "innerWidth": 430,
+        "scrollWidth": 430,
+        "bodyHeight": 2687,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 7,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 208.265625,
+            "h": 20.375,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "First name",
+            "w": 359.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Phone",
+            "w": 359.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Email",
+            "w": 359.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Best time to reach you (optional)",
+            "w": 280,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Privacy Policy",
+            "w": 90.0625,
+            "h": 16,
+            "fontSize": "13.44px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nStart free review\nWhat this review checks\nQuickly see what may matter.\nTreatment coverage\nIncome replacement / missed work\nDelayed or denied benefits\nForms, deadlines, and next steps\nHow it works\nThree simple steps.\n1\nTell us what happened\n2\nWe review the key details\n3\nYou get a clear next step\nCommon situations\nTreatment not covered\nMissing work\nBenefits delayed or denied\nUnsure what to do next\n\nOntario Accident Review is a private first step. It is not a law firm and does not provide legal advice. Where appropriate, you may choose to be connected with a qualified professional.\n\nFrequently asked questions\nPlain answers to common questions.\n?\nIs the review really free?\n\nYes. The initial accident b"
+      }
+    },
+    {
+      "vp": "iphone-pro-max-430",
+      "state": "step4-consent-closeup",
+      "metrics": {
+        "url": "http://localhost:3002/?utm_source=google&utm_medium=cpc&utm_campaign=wave3ms_mobile&utm_content=after#intake",
+        "innerWidth": 430,
+        "scrollWidth": 430,
+        "bodyHeight": 2687,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 7,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 208.265625,
+            "h": 20.375,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "First name",
+            "w": 359.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Phone",
+            "w": 359.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Email",
+            "w": 359.21875,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Best time to reach you (optional)",
+            "w": 280,
+            "h": 24.3125,
+            "fontSize": "15.2px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Privacy Policy",
+            "w": 90.0625,
+            "h": 16,
+            "fontSize": "13.44px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nStart free review\nWhat this review checks\nQuickly see what may matter.\nTreatment coverage\nIncome replacement / missed work\nDelayed or denied benefits\nForms, deadlines, and next steps\nHow it works\nThree simple steps.\n1\nTell us what happened\n2\nWe review the key details\n3\nYou get a clear next step\nCommon situations\nTreatment not covered\nMissing work\nBenefits delayed or denied\nUnsure what to do next\n\nOntario Accident Review is a private first step. It is not a law firm and does not provide legal advice. Where appropriate, you may choose to be connected with a qualified professional.\n\nFrequently asked questions\nPlain answers to common questions.\n?\nIs the review really free?\n\nYes. The initial accident b"
+      }
+    },
+    {
+      "vp": "iphone-pro-max-430",
+      "state": "desktop-intake-smoke",
+      "metrics": {
+        "url": "http://localhost:3002/?desktop_smoke=after#intake",
+        "innerWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 7383,
+        "overflow": false,
+        "overs": [],
+        "smallCount": 33,
+        "small": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 254.28125,
+            "h": 23.046875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 40.984375,
+            "h": 29.046875,
+            "fontSize": "14.4px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "How it works",
+            "w": 89.328125,
+            "h": 29.046875,
+            "fontSize": "14.4px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Who this is for",
+            "w": 99.015625,
+            "h": 29.046875,
+            "fontSize": "14.4px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 27.9375,
+            "h": 29.046875,
+            "fontSize": "14.4px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Resources",
+            "w": 72.53125,
+            "h": 29.046875,
+            "fontSize": "14.4px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "oar-btn oar-btn-ghost oar-btn-lg",
+            "text": "Learn what the review checks",
+            "w": 256.484375,
+            "h": 27.59375,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "When did the accident occur?",
+            "w": 402,
+            "h": 22.390625,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "See all deadlines",
+            "w": 134.265625,
+            "h": 22.390625,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Ontario Accident Review",
+            "w": 198.65625,
+            "h": 28.796875,
+            "fontSize": "16px",
+            "visible": true
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "oar-hide-mobile",
+            "text": "Close",
+            "w": 50.03125,
+            "h": 24.390625,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "Approximate accident date",
+            "w": 311,
+            "h": 22.390625,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "LABEL",
+            "cls": "oar-field-label",
+            "text": "City or region in Ontario",
+            "w": 311,
+            "h": 22.390625,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "View all FAQ →",
+            "w": 102.015625,
+            "h": 22.390625,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Learn more about your options →",
+            "w": 226.015625,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "hello@ontarioaccidentreview.ca",
+            "w": 244.6875,
+            "h": 23.046875,
+            "fontSize": "14.4px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Home",
+            "w": 39.234375,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "How it works",
+            "w": 86.015625,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Who this is for",
+            "w": 95.140625,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "FAQ",
+            "w": 26.890625,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Start a private review",
+            "w": 140.4375,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "All resources",
+            "w": 86.234375,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Accident benefits overview",
+            "w": 180.078125,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Important deadlines",
+            "w": 131.6875,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Types of benefits",
+            "w": 115.1875,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Helpful guides",
+            "w": 95.703125,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "About us",
+            "w": 59.09375,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Contact us",
+            "w": 71.59375,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Privacy",
+            "w": 49,
+            "h": 17,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "oar-btn oar-btn-secondary oar-btn-sm",
+            "text": "Contact us",
+            "w": 198.5625,
+            "h": 40,
+            "fontSize": "14px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Privacy Policy",
+            "w": 84.640625,
+            "h": 20.46875,
+            "fontSize": "12.8px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Terms of Service",
+            "w": 103.09375,
+            "h": 20.46875,
+            "fontSize": "12.8px",
+            "visible": true
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "Disclaimer",
+            "w": 63.296875,
+            "h": 20.46875,
+            "fontSize": "12.8px",
+            "visible": true
+          }
+        ],
+        "smallInputs": [],
+        "bodyText": "Ontario Accident Review\nHome\nHow it works\nWho this is for\nFAQ\nResources\nStart a private review\nOntario accident benefits review\nReview your Ontario accident benefits situation privately.\n\nA calm first step after an Ontario accident.\n\nAnswer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.\n\nOntario-focused\nPrivate review\nNo pressure\nNot a law firm\nStart a private review\nLearn what the review checks\nPrivate review preview\nPrivate intake\n1\nAccident details\n2\nBenefits/issues\n3\nContact preference\n4\nSubmitted\nWhen did the accident occur?\nContinue\n\nFree private review · no policy number needed · not a law firm\n\nPrivate & secure\n\nYour information is submitted through a secure form and used to review your request. We do not sell it, and we only share it with a qualified professional or relevant provider with your consent or as described in our Privacy Policy.\n\nOntario-focused\n\nWe understand Ontario's benefits system.\n\n"
+      }
+    }
+  ]
+}

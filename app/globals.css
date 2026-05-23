@@ -3547,3 +3547,157 @@ button:focus-visible,
     display: none !important;
   }
 }
+
+/* Wave 3M-S mobile intake final polish: mobile-only compression and scanability. */
+.im-helper-text {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.im-consent-copy {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.im-consent-copy strong {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.im-consent-copy span {
+  display: block;
+}
+
+@media (max-width: 760px) {
+  .im-main {
+    padding: 1rem 1rem calc(3.25rem + env(safe-area-inset-bottom)) !important;
+  }
+
+  .im-main > p:first-child {
+    margin-bottom: 0.55rem !important;
+  }
+
+  .im-main > .oar-stepper {
+    margin-bottom: 1rem !important;
+  }
+
+  .im-card {
+    padding: 1.15rem !important;
+  }
+
+  .im-card > span:first-child {
+    width: 38px !important;
+    height: 38px !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .im-card .oar-h2 {
+    margin-bottom: 0.42rem !important;
+  }
+
+  .im-card .oar-h2 + p {
+    margin-bottom: 1rem !important;
+    font-size: 0.9rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .im-card .oar-field {
+    gap: 0.42rem !important;
+  }
+
+  .im-card [style*="flex-direction: column"] {
+    gap: 1rem !important;
+  }
+
+  .im-claim-option {
+    min-height: 58px !important;
+    padding: 0.72rem 0.85rem !important;
+    gap: 0.75rem !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .im-claim-option > span:first-child {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .im-claim-option > span:nth-child(2) {
+    font-size: 0.9rem !important;
+    line-height: 1.28 !important;
+  }
+
+  .im-claim-option > span:last-child {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .im-card .oar-option {
+    min-height: 48px !important;
+    padding: 0.78rem 0.85rem !important;
+  }
+
+  .im-card .oar-callout {
+    margin-top: 0.65rem !important;
+    padding: 0.85rem !important;
+    font-size: 0.88rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .im-consent-card {
+    padding: 0.85rem !important;
+    gap: 0.65rem !important;
+  }
+
+  .im-consent-card input {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .im-consent-copy {
+    font-size: 0.84rem !important;
+    line-height: 1.42 !important;
+    gap: 0.18rem !important;
+  }
+
+  .im-consent-optional {
+    background: var(--bg) !important;
+    border-color: var(--border-soft) !important;
+  }
+
+  .im-actions {
+    margin-top: 1rem !important;
+  }
+
+  .im-main > p[style*="Private review"] {
+    margin-top: 0.55rem !important;
+  }
+
+  .im-next-card {
+    margin-top: 0.7rem !important;
+    padding: 0.72rem 0.85rem !important;
+    gap: 0.65rem !important;
+    border-color: var(--border-soft) !important;
+    box-shadow: none !important;
+  }
+
+  .im-next-card > span:first-child {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .im-next-card p:first-child {
+    font-size: 0.84rem !important;
+  }
+
+  .im-next-card p:nth-child(2),
+  .im-next-card > svg {
+    display: none !important;
+  }
+
+  .im-helper-text {
+    font-size: 0.76rem;
+  }
+}

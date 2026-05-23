@@ -280,7 +280,7 @@ export function IntakeModal() {
         </div>
       </header>
 
-      <main style={{ padding: 'clamp(1.5rem, 4vw, 3rem) 1.25rem 5rem', maxWidth: 760, margin: '0 auto', width: '100%', boxSizing: 'border-box' }}>
+      <main className="im-main" style={{ padding: 'clamp(1.5rem, 4vw, 3rem) 1.25rem 5rem', maxWidth: 760, margin: '0 auto', width: '100%', boxSizing: 'border-box' }}>
         {/* Step counter + dots */}
         <p style={{ color: 'var(--accent)', fontSize: '0.875rem', fontWeight: 600, margin: '0 0 0.875rem' }}>
           Step {step} of 4
@@ -296,7 +296,7 @@ export function IntakeModal() {
           ))}
         </div>
 
-        <div key={fadeKey} className="oar-card oar-card-elevated oar-fade-in" style={{ background: 'var(--surface)', padding: 'clamp(1.75rem, 4vw, 2.5rem)' }}>
+        <div key={fadeKey} className="oar-card oar-card-elevated oar-fade-in im-card" style={{ background: 'var(--surface)', padding: 'clamp(1.75rem, 4vw, 2.5rem)' }}>
           <span style={{
             display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
             width: 44, height: 44, borderRadius: 'var(--radius-md)',
@@ -347,6 +347,7 @@ export function IntakeModal() {
                 <div className="oar-field">
                   <label className="oar-field-label" htmlFor="im-date">Approximate accident date</label>
                   <input id="im-date" type="date" className="oar-input" value={accidentDate} onChange={e => setAccidentDate(e.target.value)} />
+                  <span className="im-helper-text">Approximate is fine — use your best guess if you do not remember the exact day.</span>
                   {fieldErrors.accidentDate && <span style={{ color: '#b91c1c', fontSize: '0.78rem', fontWeight: 500 }}>Please enter an approximate date.</span>}
                 </div>
                 <div className="oar-field">
@@ -391,6 +392,7 @@ export function IntakeModal() {
                     role="radio"
                     aria-checked={selected}
                     onClick={() => setClaimStatus(opt.val)}
+                    className="im-claim-option"
                     style={{
                       display: 'flex', alignItems: 'center', gap: '1rem',
                       padding: '1.125rem 1.25rem',
@@ -558,18 +560,20 @@ export function IntakeModal() {
                 </select>
               </div>
 
-              <label style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', padding: '1rem 1.125rem', background: 'var(--bg-soft)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)', cursor: 'pointer' }}>
+              <label className="im-consent-card im-consent-required" style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', padding: '1rem 1.125rem', background: 'var(--bg-soft)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)', cursor: 'pointer' }}>
                 <input type="checkbox" checked={consent} onChange={e => setConsent(e.target.checked)} style={{ accentColor: 'var(--accent)', width: 18, height: 18, marginTop: 2, flexShrink: 0 }} />
-                <span style={{ fontSize: '0.875rem', color: 'var(--text-strong)', lineHeight: 1.55 }}>
-                  I consent to being contacted by Ontario Accident Review about my review request and acknowledge the <a href="/privacy" style={{ color: 'var(--accent)', fontWeight: 500 }}>Privacy Policy</a>. I understand Ontario Accident Review is not a law firm and does not provide legal advice.
+                <span className="im-consent-copy" style={{ fontSize: '0.875rem', color: 'var(--text-strong)', lineHeight: 1.55 }}>
+                  <strong>I consent to being contacted about my review request.</strong>
+                  <span>I acknowledge the <a href="/privacy" style={{ color: 'var(--accent)', fontWeight: 500 }}>Privacy Policy</a> and understand Ontario Accident Review is not a law firm and does not provide legal advice.</span>
                 </span>
               </label>
               {fieldErrors.consent && <span style={{ color: '#b91c1c', fontSize: '0.78rem', fontWeight: 500, marginTop: '-0.75rem' }}>Please confirm consent before submitting.</span>}
 
-              <label style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', padding: '1rem 1.125rem', background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)', cursor: 'pointer' }}>
+              <label className="im-consent-card im-consent-optional" style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', padding: '1rem 1.125rem', background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 'var(--radius-md)', cursor: 'pointer' }}>
                 <input type="checkbox" checked={referralConsent} onChange={e => setReferralConsent(e.target.checked)} style={{ accentColor: 'var(--accent)', width: 18, height: 18, marginTop: 2, flexShrink: 0 }} />
-                <span style={{ fontSize: '0.875rem', color: 'var(--text-strong)', lineHeight: 1.55 }}>
-                  Optional: I consent to Ontario Accident Review sharing my submission with a qualified legal professional or relevant service provider if that appears useful for follow-up. I understand this is optional and does not create a lawyer-client relationship.
+                <span className="im-consent-copy" style={{ fontSize: '0.875rem', color: 'var(--text-strong)', lineHeight: 1.55 }}>
+                  <strong>Optional referral consent.</strong>
+                  <span>I consent to Ontario Accident Review sharing my submission with a qualified legal professional or relevant service provider if that appears useful for follow-up. This is optional and does not create a lawyer-client relationship.</span>
                 </span>
               </label>
 
@@ -603,7 +607,7 @@ export function IntakeModal() {
 
         {/* Next-up preview */}
         {meta.up && (
-          <div className="oar-card" style={{
+          <div className="oar-card im-next-card" style={{
             marginTop: '1.25rem', background: 'var(--surface)',
             display: 'flex', alignItems: 'center', gap: '0.875rem',
             padding: '1rem 1.25rem',
