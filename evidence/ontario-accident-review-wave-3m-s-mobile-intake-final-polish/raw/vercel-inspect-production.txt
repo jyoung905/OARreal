@@ -1,0 +1,33 @@
+Fetching deployment "oa-rreal-bbss-oepgkhyk1-jyoung905s-projects.vercel.app" in jyoung905s-projects
+> Fetched deployment "oa-rreal-bbss-oepgkhyk1-jyoung905s-projects.vercel.app" in jyoung905s-projects [350ms]
+
+  General
+
+    id		dpl_6XiwFNboEqkDHCaNpxZKb49R5pFU
+    name	oa-rreal-bbss
+    target	production
+    status	● Ready
+    url		https://oa-rreal-bbss-oepgkhyk1-jyoung905s-projects.vercel.app
+    created	Fri May 22 2026 22:03:37 GMT-0400 (Eastern Daylight Time) [2m ago]
+
+
+  Aliases
+
+    ╶ https://oa-rreal-bbss.vercel.app
+    ╶ https://www.ontarioaccidentreview.ca
+    ╶ https://oa-rreal-bbss-jyoung905s-projects.vercel.app
+    ╶ https://oa-rreal-bbss-jyoung905-jyoung905s-projects.vercel.app
+    ╶ https://ontarioaccidentreview.ca
+    
+
+  Builds
+
+    ┌ .        [0ms]
+    ├── λ _global-error (1.04MB) [iad1]
+    ├── λ _global-error.rsc (1.04MB) [iad1]
+    ├── λ _global-error.segments/__PAGE__.segment.rsc (1.04MB) [iad1]
+    ├── λ _global-error.segments/_full.segment.rsc (1.04MB) [iad1]
+    ├── λ _global-error.segments/_head.segment.rsc (1.04MB) [iad1]
+    └── 254 output items hidden
+    
+

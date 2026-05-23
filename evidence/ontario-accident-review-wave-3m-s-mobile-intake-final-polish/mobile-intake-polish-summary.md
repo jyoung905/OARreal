@@ -15,9 +15,15 @@
 
 ## Automated mobile proof
 - Before states: 28 captures; overflow: 0; inputs below 16px: 0.
-- After states: 28 captures; overflow: 0; inputs below 16px: 0.
+- Local after states: 28 captures; overflow: 0; inputs below 16px: 0.
+- Production final states: 28 captures; overflow: 0; inputs below 16px: 0.
 
-## Non-mutating conversion proof
+## Consent proof
+- Required contact consent remains a required checkbox and validate(4) blocks submission when unchecked.
+- Optional referral consent remains separate, optional, and explicitly says it does not create a lawyer-client relationship.
+- Not-a-law-firm / not-legal-advice language preserved in required consent.
+
+## Production non-mutating conversion proof
 - Direct thank-you: 0 generate_lead / 0 conversion.
 - Marker-gated thank-you: 1 generate_lead / 1 conversion.
 - Refresh: 0 generate_lead / 0 conversion.

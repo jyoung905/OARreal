@@ -1,9 +1,9 @@
 {
-  "checkedAt": "2026-05-23T02:02:23.523Z",
-  "base": "http://localhost:3002",
-  "originalSeededMarker": "wave3ms-preflight-1779501735402",
+  "checkedAt": "2026-05-23T02:05:33.366Z",
+  "base": "https://www.ontarioaccidentreview.ca",
+  "originalSeededMarker": "wave3ms-preflight-1779501925232",
   "page": {
-    "href": "http://localhost:3002/thank-you?wave3_marker=1",
+    "href": "https://www.ontarioaccidentreview.ca/thank-you?wave3_marker=1",
     "marker": null,
     "dataLayerType": "[object Array]",
     "hasGtag": true,
@@ -47,6 +47,6 @@
       "generate_lead": 0,
       "conversion": 0
     },
-    "text": "Ontario Accident Review\nHome\nHow it works\nWho this is for\nFAQ\nResources\nStart a private review\nRequest received\nThank you — your\nrequest is in.\n\nWe’ve received your information and our team will review it shortly.\n\nThis is a free, private review. We will assess possible benefits, deadlines, and next steps for your situation.\n\nOntario Accident Review is not a law firm and does not provide legal advice or create a lawyer–client relationship.\nWhat happens next\n1\n\nReview submitted information\n\nWe carefully review the details you provided.\n\n2\n\nWe assess your situation\n\nWe look at possible benefits, deadlines, and next steps.\n\n3\n\nYou receive a practical follow-up\n\nOur team will contact you with clear, personalized next steps.\n\nBrowse resources\nStart another review\nReturn home\nYour request summary\nReference number\nOAR-522-DNBF\n\nWhat you submitted\n\nSubmitted\nJust now\nCoverage applied for\nAccident benefits\nAccident type\nMotor vehicle accident\nStatus\nAwaiting review\n\nHelpful resources while you "
+    "text": "Ontario Accident Review\nHome\nHow it works\nWho this is for\nFAQ\nResources\nStart a private review\nRequest received\nThank you — your\nrequest is in.\n\nWe’ve received your information and our team will review it shortly.\n\nThis is a free, private review. We will assess possible benefits, deadlines, and next steps for your situation.\n\nOntario Accident Review is not a law firm and does not provide legal advice or create a lawyer–client relationship.\nWhat happens next\n1\n\nReview submitted information\n\nWe carefully review the details you provided.\n\n2\n\nWe assess your situation\n\nWe look at possible benefits, deadlines, and next steps.\n\n3\n\nYou receive a practical follow-up\n\nOur team will contact you with clear, personalized next steps.\n\nBrowse resources\nStart another review\nReturn home\nYour request summary\nReference number\nOAR-523-NJQF\n\nWhat you submitted\n\nSubmitted\nJust now\nCoverage applied for\nAccident benefits\nAccident type\nMotor vehicle accident\nStatus\nAwaiting review\n\nHelpful resources while you "
   }
 }
