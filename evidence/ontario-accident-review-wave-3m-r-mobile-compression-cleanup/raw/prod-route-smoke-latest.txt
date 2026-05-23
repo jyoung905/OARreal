@@ -1,0 +1,106 @@
+
+> ontario-accident-review-launch@1.0.0 qa:prod-smoke
+> node scripts/production-route-smoke.mjs
+
+[
+  {
+    "route": "/",
+    "url": "https://www.ontarioaccidentreview.ca/",
+    "status": 200,
+    "location": null,
+    "xRobotsTag": null,
+    "xVercelId": "yul1::rspm2-1779500657206-490c2ea7996d",
+    "xVercelCache": "PRERENDER",
+    "bytes": 81136
+  },
+  {
+    "route": "/review",
+    "url": "https://www.ontarioaccidentreview.ca/review",
+    "status": 200,
+    "location": null,
+    "xRobotsTag": null,
+    "xVercelId": "yul1::kvp5s-1779500657444-4ac1490eac36",
+    "xVercelCache": "PRERENDER",
+    "bytes": 34647
+  },
+  {
+    "route": "/resources",
+    "url": "https://www.ontarioaccidentreview.ca/resources",
+    "status": 200,
+    "location": null,
+    "xRobotsTag": null,
+    "xVercelId": "yul1::h6tks-1779500657780-7c29d3d02c7f",
+    "xVercelCache": "PRERENDER",
+    "bytes": 146531
+  },
+  {
+    "route": "/privacy",
+    "url": "https://www.ontarioaccidentreview.ca/privacy",
+    "status": 200,
+    "location": null,
+    "xRobotsTag": null,
+    "xVercelId": "yul1::h6tks-1779500658044-825a36c8e20b",
+    "xVercelCache": "PRERENDER",
+    "bytes": 51427
+  },
+  {
+    "route": "/disclaimer",
+    "url": "https://www.ontarioaccidentreview.ca/disclaimer",
+    "status": 200,
+    "location": null,
+    "xRobotsTag": null,
+    "xVercelId": "yul1::fnvjj-1779500658169-9edaaca3e3f0",
+    "xVercelCache": "PRERENDER",
+    "bytes": 42088
+  },
+  {
+    "route": "/thank-you",
+    "url": "https://www.ontarioaccidentreview.ca/thank-you",
+    "status": 200,
+    "location": null,
+    "xRobotsTag": "noindex, nofollow, noarchive",
+    "xVercelId": "yul1::h6tks-1779500658316-a2c15e043470",
+    "xVercelCache": "PRERENDER",
+    "bytes": 68253
+  },
+  {
+    "route": "/blog/accident-benefits-dispute-lat-aabs-ontario",
+    "url": "https://www.ontarioaccidentreview.ca/blog/accident-benefits-dispute-lat-aabs-ontario",
+    "status": 200,
+    "location": null,
+    "xRobotsTag": null,
+    "xVercelId": "yul1::dkthh-1779500658422-c0acd4aa8ac4",
+    "xVercelCache": "PRERENDER",
+    "bytes": 88264
+  },
+  {
+    "route": "/blog/insurance-dispute-fsra-mediation-ontario",
+    "url": "https://www.ontarioaccidentreview.ca/blog/insurance-dispute-fsra-mediation-ontario",
+    "status": 308,
+    "location": "/blog/accident-benefits-dispute-lat-aabs-ontario",
+    "xRobotsTag": null,
+    "xVercelId": "yul1::h6tks-1779500658813-b06b8e763ff8",
+    "xVercelCache": null,
+    "bytes": 15
+  },
+  {
+    "route": "/admin/analytics",
+    "url": "https://www.ontarioaccidentreview.ca/admin/analytics",
+    "status": 404,
+    "location": null,
+    "xRobotsTag": "noindex, nofollow, noarchive",
+    "xVercelId": "yul1::iad1::h6tks-1779500658920-309d127045a5",
+    "xVercelCache": "MISS",
+    "bytes": 13251
+  },
+  {
+    "route": "/api/intake",
+    "url": "https://www.ontarioaccidentreview.ca/api/intake",
+    "status": 405,
+    "location": null,
+    "xRobotsTag": null,
+    "xVercelId": "yul1::iad1::fnvjj-1779500659532-63bdb5d2bded",
+    "xVercelCache": "MISS",
+    "bytes": 0
+  }
+]
