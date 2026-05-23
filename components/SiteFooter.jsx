@@ -98,7 +98,7 @@ export function SiteFooter() {
   return (
     <>
       {/* ── "You're in good hands" trust band ── */}
-      <section style={{ background: 'var(--bg)', padding: 'clamp(3rem, 6vw, 5rem) 1.5rem', borderTop: '1px solid var(--border-soft)' }}>
+      <section className="oar-footer-trust-band" style={{ background: 'var(--bg)', padding: 'clamp(3rem, 6vw, 5rem) 1.5rem', borderTop: '1px solid var(--border-soft)' }}>
         <div style={{ maxWidth: 1320, margin: '0 auto' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 0.8fr)', gap: 'clamp(2rem, 5vw, 4rem)', alignItems: 'start' }} className="oar-trust-grid">
             <div>
@@ -182,6 +182,12 @@ export function SiteFooter() {
       {/* ── Footer proper ── */}
       <footer style={{ background: 'var(--bg-soft)', borderTop: '1px solid var(--border-soft)', padding: 'clamp(3rem, 6vw, 5rem) 1.5rem 2rem' }}>
         <div style={{ maxWidth: 1320, margin: '0 auto' }}>
+          <div className="oar-mobile-footer-quick">
+            <Link href="/privacy">Privacy</Link>
+            <Link href="/terms-of-service">Terms</Link>
+            <Link href="/resources">Resources</Link>
+            <Link href="/contact">Contact</Link>
+          </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1.4fr) repeat(3, minmax(0, 1fr)) minmax(0, 1.2fr)', gap: '2.5rem', marginBottom: '3rem' }} className="oar-footer-cols">
             <div>
               <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '1.4rem', color: 'var(--primary)', letterSpacing: '-0.01em', display: 'block', marginBottom: '1rem' }}>

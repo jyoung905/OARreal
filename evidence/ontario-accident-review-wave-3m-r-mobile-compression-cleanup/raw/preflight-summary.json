@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-05-23T01:35:14.249Z",
+  "base": "http://localhost:3002",
+  "directCounts": {
+    "generate_lead": 0,
+    "conversion": 0
+  },
+  "markerCounts": {
+    "generate_lead": 1,
+    "conversion": 1
+  },
+  "refreshCounts": {
+    "generate_lead": 0,
+    "conversion": 0
+  },
+  "pass": true
+}

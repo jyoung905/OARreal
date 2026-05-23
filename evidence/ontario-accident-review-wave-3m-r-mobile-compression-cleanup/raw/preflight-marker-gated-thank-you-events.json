@@ -1,0 +1,143 @@
+{
+  "checkedAt": "2026-05-23T01:35:10.497Z",
+  "base": "http://localhost:3002",
+  "seededMarker": "wave3mr-preflight-1779500105990",
+  "page": {
+    "href": "http://localhost:3002/thank-you?wave3_marker=1",
+    "marker": null,
+    "dataLayerType": "[object Array]",
+    "hasGtag": true,
+    "raw": [
+      [
+        "js",
+        {},
+        null
+      ],
+      [
+        "config",
+        "AW-18043625605",
+        null
+      ],
+      [
+        "event",
+        "generate_lead",
+        {
+          "event_category": "intake_form",
+          "event_label": "ab_claims_ontario",
+          "submission_id": "wave3mr-preflight-1779500105990"
+        }
+      ],
+      [
+        "event",
+        "conversion",
+        {
+          "send_to": "AW-18043625605/HwLYCIypipAcEIXB75tD",
+          "value": 1,
+          "currency": "CAD",
+          "transaction_id": "wave3mr-preflight-1779500105990"
+        }
+      ],
+      [
+        "event",
+        "confirmation_page_view",
+        {
+          "device": "desktop",
+          "traffic_source": "referral",
+          "landing_page": "/thank-you",
+          "timestamp_ms": 1779500106112
+        }
+      ],
+      [
+        "confirmation_page_view",
+        {
+          "event": "confirmation_page_view",
+          "device": "desktop",
+          "traffic_source": "referral",
+          "landing_page": "/thank-you",
+          "timestamp_ms": 1779500106112,
+          "gtm.uniqueEventId": 10
+        }
+      ],
+      [
+        "gtm.dom",
+        {
+          "event": "gtm.dom",
+          "gtm.uniqueEventId": 11
+        }
+      ],
+      [
+        "gtm.load",
+        {
+          "event": "gtm.load",
+          "gtm.uniqueEventId": 19
+        }
+      ],
+      [
+        "config",
+        "G-BJN974S0MR",
+        {
+          "page_path": "/thank-you?wave3_marker=1"
+        }
+      ]
+    ],
+    "events": [
+      [
+        "event",
+        "generate_lead",
+        {
+          "event_category": "intake_form",
+          "event_label": "ab_claims_ontario",
+          "submission_id": "wave3mr-preflight-1779500105990"
+        }
+      ],
+      [
+        "event",
+        "conversion",
+        {
+          "send_to": "AW-18043625605/HwLYCIypipAcEIXB75tD",
+          "value": 1,
+          "currency": "CAD",
+          "transaction_id": "wave3mr-preflight-1779500105990"
+        }
+      ],
+      [
+        "event",
+        "confirmation_page_view",
+        {
+          "device": "desktop",
+          "traffic_source": "referral",
+          "landing_page": "/thank-you",
+          "timestamp_ms": 1779500106112
+        }
+      ]
+    ],
+    "leadEvents": [
+      [
+        "event",
+        "generate_lead",
+        {
+          "event_category": "intake_form",
+          "event_label": "ab_claims_ontario",
+          "submission_id": "wave3mr-preflight-1779500105990"
+        }
+      ]
+    ],
+    "conversionEvents": [
+      [
+        "event",
+        "conversion",
+        {
+          "send_to": "AW-18043625605/HwLYCIypipAcEIXB75tD",
+          "value": 1,
+          "currency": "CAD",
+          "transaction_id": "wave3mr-preflight-1779500105990"
+        }
+      ]
+    ],
+    "counts": {
+      "generate_lead": 1,
+      "conversion": 1
+    },
+    "text": "Ontario Accident Review\nHome\nHow it works\nWho this is for\nFAQ\nResources\nStart a private review\nRequest received\nThank you — your\nrequest is in.\n\nWe’ve received your information and our team will review it shortly.\n\nThis is a free, private review. We will assess possible benefits, deadlines, and next steps for your situation.\n\nOntario Accident Review is not a law firm and does not provide legal advice or create a lawyer–client relationship.\nWhat happens next\n1\n\nReview submitted information\n\nWe carefully review the details you provided.\n\n2\n\nWe assess your situation\n\nWe look at possible benefits, deadlines, and next steps.\n\n3\n\nYou receive a practical follow-up\n\nOur team will contact you with clear, personalized next steps.\n\nBrowse resources\nStart another review\nReturn home\nYour request summary\nReference number\nOAR-522-IRLF\n\nWhat you submitted\n\nSubmitted\nJust now\nCoverage applied for\nAccident benefits\nAccident type\nMotor vehicle accident\nStatus\nAwaiting review\n\nHelpful resources while you "
+  }
+}

@@ -15,7 +15,7 @@ function trackCta(text, location) {
   Analytics.intakeStart({ trigger: location });
 }
 
-const REASSURANCE = ['Free review', 'Private review', 'No policy number needed', 'Not a law firm'];
+const REASSURANCE = ['Ontario-focused', 'Private review', 'No pressure', 'Not a law firm'];
 
 const BENEFITS = [
   'Treatment & rehabilitation coverage',
@@ -53,6 +53,26 @@ const FAQS = [
   { q: 'Will my insurer be notified?',              a: 'No. Ontario Accident Review is not connected to your insurer and will not contact your insurance company on your behalf.' },
   { q: 'What happens after I submit?',              a: 'Your information is reviewed within 1–2 business days. If your situation appears to fit our criteria, a representative will reach out with a personalized summary of next steps.' },
   { q: 'Are there deadlines I should know about?',  a: 'Ontario accident claims involve time-sensitive steps — including a 30-day window to apply for benefits. If you believe a deadline is urgent, please don\'t wait — speak with a qualified legal professional promptly.' },
+];
+
+const MOBILE_REVIEW_CHECKS = [
+  'Treatment coverage',
+  'Income replacement / missed work',
+  'Delayed or denied benefits',
+  'Forms, deadlines, and next steps',
+];
+
+const MOBILE_STEPS = [
+  ['1', 'Tell us what happened'],
+  ['2', 'We review the key details'],
+  ['3', 'You get a clear next step'],
+];
+
+const MOBILE_SITUATIONS = [
+  'Treatment not covered',
+  'Missing work',
+  'Benefits delayed or denied',
+  'Unsure what to do next',
 ];
 
 /* Inline icon helper */
@@ -106,12 +126,12 @@ export default function HomeContent() {
                 Review your Ontario accident benefits situation privately.
               </h1>
 
-              <p className="oar-lead" style={{ marginTop: 0, marginBottom: '1rem', maxWidth: 540 }}>
+              <p className="oar-lead oar-mobile-hide-compress" style={{ marginTop: 0, marginBottom: '1rem', maxWidth: 540 }}>
                 A calm first step after an Ontario accident.
               </p>
 
-              <p className="oar-body-lg" style={{ marginTop: 0, marginBottom: '2rem', maxWidth: 560 }}>
-                Share a few details and understand what benefits, deadlines, denial letters, or next steps may matter &mdash; in plain language, without pressure.
+              <p className="oar-body-lg oar-mobile-hero-copy" style={{ marginTop: 0, marginBottom: '2rem', maxWidth: 560 }}>
+                Answer a few questions and get a plain-language next step for treatment coverage, missed work, delayed benefits, or denied benefits.
               </p>
 
               {/* Reassurance pills */}
@@ -129,7 +149,7 @@ export default function HomeContent() {
 
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center', marginBottom: '0.5rem' }}>
                 <a href="#intake" className="oar-btn oar-btn-primary oar-btn-lg" onClick={() => trackCta('Start a private review', 'hero')}>
-                  Start a private review
+                  <span className="oar-desktop-label">Start a private review</span><span className="oar-mobile-label">Start free review</span>
                   <span className="oar-btn-arrow"><Icon name="arrow-right" size={14} /></span>
                 </a>
                 <a href="#how-it-works" className="oar-btn oar-btn-ghost oar-btn-lg" style={{ height: 'auto', padding: 0 }}>
@@ -140,7 +160,7 @@ export default function HomeContent() {
             </div>
 
             {/* Right: hero intake widget */}
-            <div style={{ position: 'relative', minHeight: 360 }}>
+            <div className="oar-hero-widget" style={{ position: 'relative', minHeight: 360 }}>
               <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', opacity: 0.6, zIndex: 0 }} aria-hidden="true">
                 <OntarioMap size={300} color="rgba(20, 83, 184, 0.18)" />
               </div>
@@ -213,7 +233,51 @@ export default function HomeContent() {
       </section>
 
       {/* ───── BENEFITS + DEADLINES (matches mockup hero subsection) ───── */}
-      <section id="who-this-is-for" className="oar-section" style={{ background: '#fff' }}>
+      <section id="mobile-review-checks" className="oar-mobile-compressed-section" style={{ background: '#fff' }}>
+        <div className="oar-container">
+          <div className="oar-mobile-section-head">
+            <div className="oar-eyebrow">What this review checks</div>
+            <h2 className="oar-h2">Quickly see what may matter.</h2>
+          </div>
+          <div className="oar-mobile-check-list">
+            {MOBILE_REVIEW_CHECKS.map(item => (
+              <div key={item} className="oar-mobile-check-row"><span><Icon name="check" size={14} /></span>{item}</div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="mobile-how-it-works" className="oar-mobile-compressed-section is-soft">
+        <div className="oar-container">
+          <div className="oar-mobile-section-head">
+            <div className="oar-eyebrow">How it works</div>
+            <h2 className="oar-h2">Three simple steps.</h2>
+          </div>
+          <div className="oar-mobile-step-list">
+            {MOBILE_STEPS.map(([num, title]) => (
+              <div key={num} className="oar-mobile-step-row"><span>{num}</span>{title}</div>
+            ))}
+          </div>
+
+          <div className="oar-mobile-section-head compact">
+            <div className="oar-eyebrow">Common situations</div>
+          </div>
+          <div className="oar-mobile-situation-grid">
+            {MOBILE_SITUATIONS.map(item => <div key={item} className="oar-mobile-situation-card">{item}</div>)}
+          </div>
+        </div>
+      </section>
+
+      <section className="oar-mobile-compressed-section">
+        <div className="oar-container">
+          <div className="oar-mobile-trust-block">
+            <Icon name="shield-check" size={18} />
+            <p>Ontario Accident Review is a private first step. It is not a law firm and does not provide legal advice. Where appropriate, you may choose to be connected with a qualified professional.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="who-this-is-for" className="oar-section oar-desktop-landing-section" style={{ background: '#fff' }}>
         <div className="oar-container">
           <div style={{ maxWidth: 720, marginBottom: 'clamp(2rem, 4vw, 3rem)' }}>
             <div className="oar-eyebrow oar-eyebrow-gold" style={{ marginBottom: '1rem' }}>
@@ -317,7 +381,7 @@ export default function HomeContent() {
       </section>
 
       {/* ───── HOW IT WORKS ───── */}
-      <section id="how-it-works" className="oar-section" style={{ background: 'var(--bg)' }}>
+      <section id="how-it-works" className="oar-section oar-desktop-landing-section" style={{ background: 'var(--bg)' }}>
         <div className="oar-container">
           <div style={{ textAlign: 'center', maxWidth: 640, margin: '0 auto clamp(2rem, 5vw, 3.5rem)' }}>
             <div className="oar-eyebrow" style={{ marginBottom: '1rem' }}>How it works</div>
@@ -346,7 +410,7 @@ export default function HomeContent() {
 
 
       {/* ───── TRUST / PRIVACY / CONSENT ───── */}
-      <section className="oar-section" style={{ background: '#fff' }}>
+      <section className="oar-section oar-desktop-landing-section" style={{ background: '#fff' }}>
         <div className="oar-container">
           <div className="oar-card oar-card-elevated oar-privacy-card" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 0.85fr) minmax(0, 1.15fr)', gap: 'clamp(1.5rem, 4vw, 3rem)', alignItems: 'center', background: 'var(--surface-strong)' }}>
             <div>
@@ -369,7 +433,7 @@ export default function HomeContent() {
       </section>
 
       {/* ───── RESOURCE PREVIEW ───── */}
-      <section className="oar-section" style={{ background: 'var(--bg-soft)' }}>
+      <section className="oar-section oar-desktop-landing-section" style={{ background: 'var(--bg-soft)' }}>
         <div className="oar-container">
           <div style={{ display: 'flex', justifyContent: 'space-between', gap: '1rem', alignItems: 'end', marginBottom: '1.5rem', flexWrap: 'wrap' }}>
             <div style={{ maxWidth: 680 }}>
@@ -395,7 +459,7 @@ export default function HomeContent() {
       </section>
 
       {/* ───── FINAL CTA ───── */}
-      <section className="oar-section" style={{ background: 'var(--primary)', color: '#fff' }}>
+      <section className="oar-section oar-desktop-landing-section" style={{ background: 'var(--primary)', color: '#fff' }}>
         <div className="oar-container-narrow" style={{ textAlign: 'center' }}>
           <div className="oar-eyebrow is-on-dark" style={{ marginBottom: '1rem' }}>Start your review</div>
           <h2 className="oar-h2" style={{ color: '#fff', marginBottom: '1.25rem' }}>
